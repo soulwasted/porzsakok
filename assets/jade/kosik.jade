@@ -1,0 +1,382 @@
+doctype html
+html(lang='en')
+	- var title= "Košík"
+	include ./includes/head.jade
+	body.cart
+		.main
+			include ./includes/nav.jade
+			.container#step-01
+				.row
+					.col-xs-12
+						ul.cart-steps.cart-steps--four
+							li.cart-steps__step.cart-steps__step--current
+								h6.cart-steps__title Košík
+							li.cart-steps__step.cart-steps__step
+								h6.cart-steps__title Doprava a platba
+							li.cart-steps__step.cart-steps__step
+								h6.cart-steps__title Dodací údaje
+							li.cart-steps__step.cart-steps__step--final
+								h6.cart-steps__title Souhrn
+				.row
+					.col-xs-12
+						h1 Košík
+			- for (var x = 0; x < 2; x++)
+				.container.item
+					.row
+						.col-xs-12
+							a.btn.btn-default.btn-small.btn-close(href="#")
+								span.glyphicon.glyphicon-remove(aria-hidden='true')
+								span.text odebrat
+							h2.h4 Sáčky pro 
+								strong ELECTROLUX UltraOne Z 8810
+					.row.stepperRow
+						.col-xs-12.col-sm-6
+							.stepper
+								#stepperMinus
+									span.glyphicon.glyphicon-minus(aria-hidden='true')
+								input#sliderInput(type="number" value="20")
+								#stepperPlus
+									span.glyphicon.glyphicon-plus(aria-hidden='true')
+								.stepperLabel sáčků
+						.col-xs-6.col-sm-3.prices-before
+							h4.h5 Před slevou
+							p 39,80 € (1,99 € / ks)
+						.col-xs-6.col-sm-3.prices-after
+							h4.h5 
+								strong Po slevě
+							p 
+								strong 22,99 € (1,15 € / ks)
+			.container
+				.row
+					.col-xs-12.col-sm-6
+						h2.h5 Máte slevový kód?
+						form.form-inline
+							.form-group
+								label.sr-only(for='cart-code') Slevový kód
+								.input-group
+									.input-group-addon
+										span.glyphicon.glyphicon-star(aria-hidden='true')
+									input#cart-code.form-control(type='number', placeholder='Číslo objednávky')
+							button.btn.btn-default(type='submit') Uplatnit kód
+					.col-xs-12.col-sm-6.resume-bonuses
+						h4.h5 
+							strong sleva 44 %
+						ul.simple
+							li + 5 ks filtrů zadarmo
+							li + standardní doprava zadarmo
+							li + dobírka zadarmo
+							li + 1x vůně zadarmo
+			.container.stripe-buttons
+				.row.resume-prices
+					.col-xs-8
+						h3.h4
+							| Ušetříte
+					.col-xs-4
+						h3.h4
+							| 23,98 €
+					.col-xs-8
+						h3.h4
+							strong Celkem za zboží
+					.col-xs-4
+						h3.h4
+							strong 45,98 €
+				.row
+					.col-xs-2.col-sm-4
+						a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="detail.html")
+							span.glyphicon.glyphicon-chevron-left(aria-hidden='true') 
+							span.hidden-xs Zpět k nákupu
+					.col-xs-10.col-sm-6.col-sm-offset-2
+						a.btn.btn-primary.btn-lg.btn-block(href="#step-02", data-scroll)
+							| Pokračovat 
+							span.glyphicon.glyphicon-chevron-down(aria-hidden='true')
+						p Přejdete k výběru dopravy a platby
+			form.form-horizontal
+				.container.cart-choices#step-02
+					.row
+						.col-xs-12
+							ul.cart-steps.cart-steps--four
+								li.cart-steps__step.cart-steps__step--done
+									h6.cart-steps__title Košík
+								li.cart-steps__step.cart-steps__step--current
+									h6.cart-steps__title Doprava a platba
+								li.cart-steps__step.cart-steps__step
+									h6.cart-steps__title Dodací údaje
+								li.cart-steps__step.cart-steps__step--final
+									h6.cart-steps__title Souhrn
+					.row
+						.col-xs-12
+							h2.h1 Doprava a platba
+					.row
+						.col-sm-5.col-xs-12
+							.row
+								.col-xs-12
+									h3.h5 Doprava
+							.row.choice
+								.col-xs-9
+									| Dopravné (doprava zdarma)
+								.col-xs-3.cart-price
+									| 0 €
+							.row.choice
+								.col-xs-9
+									.checkbox
+										label
+											input(type="checkbox") 
+											| Expresní doručení	
+											span Vaše objednávka bude odeslána do 24 h (€ 2,00 SET)
+								.col-xs-3
+									.info-icon
+										| i
+						.col-sm-5.col-sm-offset-2.col-xs-12
+							.row
+								.col-xs-12
+									h3.h5 Platba
+							.row.choice
+								.col-xs-9
+									.radio
+										label
+											input(type="radio", name="radiosPayment") 
+											| Dobírka 
+											span (€ 0,00)
+								.col-xs-3
+									.info-icon
+										| i
+							.row.choice
+								.col-xs-9
+									.radio
+										label
+											input(type="radio", name="radiosPayment") 
+											| Klasický bankovní převod 
+											span (€ 0,00)
+								.col-xs-3
+									.info-icon
+										| i
+							.row.choice
+								.col-xs-9
+									.radio
+										label
+											input(type="radio", name="radiosPayment") 
+											| Sporopay 
+											span (€ 0,00)
+								.col-xs-3
+									.info-icon
+										| i
+							.row.choice
+								.col-xs-9
+									.radio
+										label
+											input(type="radio", name="radiosPayment") 
+											| VÚB ePlatby 
+											span (€ 0,00)
+								.col-xs-3
+									.info-icon
+										| i
+				.container.stripe-buttons
+					.row.resume-prices
+						.col-xs-8
+							h3.h4
+								strong Cena dopravy a platby
+						.col-xs-4
+							h3.h4
+								strong 0,00 €
+					.row
+						.col-xs-2.col-sm-2
+							a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="#step-01", data-scroll)
+								span.glyphicon.glyphicon-chevron-up(aria-hidden='true')
+						.col-xs-10.col-sm-6.col-sm-offset-4
+							a.btn.btn-primary.btn-lg.btn-block(href="#step-03", data-scroll) 
+								| Pokračovat 
+								span.glyphicon.glyphicon-chevron-down(aria-hidden='true')
+							p Přejdete k dodacím údajům
+				.container.cart-choices#step-03
+					.row
+						.col-xs-12
+							ul.cart-steps.cart-steps--four
+								li.cart-steps__step.cart-steps__step--done
+									h6.cart-steps__title Košík
+								li.cart-steps__step.cart-steps__step--done
+									h6.cart-steps__title Doprava a platba
+								li.cart-steps__step.cart-steps__step--current
+									h6.cart-steps__title Dodací údaje
+								li.cart-steps__step.cart-steps__step--final
+									h6.cart-steps__title Souhrn
+					.row
+						.col-xs-12
+							h2.h1 Dodací údaje
+					.row
+						.col-xs-12
+							h3.h5 Základní informace
+					.row
+						.col-xs-12
+							.col-xs-12.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-name') Jméno
+									input#form-cart-name.form-control(type='text', placeholder='')
+							.col-xs-12.col-sm-5.col-sm-offset-1
+								.form-group
+									label.control-label(for='form-cart-surname') Příjmení
+									input#form-cart-surname.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-12.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-mail') E-mail
+									input#form-cart-mail.form-control(type='email', placeholder='')
+							.clearfix.visible-xs
+							.col-xs-6.col-sm-5.col-sm-offset-1
+								.form-group
+									label.control-label(for='form-cart-phone') Telefon
+									input#form-cart-phone.form-control(type='phone', placeholder='+420')
+					.row
+						.col-xs-12
+							h3.h5 Fakturační adresa
+					.row
+						.col-xs-12
+							.col-xs-12.col-sm-8
+								.form-group
+									label.control-label(for='form-cart-address') Ulice a číslo popisné
+									input#form-cart-address.form-control(type='text', placeholder='')
+							.col-xs-12.col-sm-4.find-butt
+								.form-group
+									a.btn.btn-success.btn-block(href='#') Doplnit adresu
+							.clearfix
+							.col-xs-12.col-sm-8
+								.form-group
+									label.control-label(for='form-cart-name2') Jméno a příjmení
+									input#form-cart-name2.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-10.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-address') Ulice
+									input#form-cart-address.form-control(type='text', placeholder='')
+							.col-xs-2.col-sm-2.col-sm-offset-1
+								.form-group
+									label.control-label(for='form-cart-address-cp') č.p.
+									input#form-cart-address-cp.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-12.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-city') Město
+									input#form-cart-city.form-control(type='text', placeholder='')
+							.col-xs-6.col-sm-2.col-sm-offset-1
+								.form-group
+									label.control-label(for='form-cart-address-psc') PSČ
+									input#form-cart-address-psc.form-control(type='text', placeholder='')
+					//- Company info
+					.row.choice
+						.col-xs-12
+							.checkbox
+								h3.h5
+									label
+										input#cart-toggle-company-cb(type="checkbox") 
+										| Chci doplnit firemní údaje (IČ, DIČ,…)
+						.col-xs-12#cart-toggle-company
+							.col-xs-12.col-sm-5
+								.form-group
+									label.control-label(for='form-company-ic') IČO Vaší firmy
+									input#form-cart-company-ic.form-control(type='text', placeholder='')
+							.col-xs-12.col-sm-4.find-butt
+								.form-group
+									a.btn.btn-success.btn-block(href='#') Doplnit údaje o firmě
+							.clearfix
+							.col-xs-5
+								.form-group
+									label.control-label(for='form-cart-company-dic') DIČ
+									input#form-cart-company-dic.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-5
+								.form-group
+									label.control-label(for='form-cart-company-icdph') IČ DPH
+									input#form-cart-company-icdph.form-control(type='text', placeholder='')
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-cart-company-name') Název firmy
+									input#form-cart-company-name.form-control(type='text', placeholder='')
+									.clearfix
+									.col-xs-10.col-sm-5
+										.form-group
+											label.control-label(for='form-cart-company-address') Ulice
+											input#form-cart-company-address.form-control(type='text', placeholder='')
+									.col-xs-2.col-sm-2.col-sm-offset-1
+										.form-group
+											label.control-label(for='form-cart-company-address-cp') č.p.
+											input#form-cart-company-address-cp.form-control(type='text', placeholder='')
+									.clearfix
+									.col-xs-12.col-sm-5
+										.form-group
+											label.control-label(for='form-cart-company-city') Město
+											input#form-cart-company-city.form-control(type='text', placeholder='')
+									.col-xs-6.col-sm-2.col-sm-offset-1
+										.form-group
+											label.control-label(for='form-cart-company-address-psc') PSČ
+											input#form-cart-company-address-psc.form-control(type='text', placeholder='')
+
+					//- Different address
+					.row.choice
+						.col-xs-12
+							.checkbox
+								h3.h5
+									label
+										input#cart-toggle-another-address-cb(type="checkbox") 
+										| Chci doručit na jinou než fakturační adresu
+						.col-xs-12#cart-toggle-another-address
+							.col-xs-12.col-sm-6
+								.form-group
+									label.control-label(for='form-cart-another-name') Jméno a příjmení
+									input#form-cart-another-name.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-12.col-sm-6
+								.form-group
+									label.control-label(for='form-cart-another-company') Název firmy
+									input#form-cart-another-company.form-control(type='text', placeholder='')
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-cart-another-address') Ulice a číslo popisné
+									input#form-cart-another-address.form-control(type='text', placeholder='')
+							.clearfix
+							.col-xs-12.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-another-city') Město
+									input#form-cart-another-city.form-control(type='text', placeholder='')
+							.clearfix.visible-xs
+							.col-xs-6.col-sm-3.col-sm-offset-1
+								.form-group
+									label.control-post(for='form-cart-another-post') PSČ
+									input#form-cart-another-post.form-control(type='number', placeholder='')
+							.clearfix
+							.col-xs-6.col-sm-5
+								.form-group
+									label.control-label(for='form-cart-another-phone') Telefon
+									input#form-cart-another-phone.form-control(type='phone', placeholder='+420')
+				.container
+					.row
+						.col-xs-12
+							h3.h5 Ostatní informace pro e-shop
+					.row.choice
+						.col-xs-12
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-cart-note') Upřesnění objednávky
+									textarea#form-cart-note.form-control(rows='3')
+					.row.choice
+						.col-xs-12.col-sm-6
+							.checkbox
+								label
+									input(type="checkbox") 
+									strong Souhlasím s obchodními podmínkami
+						.col-xs-12.col-sm-6
+							.checkbox
+								label
+									input(type="checkbox") 
+									| Chci získávat novinky
+				.container.stripe-buttons
+					.row
+						.col-xs-2.col-sm-2
+							a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="#step-02", data-scroll) 
+								span.glyphicon.glyphicon-chevron-up(aria-hidden='true')
+						.col-xs-10.col-sm-6.col-sm-offset-4
+							a.btn.btn-primary.btn-lg.btn-block(href="souhrn.html") 
+								| Souhrn objednávky
+								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+							p Zkontrolujete si ještě jednou svou objednávku a pak ji můžete v klidu odeslat
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

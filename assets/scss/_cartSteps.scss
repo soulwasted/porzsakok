@@ -1,0 +1,99 @@
+
+.content ol,
+.content ul,
+.form-item,
+.views-row {
+	/*changed from #content ul so standard bullet lists show the circles*/
+	margin: 0 0 15px;
+	padding: 0;
+}
+.cart-steps {
+	// over: hidden;
+	// width: 120%;
+	text-align: center;
+	list-style: none;
+	margin-left: -15%;
+	margin-right: -5%;
+	// Reset our counter for each cart step.
+	// http://css-tricks.com/almanac/properties/c/counter-increment/
+	counter-reset: cart-steps-counter;
+}
+.cart-steps__step {
+	float: left;
+	width: 33.33%;
+	margin: 0;
+	padding: 1em 0;
+	color: $gray;
+	position: relative;
+	// Increment the counter for each step.
+	counter-increment: cart-steps-counter;
+	&:before {
+		// Display the current count.
+		content: counter(cart-steps-counter);
+		display: inline-block;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 34px;
+		// change to variable and darken.
+		background-color: $gray-light;
+	}
+	&:after {
+		content: "";
+		border-top: 4px solid $gray-light;
+		z-index: -1;
+		position: absolute;
+		width: 92%;
+		right: -46%;
+		// Use pixels for the top so if one column is longer then the other,
+		// the position from top doesn't change.
+		top: 29px;
+	}
+}
+// Modifier for four steps instead of the normal three.
+.cart-steps--four {
+	.cart-steps__step {
+		width: 25%;
+	}
+}
+// Once the step is done, add this class.
+.cart-steps__step--done {
+	&:before {
+		// change to check mark
+		content: url("http://i.imgur.com/LVVux1s.png");
+		// change to variable
+		background-color: $brand-primary;
+	}
+	// The border after the done item is green.
+	&:after {
+		border-top: 4px solid $brand-primary;
+		z-index: -1;
+	}
+	// Fade out the step information.
+	.cart-steps__desc,
+	.cart-steps__title {
+		// opacity: 0.5;
+	}
+}
+.cart-steps__step--current {
+	&:before {
+		// change to variable
+		background-color: $brand-primary;
+		color: white;
+	}
+}
+// To support IE8 we need this class.
+.cart-steps__step--final {
+	&:after {
+		border: 0;
+	}
+}
+.cart-steps__title {
+	line-height: 1.2;
+}
+.cart-steps__desc {
+	// font-size: 12px;
+	line-height: 1.3;
+}

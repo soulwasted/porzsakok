@@ -1,0 +1,36 @@
+$gray:                       #4d4d4d;
+$gray-light:                 #b3b3b3;
+$gray-lighter:               #e6e6e6;
+
+$brand-primary:              #18823a;
+$brand-success:              #0089b0;
+$brand-red:                  #b5143b;
+
+$text-color:                 $gray;
+
+$font-family-open-sans:      "Open Sans", sans-serif;
+$font-family-special:        Sarina, "Open Sans", sans-serif;
+$font-family-base:           $font-family-open-sans;
+
+$font-size-base:             14px;
+$font-size-nav:              ceil(($font-size-base)); // ~14px
+
+$link-color:                 $brand-success;
+
+$border-radius-base:         0;
+$border-radius-large:        0;
+$border-radius-small:        0;
+
+$btn-default-bg:             transparent;
+$btn-default-border:         $brand-success;
+
+$navbar-margin-bottom:       0;
+$navbar-default-border:      $gray-lighter;
+
+$stripes-padding:            60px;
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+// $grid-float-breakpoint:     820px;
+//** Point at which the navbar begins collapsing.
+// $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);

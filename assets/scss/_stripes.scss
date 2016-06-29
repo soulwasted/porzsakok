@@ -1,0 +1,240 @@
+.stripe {
+	text-align: center;
+	padding-bottom: $stripes-padding;
+	h2 {
+		margin-top: 80px;
+		margin-bottom: 60px;
+	}
+	a.btn {
+		margin-top: 30px;
+	}
+	a.btn,
+	button {
+		&:hover {
+			background: $brand-success;
+			color: white;
+		}
+	}
+}
+.stripe-inverse {
+	color: white;
+	background: $brand-success;
+	a {
+		color: white;
+		&.btn {
+			border-color: white;
+			&:hover {
+				background: white;
+				color: $brand-success;
+			}
+		}
+	}
+	b,
+	strong {
+		color: white;
+	}
+}
+.stripe-benefits {
+	@extend .stripe;
+	.icon {
+		width: 90px;
+		height: 90px;
+		background: $brand-success;
+		border-radius: 50%;
+		display: inline-block;
+		i {
+			color: white;
+			font-size: 60px;
+		}
+	}
+	@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+		.row > div:nth-child(4) {
+			clear: both;
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		.row > div:nth-child(3),
+		.row > div:nth-child(5) {
+			clear: both;
+		}
+	}
+}
+.stripe-guarantee {
+	@extend .stripe;
+	@extend .stripe-inverse;
+	background: url('../img/bg-stripe-guarantee.jpg') center center / cover no-repeat;
+	.badge-100 {
+		letter-spacing: 200;
+		text-transform: uppercase;
+		background: url('../img/bg-badge-100.png') center bottom no-repeat;
+		// background-size: 30%;
+		padding-top: 20px;
+		padding-bottom: 12px;
+		margin-bottom: 40px;
+		line-height: 30px;
+		span {
+			font-size: 40px;
+			letter-spacing: 0;
+			font-weight: 700;
+			display: block;
+		}
+	}
+	.star-divider {
+		margin: 15px 0;
+		span:nth-child(1),
+		span:nth-child(5) {
+			opacity: 0.3;
+		}
+		span:nth-child(2),
+		span:nth-child(4) {
+			opacity: 0.7;
+		}
+	}
+}
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+	}
+}
+@keyframes pulse {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+		box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+		box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+		box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+	}
+}
+.stripe-bag {
+	h2 {
+		margin-top: 40px;
+	}
+	@extend .stripe;
+	img.vacs-stripe {
+		max-width: 520px;
+		width: 100%;
+		display: inline-block;
+	}
+	.bag-wrapper {
+		position: relative;
+		background: url('../img/vacs-bag.jpg') center center no-repeat;
+		background-size: contain;
+		background-position: center 70%;
+		padding: 50px 4em 30px;
+		@media (max-width: $screen-sm-max) {
+			padding-left: 0;
+			padding-right: 0;
+			margin-top: -50px;
+		}
+		.circle {
+			width: 24em;
+			height: 24em;
+			padding: 2.8em;
+			/*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+			border: 1px solid $brand-success;
+			border-radius: 50%;
+			@media (max-width: $screen-xs-max) {
+				border-radius: 0;
+				border: none;
+				width: 100%;
+				height: auto;
+			}
+			margin: 0 auto;
+			a.poi {
+				display: inline-block;
+				width: 6em;
+				height: 6em;
+				/* 2em = 4em/2 */
+				border-radius: 50%;
+				// width: 90px;
+				// height: 90px;
+				background: white;
+				// background: rgba(255,255,255,0.8);
+				border: 1px solid $gray-light;
+				box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+				animation: pulse 2s infinite;
+				cursor: pointer;
+				&:hover {
+					animation: none;
+					background: $brand-success;
+					border: none;
+					box-shadow: 0 0 0 10px $brand-success;
+					i {
+						color: white;
+					}
+				}
+				i {
+					color: $brand-success;
+					font-size: 70px;
+					line-height: 80px;
+					&::before {
+						margin: 0;
+					}
+					&.icon-pic-clock {
+						font-size: 60px;
+					}
+				}
+				@media (min-width: $screen-sm-min) {
+					display: block;
+					margin: -3em;
+					overflow: hidden;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					&.one {
+						transform: rotate(300deg) translate(12em) rotate(-300deg);
+					}
+					&.two {
+						transform: translate(12em);
+					}
+					/* 12em = half the width of the wrapper */
+					&.three {
+						transform: rotate(60deg) translate(12em) rotate(-60deg);
+					}
+					&.four {
+						transform: rotate(120deg) translate(12em) rotate(-120deg);
+					}
+					&.five {
+						transform: translate(-12em);
+					}
+					&.six {
+						transform: rotate(240deg) translate(12em) rotate(-240deg);
+					}
+				}
+			}
+		}
+	}
+	#accordion {
+		text-align: left;
+		margin-top: 40px;
+	}
+}
+.stripe-contact {
+	@extend .stripe;
+	@extend .stripe-inverse;
+	background: url('../img/bg-stripe-contact.jpg') center center / cover no-repeat;
+}
+.stripe-order {
+	@extend .stripe;
+	@media (min-width: $screen-sm-min) {
+		.form-inline {
+			.btn,
+			.input-group {
+				margin-right: 20px;
+				min-width: 230px;
+			}
+			// text-align: left;
+		}
+	}
+}

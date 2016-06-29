@@ -1,0 +1,190 @@
+#funny {
+	display: flex;
+}
+.sr .reveal {
+	visibility: hidden;
+	perspective: 800px;
+}
+.btn {
+	font-weight: 700;
+	&.back {
+		@extend .btn;
+		background: $gray;
+		color: white;
+		font-weight: 500;
+		.glyphicon {
+			margin-right: 10px;
+		}
+	}
+}
+.btn-higher {
+	height: 50px;
+	line-height: 50px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.btn-high {
+	height: 45px;
+	line-height: 45px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.btn-group {
+	.btn {
+		height: 40px;
+		line-height: 40px;
+		min-width: 40px;
+	}
+}
+input[type="email"],
+input[type="number"],
+input[type="text"] {}
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"],
+.radio input[type="radio"],
+.radio-inline input[type="radio"] {
+	width: 24px;
+	height: 24px;
+	margin-left: -30px;
+	margin-top: -3px;
+}
+.checkbox label,
+.radio label {
+	padding-left: 30px;
+}
+hr {
+	// margin: 15px -15px;
+	padding: 0 !important;
+}
+.container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $gray-lighter;
+	@media screen and (max-width: $screen-xs-max) {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+}
+nav .container {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border: 0 !important;
+}
+.breadcrumb {
+	border-bottom: 1px solid $gray-lighter;
+	background: none;
+	font-size: 12px;
+	padding-left: 0;
+	padding-right: 0;
+	display: inline-block;
+}
+ul.simple {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.readmore {
+	@media screen and (max-width: $screen-xs-max) {
+		max-height: 6em;
+	}
+}
+@media (min-width: 768px) {
+	.form-horizontal .control-label {
+		text-align: left;
+	}
+}
+ul.list-links {
+	width: 100%;
+	column-count: 5;
+	@media screen and (max-width: $screen-xs-max) {
+		column-count: 3;
+	}
+	li {
+		list-style: none;
+		list-style-position: inside;
+		text-align: left;
+		display: inline-block \9;
+		width: 20% \9;
+		a {
+			display: block;
+			text-decoration: underline;
+			font-size: 14px;
+			font-weight: 700;
+			padding: 10px 0;
+			&:hover {
+				// background: $gray-lighter;
+				// color: white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+ul.list-models {
+	column-count: 3;
+	padding-left: 0;
+	padding-bottom: $stripes-padding;
+	@media screen and (max-width: $screen-xs-max) {
+		column-count: 2;
+	}
+}
+ul.list-brands {
+	column-count: 3;
+	padding: 30px 0 $stripes-padding;
+	@media screen and (max-width: $screen-xs-max) {
+		column-count: 2;
+	}
+}
+.prices-after,
+.prices-before,
+.resume-bonuses {
+	h4 {
+		margin: 0;
+	}
+	text-align: right;
+}
+@media screen and (max-width: $screen-xs-max) {
+	.prices-before {
+		text-align: left;
+	}
+}
+.label11 {
+	font-size: 1.1em;
+	text-align: left;
+	margin: 0;
+	padding-top: 9px;
+	li {
+		padding-left: 50px;
+		margin-bottom: 30px;
+		list-style: none;
+	}
+}
+.glyphicon-paperclip {
+	margin-left: -40px;
+	padding-right: 20px;
+}
+.kasicky {
+	margin-bottom: 30px;
+}
+.person-desc {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	font-size: 1.2em;
+}
+@media (max-width: $screen-xs-max) {
+	.kasicka {
+		.person-desc {
+			text-align: left;
+		}
+	}
+	.photo {
+		text-align: center;
+	}
+	body.contact {
+		.fotky {
+			img {
+				width: 50%;
+			}
+		}
+	}
+}

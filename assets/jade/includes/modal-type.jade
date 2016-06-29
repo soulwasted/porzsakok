@@ -1,0 +1,24 @@
+// Modal
+#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-body
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') × 
+				h3 Model vašeho vysavače najdete na spodním štítku:
+				img(src="./img/find-model.jpg" alt="Najděte model")
+				br
+				button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Už vím!
+				p 
+					| Nenašli jste svůj model vysavače?
+				p
+					| To ale nemusí znamenat, 
+					| že pro Váš vysavač nemáme sáček. 
+				p
+					| Zavolejte nám 
+					strong +421 948 394 420
+					|, 
+					br
+					| nebo nám napište na 
+					strong
+						a(href="mailto:info@vrecka-vysavace.sk") info@vrecka-vysavace.sk

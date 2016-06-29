@@ -1,0 +1,20 @@
+body.modal-open .main {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+.modal-backdrop {
+    background-color: white;
+}
+.modal-content {
+    box-shadow: none;
+    border: none;
+    .modal-body {
+        text-align: center;
+        .btn {
+            margin: 20px 0;
+        }
+    }
+}

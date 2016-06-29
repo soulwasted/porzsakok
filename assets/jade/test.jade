@@ -1,0 +1,15 @@
+doctype html
+html(lang='en')
+	- var title= "Košík"
+	include ./includes/head.jade
+	body.cart
+		.row
+			ul.cart-steps.cart-steps--four
+				li.cart-steps__step.cart-steps__step--done
+					h6.cart-steps__title Košík
+				li.cart-steps__step.cart-steps__step--done
+					h6.cart-steps__title Doprava a platba
+				li.cart-steps__step.cart-steps__step--current
+					h6.cart-steps__title Dodací údaje
+				li.cart-steps__step.cart-steps__step--final
+					h6.cart-steps__title Souhrn

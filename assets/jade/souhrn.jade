@@ -1,0 +1,98 @@
+doctype html
+html(lang='en')
+	- var title= "Souhrn objednávky"
+	include ./includes/head.jade
+	body.cart-resume
+		.main
+			include ./includes/nav.jade
+			.container
+				.row
+					.col-xs-12.col-sm-8.col-sm-offset-2
+						.row
+							.col-xs-12
+								ul.cart-steps.cart-steps--four
+									li.cart-steps__step.cart-steps__step--done
+										h6.cart-steps__title Košík
+									li.cart-steps__step.cart-steps__step--done
+										h6.cart-steps__title Doprava a platba
+									li.cart-steps__step.cart-steps__step--done
+										h6.cart-steps__title Dodací údaje
+									li.cart-steps__step.cart-steps__step--current.cart-steps__step--final
+										h6.cart-steps__title Souhrn
+						.row
+							.col-xs-12
+								h1 Souhrn objednávky
+						hr
+						.row
+							.col-xs-12.col-sm-6
+								h4.h5 Fakturační údaje
+								| Josef Strapáč
+								br
+								| Ke Statku 2
+								br
+								| 12345
+								br
+								| Brno
+							.col-xs-12.col-sm-6
+								h4.h5 Kontakt
+								| josef.strapac@gmail.com
+								br
+								| +420 123 456 789
+						hr
+						.row
+							.col-xs-12
+								h4.h5 Košík
+								.row.item
+									h2.h4.col-xs-8
+										strong Sáčky pro ELECTROLUX UltraOne Z 8810
+									h5.col-xs-4.price
+										| 23.99 €
+								.row.item
+									h2.h4.col-xs-8
+										strong Sáčky pro AEG Z2
+									h5.col-xs-4.price
+										| 3.92 €
+								br
+								h4.h5
+									strong sleva 44 %
+								ul.simple
+									li + 5 ks filtrů zadarmo
+									li + standardní doprava zadarmo
+									li + dobírka zadarmo
+									li + 1x vůně zadarmo
+						hr
+						.row
+							.col-xs-12
+								.row.resume-prices
+									.col-xs-8
+										h3.h5 Dopravné
+									.col-xs-4
+										h3.h5 0 €
+									.col-xs-8
+										h3.h5 Klasický bankovní převod
+									.col-xs-4
+										h3.h5 0 €
+									.col-xs-8
+										h3.h5 Zboží
+									.col-xs-4
+										h3.h5 45,98 €
+									.col-xs-8
+										h3.h4
+											strong Celkem k úhradě
+									.col-xs-4
+										h3.h4
+											strong 45,98 €
+			.container.stripe-buttons
+				.row
+					.col-xs-2.col-sm-3.col-sm-offset-2.col-md-2
+						a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="kosik.html")
+							span.glyphicon.glyphicon-chevron-left(aria-hidden='true') 
+							span.hidden-xs Zpět do košíku
+					.col-xs-10.col-sm-5.col-md-offset-1
+						a.btn.btn-primary.btn-lg.btn-block(href="#step-02")
+							| Odeslat objednávku
+							span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+						p Tímto odešlete objednávku a obdržíte potvrzení o objednávce
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

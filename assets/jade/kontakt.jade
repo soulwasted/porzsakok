@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+	- var title= "Kontakt"
+	include ./includes/head.jade
+	body.contact.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='index.html') Úvodní strana
+					li.active Kontakt
+				h1
+					//- i.glyphicon.glyphicon-envelope
+					|  Kontakt
+				#content
+					h4
+						strong
+							| Chcete si objednať vrecká do vysávača? Máte otázku alebo pripomienku? Neváhajte nás kontaktovať!
+					.row
+						.col-sm-5.kontakt-info
+							br
+							br
+							img(src='https://vrecka-vysavace.sk/images/zakaznicky_servis.jpg', alt='Zákaznický servis', width='90%')
+							h3
+								span.glyphicon.glyphicon-phone-alt
+								|  + 421 948 394 420
+							div každý pracovný deň: 8:00 - 17:00
+							h3
+								span.glyphicon.glyphicon-envelope
+								a(href='mailto:info@vrecka-vysavace.sk')  info@vrecka-vysavace.sk
+							div Na Vaše e-maily odpovieme čo najskôr, najneskôr však do 24 hodín.
+						.col-sm-7.text-center.fotky
+							h3 Tím VACS Slovakia s.r.o.
+							.col-sm-6.kasicky
+								img(src='https://vrecka-vysavace.sk/images/akasicky_web.jpg', alt='Ing. Andrej Kašický', width='90%')
+								h4 Ing. Andrej Kašický
+								h5 konateľ
+							.col-sm-6.kasicka
+								img(src='https://vrecka-vysavace.sk/images/jkasicka_web.jpg', alt='Ing. Jana Kašická', width='90%   ')
+								h4 Ing. Jana Kašická
+								h5 konateľka
+					h4
+						strong Chcete reklamovať objednávku?
+					.row.label11
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Otázky spojené s prípadnou reklamáciou zasielajte na adresu 
+								strong
+									a(href='mailto:info@vrecka-vysavace.sk') info@vrecka-vysavace.sk
+								br
+								| Na Vaše reklamácie budeme reagovať čo najskôr, najneskôr však do 24 hodín.
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Pokiaľ chcete zaslať reklamovaný tovar poštou, zašlite ho prosím na adresu:
+								br
+								br
+								strong
+									| VACS Slovakia s.r.o.
+									br
+									| Opavská 8
+									br
+									| 831 01 Bratislava – Nové Mesto
+					h4
+						strong Fakturačné údaje
+					.row.label11.text-justify
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong
+									| VACS Slovakia s.r.o.
+									br
+									| Opavská 8
+									br
+									| 831 01 Bratislava – Nové Mesto
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  IČ: 48136522, DIČ: 2120073802
+								br
+								| Spoločnosť je registrovaná v Obchodnom registri Okresného súdu Bratislava I, Oddiel: Sro, Vložka č. 104284/B.
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong
+									a(href='/images/zl.pdf') Osvedčenie o živnostenskom oprávnení
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong
+									a(href='http://www.orsr.sk/vypis.asp?ID=327495&SID=2&P=0') Výpis z Obchodného registra
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong
+									a(href='/images/certifikat-175-vrecka-vysavace.pdf') Certifikát "bezpečný nákup"
+					h4
+						strong Naše bankové účty
+					.row.label11.text-justify
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Slovenská sporiteľňa, a.s.
+								br
+								| Číslo účtu: 5070409285/0900
+								br
+								| Mena účtu: EUR
+								br
+								| Číslo účtu IBAN: SK72 0900 0000 0050 7040 9285
+								br
+								| BIC – SWIFT kód Slovenskej sporiteľne, a.s.: GIBASKBX
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  VÚB, a.s.
+								br
+								| Číslo účtu: 3522962753/0200
+								br
+								| Mena účtu: EUR
+								br
+								| Číslo účtu IBAN: SK96 0200 0000 0035 2296 2753
+								br
+								| BIC – SWIFT kód VÚB, a.s.: SUBASKBX
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

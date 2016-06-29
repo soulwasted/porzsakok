@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-sass-test",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "ekko-lightbox": "^4.0.2",
+    "nouislider": "^8.5.1"
+  },
+  "devDependencies": {
+    "scrollreveal": "^3.1.4"
+  }
+}

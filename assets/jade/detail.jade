@@ -1,0 +1,177 @@
+doctype html
+html(lang='en')
+	- var title= "Detail"
+	include ./includes/head.jade
+	body.detail
+		.main
+			include ./includes/nav.jade
+			//- .container
+			//- 	.row
+			//- 		a.btn.back(href='#')
+			//- 			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+			//- 			| Zpět na modely vysavače Philips
+			.container
+				.row
+					.col-xs-12
+						h1.h3
+							| Sáčky do vysavače PHILIPS Vision Vitall: 
+							strong HR 6340-6800, HR 6938-6939, HR 6983
+			.container-fluid.sliderWrapper
+				.container
+					.row
+						.col-xs-12
+							h4 Vyberte si počet sáčků…
+					.row.sliderRow
+						.col-xs-12.col-sm-8
+							.row
+								.col-xs-12
+									#slider
+										//- .gap
+							.row.sliderBenefits
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span 4 EUR
+									.benefit
+										.icon
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 0%
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span zdarma
+									.benefit
+										.icon
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 22%
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span zdarma
+									.benefit
+										.icon
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 33%
+									.benefit
+										.icon
+											i.icon-gift(aria-hidden='true')
+										.text 1 vůně 
+											span zdarma
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span zdarma
+									.benefit
+										.icon
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 44%
+									.benefit
+										.icon
+											i.icon-gift(aria-hidden='true')
+										.text 2 vůně 
+											span zdarma
+						.col-xs-12.col-sm-4
+							.row
+								.col-xs-12
+									.stepper
+										#stepperMinus
+											span.glyphicon.glyphicon-minus(aria-hidden='true')
+										input#sliderInput(type="number" value="2")
+										#stepperPlus
+											span.glyphicon.glyphicon-plus(aria-hidden='true')
+									.stepperLabel sáčků
+							.row.discounts.hidden-xs
+								include includes/detail-summary.jade
+					.row.discounts.visible-xs
+						include includes/detail-summary.jade
+					.row
+						.col-xs-12
+							p.note Ke každým 4 sáčkům obdržíte 1 filtr zdarma. Nyní získáte 
+								strong 10 filtrů zdarma!
+			.container.cartButtons
+				.row
+					.col-xs-12.col-sm-4
+						a.btn.btn-primary.btn-lg.btn-block(href="#") Vložit do košíku
+					.col-xs-12.col-sm-8
+						span nebo 
+						a.btn.btn-default#btnOnePiece(href="#") Chcete vyzkoušet 1 sáček zdarma?
+						span  (zaplatíte pouze 4€ za dopravu)
+			.container
+				.row
+					.col-sm-6.hidden-xs.gallery
+						a(href='./img/vacs-bag/vacs-bag-detail-03-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+							img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-03-tn.jpg' alt="fotka sáčku")
+					.col-xs-12.col-sm-6
+						p
+							strong.info Skladem: 
+							strong Ano
+						p
+							strong.info Materiál:
+							|  Antibakteriální filtrační netkaná textilie
+						p
+							strong.info Počet filtračných vrestev: 
+							strong 5
+						p
+							| Sáčky pro vysavač ELECTROLUX UltraOne Z 8810 od značky VACS sú kvalitnejšou alternatívou bežných papierových sáčků, ktoré sú obvykle zložené iba z dvoch vrstiev s nižšou filtračnou schopnosťou. Tieto vrecká sú plnohodnotnou alternatívou k originálnemu výrobku.
+						.visible-xs
+							a(href='./img/vacs-bag/vacs-bag-detail-03-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+								img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-03-tn.jpg' alt="fotka sáčku")
+						.row
+							.col-xs-12.gallery
+							//- .col-xs-12
+							//- 	h2.h3 Fotografie
+							.col-xs-4
+								a(href='./img/vacs-bag/vacs-bag-detail-01-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-01-tn.jpg' alt="fotka sáčku")
+							.col-xs-4
+								a(href='./img/vacs-bag/vacs-bag-detail-02-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-02-tn.jpg' alt="fotka sáčku")
+							.col-xs-4
+								a(href='./img/vacs-bag/vacs-bag-detail-04-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-04-tn.jpg' alt="fotka sáčku")
+			.container
+				.row
+					.col-xs-12
+						h2.h3 Tento typ sáčku se hodí i do těchto modelů vysavačů značky ELECTROLUX:
+				.row
+					.col-xs-12
+						p.readmore
+							include ./includes/detail-more-models.jade
+			.container.recommendation
+				.row
+					.col-xs-12
+						h2.h3 Doporučujeme
+				.row
+					- for (var x = 0; x < 12; x++)
+						.col-xs-12.col-sm-6.col-md-4
+							.item
+								img
+								div
+									h5 Vůně do vysavače - citrónová TEST
+									p 
+										strong.info Balení obsahuje: 
+										strong 5 
+										| vonných tyčinek
+										br
+										strong.info Skladem: 
+										strong Ano
+										br
+										strong.info Cena: 
+										strong 0.01 €
+									a.btn.btn-primary.btn-sm(href="#") Vložit do košíku
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+	include ./includes/scripts.jade	
+	script(src='js/slider.js')

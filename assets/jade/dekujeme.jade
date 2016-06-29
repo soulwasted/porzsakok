@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+	- var title= "Děkujeme za objednávku"
+	include ./includes/head.jade
+	body
+		.main
+			include ./includes/nav.jade
+			.container
+				.row
+					.col-xs-12
+						h1 Děkujeme za Vaši objednávku
+					.col-xs-12
+						p Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu. Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně, balónky působí jako jakási fata morgána uprostřed pouště.
+			.container.stripe-buttons
+				.row
+					.col-xs-12.text-center
+						a.btn.btn-primary.btn-lg(href="index.html")
+							span.glyphicon.glyphicon-home(aria-hidden='true')
+							|  Zpět na úvodní stranu
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

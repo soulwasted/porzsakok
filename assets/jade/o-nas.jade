@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+	- var title= "O nás"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='index.html') Úvodní strana
+					li.active O nás
+				h1
+					//- i.glyphicon.glyphicon-user
+					|  O nás
+				#top
+					#content
+						div
+							| Prevádzkovateľom e-shopu vrecka-vysavace.sk je nová slovenská firma VACS Slovakia s.r.o. Sme výhradným distribútorom kvalitnej českej značky vreciek do vysávačov VACS na Slovensku. Výrobcom vreciek je česká firma VACS FACTORY s.r.o. z Litomyšle.
+						br
+						.row
+							.col-sm-12.kasicky
+								.col-sm-3.photo
+									img(src='https://vrecka-vysavace.sk/images/akasicky.png', alt='Ing. Andrej Kašický')
+								.col-sm-8.col-sm-offset-1.col-md-9.col-md-offset-0.person-desc
+									strong.text-primary Andrej Kašický
+									|  je spoluzakladateľom obchodu vrecka-vysavace.sk a konateľom firmy VACS Slovakia s.r.o.
+									br
+									br
+									em
+										| Mojou hlavnou úlohou vo firme je, aby ste boli informovaní o všetkých našich produktoch či akciách. Pripravujem plány na ďalší rozvoj firmy s cieľom zlepšovať služby pre Vás – zákazníkov.
+						.row
+							.col-sm-12.text-right.kasicka
+								.col-sm-8.person-desc
+									strong.text-primary Jana Kašická
+									|  je tiež spoluzakladateľkou obchodu a konateľkou firmy.
+									br
+									br
+									em
+										| Vo firme mám na starosti hlavne komunikáciu so zákazníkmi, vybavovanie reklamácií, jednoducho maximálnu spokojnosť Vás – zákazníkov.
+								.col-sm-3.photo
+									img(src='https://vrecka-vysavace.sk/images/jkasicka.png', alt='Ing. Jana Kašická')
+						h2 Na začiatok príbeh zo života
+						div
+							| Možno ste už niekedy zažili tento príbeh. Kúpite si cenovo výhodný vysávač - napríklad v nejakom e-shope na internete, v hypermarkete alebo v elektropredajni. V lepšom prípade k nemu dostanete aj pár náhradných vreciek, ktoré sa čoskoro minú. A práve v tejto chvíli začína to pravé martýrium.
+						br
+						div
+							| Ako prvá myšlienka Vás napadne pozrieť sa na náhradné vrecká v e-shope, kde ste vysávač kúpili, alebo sa opýtať v kamennom obchode, možno v hypermarkete. Tam ale čoskoro zistíte, že náhradné vrecká do Vášho zánovného vysávača nemajú a dokonca predavač ani nevie, či vôbec niekedy budú mať. Dostanete ale ďalší nápad a zájdete do miestnej elektropredajne, kde sa Vás opýtajú: „Do akého typu vysávača? Takúto značku vysávača tu vôbec nevedieme, ani vrecká nemáme, ktoré by do neho pasovali."
+						br
+						div
+							| Tento príbeh by mohol mať samozrejme ďalšie pokračovanie alebo mnoho iných variant, rovnako ako je pestrofarebný každodenný život. Cieľom nie je ohovárať e-shopy, hypermarkety, nekvalitné značky vysávačov, neochotných alebo nekompetentných predavačov. Chceli sme Vás len uistiť, že tento a iné podobné problémy poznáme a radi by sme Vám s ich riešením pomohli.
+						br
+						div
+							| E-shop vrecka-vysavace.sk je výhradným distribútorom kvalitných českých vreciek do vysávačov VACS a môžeme Vám garantovať toto:
+							ul
+								li dodáme Vám vrecká do akejkoľvek značky či typu vysávača
+								li
+									| je nám jedno či máte doma vysávač značkový, alebo neznačkový, či ste ho kúpili v hypermarkete, v e-shopu na internete alebo v miestnej elektropredajni
+								li vrecká VACS sú dobrou voľbou, ak hľadáte najlepší pomer "cena - kvalita".
+						h2 História značky VACS
+						div
+							| Drvivá väčšina vreciek pochádza z Číny. Ázijská veľmoc exportuje vrecká papierové, textilné alebo aj pre alergikov. Vrecká z Číny majú dokonca mená originálnych značiek vysávačov. Sú ale ázijské vrecká a filtre kvalitné? Odpoveď na túto otázku prenecháme skúšobným ústavom Slovenskej obchodnej inšpekcii alebo časopisu dTest. Keď však uvážime nekonečné príbehy o tom, čo všetko sú Číňania schopní predať ako „bezpečné" potraviny alebo hračky pre deti, tak ani v odvetví vreciek do vysávačov nie je možné dôverovať ázijskej veľkoprodukcii. Je známe, že nekvalitné vrecká do vysávačov vypúšťajú cez filter a systém vysávača do vzduchu množstvo prachu, ktoré je škodlivé najmä pre deti a alergikov.
+						br
+						div
+							| Vyššie uvedené skutočnosti boli podnetom pre bývalého manažéra známej značky bielej techniky v Českej republike Ondreja Macka, aby sa venoval dlhodobému sústredenému vývoju vreciek do vysávačov. Tento vývoj bol časovo, technicky a finančne veľmi náročný, ale nakoniec sa to podarilo. Vďaka nemu a jeho manželke vyrába rodinná firma VACS FACTORY v Litomyšli široký sortiment vreciek značky VACS do všetkých známych a používaných vysávačov na slovenskom a českom trhu.
+						br
+						div
+							| Česká značka VACS znamená osvedčenú kvalitu za veľmi priaznivú cenu.
+						h2 Podčiarknuté, zrátané!
+						div
+							| Česká značka - česká kvalita, viac než 15 000 druhov vreciek do vysávačov za priaznivú cenu, k nákupu darček a poštovné zadarmo! Viete o inom obchode s vreckami do vysávačov, ktorý má rovnaké výhody?
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

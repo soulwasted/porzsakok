@@ -1,0 +1,15 @@
+body.home h1.special,
+body.home p.lead,
+body.home p.lead strong {
+	color: white;
+}
+.search {
+	background: url("../img/porzsakok-carpet.jpg") center center no-repeat;
+}
+#search-brand select {
+    background-image: none !important;
+}
+ul.list-links li {
+    display: inline-block;
+    width: 20%;
+}
