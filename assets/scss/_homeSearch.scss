@@ -3,7 +3,8 @@
 	// background: $gray-lighter;
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%), url("../img/search-bg.jpg") center center no-repeat;
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%), url("../img/porzsakok-carpet3.jpg") center center no-repeat;
-	background: url("../img/porzsakok-carpet4.jpg") center center no-repeat;
+	// background: url("../img/porzsakok-carpet.jpg") center center no-repeat;
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
 	background-size: cover;
 	& > .container {
 		display: flex;
@@ -20,13 +21,13 @@
 	.intro {
 		padding: 20px 0;
 		h1 {
-			color: white;
+			// color: white;
 		}
 		p.lead {
-			color: white;
+			// color: white;
 			font-size: 24px;
 			strong {
-				color: white;
+				// color: white;
 			}
 			@media (max-width: $screen-sm-max) {
 				font-size: 18px;

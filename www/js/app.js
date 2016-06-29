@@ -15,6 +15,20 @@
             $("#cart-toggle-another-address").slideToggle();
         });
 
+        // add class to nav when scrolled
+        $(window).scroll(function() {
+            var nav = $('nav.navbar');
+            var top = 80;
+            if ($(window).scrollTop() >= top) {
+
+                nav.addClass('fixed');
+
+            } else {
+                nav.removeClass('fixed');
+            }
+        });
+
+
         // Executes only in XS breakpoint
         if (viewport.is('<=sm')) {
             funcReadMore();
@@ -85,8 +99,8 @@ function revealThings() {
     // Add class to <html> if ScrollReveal is supported
     if (sr.isSupported()) {
         document.documentElement.classList.add('sr');
-        if ($('.benefits .benefit').length != 0) {
-            sr.reveal('.benefits .benefit', customReveal, seqDelay);
+        if ($('.stripe-benefits .benefit').length != 0) {
+            sr.reveal('.stripe-benefits .benefit', customReveal, seqDelay);
         }
         sr.reveal('.reveal', customReveal);
     }

@@ -1,7 +1,12 @@
 .navbar {
 	background: white;
-	background: rgba(255,255,255,0.9);
-	border-bottom: 1px solid $navbar-default-border;
+	// background: rgba(255,255,255,0.9);
+	// border-bottom: 1px solid $navbar-default-border;
+	border-bottom: none;
+    transition: box-shadow 0.5s linear;
+    &.fixed {
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    }
     .navbar-nav {
         // display: inline-block;
         // float: none;
@@ -16,6 +21,10 @@
                         margin: 0 3px;
                     }
                 }
+            }
+            &:hover {
+                // color: white !important;
+                background: $gray-lighter;
             }
             &.active {
                 a {

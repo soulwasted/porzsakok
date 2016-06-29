@@ -1,0 +1,56 @@
+doctype html
+html(lang='en')
+	- var title= "O nás"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				h1
+					//- i.glyphicon.glyphicon-question-sign
+					|  Ako nakúpiť
+				#content
+					.row.label11.text-left
+						.col-sm-6
+							.panel.panel-default
+								.panel-body
+									h4
+										span.glyphicon.glyphicon-book
+										|  
+										a(href='/ako-nakupit/sprievodca') Stručný sprievodca nákupom
+									h4
+										a(href='/ako-nakupit/obchodne-podmienky')
+											span.glyphicon.glyphicon-pencil
+											|  Obchodné a reklamačné podmienky
+									h4
+										a(href='/')
+										a(href='/objednavka')
+											span.glyphicon.glyphicon-gift
+											|  Stav vybavenia Vašej objednávky
+						.col-sm-6
+							.panel.panel-default
+								.panel-body
+									h4
+										a(href='/ako-nakupit/moznosti-platby')
+											span.glyphicon.glyphicon-credit-card
+											|  Ako môžete zaplatiť
+									h4
+										a(href='/ako-nakupit/doprava')
+											span.glyphicon.glyphicon-road
+											|  Ako Vám objednávku dopravíme
+									h4
+										a(href='/')
+											span.glyphicon.glyphicon-list-alt
+											|  Ako reklamovať tovar
+					.row.label11.text-left
+						.col-sm-12
+							.panel.panel-default
+								.panel-body
+									h4.text-center
+										a(href='/ako-nakupit/specialne-sluzby')
+											span.glyphicon.glyphicon-fire
+											|  Taká možnosť tu ešte nebola – bezkonkurenčná ponuka e-shopu!
+
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade
