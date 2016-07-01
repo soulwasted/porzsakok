@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+	- var title= "Žádost o zaslání nového hesla"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li.active Žádost o zaslání nového hesla
+				.row
+					.col-xs-12
+						h1
+							//- i.glyphicon.glyphicon-log-in
+							|  Žádost o zaslání nového hesla
+				.row
+					.col-xs-12.col-sm-8
+						p Ak ste zabudli(a) alebo stratil(a) Vaše heslo a nemôžete sa prihlásiť, vyplňte tu svoj e-mail, ktorý ste uviedol(a) pri registrácii, a my Vám obratom zašleme instrukcie na zadaný e-mail.
+				.row
+					form#frm-signInForm.form-horizontal(action='/prihlasit', method='post', novalidate='')
+						.col-xs-12.col-sm-5
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-login-reset-username') Přihlašovací jméno (e-mail)
+									input#form-login-reset-username.btn-high.form-control(type='text', placeholder='')
+								.form-group
+									button.btn.btn-primary.btn-lg.btn-block(type='submit', name='send')
+										i.glyphicon.glyphicon-ok
+										|  Vygenerovat požadavek na nové heslo
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

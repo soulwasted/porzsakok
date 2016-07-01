@@ -4876,46 +4876,37 @@ ul.list-brands {
   .prices-before {
     text-align: left; } }
 
-.label11 {
-  font-size: 1.1em;
-  text-align: left;
-  margin: 0;
-  padding-top: 9px; }
-  .label11 li {
-    padding-left: 50px;
-    margin-bottom: 30px;
-    list-style: none; }
+@media (min-width: 768px) {
+  .same-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
+    .same-height .info-block {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-align-content: center;
+          -ms-flex-line-pack: center;
+              align-content: center;
+      text-align: center; } }
 
-.glyphicon-paperclip {
-  margin-left: -40px;
-  padding-right: 20px; }
-
-.kasicky {
-  margin-bottom: 30px; }
-
-.person-desc {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
-  font-size: 1.2em; }
-
-@media (max-width: 767px) {
-  .kasicka .person-desc {
-    text-align: left; }
-  .photo {
-    text-align: center; }
-  body.contact .fotky img {
-    width: 50%; } }
+.same-height .info-block .badge-100 {
+  width: 100%;
+  text-align: center;
+  margin: 60px auto;
+  color: white; }
 
 .special {
   font-family: Sarina, "Open Sans", sans-serif; }
@@ -4958,6 +4949,9 @@ h6 {
 body.text h3, body.text h4, body.text h5 {
   text-transform: none;
   color: #4d4d4d !important; }
+
+body.text a h3, body.text a h4, body.text a h5 {
+  color: #0089b0 !important; }
 
 p b,
 p strong {
@@ -5032,7 +5026,14 @@ footer {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  color: #e6e6e6; }
+  footer .container {
+    border: none; }
+  footer a {
+    color: #e6e6e6; }
+    footer a:hover {
+      color: #e6e6e6; }
 
 .search {
   background: #caf3ff;
@@ -5281,21 +5282,22 @@ footer {
   .stripe-benefits .row > div:nth-child(5) {
     clear: both; } }
 
+.badge-100 {
+  letter-spacing: 200;
+  text-transform: uppercase;
+  background: url("../img/bg-badge-100.png") center bottom no-repeat;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  margin-bottom: 40px;
+  line-height: 30px; }
+  .badge-100 span {
+    font-size: 40px;
+    letter-spacing: 0;
+    font-weight: 700;
+    display: block; }
+
 .stripe-guarantee {
   background: url("../img/bg-stripe-guarantee.jpg") center center/cover no-repeat; }
-  .stripe-guarantee .badge-100 {
-    letter-spacing: 200;
-    text-transform: uppercase;
-    background: url("../img/bg-badge-100.png") center bottom no-repeat;
-    padding-top: 20px;
-    padding-bottom: 12px;
-    margin-bottom: 40px;
-    line-height: 30px; }
-    .stripe-guarantee .badge-100 span {
-      font-size: 40px;
-      letter-spacing: 0;
-      font-weight: 700;
-      display: block; }
   .stripe-guarantee .star-divider {
     margin: 15px 0; }
     .stripe-guarantee .star-divider span:nth-child(1),
@@ -5941,5 +5943,61 @@ body.cart .stepper {
 
 .cart-steps__desc {
   line-height: 1.3; }
+
+.label11 {
+  font-size: 1.1em;
+  text-align: left;
+  margin: 0;
+  padding-top: 9px; }
+  .label11 li {
+    padding-left: 50px;
+    margin-bottom: 30px;
+    list-style: none; }
+
+.glyphicon-paperclip {
+  margin-left: -40px;
+  padding-right: 20px;
+  margin-right: 0 !important; }
+
+.kasicky {
+  margin-bottom: 30px; }
+
+.person-desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  font-size: 1.2em; }
+
+@media (max-width: 767px) {
+  .kasicka .person-desc {
+    text-align: left; }
+  .photo {
+    text-align: center; }
+  body.contact .fotky img {
+    width: 50%; } }
+
+body.howto .panel-body {
+  padding-left: 40px; }
+  body.howto .panel-body h4 {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  body.howto .panel-body .glyphicon {
+    margin-right: 10px;
+    margin-left: -30px; }
+
+body.text .panel-default {
+  padding: 15px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=app.css.map */

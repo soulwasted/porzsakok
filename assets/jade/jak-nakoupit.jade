@@ -1,55 +1,59 @@
 doctype html
 html(lang='en')
-	- var title= "O nás"
+	- var title= "Jak nakoupit"
 	include ./includes/head.jade
-	body.text
+	body.text.howto
 		.main
 			include ./includes/nav.jade
 			.container
-				h1
-					//- i.glyphicon.glyphicon-question-sign
-					|  Ako nakúpiť
-				#content
-					.row.label11.text-left
-						.col-sm-6
-							.panel.panel-default
-								.panel-body
-									h4
+				ul.breadcrumb
+					li
+						a(href='/index.html') Domů
+					li.active Ako nakúpiť
+				.row
+					.col-xs-12
+						h1
+							//- i.glyphicon.glyphicon-question-sign
+							|  Jak nakoupit
+				.row
+					.col-sm-6.col-xs-12
+						.panel.panel-default
+							.panel-body.label11
+								h4
+									a(href='/pruvodce-nakupem.html') 
 										span.glyphicon.glyphicon-book
-										|  
-										a(href='/ako-nakupit/sprievodca') Stručný sprievodca nákupom
-									h4
-										a(href='/ako-nakupit/obchodne-podmienky')
-											span.glyphicon.glyphicon-pencil
-											|  Obchodné a reklamačné podmienky
-									h4
-										a(href='/')
-										a(href='/objednavka')
-											span.glyphicon.glyphicon-gift
-											|  Stav vybavenia Vašej objednávky
-						.col-sm-6
-							.panel.panel-default
-								.panel-body
-									h4
-										a(href='/ako-nakupit/moznosti-platby')
-											span.glyphicon.glyphicon-credit-card
-											|  Ako môžete zaplatiť
-									h4
-										a(href='/ako-nakupit/doprava')
-											span.glyphicon.glyphicon-road
-											|  Ako Vám objednávku dopravíme
-									h4
-										a(href='/')
-											span.glyphicon.glyphicon-list-alt
-											|  Ako reklamovať tovar
-					.row.label11.text-left
-						.col-sm-12
-							.panel.panel-default
-								.panel-body
-									h4.text-center
-										a(href='/ako-nakupit/specialne-sluzby')
-											span.glyphicon.glyphicon-fire
-											|  Taká možnosť tu ešte nebola – bezkonkurenčná ponuka e-shopu!
+										| Stručný sprievodca nákupom
+								h4
+									a(href='/obchodni-podminky.html')
+										span.glyphicon.glyphicon-pencil
+										| Obchodné a reklamačné podmienky
+								h4
+									a(href='/objednavka')
+										span.glyphicon.glyphicon-gift
+										| Stav vybavenia Vašej objednávky
+					.col-sm-6.col-xs-12
+						.panel.panel-default
+							.panel-body.label11
+								h4
+									a(href='moznosti-platby.html')
+										span.glyphicon.glyphicon-credit-card
+										| Ako môžete zaplatiť
+								h4
+									a(href='doprava.html')
+										span.glyphicon.glyphicon-road
+										| Ako Vám objednávku dopravíme
+								h4
+									a(href='reklamace.html')
+										span.glyphicon.glyphicon-list-alt
+										| Ako reklamovať tovar
+				.row
+					.col-sm-12
+						.panel.panel-default
+							.panel-body.label11
+								h4.text-center
+									a(href='specialni-sluzby.html')
+										span.glyphicon.glyphicon-fire
+										strong Taká možnosť tu ešte nebola – bezkonkurenčná ponuka e-shopu!
 
 	include ./includes/stripe-guarantee.jade
 	include ./includes/footer.jade

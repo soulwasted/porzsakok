@@ -1,6 +1,6 @@
 doctype html
 html(lang='en')
-	- var title= "O nás"
+	- var title= "Přihlášení"
 	include ./includes/head.jade
 	body.text
 		.main
@@ -10,49 +10,36 @@ html(lang='en')
 					li
 						a(href='/') Domov
 					li.active Prihlásenie
-				h3
-					//- i.glyphicon.glyphicon-log-in
-					|  Prihlásenie do osobného účtu
-				#content
-					br
-					form#frm-signInForm(action='/prihlasit', method='post', novalidate='')
-						noscript <p>Vyplňte nospam: <input name="email_confirm" size="6"></p>
-						script(type='text/javascript').
-							document.write('<input type="hidden" name="email_confirm" value="no' + '@' + 'spam" />');
-						input(type='hidden', name='email_confirm', value='no@spam')
-						.col-sm-8.form-horizontal.form-group
-							.row
-								label.col-sm-5.control-label(for='frm-signInForm-username', style='font-size: 1.1em;') Prihlasovacie meno (e-mail):
-								.col-sm-7
-									input#frm-signInForm-username.form-control(type='text', name='username', required='', data-nette-rules='[{"op":":filled","msg":"Please enter your username."}]')
-							.row
-								label.col-sm-5.control-label(for='frm-signInForm-password', style='font-size: 1.1em;') Heslo:
-								.col-sm-7
-									input#frm-signInForm-password.form-control(type='password', name='password', required='', data-nette-rules='[{"op":":filled","msg":"Please enter your password."}]')
-							.row
-								.col-sm-5
-								.col-sm-7
-									button.btn.btn-success.btn-block(type='submit', name='send')
+				.row
+					.col-xs-12
+						h1
+							//- i.glyphicon.glyphicon-log-in
+							|  Prihlásenie do osobného účtu
+				form#frm-signInForm.form-horizontal(action='/prihlasit', method='post', novalidate='')
+					.row.same-height
+						.col-xs-12.col-sm-5
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-login-username') Přihlašovací jméno
+									input#form-login-username.btn-high.form-control(type='text', placeholder='')
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-login-pass') Heslo
+									input#form-login-pass.btn-high.form-control(type='password', placeholder='')
+							.col-xs-12
+								.form-group
+									button.btn.btn-primary.btn-lg.btn-block(type='submit', name='send')
 										i.glyphicon.glyphicon-ok
 										|  Prihlásiť
-						.row.label11.text-left
-							.col-sm-12
+						.col-xs-12.col-sm-6.col-sm-offset-1.info-block
+							div
 								| Nemôžete sa prihlásiť? Možno ste údaje jednoducho zabudli - to sa predsa stáva. 
-								a(href='/ziadost')
-									strong
-										| Nechajte si údaje poslať e-mailom
-										strong
-								strong
-									strong
-										| !
-							strong
-								strong
-						strong
-							strong
+								br
+								br
+								a(href='zadost.html')
+									strong Nechajte si údaje poslať e-mailom
+								strong !
 								input(type='hidden', name='do', value='signInForm-submit')
-				strong
-					strong
-
 	include ./includes/stripe-guarantee.jade
 	include ./includes/footer.jade
 	include ./includes/scripts.jade

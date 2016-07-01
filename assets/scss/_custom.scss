@@ -147,44 +147,25 @@ ul.list-brands {
 		text-align: left;
 	}
 }
-.label11 {
-	font-size: 1.1em;
-	text-align: left;
-	margin: 0;
-	padding-top: 9px;
-	li {
-		padding-left: 50px;
-		margin-bottom: 30px;
-		list-style: none;
-	}
-}
-.glyphicon-paperclip {
-	margin-left: -40px;
-	padding-right: 20px;
-}
-.kasicky {
-	margin-bottom: 30px;
-}
-.person-desc {
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	font-size: 1.2em;
-}
-@media (max-width: $screen-xs-max) {
-	.kasicka {
-		.person-desc {
-			text-align: left;
+.same-height {
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		align-items: stretch;
+		.info-block {
+			display: flex;
+			align-items: center;
+			align-content: center;
+			text-align: center;
+			// flex-direction: column;
 		}
 	}
-	.photo {
-		text-align: center;
-	}
-	body.contact {
-		.fotky {
-			img {
-				width: 50%;
-			}
+	.info-block {
+		.badge-100 {
+			width: 100%;
+			// padding-top: 60px;
+			text-align: center;
+			margin: 60px auto;
+			color: white;
 		}
 	}
 }

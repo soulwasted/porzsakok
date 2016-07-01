@@ -1,0 +1,92 @@
+doctype html
+html(lang='en')
+	- var title= "Možnosti platby"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domu
+					li
+						a(href='/ako-nakupit') Ako nakúpiť
+					li.active Možnosti platby
+				.row
+					.col-xs-12
+						h1
+							i.glyphicon.glyphicon-credit-card
+							|  Možnosti platby
+				.row
+					br
+					h4
+						strong Ako u nás môžete zaplatiť?
+					h4 Pripravili sme pre vás tieto možnosti platby:
+					.row.label11.text-justify
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong.text-primary Dobierka
+								|  - zvolením tohto spôsobu platby je objednávka expedovaná (tzn. predaná prepravcovi aby zásielku doručil objednávajúcemu) najneskôr do 2 dní od potvrdenia objednávky. Doručovacia spoločnosť odovzdá zásielku príjemcovi pri prevzatí v momente, keď za ňu zaplatí.
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong.text-primary Klasický bankový prevod
+								|  - zvolením tohto spôsobu platby Vám budú po potvrdení objednávky do zadaného e-mailu odoslané informácie potrebné pre realizáciu bezhotovostnej platby z vášho bankového účtu. Pri jej využití je objednávka expedovaná najneskôr do 2 dní od pripísania platby na účet e-shopu.
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Platbu môžete realizovať aj 
+								strong.text-primary v hotovosti
+								|  na niektorý z našich bankových účtov. Objednávka je expedovaná najneskôr do 2 dní od pripísania platby na účet e-shopu.
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Variabilný symbol platby: 
+								strong.text-primary vždy číslo Vašej objednávky
+					h4 Bankové účty e-shopu:
+					.row.label11.text-justify
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Slovenská sporiteľňa, a.s.
+								br
+								| Číslo účtu: 5070409285/0900
+								br
+								| Mena účtu: EUR
+								br
+								| Číslo účtu IBAN: SK72 0900 0000 0050 7040 9285
+								br
+								| BIC – SWIFT kód Slovenskej sporiteľne, a.s.: GIBASKBX
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  VÚB, a.s.
+								br
+								| Číslo účtu: 3522962753/0200
+								br
+								| Mena účtu: EUR
+								br
+								| Číslo účtu IBAN: SK96 0200 0000 0035 2296 2733
+								br
+								| BIC – SWIFT kód VÚB, a.s.: SUBASKBX
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  V rámci rozvoja služieb zákazníkom pripravujeme platby prostredníctvom platobných kariet.
+					h4
+						| Okrem dobierky, klasického bankového prevodu alebo platby v hotovosti môžete využiť aj nasledujúce spôsoby platieb:
+					.row.label11.text-justify
+						.col-sm-12
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong.text-primary SPOROPAY
+								|  je rýchla a bezpečná platba pre klientov banky Slovenská sporiteľňa, a.s. Pri jej využití je objednávka expedovaná najneskôr do 2 dní od pripísania platby na účet e-shopu.
+							li
+								| Služba SPOROPAY umožňuje kupujúcemu platiť za objednaný tovar alebo služby poskytované internetovým obchodníkom prostredníctvom služby Internetbanking Slovenskej sporiteľne. Každý klient Slovenskej sporiteľne, využívajúci službu Internetbanking, získava automaticky, bez akýchkoľvek doplňujúcich poplatkov, možnosť zaplatiť za objednaný tovar priamo zo stránky e-shopu vacs slovakia.
+							li Aký je priebeh platby?
+							li
+								| Po odoslaní objednávky ste automaticky presmerovaný na platobnú bránu Slovenskej sporiteľne. Na tejto stránke zákazník vyplní svoje Prihlasovacie meno a Heslo / Autorizačný kód. Tieto údaje sa v žiadnom prípade neukladajú do databáze e-shopu vacs slovakia. Po úspešnom prihlásení do služby Internetbanking sa zákazníkovi zobrazí predvyplnený platobný príkaz na úhradu objednávky. Zákazník iba skontroluje predvyplnené údaje a autorizuje platbu. Výhodou tohto spôsobu platby je zníženie rizika chyby pri ručnom vyplňovaniu príkazu na úhradu objednávky. Platbu následne evidujeme na našom účte v priebehu niekoľkých minút.
+							li
+								span.glyphicon.glyphicon-paperclip
+								strong.text-primary VÚB ePlatba
+								|  je rýchla a bezpečná platba pre klientov banky VÚB, a.s. Pri jej využití je objednávka expedovaná najneskôr do 2 dní od pripísania platby na účet e-shopu.
+
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

@@ -45,6 +45,11 @@ body.text {
 		text-transform: none;
 		color: $text-color !important;
 	}
+	a {
+		h3, h4, h5 {
+			color: $brand-success !important;
+		}
+	}
 }
 
 p {

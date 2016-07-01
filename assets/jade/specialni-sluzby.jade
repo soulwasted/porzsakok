@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+	- var title= "Speciální služby"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li
+						a(href='/ako-nakupit') Ako nakúpiť
+					li.active Špeciálne služby
+				.row
+					.col-xs-12
+						h1
+							i.glyphicon.glyphicon-pencil
+							|  Špeciálne služby k nákupu
+				.row.same-height
+					.col-sm-6.label11
+						h4
+							strong Taká možnosť tu ešte nebola – bezkonkurenčná ponuka e-shopu!
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  V prípade zistenia, že dodaný výrobok Vám nevyhovuje, môžete vrátiť zakúpený tovar do 3 mesiacov od nákupu bez udania dôvodu.
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Máte možnosť vrátiť i rozbalené balenie vreciek.
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Máte možnosť vrátiť balenie i v prípade, že jedno vrecko z dodaného balenia je použité alebo chýba.
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Táto uvedená špeciálna ponuka sa vzťahuje len na vrecká do vysávačov. Na ostatný tovar je možné uplatniť štandardné reklamačné podmienky uvedené vo všeobecných obchodných podmienkach.
+					.col-sm-6.col-md-5.col-md-offset-1.info-block
+						.row.badge-100
+							span.reveal 100 %
+							| na vrácení zboží
+	//- include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

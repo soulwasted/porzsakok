@@ -1,8 +1,18 @@
 footer {
-    min-height: 50px;
-    background: $gray;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	min-height: 50px;
+	background: $gray;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $gray-lighter;
+	.container {
+		border: none;
+	}
+	a {
+		color: $gray-lighter;
+		&:hover {
+			color: $gray-lighter;
+		}
+	}
 }

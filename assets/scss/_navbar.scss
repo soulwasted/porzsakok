@@ -3,56 +3,55 @@
 	// background: rgba(255,255,255,0.9);
 	// border-bottom: 1px solid $navbar-default-border;
 	border-bottom: none;
-    transition: box-shadow 0.5s linear;
-    &.fixed {
-        box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
-    }
-    .navbar-nav {
-        // display: inline-block;
-        // float: none;
-        // vertical-align: top;
-        li {
-            a {
-                font-size: $font-size-nav;
-                color: $gray-base;
-                &.cart {
-                    font-weight: 700;
-                    span.glyphicon {
-                        margin: 0 3px;
-                    }
-                }
-            }
-            &:hover {
-                // color: white !important;
-                background: $gray-lighter;
-            }
-            &.active {
-                a {
-                    background: $brand-success;
-                    color: white;
-                }
-            }
-        }
-    }
-    .cart {
+	transition: box-shadow 0.5s linear;
+	&.fixed {
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+	}
+	.navbar-nav {
+		// display: inline-block;
+		// float: none;
+		// vertical-align: top;
+		li {
+			a {
+				font-size: $font-size-nav;
+				color: $gray-base;
+				&.cart {
+					font-weight: 700;
+					span.glyphicon {
+						margin: 0 3px;
+					}
+				}
+			}
+			&:hover {
+				// color: white !important;
+				background: $gray-lighter;
+			}
+			&.active {
+				a {
+					background: $brand-success;
+					color: white;
+				}
+			}
+		}
+	}
+	.cart {
 		li {
 			@media (max-width: $screen-xs-max) {
 				margin-right: 20px;
 			}
 		}
-    }
-    .navbar-collapse {
-        // text-align: center;
-    }
+	}
+	.navbar-collapse {
+		// text-align: center;
+	}
 }
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    .navbar .navbar-nav  li  a {
-        padding-left: 10px;
-        padding-right: 10px;
-        font-size: 12px !important;
-    }
+	.navbar .navbar-nav li a {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 12px !important;
+	}
 }
-
 body {
-    padding-top: $navbar-height;
+	padding-top: $navbar-height;
 }

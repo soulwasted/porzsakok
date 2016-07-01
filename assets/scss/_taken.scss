@@ -1,0 +1,62 @@
+.label11 {
+	font-size: 1.1em;
+	text-align: left;
+	margin: 0;
+	padding-top: 9px;
+	li {
+		padding-left: 50px;
+		margin-bottom: 30px;
+		list-style: none;
+	}
+}
+.glyphicon-paperclip {
+	margin-left: -40px;
+	padding-right: 20px;
+	margin-right: 0 !important;
+}
+.kasicky {
+	margin-bottom: 30px;
+}
+.person-desc {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	font-size: 1.2em;
+}
+@media (max-width: $screen-xs-max) {
+	.kasicka {
+		.person-desc {
+			text-align: left;
+		}
+	}
+	.photo {
+		text-align: center;
+	}
+	body.contact {
+		.fotky {
+			img {
+				width: 50%;
+			}
+		}
+	}
+}
+body.howto {
+	.panel-body {
+		padding-left: 40px;
+		h4 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.glyphicon {
+			margin-right: 10px;
+			margin-left: -30px;
+		}
+	}
+}
+body.text {
+	.panel-default {
+		padding: 15px;
+		border: 1px solid $gray-lighter;
+		margin-bottom: 20px;
+	}
+}

@@ -1,0 +1,58 @@
+doctype html
+html(lang='en')
+	- var title= "Doprava"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domu
+					li
+						a(href='/ako-nakupit') Ako nakúpiť
+					li.active Doprava
+				.row
+					.col-xs-12
+						h1
+							i.glyphicon.glyphicon-road
+							|  Expedícia (odovzdanie objednávky prepravcovi) a doprava objednávky
+				.row.label11.text-justify
+					.col-xs-12
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Vašu objednávku 
+							span.text-primary odovzdáme prepravcovi (expedujeme)
+							|  najneskôr do 3 pracovných dní (spravidla do 2 pracovných dní)
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Prepravca vám tovar dopraví najneskôr do 24 hodín od okamžiku jeho odovzdania k preprave
+						li
+							span.glyphicon.glyphicon-paperclip
+							span.text-primary Expedíciu
+							|  Vašej objednávky pre e-shop vrecka-vysavace.sk zaisťuje priamo výrobca vreciek do vysávačov, firma:
+							br
+							| VACS FACTORY s.r.o., Trstěnická 932, 570 01 Litomyšl
+							br
+							| IČO 03729435
+						li
+							span.glyphicon.glyphicon-paperclip
+							span.text-primary Dopravu
+							|  pre náš e-shop zaisťuje spoločnosť:
+							br
+							| P4S distribuce s.r.o., Weilova 1451/2g Praha 10 - Hostivař 102 00, IČO 28890698
+							br
+							| e-mail: 
+							a(href='mailto:administrace@p4sdistribuce.cz') administrace@p4sdistribuce.cz
+							br
+							| www stránky: 
+							a(href='http://kuryrnaslovensko.cz') http://kuryrnaslovensko.cz
+							| .
+						li
+							span.glyphicon.glyphicon-paperclip
+							|  Svoju objednávku môžete sledovať na tejto 
+							a(href='/objednavka') adrese
+
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

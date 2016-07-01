@@ -59,26 +59,26 @@
 		}
 	}
 }
+.badge-100 {
+	letter-spacing: 200;
+	text-transform: uppercase;
+	background: url('../img/bg-badge-100.png') center bottom no-repeat;
+	// background-size: 30%;
+	padding-top: 20px;
+	padding-bottom: 12px;
+	margin-bottom: 40px;
+	line-height: 30px;
+	span {
+		font-size: 40px;
+		letter-spacing: 0;
+		font-weight: 700;
+		display: block;
+	}
+}
 .stripe-guarantee {
 	@extend .stripe;
 	@extend .stripe-inverse;
 	background: url('../img/bg-stripe-guarantee.jpg') center center / cover no-repeat;
-	.badge-100 {
-		letter-spacing: 200;
-		text-transform: uppercase;
-		background: url('../img/bg-badge-100.png') center bottom no-repeat;
-		// background-size: 30%;
-		padding-top: 20px;
-		padding-bottom: 12px;
-		margin-bottom: 40px;
-		line-height: 30px;
-		span {
-			font-size: 40px;
-			letter-spacing: 0;
-			font-weight: 700;
-			display: block;
-		}
-	}
 	.star-divider {
 		margin: 15px 0;
 		span:nth-child(1),

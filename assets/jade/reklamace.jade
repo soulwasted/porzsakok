@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+	- var title= "Reklamace"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li
+						a(href='/ako-nakupit') Ako nakúpiť
+					li.active Reklamácie
+				.row
+					.col-xs-12
+						h1
+							i.glyphicon.glyphicon-credit-card
+							|  Reklamácie
+				.row
+					.col-xs-12
+						br
+						h4
+							strong Zakúpil som produkt a nie je funkčný
+						.row.label11.text-justify
+							.col-sm-12
+								li
+									span.glyphicon.glyphicon-paperclip
+									|  K tejto situácií môže výnimočne dôjsť aj u veľmi kvalitných výrobkov. Sme tu pre Vás, aby sme urobili maximum pre najrýchlejšie doriešenie. V tomto prípade prosím produkt vráťte poštou v rámci 3 mesačnej lehoty, vrátime Vám platbu alebo Vám tovar vymeníme. Závadu nám v tomto prípade spresnite, aby sme mohli situáciu doriešiť s výrobcom, pomôžete tak k ešte väčšej kvalite výrobkov.
+						h4
+							strong Kde môžem uplatniť reklamáciu?
+						.row.label11.text-justify
+							.col-sm-12
+								li
+									span.glyphicon.glyphicon-paperclip
+									|  Jednoducho nám tovar pošlete poštou na adresu: VACS Slovakia s.r.o., Opavská 8, 831 01 Bratislava a do 
+									strong Oznámenia o uplatnení reklamácie predávajúcemu
+									| , čo najpodrobnejšie popíšte závadu. O vyriešení Vašej reklamácie sa postaráme a zašleme Vám tovar na Vašu adresu.
+						h4
+							strong Čo potrebujem k reklamácii za dokumenty?
+						.row.label11.text-justify
+							.col-sm-12
+								li
+									span.glyphicon.glyphicon-paperclip
+									|  Nie je to vôbec zložité. K tovaru, ktorý nám vrátite poštou priložte 
+									strong Oznámenie o uplatnení reklamácie predávajúcemu
+									| , v ktorom čo najpodrobnejšie popíšte závadu a uveďte kontakt na Vás.
+						h4
+							strong Ako dlho bude trvať vyriešenie reklamácie?
+						.row.label11.text-justify
+							.col-sm-12
+								li
+									span.glyphicon.glyphicon-paperclip
+									|  Po určení spôsobu vybavenia reklamácie sa reklamácia vybaví ihneď, v odôvodnených prípadoch možno reklamáciu vybaviť aj neskôr. Vybavenie reklamácie však nesmie trvať dlhšie ako 30 dní odo dňa uplatnenia reklamácie.
+						.row.label11.text-justify
+							.col-sm-12
+								| Nenašli ste odpoveď na svoju otázku? 
+								strong
+									a(href='/kontakt#contact_form') Kontaktujte nás
+								| .
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade

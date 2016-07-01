@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+	- var title= "Stav objednávky"
+	include ./includes/head.jade
+	body.text
+		.main
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li.active Stav objednávky
+				h1
+					//- i.glyphicon.glyphicon-gift
+					|  Zistiť stav objednávky
+				form#frm-signInForm.form-horizontal(action='/prihlasit', method='post', novalidate='')
+					.row
+						.col-xs-12.col-sm-5.label11
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Stav Vašej objednávky môžete zistiť aj keď ste sa neprihlásili do svojho osobného účtu.
+
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-order-number') Číslo objednávky
+									input#form-order-number.btn-high.form-control(type='text', placeholder='')
+							.col-xs-12
+								.form-group
+									label.control-label(for='form-order-mail') Váš e-mail
+									input#form-order-mail.btn-high.form-control(type='mail', placeholder='')
+							.col-xs-12
+								.form-group
+									button.btn.btn-primary.btn-lg.btn-block(type='submit', name='send')
+										i.glyphicon.glyphicon-ok
+										|  Prihlásiť
+						.col-xs-12.col-sm-6.col-sm-offset-1.label11
+							li
+								span.glyphicon.glyphicon-paperclip
+								|  Keď sa prihlásite do Vášho osobného účtu môžete si sami:
+								br
+								.list-offset
+									| - zmeniť osobné údaje
+									br
+									| - zmeniť heslo
+									br
+									| - sledovať stav Vašej aktuálnej objednávky
+									br
+									| - nájsť kompletný prehľad a históriu svojich objednávok
+									br
+									| - vytvoriť novú objednávku bez nutnosti vyplňovať identifikačné údaje
+									br
+									| - vytlačiť akúkoľvek historickú objednávku alebo faktúru.
+	include ./includes/stripe-guarantee.jade
+	include ./includes/footer.jade
+	include ./includes/scripts.jade
