@@ -4985,18 +4985,20 @@ strong.info {
   .navbar.fixed {
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
-  .navbar .navbar-nav li a {
-    font-size: 14px;
-    color: #000; }
-    .navbar .navbar-nav li a.cart {
-      font-weight: 700; }
-      .navbar .navbar-nav li a.cart span.glyphicon {
-        margin: 0 3px; }
-  .navbar .navbar-nav li:hover {
-    background: #e6e6e6; }
-  .navbar .navbar-nav li.active a {
-    background: #0089b0;
-    color: white; }
+  .navbar .navbar-nav {
+    margin-top: 5px; }
+    .navbar .navbar-nav li a {
+      font-size: 14px;
+      color: #000; }
+      .navbar .navbar-nav li a.cart {
+        font-weight: 700; }
+        .navbar .navbar-nav li a.cart span.glyphicon {
+          margin: 0 3px; }
+    .navbar .navbar-nav li:hover {
+      background: #e6e6e6; }
+    .navbar .navbar-nav li.active a {
+      background: #0089b0;
+      color: white; }
   @media (max-width: 767px) {
     .navbar .cart li {
       margin-right: 20px; } }
@@ -5030,6 +5032,10 @@ footer {
   color: #e6e6e6; }
   footer .container {
     border: none; }
+    @media (max-width: 767px) {
+      footer .container .row > div {
+        margin-bottom: 10px;
+        text-align: center; } }
   footer a {
     color: #e6e6e6; }
     footer a:hover {
@@ -5450,6 +5456,24 @@ footer {
                 -ms-transform: rotate(240deg) translate(15em) rotate(-240deg);
                  -o-transform: rotate(240deg) translate(15em) rotate(-240deg);
                     transform: rotate(240deg) translate(15em) rotate(-240deg); } }
+  @media (max-width: 767px) {
+    .stripe-bag .bag-wrapper {
+      background-position: center -10%;
+      padding-top: 0;
+      padding-bottom: 0;
+      max-height: 400px; }
+      .stripe-bag .bag-wrapper .circle {
+        padding: 200px 0 0; }
+        .stripe-bag .bag-wrapper .circle a.poi {
+          display: inline-block;
+          width: 4.5em;
+          height: 4.5em;
+          margin: 10px; }
+          .stripe-bag .bag-wrapper .circle a.poi i {
+            font-size: 50px;
+            line-height: 60px; }
+            .stripe-bag .bag-wrapper .circle a.poi i.icon-pic-clock {
+              font-size: 45px; } }
 
 .stripe-bag #accordion {
   text-align: left;

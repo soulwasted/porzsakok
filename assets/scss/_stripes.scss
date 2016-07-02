@@ -207,6 +207,28 @@
 				}
 			}
 		}
+		@media (max-width: $screen-xs-max) {
+			background-position: center -10%;
+			padding-top: 0;
+			padding-bottom: 0;
+			max-height: 400px;
+			.circle {
+				padding: 200px 0 0;
+				a.poi {
+					display: inline-block;
+					width: 4.5em;
+					height: 4.5em;
+					margin: 10px;
+					i {
+						font-size: 50px;
+						line-height: 60px;
+						&.icon-pic-clock {
+							font-size: 45px;
+						}
+					}
+				}
+			}
+		}
 	}
 	#accordion {
 		text-align: left;
