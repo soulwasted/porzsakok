@@ -64,7 +64,7 @@ var paths = {
         ],
         dest: "www/js",
         name: "scripts.js",
-        min: "scripts.js",
+        min: "scripts.min.js",
         justcopy: [
             "assets/js/app.js",
             "assets/js/slider.js"
@@ -73,7 +73,7 @@ var paths = {
     sass: {
         src: "assets/scss/app.scss",
         dest: "www/css",
-        min: "app.css",
+        min: "app.min.css",
         hotfixes: "assets/scss/components/hotfixes.scss"
     },
     css: {

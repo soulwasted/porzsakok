@@ -4,8 +4,11 @@
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%), url("../img/search-bg.jpg") center center no-repeat;
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%), url("../img/porzsakok-carpet3.jpg") center center no-repeat;
 	// background: url("../img/porzsakok-carpet.jpg") center center no-repeat;
-	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
 	& > .container {
 		display: flex;
 		flex-direction: column;
@@ -37,7 +40,7 @@
 	.tabs {
 		text-align: center;
 		display: flex;
-		// flex: 1;
+		flex-grow: 2;
 		flex-direction: column;
 		align-items: center;
 		// align-items: center;

@@ -91,29 +91,18 @@
 		}
 	}
 }
-@-webkit-keyframes pulse {
-	0% {
-		-webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-	}
-	70% {
-		-webkit-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
-	}
-	100% {
-		-webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-	}
-}
 @keyframes pulse {
 	0% {
-		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
-		box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+		// box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+		opacity: 0.4;
 	}
 	70% {
-		-moz-box-shadow: 0 0 0 20px rgba(204,169,44, 0);
-		box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+		// box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+		opacity: 1.0;
 	}
 	100% {
-		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-		box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+		// box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+		opacity: 0.0;
 	}
 }
 .stripe-bag {
@@ -132,39 +121,43 @@
 		background-size: contain;
 		background-position: center 70%;
 		padding: 50px 4em 30px;
+		// overflow: hidden;
 		@media (max-width: $screen-sm-max) {
 			padding-left: 0;
 			padding-right: 0;
-			margin-top: -50px;
+			// margin-top: -50px;
 		}
 		.circle {
-			width: 24em;
-			height: 24em;
+			width: 30em;
+			height: 30em;
 			padding: 2.8em;
 			/*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
 			border: 1px solid $brand-success;
 			border-radius: 50%;
+			margin: 0 auto;
 			@media (max-width: $screen-xs-max) {
 				border-radius: 0;
 				border: none;
 				width: 100%;
 				height: auto;
 			}
-			margin: 0 auto;
+			.pois {
+				overflow: hidden;
+			}
 			a.poi {
-				display: inline-block;
+				display: block;
 				width: 6em;
 				height: 6em;
-				/* 2em = 4em/2 */
 				border-radius: 50%;
-				// width: 90px;
-				// height: 90px;
 				background: white;
-				// background: rgba(255,255,255,0.8);
 				border: 1px solid $gray-light;
-				box-shadow: 0 0 0 rgba(204,169,44, 0.4);
-				animation: pulse 2s infinite;
+				// box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+				// box-shadow: 0 0 0 20px rgba(0,0,0,0.4);
 				cursor: pointer;
+				&::after {
+					border: 10px solid red;
+				}
+				&.active,
 				&:hover {
 					animation: none;
 					background: $brand-success;
@@ -193,23 +186,23 @@
 					top: 50%;
 					left: 50%;
 					&.one {
-						transform: rotate(300deg) translate(12em) rotate(-300deg);
+						transform: rotate(300deg) translate(15em) rotate(-300deg);
 					}
 					&.two {
-						transform: translate(12em);
+						transform: translate(15em);
 					}
-					/* 12em = half the width of the wrapper */
+					/* 15em = half the width of the wrapper */
 					&.three {
-						transform: rotate(60deg) translate(12em) rotate(-60deg);
+						transform: rotate(60deg) translate(15em) rotate(-60deg);
 					}
 					&.four {
-						transform: rotate(120deg) translate(12em) rotate(-120deg);
+						transform: rotate(120deg) translate(15em) rotate(-120deg);
 					}
 					&.five {
-						transform: translate(-12em);
+						transform: translate(-15em);
 					}
 					&.six {
-						transform: rotate(240deg) translate(12em) rotate(-240deg);
+						transform: rotate(240deg) translate(15em) rotate(-240deg);
 					}
 				}
 			}
@@ -218,6 +211,16 @@
 	#accordion {
 		text-align: left;
 		margin-top: 40px;
+		.panel-default:last-child {
+			border-bottom: 1px solid $gray-lighter;
+		}
+		h5.panel-title {
+			padding-top: 10px;
+			border-top: 1px solid $gray-lighter;
+			a {
+				display: block;
+			}
+		}
 	}
 }
 .stripe-contact {
