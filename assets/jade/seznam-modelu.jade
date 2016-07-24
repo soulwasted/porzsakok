@@ -4,23 +4,36 @@ html(lang='en')
 	- var title= "Seznam modelů Electrolux"
 	include ./includes/head.jade
 	body
-		include ./includes/nav.jade
-		.container
-			.row
-				a.btn.back(href='seznam-znacek.html') 
-					span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-					| Zpět na seznam značek vysavačů
-		.container
-			.row
-				.col-xs-12
-					h1 Electrolux
-					p.readmore Pripravili sme širokú ponuku antibakteriálnych sáčků do vysávačov Electrolux. Jedná sa o plnohodnotnú efektívnu náhradu za originálne vrecká do vysávačov Electrolux. Vrecká sú vyrobené z kvalitnej 5 vrstvovej netkanej textílie, majú veľmi dobré filtračné schopnosti a sú vhodné aj pre alergikov. Ponúkame rôzne výhodné balenia, zľavy a možnosť dopravy a dobierky zadarmo. Pokiaľ v našej ponuke nenájdete Váš model vysávača, neváhajte nás kontaktovať. Radi Vám pomôžeme s výberom, prípadne pre vás správne sáček zoženieme.
-		.container
-			.row
-				.col-xs-12
-					h2 Seznam modelů Electrolux
-					ul.list-links.list-models
-						include ./includes/electrolux-models.jade
-		include ./includes/stripe-guarantee.jade
-		include ./includes/footer.jade
+		.main.seznam-modelu
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li
+						a(href='/seznam-znacek.html') Seznam značek
+					li.active Electrolux
+					//- .row
+					//- 	a.btn.back(href='seznam-znacek.html') 
+					//- 		span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+					//- 		| Zpět na seznam značek vysavačů
+				.row
+					.col-xs-12
+						h1 Electrolux
+						p.readmore Pripravili sme širokú ponuku antibakteriálnych sáčků do vysávačov Electrolux. Jedná sa o plnohodnotnú efektívnu náhradu za originálne vrecká do vysávačov Electrolux. Vrecká sú vyrobené z kvalitnej 5 vrstvovej netkanej textílie, majú veľmi dobré filtračné schopnosti a sú vhodné aj pre alergikov. Ponúkame rôzne výhodné balenia, zľavy a možnosť dopravy a dobierky zadarmo. Pokiaľ v našej ponuke nenájdete Váš model vysávača, neváhajte nás kontaktovať. Radi Vám pomôžeme s výberom, prípadne pre vás správne sáček zoženieme.
+						#search-fulltext
+							form(action='seznam-modelu.html')
+								input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
+								button.btn(type='submit')
+									span.glyphicon.glyphicon-search(aria-hidden='true')
+							a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
+			.container
+				.row
+					.col-xs-12
+						h2 Seznam modelů Electrolux
+						ul.list-links.list-models
+							include ./includes/electrolux-models.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
 		include ./includes/scripts.jade

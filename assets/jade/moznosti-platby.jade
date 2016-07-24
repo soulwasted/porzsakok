@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Možnosti platby"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -86,7 +86,6 @@ html(lang='en')
 								span.glyphicon.glyphicon-paperclip
 								strong.text-primary VÚB ePlatba
 								|  je rýchla a bezpečná platba pre klientov banky VÚB, a.s. Pri jej využití je objednávka expedovaná najneskôr do 2 dní od pripísania platby na účet e-shopu.
-
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

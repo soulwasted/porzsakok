@@ -27,7 +27,7 @@
 			// color: white;
 		}
 		p.lead {
-			// color: white;
+			color: black;
 			font-size: 24px;
 			strong {
 				// color: white;
@@ -58,99 +58,6 @@
 			form {
 				min-height: 100px;
 				padding: 30px 0;
-			}
-			a.find {
-				display: inline-block;
-				padding: 10px 20px;
-				margin-top: 30px;
-				margin-bottom: 10px;
-				flex-shrink: 1;
-				color: white;
-				text-decoration: underline;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-			#search-brand {
-				select {
-					width: 100%;
-					max-width: 600px;
-					height: 60px;
-					font-size: 18px;
-					padding: 0 30px;
-					background-color: white;
-					background-color: rgba(255,255,255,0.8);
-					background-image: url("../img/select-arrow.png");
-					background-position: right center;
-					background-repeat: no-repeat;
-					-webkit-appearance: none;
-					-moz-appearance:none;
-					appearance: none;
-					border: 2px solid white;
-					@media (max-width: $screen-sm-max) {
-						padding: 0 10px;
-						font-size: 14px;
-					}
-				}
-				select::-ms-expand {
-					display: none;
-				}
-			}
-			#search-fulltext {
-				form {
-					padding: 23px 0;
-					input {
-						width: calc(100% - 60px);
-						max-width: 600px;
-						height: 60px;
-						font-size: 18px;
-						padding: 0 30px;
-						background: white;
-						background: rgba(255,255,255,0.8);
-						border: 2px solid white;
-						@media (max-width: $screen-sm-max) {
-							padding: 0 10px;
-							font-size: 14px;
-						}
-					}
-				}
-				.btn {
-					background: $brand-primary;
-					color: white;
-					font-size: 36px;
-					border-radius: 50%;
-					width: 80px;
-					height: 80px;
-					border: 2px solid white;
-					min-width: inherit;
-					margin-left: -30px;
-					margin-top: -5px;
-					box-shadow: 0 0 40px 0 rgba(0,0,0,0.5);
-					&:hover {
-						box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
-					}
-				}
-			}
-			#search-list {
-				// background-color: rgba(255,255,255,0.8);
-				width: 100%;
-				ul {
-					@extend ul.list-links;
-					margin-bottom: 0;
-					li {
-						a {
-							font-size: 18px;
-							color: white;
-							@media (max-width: $screen-sm-max) {
-								font-size: 14px;
-							}
-						}
-					}
-				}
-				a {
-					font-size: 14px;
-					color: white;
-				}
 			}
 		}
 		ul.nav-pills {
@@ -197,5 +104,124 @@
 				}
 			}
 		}
+	}
+}
+
+a.find {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	flex-shrink: 1;
+	color: white;
+	font-size: 18px;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+.main.seznam-modelu {
+	a.find {
+		color: $brand-success;
+		font-size: 14px;
+		margin-top: 0;
+		padding-left: 0;
+	}
+}
+
+#search-brand {
+	select {
+		width: 100%;
+		max-width: 600px;
+		height: 60px;
+		font-size: 18px;
+		padding: 0 30px;
+		background-color: white;
+		background-color: rgba(255,255,255,0.8);
+		background-image: url("../img/select-arrow.png");
+		background-position: right center;
+		background-repeat: no-repeat;
+		-webkit-appearance: none;
+		-moz-appearance:none;
+		appearance: none;
+		border: 2px solid white;
+		@media (max-width: $screen-sm-max) {
+			padding: 0 10px;
+			font-size: 14px;
+		}
+	}
+	select::-ms-expand {
+		display: none;
+	}
+}
+#search-fulltext {
+	form {
+		padding: 23px 0;
+		input {
+			width: calc(100% - 60px);
+			max-width: 600px;
+			height: 60px;
+			font-size: 18px;
+			padding: 0 30px;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			border: 2px solid white;
+			@media (max-width: $screen-sm-max) {
+				padding: 0 10px;
+				font-size: 14px;
+			}
+		}
+	}
+	.btn {
+		background: $brand-primary;
+		color: white;
+		font-size: 36px;
+		border-radius: 50%;
+		width: 80px;
+		height: 80px;
+		border: 2px solid white;
+		min-width: inherit;
+		margin-left: -30px;
+		margin-top: -5px;
+		box-shadow: 0 0 40px 0 rgba(0,0,0,0.5);
+		&:hover {
+			box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+		}
+	}
+}
+.main.seznam-modelu {
+	#search-fulltext {
+		form {
+			padding: 10px 0;
+			input {
+				border-color: $brand-success;
+				max-width: 800px;
+			}
+			.btn {
+				background: $brand-success;
+				border: 2px solid $brand-success;
+			}
+		}
+	}
+}
+#search-list {
+	// background-color: rgba(255,255,255,0.8);
+	width: 100%;
+	ul {
+		@extend ul.list-links;
+		margin-bottom: 0;
+		li {
+			a {
+				font-size: 18px;
+				color: white;
+				@media (max-width: $screen-sm-max) {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	a {
+		// font-size: 14px;
+		color: white;
 	}
 }

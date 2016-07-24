@@ -182,7 +182,7 @@ $buttonRadius: 5px;
 	top: -20px;
 	position: relative;
 }
-body.cart {
+.main.cart {
 	.stepper {
 		justify-content: flex-start;
 		@media screen and (max-width: $screen-xs-max) {
@@ -221,15 +221,6 @@ body.cart {
 		align-items: center;
 		#slider {
 			margin-top: 20px;
-		}
-	}
-}
-
-body.detail {
-	.discounts {
-		// text-align: center;
-		@media screen and (max-width: $screen-xs-max) {
-			// text-align: left;
 		}
 	}
 }

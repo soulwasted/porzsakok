@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Doprava"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -52,7 +52,6 @@ html(lang='en')
 							span.glyphicon.glyphicon-paperclip
 							|  Svoju objednávku môžete sledovať na tejto 
 							a(href='/objednavka') adrese
-
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

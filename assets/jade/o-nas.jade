@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "O nás"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -69,6 +69,6 @@ html(lang='en')
 						h2 Podčiarknuté, zrátané!
 						div
 							| Česká značka - česká kvalita, viac než 15 000 druhov vreciek do vysávačov za priaznivú cenu, k nákupu darček a poštovné zadarmo! Viete o inom obchode s vreckami do vysávačov, ktorý má rovnaké výhody?
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

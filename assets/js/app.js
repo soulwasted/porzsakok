@@ -7,7 +7,7 @@
             parent: '#accordion'
         });
         // always open tab in accordion after clicking on icon
-        $(".poi").click(function() {
+        $(".poi").mouseover(function() {
             var myClass = $(this).attr("class");
             myClass = myClass.replace('poi ', '');
             $("#accordion #poi-text-" + myClass).collapse("show");

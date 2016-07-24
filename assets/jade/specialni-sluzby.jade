@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Speciální služby"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -37,6 +37,6 @@ html(lang='en')
 						.row.badge-100
 							span.reveal 100 %
 							| na vrácení zboží
-	//- include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			//- include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

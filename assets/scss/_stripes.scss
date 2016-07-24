@@ -79,6 +79,9 @@
 	@extend .stripe;
 	@extend .stripe-inverse;
 	background: url('../img/bg-stripe-guarantee.jpg') center center / cover no-repeat;
+	h2 {
+		margin-bottom: 30px;
+	}
 	.star-divider {
 		margin: 15px 0;
 		span:nth-child(1),
@@ -108,11 +111,13 @@
 .stripe-bag {
 	h2 {
 		margin-top: 40px;
+		margin-bottom: 20px;
 	}
 	@extend .stripe;
 	img.vacs-stripe {
 		max-width: 520px;
 		width: 100%;
+		margin-bottom: 20px;
 		display: inline-block;
 	}
 	.bag-wrapper {
@@ -249,9 +254,16 @@
 	@extend .stripe;
 	@extend .stripe-inverse;
 	background: url('../img/bg-stripe-contact.jpg') center center / cover no-repeat;
+	p {
+		font-size: 18px;
+	}
 }
 .stripe-order {
 	@extend .stripe;
+	h2 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
 	@media (min-width: $screen-sm-min) {
 		.form-inline {
 			.btn,

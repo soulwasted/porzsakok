@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Obchodní podmínky"
 	include ./includes/head.jade
-	body.text.howto
-		.main
+	body
+		.main.text.howto
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -575,6 +575,6 @@ html(lang='en')
 								| 11.5 Kupujúci bude pred odoslaním objednávky vyzvaný, aby zaškrtnutím políčka potvrdil, že sa s týmito obchodnými a reklamačnými podmienkami oboznámil, prečítal ich, porozumel ich obsahu a v celom rozsahu s nimi súhlasí.
 							.col-sm-12.text-justify(style='text-indent: -30px; padding-bottom: 10px;')
 								| 11.6 Tieto obchodné podmienky sú platné a účinné od 1.11.2015.
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

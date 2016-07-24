@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Přihlášení"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -40,6 +40,6 @@ html(lang='en')
 									strong Nechajte si údaje poslať e-mailom
 								strong !
 								input(type='hidden', name='do', value='signInForm-submit')
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Průvodce nákupem"
 	include ./includes/head.jade
-	body.text.howto
-		.main
+	body
+		.main.text.howto
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -50,6 +50,6 @@ html(lang='en')
 							|  Odoslaním nákupného košíku začneme Vašu objednávku spracovávať. O ďalšom postupe budete informovaný e-mailom na adresu uvedenú v dodacích údajoch. 
 							a(href='/objednavka') Stav Vašej objednávky
 							|  môžete zistiť po zadaní čísla objednávky a Vášho mailu.
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

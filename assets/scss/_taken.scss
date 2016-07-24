@@ -32,7 +32,7 @@
 	.photo {
 		text-align: center;
 	}
-	body.contact {
+	.main.contact {
 		.fotky {
 			img {
 				width: 50%;
@@ -40,7 +40,7 @@
 		}
 	}
 }
-body.howto {
+.main.howto {
 	.panel-body {
 		padding-left: 40px;
 		h4 {
@@ -53,7 +53,7 @@ body.howto {
 		}
 	}
 }
-body.text {
+.main.text {
 	.panel-default {
 		padding: 15px;
 		border: 1px solid $gray-lighter;

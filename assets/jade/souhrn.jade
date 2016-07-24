@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Souhrn objednávky"
 	include ./includes/head.jade
-	body.cart-resume
-		.main
+	body
+		.main.cart-resume
 			include ./includes/nav.jade
 			.container
 				.row
@@ -93,6 +93,6 @@ html(lang='en')
 							| Odeslat objednávku
 							span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
 						p Tímto odešlete objednávku a obdržíte potvrzení o objednávce
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Žádost o zaslání nového hesla"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -29,6 +29,6 @@ html(lang='en')
 									button.btn.btn-primary.btn-lg.btn-block(type='submit', name='send')
 										i.glyphicon.glyphicon-ok
 										|  Vygenerovat požadavek na nové heslo
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

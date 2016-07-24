@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Reklamace"
 	include ./includes/head.jade
-	body.text
-		.main
+	body
+		.main.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -58,6 +58,6 @@ html(lang='en')
 								strong
 									a(href='/kontakt#contact_form') Kontaktujte nás
 								| .
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

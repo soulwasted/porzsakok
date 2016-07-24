@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Kontakt"
 	include ./includes/head.jade
-	body.contact.text
-		.main
+	body
+		.main.contact.text
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -117,6 +117,6 @@ html(lang='en')
 								| Číslo účtu IBAN: SK96 0200 0000 0035 2296 2753
 								br
 								| BIC – SWIFT kód VÚB, a.s.: SUBASKBX
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade

@@ -2,8 +2,8 @@ doctype html
 html(lang='en')
 	- var title= "Jak nakoupit"
 	include ./includes/head.jade
-	body.text.howto
-		.main
+	body
+		.main.text.howto
 			include ./includes/nav.jade
 			.container
 				ul.breadcrumb
@@ -54,7 +54,6 @@ html(lang='en')
 									a(href='specialni-sluzby.html')
 										span.glyphicon.glyphicon-fire
 										strong Taká možnosť tu ešte nebola – bezkonkurenčná ponuka e-shopu!
-
-	include ./includes/stripe-guarantee.jade
-	include ./includes/footer.jade
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
 	include ./includes/scripts.jade
