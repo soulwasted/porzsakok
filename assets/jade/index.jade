@@ -16,7 +16,7 @@ html(lang='en')
 								i.icon-piggy
 							h4 Množstevní slevy
 							p
-								| Nabízíme výhodné balení s 
+								| Nabízíme výhodné balení s
 								strong nejnižší cenou
 								|  za sáček
 					.col-md-2.col-md-25.col-sm-4.col-xs-6
@@ -25,7 +25,7 @@ html(lang='en')
 								i.icon-bags
 							h4 Největší výběr
 							p
-								| Zajistíme sáčky pro 
+								| Zajistíme sáčky pro
 								strong jakýkoliv model vysavače
 					.col-md-2.col-md-25.col-sm-4.col-xs-6
 						.benefit
@@ -33,7 +33,7 @@ html(lang='en')
 								i.icon-transport
 							h4 Doprava zdarma
 							p
-								| U balení L a XL je 
+								| U balení L a XL je
 								strong doprava zdarma
 					.col-md-2.col-md-25.col-md-offset-0.col-sm-4.col-sm-offset-2.col-xs-6
 						.benefit
@@ -41,7 +41,7 @@ html(lang='en')
 								i.icon-gift
 							h4 Dárek k nákupu
 							p
-								| U balení L a XL 
+								| U balení L a XL
 								strong vůně do vysavače zdarma
 					.col-md-2.col-md-25.col-sm-4.col-sm-offset-0.col-xs-6.col-xs-offset-3
 						.benefit
@@ -49,10 +49,27 @@ html(lang='en')
 								i.icon-clock
 							h4 Expresní expedice
 							p
-								| Vaši objednávku umíme vyexpedovat 
+								| Vaši objednávku umíme vyexpedovat
 								strong do 24 hodin
 			include ./includes/stripe-guarantee.jade
 			include ./includes/stripe-bag.jade
+			.container-fluid.stripe-additional
+				.row
+					.col-xs-12
+						h2 &hellip;pořád máte pocit, že Vám něco chybí?
+							br
+							| Vyzkoušejte doplňkové zboží.
+				.row
+					.col-xs-12
+						a(href='hq').pic-01
+							img(src='img/porzsakok-add-01.jpg', alt='Podlahové kartáče')
+							span Podlahové kartáče
+						a(href='hq').pic-02
+							img(src='img/porzsakok-add-02.jpg', alt='Vůně do vysavače')
+							span Vůně do vysavače
+						a(href='hq').pic-03
+							img(src='img/porzsakok-add-03.jpg', alt='HEPA filtry')
+							span HEPA filtry
 			.container-fluid.stripe-contact
 				.row
 					.col-xs-12
@@ -90,7 +107,7 @@ html(lang='en')
 									.input-group-addon
 										span.glyphicon.glyphicon-envelope(aria-hidden='true')
 									input#order-mail.form-control.btn-higher(type='email', placeholder='Váš e-mail')
-							button.btn.btn-default.btn-higher(type='submit') Vyhledat objednávku	
+							button.btn.btn-default.btn-higher(type='submit') Vyhledat objednávku
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade
 		include ./includes/scripts.jade

@@ -258,6 +258,81 @@
 		font-size: 18px;
 	}
 }
+.stripe-additional {
+	@extend .stripe;
+	background: $gray-lighter;
+	p {
+		font-size: 18px;
+	}
+	a {
+		// width: 100%;
+		// display: inline-block;
+		display: block;
+		clear: both;
+
+		img {
+			border-radius: 50%;
+			border: 3px solid $brand-success;
+			width: 200px;
+			z-index: 5;
+			position: relative;
+		}
+		span {
+			display: inline-block;
+			text-transform: uppercase;
+			text-align: left;
+			color: white;
+			font-weight: 700;
+			font-size: 18px;
+			background: $brand-success;
+			padding: 20px 30px;
+			position: relative;
+			left: -20px;
+			max-width: 240px;
+
+		}
+		&.pic-02 {
+			margin-left: -300px;
+			span {
+				// left: 20px;
+			}
+		}
+		&.pic-03 {
+			margin-left: 100px;
+		}
+
+		&.pic-02, &.pic-03 {
+			img {
+				width: 130px;
+			}
+			span {
+			}
+		}
+
+		&:hover {
+			img {
+				border-color: #006e8e;;
+			}
+			span {
+				background-color: #006e8e;;
+			}
+		}
+	}
+	@media screen and (max-width: $screen-xs-max) {
+		a {
+			margin-top: 10px;
+			margin-left: 0 !important;
+			span {
+				text-align: center;
+				max-width: 100%;
+				left: 0;
+				top: -10px;
+				display: block;
+			}
+		}
+	}
+
+}
 .stripe-order {
 	@extend .stripe;
 	h2 {

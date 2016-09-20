@@ -11,19 +11,19 @@
 					select#frm-firmSelectForm-firm(name='firm')
 						<option value="">Vyberte značku vysavače</option>
 						include ./search-select.jade
-				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?                         
+				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
 			#search-fulltext.tab-pane.fade.in.active(role='tabpanel')
 				form(action='seznam-modelu.html')
 					input(type='text', placeholder='Napište značku a/nebo typ vysavače')
 					button.btn(type='submit')
 						span.glyphicon.glyphicon-search(aria-hidden='true')
-				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?                         
+				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
 			#search-list.tab-pane.fade(role='tabpanel')
 				.row
 					ul.list-links
 						include ./search-list-links.jade
 				a.find(href='seznam-znacek.html') všechny značky…
-		// Nav tabs		
+		// Nav tabs
 		ul.nav.nav-pills(role='tablist')
 			li.col-xs-4(role='presentation')
 				a(href='#search-brand', aria-controls='search-brand', role='tab', data-toggle='tab') Podle značky a typu

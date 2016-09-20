@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-sass-test",
+  "name": "porzsakok",
   "description": "",
   "main": "",
   "license": "MIT",
@@ -12,9 +12,12 @@
     "tests"
   ],
   "dependencies": {
+    "jquery": "~2.2.4",
     "bootstrap-sass": "^3.3.6",
     "ekko-lightbox": "^4.0.2",
-    "nouislider": "^8.5.1"
+    "nouislider": "^8.5.1",
+    "responsive-bootstrap-toolkit": "^2.6.3",
+    "smooth-scroll": "https://github.com/cferdinandi/smooth-scroll.git#^10.0.1"
   },
   "devDependencies": {
     "scrollreveal": "^3.1.4"

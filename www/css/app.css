@@ -1087,7 +1087,6 @@ a {
     color: #004d64;
     text-decoration: underline; }
   a:focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
 
@@ -2305,7 +2304,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px; }
 
@@ -2823,7 +2821,6 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-    outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   .btn:hover, .btn:focus, .btn.focus {
@@ -4410,7 +4407,6 @@ button.close {
     -webkit-transition: -webkit-transform 0.3s ease-out;
     -o-transition: -o-transform 0.3s ease-out;
     transition: -webkit-transform 0.3s ease-out;
-    -o-transition: transform 0.3s ease-out, -o-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out, -o-transform 0.3s ease-out; }
   .modal.in .modal-dialog {
@@ -5045,12 +5041,14 @@ footer {
 
 .search {
   background: #caf3ff;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(60%, rgba(255, 255, 255, 0))), url("../img/porzsakok-carpet.jpg") center center no-repeat;
-  background: -webkit-linear-gradient(white 0%, rgba(255, 255, 255, 0) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
-  background: -o-linear-gradient(white 0%, rgba(255, 255, 255, 0) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
-  background: linear-gradient(white 0%, rgba(255, 255, 255, 0) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(60%, rgba(255, 255, 255, 0.5))), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+  background: -webkit-linear-gradient(white 0%, rgba(255, 255, 255, 0.5) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+  background: -o-linear-gradient(white 0%, rgba(255, 255, 255, 0.5) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+  background: linear-gradient(white 0%, rgba(255, 255, 255, 0.5) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
+  -webkit-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.3), 0px 0px 30px 0px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.3), 0px 0px 30px 0px rgba(0, 0, 0, 0.13);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5134,7 +5132,7 @@ footer {
           -ms-flex-pack: center;
               justify-content: center;
       width: 100%;
-      min-height: 220px; }
+      min-height: 230px; }
       .search .tabs .tab-content .tab-pane {
         width: 100%; }
       .search .tabs .tab-content form {
@@ -5144,16 +5142,26 @@ footer {
       width: 100%;
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
-              align-self: flex-end; }
+              align-self: flex-end;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      max-width: 650px;
+      margin: 0 auto;
+      margin-bottom: -30px; }
       .search .tabs ul.nav-pills li {
         margin-left: 0;
+        margin-right: 10px;
         padding: 0; }
+        .search .tabs ul.nav-pills li:last-child {
+          margin-right: 0; }
         .search .tabs ul.nav-pills li.active a {
           color: white;
-          background: none;
-          font-weight: 700; }
+          background: #0089b0; }
           .search .tabs ul.nav-pills li.active a:hover {
-            background: none; }
+            background: #006e8e; }
         .search .tabs ul.nav-pills li a {
           display: -webkit-box;
           display: -webkit-flex;
@@ -5161,10 +5169,12 @@ footer {
           -js-display: flex;
           display: flex;
           background: white;
+          border: 1px solid #0089b0;
           height: 60px;
           padding: 0 20px;
-          color: #4d4d4d;
-          font-size: 18px;
+          color: #0089b0;
+          font-size: 15px;
+          font-weight: 700;
           -webkit-box-align: center;
           -webkit-align-items: center;
               -ms-flex-align: center;
@@ -5178,8 +5188,7 @@ footer {
               font-size: 14px;
               padding: 0 5px; } }
           .search .tabs ul.nav-pills li a:hover {
-            color: white;
-            background: #0089b0; }
+            background: #e6e6e6; }
         @media screen and (max-width: 991px) {
           .search .tabs ul.nav-pills li a {
             max-width: 250px; } }
@@ -5187,16 +5196,18 @@ footer {
 a.find {
   display: inline-block;
   padding: 10px 20px;
-  margin-top: 30px;
   margin-bottom: 10px;
   -webkit-flex-shrink: 1;
       -ms-flex-negative: 1;
           flex-shrink: 1;
-  color: white;
+  color: black;
   font-size: 18px;
   text-decoration: underline; }
   a.find:hover {
     text-decoration: none; }
+
+#search-list a.find {
+  margin-top: 20px; }
 
 .main.seznam-modelu a.find {
   color: #0089b0;
@@ -5206,7 +5217,7 @@ a.find {
 
 #search-brand select {
   width: 100%;
-  max-width: 600px;
+  max-width: 650px;
   height: 60px;
   font-size: 18px;
   padding: 0 30px;
@@ -5218,7 +5229,7 @@ a.find {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 2px solid white; }
+  border: 3px solid #0089b0; }
   @media (max-width: 991px) {
     #search-brand select {
       padding: 0 10px;
@@ -5238,7 +5249,8 @@ a.find {
     padding: 0 30px;
     background: white;
     background: rgba(255, 255, 255, 0.8);
-    border: 2px solid white; }
+    border: 3px solid #0089b0;
+    border-radius: 4px; }
     @media (max-width: 991px) {
       #search-fulltext form input {
         padding: 0 10px;
@@ -5275,24 +5287,21 @@ a.find {
   #search-list ul {
     margin-bottom: 0; }
     #search-list ul li a {
-      font-size: 18px;
-      color: white; }
+      font-size: 18px; }
       @media (max-width: 991px) {
         #search-list ul li a {
           font-size: 14px; } }
-  #search-list a {
-    color: white; }
 
-.stripe, .stripe-benefits, .stripe-guarantee, .stripe-bag, .stripe-contact, .stripe-order {
+.stripe, .stripe-benefits, .stripe-guarantee, .stripe-bag, .stripe-contact, .stripe-additional, .stripe-order {
   text-align: center;
   padding-bottom: 60px; }
-  .stripe h2, .stripe-benefits h2, .stripe-guarantee h2, .stripe-bag h2, .stripe-contact h2, .stripe-order h2 {
+  .stripe h2, .stripe-benefits h2, .stripe-guarantee h2, .stripe-bag h2, .stripe-contact h2, .stripe-additional h2, .stripe-order h2 {
     margin-top: 80px;
     margin-bottom: 60px; }
-  .stripe a.btn, .stripe-benefits a.btn, .stripe-guarantee a.btn, .stripe-bag a.btn, .stripe-contact a.btn, .stripe-order a.btn {
+  .stripe a.btn, .stripe-benefits a.btn, .stripe-guarantee a.btn, .stripe-bag a.btn, .stripe-contact a.btn, .stripe-additional a.btn, .stripe-order a.btn {
     margin-top: 30px; }
-  .stripe a.btn:hover, .stripe-benefits a.btn:hover, .stripe-guarantee a.btn:hover, .stripe-bag a.btn:hover, .stripe-contact a.btn:hover, .stripe-order a.btn:hover,
-  .stripe button:hover, .stripe-benefits button:hover, .stripe-guarantee button:hover, .stripe-bag button:hover, .stripe-contact button:hover, .stripe-order button:hover {
+  .stripe a.btn:hover, .stripe-benefits a.btn:hover, .stripe-guarantee a.btn:hover, .stripe-bag a.btn:hover, .stripe-contact a.btn:hover, .stripe-additional a.btn:hover, .stripe-order a.btn:hover,
+  .stripe button:hover, .stripe-benefits button:hover, .stripe-guarantee button:hover, .stripe-bag button:hover, .stripe-contact button:hover, .stripe-additional button:hover, .stripe-order button:hover {
     background: #0089b0;
     color: white; }
 
@@ -5518,6 +5527,52 @@ a.find {
   background: url("../img/bg-stripe-contact.jpg") center center/cover no-repeat; }
   .stripe-contact p {
     font-size: 18px; }
+
+.stripe-additional {
+  background: #e6e6e6; }
+  .stripe-additional p {
+    font-size: 18px; }
+  .stripe-additional a {
+    display: block;
+    clear: both; }
+    .stripe-additional a img {
+      border-radius: 50%;
+      border: 3px solid #0089b0;
+      width: 200px;
+      z-index: 5;
+      position: relative; }
+    .stripe-additional a span {
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: left;
+      color: white;
+      font-weight: 700;
+      font-size: 18px;
+      background: #0089b0;
+      padding: 20px 30px;
+      position: relative;
+      left: -20px;
+      max-width: 240px; }
+    .stripe-additional a.pic-02 {
+      margin-left: -300px; }
+    .stripe-additional a.pic-03 {
+      margin-left: 100px; }
+    .stripe-additional a.pic-02 img, .stripe-additional a.pic-03 img {
+      width: 130px; }
+    .stripe-additional a:hover img {
+      border-color: #006e8e; }
+    .stripe-additional a:hover span {
+      background-color: #006e8e; }
+  @media screen and (max-width: 767px) {
+    .stripe-additional a {
+      margin-top: 10px;
+      margin-left: 0 !important; }
+      .stripe-additional a span {
+        text-align: center;
+        max-width: 100%;
+        left: 0;
+        top: -10px;
+        display: block; } }
 
 .stripe-order h2 {
   margin-top: 40px;

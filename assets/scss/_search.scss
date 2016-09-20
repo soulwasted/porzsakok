@@ -4,8 +4,10 @@
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 90%), url("../img/search-bg.jpg") center center no-repeat;
 	// background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%), url("../img/porzsakok-carpet3.jpg") center center no-repeat;
 	// background: url("../img/porzsakok-carpet.jpg") center center no-repeat;
-	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
+	background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 60%), url("../img/porzsakok-carpet.jpg") center center no-repeat;
 	background-size: cover;
+	// border-bottom: 1px solid $brand-success;
+	box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.3), 0px 0px 30px 0px rgba(0,0,0,0.13);
 	display: flex;
 	flex-direction: column;
 	align-content: stretch;
@@ -51,7 +53,7 @@
 			align-items: center;
 			justify-content: center;
 			width: 100%;
-			min-height: 220px;
+			min-height: 230px;
 			.tab-pane {
 				width: 100%;
 			}
@@ -64,27 +66,35 @@
 			width: 100%;
 			// display: inline-block;
 			align-self: flex-end;
+			display: flex;
+			max-width: 650px;
+			margin: 0 auto;
+			margin-bottom: -30px;
 			li {
 				margin-left: 0;
+				margin-right: 10px;
 				padding: 0;
+				&:last-child {
+					margin-right: 0;
+				}
 				&.active {
 					a {
 						color: white;
-						// background: $brand-success;
-						background: none;
-						font-weight: 700;
+						background: $brand-success;
 						&:hover {
-							background: none;
+							background: #006e8e;
 						}
 					}
 				}
 				a {
 					display: flex;
 					background: white;
+					border: 1px solid $brand-success;
 					height: 60px;
 					padding: 0 20px;
-					color: $gray;
-					font-size: 18px;
+					color: $brand-success;
+					font-size: 15px;
+					font-weight: 700;
 					align-items: center;
 					justify-content: center;
 					@media (max-width: $screen-sm-max) {
@@ -92,9 +102,10 @@
 						padding: 0 5px;
 					}
 					&:hover {
-						color: white;
+						// color: white;
 						// color: $gray-lighter;
-						background: $brand-success;
+						// background: rgba(0, 137, 176, 0.4);
+						background: $gray-lighter;
 					}
 				}
 				@media screen and (max-width: $screen-sm-max) {
@@ -110,14 +121,19 @@
 a.find {
 	display: inline-block;
 	padding: 10px 20px;
-	margin-top: 30px;
+	// margin-top: 20px;
 	margin-bottom: 10px;
 	flex-shrink: 1;
-	color: white;
+	color: black;
 	font-size: 18px;
 	text-decoration: underline;
 	&:hover {
 		text-decoration: none;
+	}
+}
+#search-list {
+	a.find {
+		margin-top: 20px;
 	}
 }
 .main.seznam-modelu {
@@ -132,7 +148,7 @@ a.find {
 #search-brand {
 	select {
 		width: 100%;
-		max-width: 600px;
+		max-width: 650px;
 		height: 60px;
 		font-size: 18px;
 		padding: 0 30px;
@@ -144,7 +160,7 @@ a.find {
 		-webkit-appearance: none;
 		-moz-appearance:none;
 		appearance: none;
-		border: 2px solid white;
+		border: 3px solid $brand-success;
 		@media (max-width: $screen-sm-max) {
 			padding: 0 10px;
 			font-size: 14px;
@@ -165,7 +181,9 @@ a.find {
 			padding: 0 30px;
 			background: white;
 			background: rgba(255,255,255,0.8);
-			border: 2px solid white;
+			// border: 2px solid white;
+			border: 3px solid $brand-success;
+			border-radius: 4px;
 			@media (max-width: $screen-sm-max) {
 				padding: 0 10px;
 				font-size: 14px;
@@ -213,7 +231,7 @@ a.find {
 		li {
 			a {
 				font-size: 18px;
-				color: white;
+				// color: white;
 				@media (max-width: $screen-sm-max) {
 					font-size: 14px;
 				}
@@ -222,6 +240,6 @@ a.find {
 	}
 	a {
 		// font-size: 14px;
-		color: white;
+		// color: white;
 	}
 }

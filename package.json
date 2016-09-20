@@ -1,6 +1,6 @@
 {
   "name": "porzsakok",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Porzsakok project package.json file :)",
   "main": "gulpfile.js",
   "repository": {
