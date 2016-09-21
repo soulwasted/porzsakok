@@ -42,12 +42,12 @@
 		margin-top: 10px;
 		margin-bottom: 10px;
 		.badge-sale {
-			padding-top: 7px;
-			width: 60px;
+			padding: 7px 10px;
+			width: auto;
 			height: 60px;
 			// border: 2px solid $brand-red;
 			background: $brand-primary;
-			border-radius: 50%;
+			border-radius: 12px;
 			display: inline-block;
 			color: white;
 			text-transform: none;

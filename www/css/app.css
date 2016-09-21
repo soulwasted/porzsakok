@@ -5891,11 +5891,11 @@ body.modal-open .main {
     margin-top: 10px;
     margin-bottom: 10px; }
     .discounts .prices-sale .badge-sale {
-      padding-top: 7px;
-      width: 60px;
+      padding: 7px 10px;
+      width: auto;
       height: 60px;
       background: #18823a;
-      border-radius: 50%;
+      border-radius: 12px;
       display: inline-block;
       color: white;
       text-transform: none; }
