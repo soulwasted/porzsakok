@@ -262,43 +262,62 @@
 	@extend .stripe;
 	background: $gray-lighter;
 	p {
-		font-size: 18px;
+		// font-size: 18px;
 	}
-	a {
+	.pic {
 		// width: 100%;
 		// display: inline-block;
 		display: block;
-		clear: both;
-
+		min-height: 210px;
 		img {
 			border-radius: 50%;
 			border: 3px solid $brand-success;
 			width: 200px;
 			z-index: 5;
 			position: relative;
+			// display: inline-block;
+			vertical-align: top;
+
+			&::after {
+			}
 		}
-		span {
+		.text {
 			display: inline-block;
-			text-transform: uppercase;
 			text-align: left;
-			color: white;
-			font-weight: 700;
-			font-size: 18px;
 			background: $brand-success;
 			padding: 20px 30px;
 			position: relative;
 			left: -20px;
-			max-width: 240px;
+			top: 20px;
+			max-width: 540px;
+			h4 {
+				display: inline-block;
+				color: white !important;
+				text-transform: uppercase;
+				color: white;
+				font-weight: 700;
+				font-size: 18px;
+			}
+			p {
+				color: white;
+			}
+			a {
+				color: white;
+				text-decoration: underline;
+			}
 
 		}
 		&.pic-02 {
-			margin-left: -300px;
-			span {
-				// left: 20px;
+			// margin-left: -300px;
+			.text {
+				left: 20px;
+			}
+			img.xs-show {
+				display: none;
 			}
 		}
 		&.pic-03 {
-			margin-left: 100px;
+			// margin-left: 100px;
 		}
 
 		&.pic-02, &.pic-03 {
@@ -313,19 +332,26 @@
 			img {
 				border-color: #006e8e;;
 			}
-			span {
+			.text {
 				background-color: #006e8e;;
 			}
 		}
 	}
 	@media screen and (max-width: $screen-xs-max) {
-		a {
+		.pic {
 			margin-top: 10px;
 			margin-left: 0 !important;
-			span {
+			img.xs-hide {
+				display: none;
+			}
+			img.xs-show {
+				display: inline-block !important;
+			}
+			.text {
 				text-align: center;
 				max-width: 100%;
-				left: 0;
+				left: 0 !important;
+				right: 0;
 				top: -10px;
 				display: block;
 			}

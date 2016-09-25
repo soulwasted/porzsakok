@@ -53,23 +53,7 @@ html(lang='en')
 								strong do 24 hodin
 			include ./includes/stripe-guarantee.jade
 			include ./includes/stripe-bag.jade
-			.container-fluid.stripe-additional
-				.row
-					.col-xs-12
-						h2 &hellip;pořád máte pocit, že Vám něco chybí?
-							br
-							| Vyzkoušejte doplňkové zboží.
-				.row
-					.col-xs-12
-						a(href='hq').pic-01
-							img(src='img/porzsakok-add-01.jpg', alt='Podlahové kartáče')
-							span Podlahové kartáče
-						a(href='hq').pic-02
-							img(src='img/porzsakok-add-02.jpg', alt='Vůně do vysavače')
-							span Vůně do vysavače
-						a(href='hq').pic-03
-							img(src='img/porzsakok-add-03.jpg', alt='HEPA filtry')
-							span HEPA filtry
+			include ./includes/stripe-additional.jade
 			.container-fluid.stripe-contact
 				.row
 					.col-xs-12

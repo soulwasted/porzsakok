@@ -1,55 +1,58 @@
 doctype html
 html(lang='en')
-	- var title= "Průvodce nákupem"
-	include ./includes/head.jade
-	body
-		.main.text.howto
-			include ./includes/nav.jade
-			.container
-				ul.breadcrumb
-					li
-						a(href='/index.html') Domů
-					li
-						a(href='/jak-nakoupit') Ako nakúpiť
-					li.active Sprievodca nákupom
-				.row
-					.col-xs-12
-						h1
-							i.glyphicon.glyphicon-book
-							|  Nakúpiť na vrecka-vysavace.sk je naozaj jednoduché!
-				.row.label11.text-left
-					.col-sm-12
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Ak ste u nás už v minulosti nakupovali, 
-							a(href='/prihlasit') prihláste sa do vášho osobného účtu
-							|  (e-mail a heslo) a vaša objednávka už bude čiastočne vyplnená (vaše meno, priezvisko, adresa atď.)
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Vyhľadanie vášho vrecká do vysávača nebolo nikdy tak jednoduché – vyskúšajte 
-							a(href='/') vyhľadávacie centrum vacs slovakia
-							| . Ak neviete nájsť Vaše vrecko urobíme to za Vás. Kontaktujte nás na 
-							a(href='mailto:pomoc@vrecka-vysavace.sk') pomoc@vrecka-vysavace.sk
-							| . Vo svojom e-mailu uveďte výrobcu a typ vysávača. Keď nájdete svoje vrecko do vysávača, vyberte si niektoré z našich balení S, M, L alebo XL. Na tejto stránke nájdete aj presné informácie o obsahu balenia (tzn. počet vreciek a filtrov v balení atď.).
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Pomocou tlačidla VLOŽIŤ DO KOŠÍKA si vyberiete požadované balenie vreciek.
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Priamo v košíku môžete dokonca zmeniť balenie, počet kusov balenia alebo zmeniť typ vrecka. Okrem toho môžete pridať doplnkový tovar ako napr. turbokefa, kefa na tvrdé podlahy, vône do vysávača atd.
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Nezabudnite si skontrolovať, či už máte naozaj všetko, čo potrebujete.
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Ostáva už len vyplniť identifikačné údaje objednávky. Aj v tejto časti sme sa snažili Vám maximálne uľahčiť prácu - políčka obsahujú praktické komentáre alebo nápovede. Políčko „Vyhľadajte adresu“ vám pomôže pri vyplnení adresy. Ak nakupujete na firmu stačí vyplniť Vaše IČO do políčka „IČO:“ – ostatné údaje budú vyplnené automaticky z verejnej databáze 
-							a(href='http://www.statistics.sk') http://www.statistics.sk
-							| .
-						li
-							span.glyphicon.glyphicon-paperclip
-							|  Odoslaním nákupného košíku začneme Vašu objednávku spracovávať. O ďalšom postupe budete informovaný e-mailom na adresu uvedenú v dodacích údajoch. 
-							a(href='/objednavka') Stav Vašej objednávky
-							|  môžete zistiť po zadaní čísla objednávky a Vášho mailu.
-			include ./includes/stripe-guarantee.jade
-			include ./includes/footer.jade
-	include ./includes/scripts.jade
+    - var title= "Průvodce nákupem"
+    include ./includes/head.jade
+    body
+        .main.text.howto
+            include ./includes/nav.jade
+            .container
+                ul.breadcrumb
+                    li
+                        a(href='/index.html') Domů
+                    li
+                        a(href='/jak-nakoupit') Ako nakúpiť
+                    li.active Sprievodca nákupom
+                .row
+                    .col-xs-12
+                        h1
+                            i.glyphicon.glyphicon-book
+                            |  Nakúpiť na vrecka-vysavace.sk je naozaj jednoduché!
+                .row.label11.text-left
+                    .col-sm-12
+                        #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                            .panel.panel-default
+                                li#headingOne.panel-heading(role='tab')
+                                    h4.panel-title
+                                        span.glyphicon.glyphicon-paperclip
+                                        a(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                            | Nadpis 1
+                                #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                                    .panel-body
+                                        |  Ak ste u nás už v minulosti nakupovali,
+                                        a(href='/prihlasit') prihláste sa do vášho osobného účtu
+                                        |  (e-mail a heslo) a vaša objednávka už bude čiastočne vyplnená (vaše meno, priezvisko, adresa atď.)
+                            .panel.panel-default
+                                li#headingTwo.panel-heading(role='tab')
+                                    h4.panel-title
+                                        span.glyphicon.glyphicon-paperclip
+                                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                            | Nadpis 2
+                                #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                                    .panel-body
+                                        |  Vyhľadanie vášho vrecká do vysávača nebolo nikdy tak jednoduché – vyskúšajte
+                                        a(href='/') vyhľadávacie centrum vacs slovakia
+                                        | . Ak neviete nájsť Vaše vrecko urobíme to za Vás. Kontaktujte nás na
+                                        a(href='mailto:pomoc@vrecka-vysavace.sk') pomoc@vrecka-vysavace.sk
+                                        | . Vo svojom e-mailu uveďte výrobcu a typ vysávača. Keď nájdete svoje vrecko do vysávača, vyberte si niektoré z našich balení S, M, L alebo XL. Na tejto stránke nájdete aj presné informácie o obsahu balenia (tzn. počet vreciek a filtrov v balení atď.).
+                            .panel.panel-default
+                                li#headingThree.panel-heading(role='tab')
+                                    h4.panel-title
+                                        span.glyphicon.glyphicon-paperclip
+                                        a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                            | Nadpis 3
+                                #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                                    .panel-body
+                                        |  Pomocou tlačidla VLOŽIŤ DO KOŠÍKA si vyberiete požadované balenie vreciek.
+            include ./includes/stripe-guarantee.jade
+            include ./includes/footer.jade
+    include ./includes/scripts.jade

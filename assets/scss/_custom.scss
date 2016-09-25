@@ -17,6 +17,9 @@
 		}
 	}
 }
+.btn-default {
+	color: $brand-success;
+}
 .btn-higher {
 	height: 50px;
 	line-height: 50px;
@@ -171,4 +174,9 @@ ul.list-brands {
 			color: white;
 		}
 	}
+}
+.clear {
+	clear: both;
+	display: block;
+	content: " ";
 }

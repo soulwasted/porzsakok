@@ -4743,6 +4743,9 @@ button.close {
     .back.btn .glyphicon {
       margin-right: 10px; }
 
+.btn-default {
+  color: #0089b0; }
+
 .btn-higher {
   height: 50px;
   line-height: 50px;
@@ -4905,6 +4908,11 @@ ul.list-brands {
   text-align: center;
   margin: 60px auto;
   color: white; }
+
+.clear {
+  clear: both;
+  display: block;
+  content: " "; }
 
 .special {
   font-family: Sarina, "Open Sans", sans-serif; }
@@ -5530,47 +5538,60 @@ a.find {
 
 .stripe-additional {
   background: #e6e6e6; }
-  .stripe-additional p {
-    font-size: 18px; }
-  .stripe-additional a {
+  .stripe-additional .pic {
     display: block;
-    clear: both; }
-    .stripe-additional a img {
+    min-height: 210px; }
+    .stripe-additional .pic img {
       border-radius: 50%;
       border: 3px solid #0089b0;
       width: 200px;
       z-index: 5;
-      position: relative; }
-    .stripe-additional a span {
+      position: relative;
+      vertical-align: top; }
+    .stripe-additional .pic .text {
       display: inline-block;
-      text-transform: uppercase;
       text-align: left;
-      color: white;
-      font-weight: 700;
-      font-size: 18px;
       background: #0089b0;
       padding: 20px 30px;
       position: relative;
       left: -20px;
-      max-width: 240px; }
-    .stripe-additional a.pic-02 {
-      margin-left: -300px; }
-    .stripe-additional a.pic-03 {
-      margin-left: 100px; }
-    .stripe-additional a.pic-02 img, .stripe-additional a.pic-03 img {
+      top: 20px;
+      max-width: 540px; }
+      .stripe-additional .pic .text h4 {
+        display: inline-block;
+        color: white !important;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 700;
+        font-size: 18px; }
+      .stripe-additional .pic .text p {
+        color: white; }
+      .stripe-additional .pic .text a {
+        color: white;
+        text-decoration: underline; }
+    .stripe-additional .pic.pic-02 .text {
+      left: 20px; }
+    .stripe-additional .pic.pic-02 img.xs-show {
+      display: none; }
+    .stripe-additional .pic.pic-02 img, .stripe-additional .pic.pic-03 img {
       width: 130px; }
-    .stripe-additional a:hover img {
+    .stripe-additional .pic:hover img {
       border-color: #006e8e; }
-    .stripe-additional a:hover span {
+    .stripe-additional .pic:hover .text {
       background-color: #006e8e; }
   @media screen and (max-width: 767px) {
-    .stripe-additional a {
+    .stripe-additional .pic {
       margin-top: 10px;
       margin-left: 0 !important; }
-      .stripe-additional a span {
+      .stripe-additional .pic img.xs-hide {
+        display: none; }
+      .stripe-additional .pic img.xs-show {
+        display: inline-block !important; }
+      .stripe-additional .pic .text {
         text-align: center;
         max-width: 100%;
-        left: 0;
+        left: 0 !important;
+        right: 0;
         top: -10px;
         display: block; } }
 
@@ -6131,14 +6152,20 @@ body.modal-open .main {
   .main.contact .fotky img {
     width: 50%; } }
 
+.main.howto .label11 li {
+  margin-bottom: 0; }
+
 .main.howto .panel-body {
   padding-left: 40px; }
-  .main.howto .panel-body h4 {
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  .main.howto .panel-body .glyphicon {
-    margin-right: 10px;
-    margin-left: -30px; }
+
+.main.howto .glyphicon {
+  padding-right: 13px; }
+
+.main.howto .panel-collapse {
+  margin-top: 20px; }
+
+.main.howto .panel-title {
+  margin-top: 10px !important; }
 
 .main.text .panel-default {
   padding: 15px;
