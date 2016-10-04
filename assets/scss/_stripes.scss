@@ -267,28 +267,30 @@
 	.pic {
 		// width: 100%;
 		// display: inline-block;
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		min-height: 210px;
 		img {
 			border-radius: 50%;
 			border: 3px solid $brand-success;
 			width: 200px;
-			z-index: 5;
-			position: relative;
+			z-index: 10;
+			// position: relative;
 			// display: inline-block;
-			vertical-align: top;
+			// vertical-align: top;
 
 			&::after {
 			}
 		}
 		.text {
-			display: inline-block;
+			// display: inline-block;
 			text-align: left;
 			background: $brand-success;
-			padding: 20px 30px;
+			padding: 20px 30px 20px 80px;
 			position: relative;
-			left: -20px;
-			top: 20px;
+			left: -30px;
+			// top: 20px;
 			max-width: 540px;
 			h4 {
 				display: inline-block;
@@ -308,12 +310,13 @@
 
 		}
 		&.pic-02 {
-			// margin-left: -300px;
-			.text {
-				left: 20px;
+			img {
+				order: 2;
 			}
-			img.xs-show {
-				display: none;
+			.text {
+				left: 30px;
+				padding: 20px 80px 20px 30px;
+				// order: 0;
 			}
 		}
 		&.pic-03 {
@@ -329,6 +332,7 @@
 		}
 
 		&:hover {
+			cursor: pointer;
 			img {
 				border-color: #006e8e;;
 			}
@@ -340,20 +344,20 @@
 	@media screen and (max-width: $screen-xs-max) {
 		.pic {
 			margin-top: 10px;
+			display: block;
 			margin-left: 0 !important;
-			img.xs-hide {
-				display: none;
-			}
-			img.xs-show {
-				display: inline-block !important;
+			img {
+				position: relative;
+				// z-index: 10;
 			}
 			.text {
 				text-align: center;
 				max-width: 100%;
 				left: 0 !important;
 				right: 0;
-				top: -10px;
+				top: -20px;
 				display: block;
+				padding: 20px 30px !important;
 			}
 		}
 	}

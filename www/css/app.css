@@ -5539,23 +5539,31 @@ a.find {
 .stripe-additional {
   background: #e6e6e6; }
   .stripe-additional .pic {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-height: 210px; }
     .stripe-additional .pic img {
       border-radius: 50%;
       border: 3px solid #0089b0;
       width: 200px;
-      z-index: 5;
-      position: relative;
-      vertical-align: top; }
+      z-index: 10; }
     .stripe-additional .pic .text {
-      display: inline-block;
       text-align: left;
       background: #0089b0;
-      padding: 20px 30px;
+      padding: 20px 30px 20px 80px;
       position: relative;
-      left: -20px;
-      top: 20px;
+      left: -30px;
       max-width: 540px; }
       .stripe-additional .pic .text h4 {
         display: inline-block;
@@ -5569,31 +5577,37 @@ a.find {
       .stripe-additional .pic .text a {
         color: white;
         text-decoration: underline; }
+    .stripe-additional .pic.pic-02 img {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; }
     .stripe-additional .pic.pic-02 .text {
-      left: 20px; }
-    .stripe-additional .pic.pic-02 img.xs-show {
-      display: none; }
+      left: 30px;
+      padding: 20px 80px 20px 30px; }
     .stripe-additional .pic.pic-02 img, .stripe-additional .pic.pic-03 img {
       width: 130px; }
-    .stripe-additional .pic:hover img {
-      border-color: #006e8e; }
-    .stripe-additional .pic:hover .text {
-      background-color: #006e8e; }
+    .stripe-additional .pic:hover {
+      cursor: pointer; }
+      .stripe-additional .pic:hover img {
+        border-color: #006e8e; }
+      .stripe-additional .pic:hover .text {
+        background-color: #006e8e; }
   @media screen and (max-width: 767px) {
     .stripe-additional .pic {
       margin-top: 10px;
+      display: block;
       margin-left: 0 !important; }
-      .stripe-additional .pic img.xs-hide {
-        display: none; }
-      .stripe-additional .pic img.xs-show {
-        display: inline-block !important; }
+      .stripe-additional .pic img {
+        position: relative; }
       .stripe-additional .pic .text {
         text-align: center;
         max-width: 100%;
         left: 0 !important;
         right: 0;
-        top: -10px;
-        display: block; } }
+        top: -20px;
+        display: block;
+        padding: 20px 30px !important; } }
 
 .stripe-order h2 {
   margin-top: 40px;
