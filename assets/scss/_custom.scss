@@ -68,6 +68,7 @@ hr {
 		padding-bottom: 15px;
 	}
 }
+
 nav .container {
 	padding-top: 0 !important;
 	padding-bottom: 0 !important;
@@ -179,4 +180,24 @@ ul.list-brands {
 	clear: both;
 	display: block;
 	content: " ";
+}
+
+.container.center {
+	text-align: center;
+}
+
+@media screen and (min-width: $screen-sm) {
+	.container.center-vert > .row {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.visible-xs {
+	display: block !important;
+}
+@media screen and (min-width: $screen-sm) {
+	.visible-xs {
+		display: none !important;
+	}
 }

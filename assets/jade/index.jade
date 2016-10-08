@@ -6,92 +6,12 @@ html(lang='en')
 		.main.home
 			include ./includes/nav.jade
 			include ./includes/home-search.jade
-			.container.stripe-benefits
-				.row
-					h2 Naše výhody
-				.row
-					.col-md-2.col-md-25.col-sm-4.col-xs-6
-						.benefit
-							.icon
-								i.icon-piggy
-							h4 Množstevní slevy
-							p
-								| Nabízíme výhodné balení s
-								strong nejnižší cenou
-								|  za sáček
-					.col-md-2.col-md-25.col-sm-4.col-xs-6
-						.benefit
-							.icon
-								i.icon-bags
-							h4 Největší výběr
-							p
-								| Zajistíme sáčky pro
-								strong jakýkoliv model vysavače
-					.col-md-2.col-md-25.col-sm-4.col-xs-6
-						.benefit
-							.icon
-								i.icon-transport
-							h4 Doprava zdarma
-							p
-								| U balení L a XL je
-								strong doprava zdarma
-					.col-md-2.col-md-25.col-md-offset-0.col-sm-4.col-sm-offset-2.col-xs-6
-						.benefit
-							.icon
-								i.icon-gift
-							h4 Dárek k nákupu
-							p
-								| U balení L a XL
-								strong vůně do vysavače zdarma
-					.col-md-2.col-md-25.col-sm-4.col-sm-offset-0.col-xs-6.col-xs-offset-3
-						.benefit
-							.icon
-								i.icon-clock
-							h4 Expresní expedice
-							p
-								| Vaši objednávku umíme vyexpedovat
-								strong do 24 hodin
+			include ./includes/stripe-benefits.jade
 			include ./includes/stripe-guarantee.jade
 			include ./includes/stripe-bag.jade
 			include ./includes/stripe-additional.jade
-			.container-fluid.stripe-contact
-				.row
-					.col-xs-12
-						h2 Chcete se na něco zeptat?
-				.row
-					.col-xs-12.col-sm-4.col-sm-offset-2
-						p
-							| Pište na
-							br
-							strong
-								a(href='mailto:info@vrecka-vysavace.sk') info@vrecka-vysavace.sk
-					.col-xs-12.col-sm-4
-						p
-							| nebo nám zavolejte na
-							br
-							strong +421 948 394 420
-				.row
-					a.btn.btn-default.btn-higher(href='#', role='button') Kontakty
-			.container.stripe-order
-				.row
-					.col-xs-12
-						h2 Zjistěte stav Vaší objednávky
-				.row
-					.col-xs-12
-						form.form-inline
-							.form-group
-								label.sr-only(for='order-number') Číslo objednávky
-								.input-group
-									.input-group-addon
-										span.glyphicon.glyphicon-user(aria-hidden='true')
-									input#order-number.form-control.btn-higher(type='number', placeholder='Číslo objednávky')
-							.form-group
-								label.sr-only(for='order-mail') Váš e-mail
-								.input-group
-									.input-group-addon
-										span.glyphicon.glyphicon-envelope(aria-hidden='true')
-									input#order-mail.form-control.btn-higher(type='email', placeholder='Váš e-mail')
-							button.btn.btn-default.btn-higher(type='submit') Vyhledat objednávku
+			include ./includes/stripe-contact.jade
+			include ./includes/stripe-order.jade
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade
 		include ./includes/scripts.jade

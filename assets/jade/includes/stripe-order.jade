@@ -1,0 +1,20 @@
+.container.stripe-order
+    .row
+        .col-xs-12
+            h2 Zjistěte stav Vaší objednávky
+    .row
+        .col-xs-12
+            form.form-inline
+                .form-group
+                    label.sr-only(for='order-number') Číslo objednávky
+                    .input-group
+                        .input-group-addon
+                            span.glyphicon.glyphicon-user(aria-hidden='true')
+                        input#order-number.form-control.btn-higher(type='number', placeholder='Číslo objednávky')
+                .form-group
+                    label.sr-only(for='order-mail') Váš e-mail
+                    .input-group
+                        .input-group-addon
+                            span.glyphicon.glyphicon-envelope(aria-hidden='true')
+                        input#order-mail.form-control.btn-higher(type='email', placeholder='Váš e-mail')
+                button.btn.btn-default.btn-higher(type='submit') Vyhledat objednávku

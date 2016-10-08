@@ -108,133 +108,19 @@
 		opacity: 0.0;
 	}
 }
+img.vacs-stripe {
+	max-width: 520px;
+	width: 100%;
+	margin-bottom: 20px;
+	display: inline-block;
+}
 .stripe-bag {
 	h2 {
 		margin-top: 40px;
 		margin-bottom: 20px;
 	}
 	@extend .stripe;
-	img.vacs-stripe {
-		max-width: 520px;
-		width: 100%;
-		margin-bottom: 20px;
-		display: inline-block;
-	}
-	.bag-wrapper {
-		position: relative;
-		background: url('../img/vacs-bag.jpg') center center no-repeat;
-		background-size: contain;
-		background-position: center 70%;
-		padding: 50px 4em 30px;
-		// overflow: hidden;
-		@media (max-width: $screen-sm-max) {
-			padding-left: 0;
-			padding-right: 0;
-			// margin-top: -50px;
-		}
-		.circle {
-			width: 30em;
-			height: 30em;
-			padding: 2.8em;
-			/*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
-			border: 1px solid $brand-success;
-			border-radius: 50%;
-			margin: 0 auto;
-			@media (max-width: $screen-xs-max) {
-				border-radius: 0;
-				border: none;
-				width: 100%;
-				height: auto;
-			}
-			.pois {
-				overflow: hidden;
-			}
-			a.poi {
-				display: block;
-				width: 6em;
-				height: 6em;
-				border-radius: 50%;
-				background: white;
-				border: 1px solid $gray-light;
-				// box-shadow: 0 0 0 rgba(204,169,44, 0.4);
-				// box-shadow: 0 0 0 20px rgba(0,0,0,0.4);
-				cursor: pointer;
-				&::after {
-					border: 10px solid red;
-				}
-				&.active,
-				&:hover {
-					animation: none;
-					background: $brand-success;
-					border: none;
-					box-shadow: 0 0 0 10px $brand-success;
-					i {
-						color: white;
-					}
-				}
-				i {
-					color: $brand-success;
-					font-size: 70px;
-					line-height: 80px;
-					&::before {
-						margin: 0;
-					}
-					&.icon-pic-clock {
-						font-size: 60px;
-					}
-				}
-				@media (min-width: $screen-sm-min) {
-					display: block;
-					margin: -3em;
-					overflow: hidden;
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					&.one {
-						transform: rotate(300deg) translate(15em) rotate(-300deg);
-					}
-					&.two {
-						transform: translate(15em);
-					}
-					/* 15em = half the width of the wrapper */
-					&.three {
-						transform: rotate(60deg) translate(15em) rotate(-60deg);
-					}
-					&.four {
-						transform: rotate(120deg) translate(15em) rotate(-120deg);
-					}
-					&.five {
-						transform: translate(-15em);
-					}
-					&.six {
-						transform: rotate(240deg) translate(15em) rotate(-240deg);
-					}
-				}
-			}
-		}
-		@media (max-width: $screen-xs-max) {
-			background-position: center -10%;
-			padding-top: 0;
-			padding-bottom: 0;
-			max-height: 400px;
-			.circle {
-				padding: 200px 0 0;
-				a.poi {
-					display: inline-block;
-					width: 4.5em;
-					height: 4.5em;
-					margin: 10px;
-					i {
-						font-size: 50px;
-						line-height: 60px;
-						&.icon-pic-clock {
-							font-size: 45px;
-						}
-					}
-				}
-			}
-		}
-	}
+	@import "bag-wrapper";
 	#accordion {
 		text-align: left;
 		margin-top: 40px;
