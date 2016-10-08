@@ -5435,7 +5435,8 @@ img.vacs-stripe {
   -webkit-background-size: contain;
           background-size: contain;
   background-position: center 70%;
-  padding: 50px 4em 30px; }
+  padding: 50px 4em 30px;
+  text-align: center; }
   @media (max-width: 991px) {
     .stripe-bag .bag-wrapper {
       padding-left: 0;
@@ -6161,7 +6162,8 @@ body > .main.vacs .bag-wrapper {
   -webkit-background-size: contain;
           background-size: contain;
   background-position: center 70%;
-  padding: 50px 4em 30px; }
+  padding: 50px 4em 30px;
+  text-align: center; }
   @media (max-width: 991px) {
     body > .main.vacs .bag-wrapper {
       padding-left: 0;
