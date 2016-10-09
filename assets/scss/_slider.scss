@@ -98,12 +98,12 @@ $buttonRadius: 5px;
 		background: $brand-success;
 		border-radius: $buttonRadius;
 		border: 0;
-		box-shadow: 0 0 4px 0 $gray;
+		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 		cursor: pointer;
 		transition: box-shadow 0.5s;
 		&:hover {
 			background: lighten($brand-success,4);
-			box-shadow: 0 0 30px 0 $gray;
+			box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
 		}
 		&::before {
 			height: 20px;
@@ -221,18 +221,6 @@ $buttonRadius: 5px;
 		align-items: center;
 		#slider {
 			margin-top: 20px;
-		}
-	}
-}
-.recommendation {
-	.item {
-		display: flex;
-		margin-bottom: 30px;
-		img {
-			height: 60px;
-			width: 60px;
-			border: 1px solid $gray-lighter;
-			margin: 10px 10px 0 0;
 		}
 	}
 }

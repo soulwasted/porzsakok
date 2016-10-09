@@ -1,0 +1,49 @@
+//- seznam-modelu.jade
+doctype html
+html(lang='en')
+	- var title= "HQ"
+	include ./includes/head.jade
+	body
+		.main.hq
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') KEZDŐLAP
+					li
+						a(href='/seznam-znacek.html') MÁRKAJEGYZÉK
+					li.active HQ
+				.row
+					.col-xs-12
+						h1 HQ
+						#search-fulltext
+							form(action='seznam-modelu.html')
+								input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
+								button.btn(type='submit')
+									span.glyphicon.glyphicon-search(aria-hidden='true')
+			.container.recommendation
+				.row
+					.col-xs-12
+						h2 Seznam modelů Electrolux
+				.row
+					- for (var x = 0; x < 12; x++)
+						.col-sm-12.col-md-6
+							.item
+								img
+								div
+									h4
+										a(href='#') Vůně do vysavače - citrónová TEST
+									p 
+										span.info Balení obsahuje: 
+										strong 5 vonných tyčinek
+										br
+										span.info Skladem: 
+										strong Ano
+										br
+										span.info Cena: 
+										strong 0.01 €
+									//- a.btn.btn-primary.btn-sm(href="#") Vložit do košíku
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
+		include ./includes/scripts.jade

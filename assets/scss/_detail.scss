@@ -75,3 +75,25 @@
 		}
 	}
 }
+
+
+.recommendation {
+	.item {
+		display: flex;
+		margin-bottom: 30px;
+		img {
+			height: 60px;
+			width: 60px;
+			border: 1px solid $gray-lighter;
+			margin: 10px 10px 0 0;
+		}
+	}
+}
+.main.hq {
+	.recommendation {
+		img {
+			width: 120px;
+			height: 120px;
+		}
+	}
+}

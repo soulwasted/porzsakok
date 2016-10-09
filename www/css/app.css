@@ -5765,8 +5765,8 @@ body.modal-open .main {
     background: #0089b0;
     border-radius: 5px;
     border: 0;
-    -webkit-box-shadow: 0 0 4px 0 #4d4d4d;
-            box-shadow: 0 0 4px 0 #4d4d4d;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
     cursor: pointer;
     -webkit-transition: -webkit-box-shadow 0.5s;
     transition: -webkit-box-shadow 0.5s;
@@ -5775,8 +5775,8 @@ body.modal-open .main {
     transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
     #slider .noUi-handle:hover {
       background: #0099c4;
-      -webkit-box-shadow: 0 0 30px 0 #4d4d4d;
-              box-shadow: 0 0 30px 0 #4d4d4d; }
+      -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
     #slider .noUi-handle::before {
       height: 20px;
       width: 2px;
@@ -5894,19 +5894,6 @@ body.modal-open .main {
     .sliderRow #slider {
       margin-top: 20px; } }
 
-.recommendation .item {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  -js-display: flex;
-  display: flex;
-  margin-bottom: 30px; }
-  .recommendation .item img {
-    height: 60px;
-    width: 60px;
-    border: 1px solid #e6e6e6;
-    margin: 10px 10px 0 0; }
-
 @media screen and (max-width: 767px) {
   .sliderWrapper h4 {
     text-align: center; } }
@@ -5971,6 +5958,23 @@ body.modal-open .main {
         max-width: none; } }
   .gallery a:last-child {
     margin-right: 0; }
+
+.recommendation .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  margin-bottom: 30px; }
+  .recommendation .item img {
+    height: 60px;
+    width: 60px;
+    border: 1px solid #e6e6e6;
+    margin: 10px 10px 0 0; }
+
+.main.hq .recommendation img {
+  width: 120px;
+  height: 120px; }
 
 .btn-close {
   float: right;
@@ -6283,7 +6287,10 @@ body > .main.vacs .grayed {
   background-color: #f7f7f7; }
 
 body > .main.vacs .container .container {
-  margin: 30px 0; }
+  margin: 20px 0; }
+
+body > .main.vacs .container.advices .row {
+  margin: 20px 0; }
 
 body > .main.vacs a strong {
   color: #0089b0; }
