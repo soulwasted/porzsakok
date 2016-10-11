@@ -5370,7 +5370,6 @@ a.find {
 
 .badge-100 {
   letter-spacing: 200;
-  text-transform: uppercase;
   background: url("../img/bg-badge-100.png") center bottom no-repeat;
   padding-top: 20px;
   padding-bottom: 12px;
