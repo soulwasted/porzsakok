@@ -58,6 +58,7 @@ var paths = {
             "bower_components/smooth-scroll/dist/js/smooth-scroll.js",
 			"bower_components/scrollreveal/dist/scrollreveal.js",
 			"assets/js/wNumb.js",
+			"assets/js/modernizr.js",
 			"bower_components/nouislider/distribute/nouislider.js",
             "node_modules/readmore-js/readmore.min.js"
             // "assets/js/**/*.js"
