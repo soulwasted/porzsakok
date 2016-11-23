@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'vrecka';
-  src: url('../font/vrecka.eot?23669969');
-  src: url('../font/vrecka.eot?23669969#iefix') format('embedded-opentype'),
-       url('../font/vrecka.woff2?23669969') format('woff2'),
-       url('../font/vrecka.woff?23669969') format('woff'),
-       url('../font/vrecka.ttf?23669969') format('truetype'),
-       url('../font/vrecka.svg?23669969#vrecka') format('svg');
+  src: url('../font/vrecka.eot?61088176');
+  src: url('../font/vrecka.eot?61088176#iefix') format('embedded-opentype'),
+       url('../font/vrecka.woff2?61088176') format('woff2'),
+       url('../font/vrecka.woff?61088176') format('woff'),
+       url('../font/vrecka.ttf?61088176') format('truetype'),
+       url('../font/vrecka.svg?61088176#vrecka') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'vrecka';
-    src: url('../font/vrecka.svg?23669969#vrecka') format('svg');
+    src: url('../font/vrecka.svg?61088176#vrecka') format('svg');
   }
 }
 */
@@ -70,3 +70,6 @@
 .icon-piggy:before { content: '\e80d'; } /* '' */
 .icon-transport:before { content: '\e80e'; } /* '' */
 .icon-euro:before { content: '\e80f'; } /* '' */
+.icon-check:before { content: '\e810'; } /* '' */
+.icon-thumbs_up:before { content: '\e811'; } /* '' */
+.icon-star:before { content: '\e812'; } /* '' */
