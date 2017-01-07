@@ -53,9 +53,9 @@ $L: 1170px; // media queries
     border-radius: $radius;
 }
 @import 'bourbon/bourbon'; // http://bourbon.io/
-/* -------------------------------- 
+/* --------------------------------
 
-Main components 
+Main components
 
 -------------------------------- */
 .cd-img-replace { /* replace text with a background-image */
@@ -82,7 +82,7 @@ Main components
     right: 0;
     // padding: 15px;
     @include center(y); // see partials > _mixins.scss
-    z-index: 1;
+    z-index: 20;
 	transition: transform 0.2s, background-color 0.5s;
 	transition: box-shadow 0.2s linear;
 	background-color: transparent;
@@ -139,7 +139,7 @@ Main components
         &.is-selected .cd-label {
 			@include transform(scale(1.2));
         }
-		
+
     }
 
     .cd-dot-wrapper {
@@ -185,10 +185,10 @@ Main components
 /* Touch devices */
 .touch .cd-nav-trigger {
     display: block;
-    z-index: 2;
+    z-index: 21;
     position: fixed;
-    bottom: 30px;
-    right: 5%;
+    bottom: 6px;
+    left: 15px;
     height: 44px;
     width: 44px;
     @include border-radius;
@@ -225,21 +225,21 @@ Main components
 
 .touch #cd-vertical-nav {
     position: fixed;
-    z-index: 1;
-    right: 5%;
-    bottom: 30px;
+    z-index: 20;
+    left: 15px;
+    bottom: 6px;
     width: 90%;
     max-width: 400px;
     max-height: 90%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    @include transform-origin(right bottom);
+    @include transform-origin(left bottom);
     @include transform(scale(0));
     @include transition-property(transform);
     @include transition-duration(.2s);
     @include border-radius;
     background-color: rgba($brand-success, .9);
-	
+
 	ul {
 	    list-style-type: none !important;
 	}

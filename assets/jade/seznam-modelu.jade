@@ -29,10 +29,11 @@ html(lang='en')
 							a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
 			.container
 				.row
-					.col-xs-12
-						h2 Seznam modelů Electrolux
-						ul.list-links.list-models
-							include ./includes/electrolux-models.jade
+					//- .col-xs-12
+					//- 	h2 Seznam modelů Electrolux
+					//- 	ul.list-links.list-models
+					//- 		include ./includes/electrolux-models.jade
+					include ./includes/electrolux-models-full.jade
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade

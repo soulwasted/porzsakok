@@ -5,6 +5,17 @@
 		}
 	}
 }
+.heureka-offer {
+	display: flex;
+	align-items: center;
+	strong {
+		padding-top: 5px;
+	}
+	.heureka-logo {
+		width: 100%;
+		max-width: 150px;
+	}
+}
 .cartButtons {
 	.row {
 		-js-display: flex;
@@ -29,20 +40,34 @@
 }
 .discounts {
 	margin-top: 18px;
+	@media screen and (max-width: $screen-sm) {
+		display: flex;
+		align-items: center;
+		&>div {
+			padding: 0;
+		}
+	}
 	.prices-before, .prices-after, .prices-sale {
 		text-transform: uppercase;
 		text-align: center;
-		font-size: 12px;
+		font-size: 10px;
+	}
+	.prices-before {
+		strong {
+			text-decoration: line-through;
+		}
 	}
 	strong {
 		color: $brand-primary;
 		font-size: 18px;
 	}
 	.prices-sale {
-		margin-top: 10px;
-		margin-bottom: 10px;
+		@media screen and (min-width: $screen-sm) {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 		.badge-sale {
-			padding: 7px 10px;
+			padding: 7px 6px;
 			width: auto;
 			height: 60px;
 			// border: 2px solid $brand-red;
@@ -54,6 +79,7 @@
 			strong {
 				display: block;
 				color: white;
+				// font-size: 10px;
 			}
 		}
 	}

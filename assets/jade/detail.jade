@@ -16,6 +16,10 @@ html(lang='en')
 						h1.h3
 							| Sáčky do vysavače PHILIPS Vision Vitall: 
 							strong HR 6340-6800, HR 6938-6939, HR 6983
+					.col-xs-12.heureka-offer
+						strong
+							| Špeciálna ponuka 
+						img.heureka-logo(src="img/heureka-logo.png" alt="heureka")
 			.container-fluid.sliderWrapper
 				.container
 					.row
@@ -77,11 +81,6 @@ html(lang='en')
 											i.icon-heart(aria-hidden='true')
 										.text sleva 
 											span 44%
-									//- .benefit
-									//- 	.icon
-									//- 		i.icon-gift(aria-hidden='true')
-									//- 	.text 2 vůně 
-									//- 		span zdarma
 									.benefit
 										.icon
 											i.icon-bomb(aria-hidden='true')
@@ -97,10 +96,8 @@ html(lang='en')
 										#stepperPlus
 											span.glyphicon.glyphicon-plus(aria-hidden='true')
 									.stepperLabel sáčků
-							.row.discounts.hidden-xs
+							.row.discounts
 								include includes/detail-summary.jade
-					.row.discounts.visible-xs
-						include includes/detail-summary.jade
 					.row
 						.col-xs-12
 							p.note Ke každým 4 sáčkům obdržíte 1 filtr zdarma. Nyní získáte 
