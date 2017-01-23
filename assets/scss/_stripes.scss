@@ -1,5 +1,4 @@
 .stripe {
-	text-align: center;
 	padding-bottom: $stripes-padding;
 	h2 {
 		margin-top: 80px;
@@ -11,21 +10,21 @@
 	a.btn,
 	button {
 		&:hover {
-			background: $brand-success;
+			background: $brand-secondary;
 			color: white;
 		}
 	}
 }
 .stripe-inverse {
 	color: white;
-	background: $brand-success;
+	background: $brand-secondary;
 	a {
 		color: white;
 		&.btn {
 			border-color: white;
 			&:hover {
 				background: white;
-				color: $brand-success;
+				color: $brand-secondary;
 			}
 		}
 	}
@@ -36,15 +35,22 @@
 }
 .stripe-benefits {
 	@extend .stripe;
+	.row {
+		// display: flex;
+		// flex-wrap: wrap;
+	}
+	.benefit {
+		// width: 33%;
+		// @media screen and (max-width: $screen-sm-max) {
+		// 	width: 50%;
+		// }
+		min-height: 200px;
+	}
 	.icon {
-		width: 90px;
-		height: 90px;
-		background: $brand-success;
-		border-radius: 50%;
-		display: inline-block;
 		i {
-			color: white;
-			font-size: 60px;
+			color: $brand-secondary;
+			font-size: 70px;
+			line-height: 1em;
 		}
 	}
 	@media screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
@@ -61,9 +67,7 @@
 }
 .badge-100 {
 	letter-spacing: 200;
-	// text-transform: uppercase;
 	background: url('../img/bg-badge-100.png') center bottom no-repeat;
-	// background-size: 30%;
 	padding-top: 20px;
 	padding-bottom: 12px;
 	margin-bottom: 40px;
@@ -78,6 +82,7 @@
 .stripe-guarantee {
 	@extend .stripe;
 	@extend .stripe-inverse;
+	text-align: center;
 	background: url('../img/bg-stripe-guarantee.jpg') center center / cover no-repeat;
 	h2 {
 		margin-bottom: 30px;
@@ -159,7 +164,7 @@ img.vacs-stripe {
 		min-height: 210px;
 		img {
 			border-radius: 50%;
-			border: 3px solid $brand-success;
+			border: 3px solid $brand-secondary;
 			width: 200px;
 			z-index: 10;
 			// position: relative;
@@ -172,7 +177,7 @@ img.vacs-stripe {
 		.text {
 			// display: inline-block;
 			text-align: left;
-			background: $brand-success;
+			background: $brand-secondary;
 			padding: 20px 30px 20px 80px;
 			position: relative;
 			left: -30px;

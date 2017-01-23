@@ -93,7 +93,7 @@
 .cart-resume {
 	.item {
 		// margin-bottom: 10px;
-		border-bottom: 1px dashed lighten($brand-success, 50%);
+		border-bottom: 1px dashed lighten($brand-secondary, 50%);
 		ul {
 			margin-left: 20px;
 		}
@@ -107,7 +107,7 @@
 	text-align: right;
 	// float: right;
 	font-weight: 700;
-	color: $brand-success;
+	color: $brand-secondary;
 }
 .info-icon {
 	border-radius: 50%;

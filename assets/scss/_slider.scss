@@ -29,17 +29,17 @@ $buttonRadius: 5px;
 			.icon {
 				border-radius: 50%;
 				text-align: center;
-				background: lighten($brand-success, 60);
+				background: lighten($brand-secondary, 60);
 				width: 50px;
 				height: 50px;
 				i {
-					color: $brand-success;
+					color: $brand-secondary;
 					font-size: 36px;
 				}
 			}
 			.text {
 				width: 70px;
-				color: $brand-success;
+				color: $brand-secondary;
 				font-size: 12px;
 				padding-left: 6px;
 				@media screen and (max-width: $screen-sm-max) {
@@ -77,8 +77,8 @@ $buttonRadius: 5px;
 }
 #slider {
 	margin: 34px 20px 60px;
-	background: $brand-success;
-	// background: lighten($brand-success, 10);
+	background: $brand-secondary;
+	// background: lighten($brand-secondary, 10);
 	height: 15px;
 	box-shadow: none;
 	border: 0;
@@ -95,14 +95,14 @@ $buttonRadius: 5px;
 		height: $sliderButtSize;
 		left: -25px;
 		top: -19px;
-		background: $brand-success;
+		background: $brand-secondary;
 		border-radius: $buttonRadius;
 		border: 0;
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
 		cursor: pointer;
 		transition: box-shadow 0.5s;
 		&:hover {
-			background: lighten($brand-success,4);
+			background: lighten($brand-secondary,4);
 			box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
 		}
 		&::before {
@@ -123,7 +123,7 @@ $buttonRadius: 5px;
 }
 .noUi-background {
 	// background: $gray-lighter !important;
-	background: lighten($brand-success, 60) !important;
+	background: lighten($brand-secondary, 60) !important;
 }
 .stepper {
 	display: flex;

@@ -1,20 +1,21 @@
 .navbar {
-	background: white;
-	// background: rgba(255,255,255,0.9);
-	// border-bottom: 1px solid $navbar-default-border;
+	background: transparent;
 	border-bottom: none;
-	transition: box-shadow 0.5s linear;
+	transition: all 0.3s linear;
 	&.fixed {
-		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+		box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+		background: white;
+		transition: background 0.6s linear;
+		transition: box-shadow 0.8s linear;
 	}
 	.navbar-brand {
-		color: $brand-success;
+		color: $brand-primary;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
 	}
 	.navbar-nav {
-		// display: inline-block;
-		// float: none;
-		// vertical-align: top;
-		// margin-top: 5px;
 		li {
 			a {
 				font-size: $font-size-nav;
@@ -32,7 +33,7 @@
 			}
 			&.active {
 				a {
-					background: $brand-success;
+					background: $brand-secondary;
 					color: white;
 				}
 			}
@@ -57,5 +58,5 @@
 	}
 }
 body {
-	padding-top: $navbar-height;
+	// padding-top: $navbar-height;
 }

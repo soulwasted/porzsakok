@@ -16,7 +16,7 @@
         height: 30em;
         padding: 2.8em;
         /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
-        border: 1px solid $brand-success;
+        border: 1px solid $brand-secondary;
         border-radius: 50%;
         margin: 0 auto;
         @media (max-width: $screen-xs-max) {
@@ -44,15 +44,15 @@
             &.active,
             &:hover {
                 animation: none;
-                background: $brand-success;
+                background: $brand-secondary;
                 border: none;
-                box-shadow: 0 0 0 10px $brand-success;
+                box-shadow: 0 0 0 10px $brand-secondary;
                 i {
                     color: white;
                 }
             }
             i {
-                color: $brand-success;
+                color: $brand-secondary;
                 font-size: 70px;
                 line-height: 80px;
                 &::before {
