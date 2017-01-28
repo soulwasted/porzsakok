@@ -77,6 +77,13 @@ Main components
     display: none;
 }
 
+#cd-vertical-nav {
+	display: none;
+	&.show {
+		display: block;
+	}
+}
+
 .no-touch #cd-vertical-nav {
     position: fixed;
     right: 0;
@@ -134,7 +141,7 @@ Main components
 
         &.is-selected .cd-dot {
             background-color: white;
-			border: 2px solid $brand-success
+			border: 2px solid $brand-secondary
         }
         &.is-selected .cd-label {
 			@include transform(scale(1.2));
@@ -162,7 +169,7 @@ Main components
         height: 14px;
         width: 14px;
         border-radius: 50%;
-        background-color: $brand-success;
+        background-color: $brand-secondary;
         -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
         -moz-transition: -moz-transform 0.2s, background-color 0.5s;
         transition: transform 0.2s, background-color 0.5s;
@@ -173,7 +180,7 @@ Main components
         position: relative;
         // margin-right: 10px;
         padding: 0.8em 0.5em;
-        color: $brand-success;
+        color: $brand-secondary;
         @include font-size(18px);
         -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
         -moz-transition: -moz-transform 0.2s, opacity 0.2s;
@@ -192,7 +199,7 @@ Main components
     height: 44px;
     width: 44px;
     @include border-radius;
-    background: rgba($brand-success, .9);
+    background: rgba($brand-secondary, .9);
 
     span {
         position: absolute;
@@ -238,7 +245,7 @@ Main components
     @include transition-property(transform);
     @include transition-duration(.2s);
     @include border-radius;
-    background-color: rgba($brand-success, .9);
+    background-color: rgba($brand-secondary, .9);
 
 	ul {
 	    list-style-type: none !important;
