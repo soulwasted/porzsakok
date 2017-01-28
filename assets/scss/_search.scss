@@ -1,17 +1,25 @@
 .search {
-	background: white url("../img/bg-search.jpg") 60% center no-repeat;
+	background: white url("../img/bg-search-1600.jpg") 60% center no-repeat;
 	background-size: cover;
 	// border-bottom: 1px solid $brand-secondary;
 	// box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.3), 0px 0px 30px 0px rgba(0,0,0,0.13);
 	display: flex;
 	align-items: center;
-	min-height: 50vh;
-	padding: 100px 0 80px 0;
+	min-height: 70vh;
+	padding: 80px 0 60px 0;
 	@media screen and (orientation:portrait) {
 		min-height: 50vh;
 	}
+	@media (max-width: $screen-sm-max) {
+		background: white url("../img/bg-search-800.jpg") center center no-repeat;
+		background-size: cover;
+		// background-position: 70% center;
+	}
+	@media (max-width: $screen-xs-max) {
+		padding: 40px 0 20px 0;
+	}
 	.container {
-		padding: 0;
+		// padding: 0;
 		border-bottom: none;
 	}
 	.intro {
@@ -39,50 +47,31 @@ a.find {
 	margin-bottom: 10px;
 	flex-shrink: 1;
 	color: black;
-	font-size: 18px;
+	// font-size: 18px;
+	font-size: 14px;
 	text-decoration: underline;
+	@media (max-width: $screen-xs-max) {
+	}
 	&:hover {
 		text-decoration: none;
 	}
 }
 
-#search-brand {
-	select {
-		width: 100%;
-		max-width: 650px;
-		height: 60px;
-		font-size: 18px;
-		padding: 0 30px;
-		background-color: white;
-		background-color: rgba(255,255,255,0.8);
-		background-image: url("../img/select-arrow.png");
-		background-position: right center;
-		background-repeat: no-repeat;
-		-webkit-appearance: none;
-		-moz-appearance:none;
-		appearance: none;
-		border: 3px solid $brand-secondary;
-		@media (max-width: $screen-sm-max) {
-			padding: 0 10px;
-			font-size: 14px;
-		}
-	}
-	select::-ms-expand {
-		display: none;
-	}
-}
 #search-fulltext {
 	form {
 		padding: 60px 0 10px;
-		z-index: 100;
+		z-index: 2;
 		position: relative;
+		@media (max-width: $screen-xs-max) {
+			padding-top: 30px;
+		}
 		input {
 			width: calc(100% - 170px);
 			// max-width: 600px;
 			width: 100%;
 			height: 80px;
 			font-size: 18px;
-			padding: 0 85px;
+			padding: 0 60px;
 			background: white;
 			background: rgba(255,255,255,0.8);
 			// border: 2px solid white;
@@ -90,16 +79,22 @@ a.find {
 			border-radius: 5px;
 			@media (max-width: $screen-sm-max) {
 				padding: 0 10px;
+			}
+			@media (max-width: $screen-xs-max) {
+				height: 60px;
 				font-size: 14px;
 			}
 		}
-		i {
+		i.icon-placeholder {
 			float: left;
 			position: relative;
-			margin-left: 6px;
-			margin-top: -76px;
-			font-size: 48px;
+			margin-left: 20px;
+			margin-top: -67px;
+			font-size: 32px;
 			color: rgba(0,0,0,0.2);
+			@media (max-width: $screen-sm-max) {
+				display: none;
+			}
 		}
 	}
 	.btn {
@@ -116,9 +111,33 @@ a.find {
 		&:hover {
 			background-color: darken($brand-primary, 20);
 		}
+		@media (max-width: $screen-xs-max) {
+			margin-top: -55px;
+			margin-right: 5px;
+		}
+		@media (max-width: 480px) {
+			width: 50px;
+		}
+		i {
+			display: none;
+		}
+		@media (max-width: 480px) {
+			span {
+				display: none;
+			}
+			i {
+				display: block;
+				font-size: 24px;
+			}
+		}
 	}
 }
-.whisper {
+#whisper {
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0.3s, opacity 0.3s linear;
+
+
 	position: absolute;
 	background: white;
 	border-radius: 5px;
@@ -126,10 +145,18 @@ a.find {
 	padding: 110px 20px 20px 20px;
 	margin-left: -20px;
 	margin-top: -110px;
-	z-index: 90;
+	z-index: 1;
 	width: calc(100% + 10px);
+
+	&.show {
+		transition: visibility 0s, opacity 0.5s linear;
+		visibility: visible;
+		opacity: 1;
+	}
+
 	.content {
-		max-height: 400px;
+		// max-height: 400px;
+		height: 75vh;
 		overflow-y: scroll;
 		h5 {
 			font-size: 12px;
@@ -183,6 +210,12 @@ a.find {
 					}
 					span {
 						margin-left: 10px;
+						span.ac-match {
+							margin-left: 0;
+							color: black;
+							font-weight: 700;
+							text-decoration: underline;
+						}
 					}
 					span.price {
 						float: right;

@@ -77,6 +77,13 @@ Main components
     display: none;
 }
 
+#cd-vertical-nav {
+	display: none;
+	&.show {
+		display: block;
+	}
+}
+
 .no-touch #cd-vertical-nav {
     position: fixed;
     right: 0;

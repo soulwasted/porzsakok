@@ -4734,7 +4734,8 @@ button.close {
           perspective: 800px; }
 
 .btn, .btn.back {
-  font-weight: 700; }
+  font-weight: 700;
+  border-radius: 5px; }
   .back.btn {
     background: #4d4d4d;
     color: white;
@@ -5025,7 +5026,8 @@ strong.info {
     width: 20%; } }
 
 .navbar {
-  background: transparent;
+  background: white;
+  background: rgba(255, 255, 255, 0.5);
   border-bottom: none;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
@@ -5051,10 +5053,14 @@ strong.info {
   .navbar .navbar-nav li a {
     font-size: 14px;
     color: #000; }
+    .navbar .navbar-nav li a i {
+      font-size: 16px; }
     .navbar .navbar-nav li a.cart {
       font-weight: 700; }
-      .navbar .navbar-nav li a.cart span.glyphicon {
+      .navbar .navbar-nav li a.cart i {
         margin: 0 3px; }
+    .navbar .navbar-nav li a .badge {
+      margin-left: 3px; }
   .navbar .navbar-nav li:hover {
     background: #e6e6e6; }
   .navbar .navbar-nav li.active a {
@@ -5069,6 +5075,11 @@ strong.info {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 12px !important; } }
+
+body {
+  padding-top: 50px; }
+  body .main.home {
+    margin-top: -50px; }
 
 footer {
   min-height: 50px;
@@ -5100,7 +5111,7 @@ footer {
       color: #e6e6e6; }
 
 .search {
-  background: white url("../img/bg-search.jpg") 60% center no-repeat;
+  background: white url("../img/bg-search-1600.jpg") 60% center no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
   display: -webkit-box;
@@ -5112,13 +5123,20 @@ footer {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 50vh;
-  padding: 100px 0 80px 0; }
+  min-height: 70vh;
+  padding: 80px 0 60px 0; }
   @media screen and (orientation: portrait) {
     .search {
       min-height: 50vh; } }
+  @media (max-width: 991px) {
+    .search {
+      background: white url("../img/bg-search-800.jpg") center center no-repeat;
+      -webkit-background-size: cover;
+              background-size: cover; } }
+  @media (max-width: 767px) {
+    .search {
+      padding: 40px 0 20px 0; } }
   .search .container {
-    padding: 0;
     border-bottom: none; }
   .search .intro h1 {
     text-align: left; }
@@ -5137,60 +5155,46 @@ a.find {
       -ms-flex-negative: 1;
           flex-shrink: 1;
   color: black;
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: underline; }
   a.find:hover {
     text-decoration: none; }
 
-#search-brand select {
-  width: 100%;
-  max-width: 650px;
-  height: 60px;
-  font-size: 18px;
-  padding: 0 30px;
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-image: url("../img/select-arrow.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: 3px solid #0089b0; }
-  @media (max-width: 991px) {
-    #search-brand select {
-      padding: 0 10px;
-      font-size: 14px; } }
-
-#search-brand select::-ms-expand {
-  display: none; }
-
 #search-fulltext form {
   padding: 60px 0 10px;
-  z-index: 100;
+  z-index: 2;
   position: relative; }
+  @media (max-width: 767px) {
+    #search-fulltext form {
+      padding-top: 30px; } }
   #search-fulltext form input {
     width: -webkit-calc(100% - 170px);
     width: calc(100% - 170px);
     width: 100%;
     height: 80px;
     font-size: 18px;
-    padding: 0 85px;
+    padding: 0 60px;
     background: white;
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid #0089b0;
     border-radius: 5px; }
     @media (max-width: 991px) {
       #search-fulltext form input {
-        padding: 0 10px;
+        padding: 0 10px; } }
+    @media (max-width: 767px) {
+      #search-fulltext form input {
+        height: 60px;
         font-size: 14px; } }
-  #search-fulltext form i {
+  #search-fulltext form i.icon-placeholder {
     float: left;
     position: relative;
-    margin-left: 6px;
-    margin-top: -76px;
-    font-size: 48px;
+    margin-left: 20px;
+    margin-top: -67px;
+    font-size: 32px;
     color: rgba(0, 0, 0, 0.2); }
+    @media (max-width: 991px) {
+      #search-fulltext form i.icon-placeholder {
+        display: none; } }
 
 #search-fulltext .btn {
   float: right;
@@ -5205,8 +5209,28 @@ a.find {
   cursor: pointer; }
   #search-fulltext .btn:hover {
     background-color: #f10004; }
+  @media (max-width: 767px) {
+    #search-fulltext .btn {
+      margin-top: -55px;
+      margin-right: 5px; } }
+  @media (max-width: 480px) {
+    #search-fulltext .btn {
+      width: 50px; } }
+  #search-fulltext .btn i {
+    display: none; }
+  @media (max-width: 480px) {
+    #search-fulltext .btn span {
+      display: none; }
+    #search-fulltext .btn i {
+      display: block;
+      font-size: 24px; } }
 
-.whisper {
+#whisper {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0.3s, opacity 0.3s linear;
+  -o-transition: visibility 0.3s, opacity 0.3s linear;
+  transition: visibility 0.3s, opacity 0.3s linear;
   position: absolute;
   background: white;
   border-radius: 5px;
@@ -5215,47 +5239,58 @@ a.find {
   padding: 110px 20px 20px 20px;
   margin-left: -20px;
   margin-top: -110px;
-  z-index: 90;
+  z-index: 1;
   width: -webkit-calc(100% + 10px);
   width: calc(100% + 10px); }
-  .whisper .content {
-    max-height: 400px;
+  #whisper.show {
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    -o-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+    visibility: visible;
+    opacity: 1; }
+  #whisper .content {
+    height: 75vh;
     overflow-y: scroll; }
-    .whisper .content h5 {
+    #whisper .content h5 {
       font-size: 12px;
       color: #b3b3b3;
       padding-left: 86px;
       text-transform: none; }
-    .whisper .content ul {
+    #whisper .content ul {
       line-height: 30px; }
-      .whisper .content ul.top {
+      #whisper .content ul.top {
         line-height: 50px; }
-      .whisper .content ul li a {
+      #whisper .content ul li a {
         font-size: 18px;
         text-decoration: underline;
         display: block; }
-        .whisper .content ul li a img {
+        #whisper .content ul li a img {
           height: 100%;
           width: 66px; }
-        .whisper .content ul li a .link {
+        #whisper .content ul li a .link {
           display: inline-block;
           width: -webkit-calc(100% - 76px);
           width: calc(100% - 76px);
           margin-left: 10px;
           border-radius: 5px;
           cursor: pointer; }
-          .whisper .content ul li a .link:hover {
+          #whisper .content ul li a .link:hover {
             background: #0089b0; }
-            .whisper .content ul li a .link:hover span {
+            #whisper .content ul li a .link:hover span {
               color: white; }
-        .whisper .content ul li a span {
+        #whisper .content ul li a span {
           margin-left: 10px; }
-        .whisper .content ul li a span.price {
+          #whisper .content ul li a span span.ac-match {
+            margin-left: 0;
+            color: black;
+            font-weight: 700;
+            text-decoration: underline; }
+        #whisper .content ul li a span.price {
           float: right;
           margin-right: 10px;
           font-size: 14px;
           color: #000000; }
-          .whisper .content ul li a span.price span {
+          #whisper .content ul li a span.price span {
             color: #e6e6e6; }
 
 .stripe, .stripe-benefits, .stripe-guarantee, .stripe-bag, .stripe-contact, .stripe-additional, .stripe-order {
@@ -5263,6 +5298,10 @@ a.find {
   .stripe h2, .stripe-benefits h2, .stripe-guarantee h2, .stripe-bag h2, .stripe-contact h2, .stripe-additional h2, .stripe-order h2 {
     margin-top: 80px;
     margin-bottom: 60px; }
+    @media (max-width: 767px) {
+      .stripe h2, .stripe-benefits h2, .stripe-guarantee h2, .stripe-bag h2, .stripe-contact h2, .stripe-additional h2, .stripe-order h2 {
+        margin-top: 40px;
+        margin-bottom: 30px; } }
   .stripe a.btn, .stripe-benefits a.btn, .stripe-guarantee a.btn, .stripe-bag a.btn, .stripe-contact a.btn, .stripe-additional a.btn, .stripe-order a.btn {
     margin-top: 30px; }
   .stripe a.btn:hover, .stripe-benefits a.btn:hover, .stripe-guarantee a.btn:hover, .stripe-bag a.btn:hover, .stripe-contact a.btn:hover, .stripe-additional a.btn:hover, .stripe-order a.btn:hover,
@@ -5273,6 +5312,8 @@ a.find {
 .stripe-inverse, .stripe-guarantee, .stripe-contact {
   color: white;
   background: #0089b0; }
+  .stripe-inverse h2, .stripe-guarantee h2, .stripe-contact h2 {
+    color: white; }
   .stripe-inverse a, .stripe-guarantee a, .stripe-contact a {
     color: white; }
     .stripe-inverse a.btn, .stripe-guarantee a.btn, .stripe-contact a.btn {
@@ -5358,142 +5399,144 @@ img.vacs-stripe {
   margin-bottom: 20px;
   display: inline-block; }
 
-.stripe-bag h2 {
-  margin-top: 40px;
-  margin-bottom: 20px; }
-
-.stripe-bag .bag-wrapper {
-  position: relative;
-  background: url("../img/vacs-bag.jpg") center center no-repeat;
-  -webkit-background-size: contain;
-          background-size: contain;
-  background-position: center 70%;
-  padding: 50px 4em 30px;
+.stripe-bag {
   text-align: center; }
-  @media (max-width: 991px) {
-    .stripe-bag .bag-wrapper {
-      padding-left: 0;
-      padding-right: 0; } }
-  .stripe-bag .bag-wrapper .circle {
-    width: 30em;
-    height: 30em;
-    padding: 2.8em;
-    /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
-    border: 1px solid #0089b0;
-    border-radius: 50%;
-    margin: 0 auto; }
-    @media (max-width: 767px) {
-      .stripe-bag .bag-wrapper .circle {
-        border-radius: 0;
-        border: none;
-        width: 100%;
-        height: auto; } }
-    .stripe-bag .bag-wrapper .circle .pois {
-      overflow: hidden; }
-    .stripe-bag .bag-wrapper .circle a.poi {
-      display: block;
-      width: 6em;
-      height: 6em;
+  .stripe-bag h2 {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  .stripe-bag .bag-wrapper {
+    position: relative;
+    background: url("../img/vacs-bag.jpg") center center no-repeat;
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: center 70%;
+    padding: 50px 4em 30px;
+    text-align: center; }
+    @media (max-width: 991px) {
+      .stripe-bag .bag-wrapper {
+        padding-left: 0;
+        padding-right: 0; } }
+    .stripe-bag .bag-wrapper .circle {
+      width: 30em;
+      height: 30em;
+      padding: 2.8em;
+      /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+      border: 1px solid #0089b0;
       border-radius: 50%;
-      background: white;
-      border: 1px solid #b3b3b3;
-      cursor: pointer; }
-      .stripe-bag .bag-wrapper .circle a.poi::after {
-        border: 10px solid red; }
-      .stripe-bag .bag-wrapper .circle a.poi.active, .stripe-bag .bag-wrapper .circle a.poi:hover {
-        -webkit-animation: none;
-             -o-animation: none;
-                animation: none;
-        background: #0089b0;
-        border: none;
-        -webkit-box-shadow: 0 0 0 10px #0089b0;
-                box-shadow: 0 0 0 10px #0089b0; }
-        .stripe-bag .bag-wrapper .circle a.poi.active i, .stripe-bag .bag-wrapper .circle a.poi:hover i {
-          color: white; }
-      .stripe-bag .bag-wrapper .circle a.poi i {
-        color: #0089b0;
-        font-size: 70px;
-        line-height: 80px; }
-        .stripe-bag .bag-wrapper .circle a.poi i::before {
-          margin: 0; }
-        .stripe-bag .bag-wrapper .circle a.poi i.icon-pic-clock {
-          font-size: 60px; }
-      @media (min-width: 768px) {
-        .stripe-bag .bag-wrapper .circle a.poi {
-          display: block;
-          margin: -3em;
-          overflow: hidden;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          /* 15em = half the width of the wrapper */ }
-          .stripe-bag .bag-wrapper .circle a.poi.one {
-            -webkit-transform: rotate(300deg) translate(15em) rotate(-300deg);
-                -ms-transform: rotate(300deg) translate(15em) rotate(-300deg);
-                 -o-transform: rotate(300deg) translate(15em) rotate(-300deg);
-                    transform: rotate(300deg) translate(15em) rotate(-300deg); }
-          .stripe-bag .bag-wrapper .circle a.poi.two {
-            -webkit-transform: translate(15em);
-                -ms-transform: translate(15em);
-                 -o-transform: translate(15em);
-                    transform: translate(15em); }
-          .stripe-bag .bag-wrapper .circle a.poi.three {
-            -webkit-transform: rotate(60deg) translate(15em) rotate(-60deg);
-                -ms-transform: rotate(60deg) translate(15em) rotate(-60deg);
-                 -o-transform: rotate(60deg) translate(15em) rotate(-60deg);
-                    transform: rotate(60deg) translate(15em) rotate(-60deg); }
-          .stripe-bag .bag-wrapper .circle a.poi.four {
-            -webkit-transform: rotate(120deg) translate(15em) rotate(-120deg);
-                -ms-transform: rotate(120deg) translate(15em) rotate(-120deg);
-                 -o-transform: rotate(120deg) translate(15em) rotate(-120deg);
-                    transform: rotate(120deg) translate(15em) rotate(-120deg); }
-          .stripe-bag .bag-wrapper .circle a.poi.five {
-            -webkit-transform: translate(-15em);
-                -ms-transform: translate(-15em);
-                 -o-transform: translate(-15em);
-                    transform: translate(-15em); }
-          .stripe-bag .bag-wrapper .circle a.poi.six {
-            -webkit-transform: rotate(240deg) translate(15em) rotate(-240deg);
-                -ms-transform: rotate(240deg) translate(15em) rotate(-240deg);
-                 -o-transform: rotate(240deg) translate(15em) rotate(-240deg);
-                    transform: rotate(240deg) translate(15em) rotate(-240deg); } }
-  @media (max-width: 767px) {
-    .stripe-bag .bag-wrapper {
-      background-position: center -10%;
-      padding-top: 0;
-      padding-bottom: 0;
-      max-height: 400px; }
-      .stripe-bag .bag-wrapper .circle {
-        padding: 200px 0 0; }
-        .stripe-bag .bag-wrapper .circle a.poi {
-          display: inline-block;
-          width: 4.5em;
-          height: 4.5em;
-          margin: 10px; }
-          .stripe-bag .bag-wrapper .circle a.poi i {
-            font-size: 50px;
-            line-height: 60px; }
-            .stripe-bag .bag-wrapper .circle a.poi i.icon-pic-clock {
-              font-size: 45px; } }
-
-.stripe-bag #accordion {
-  text-align: left;
-  margin-top: 40px; }
-  .stripe-bag #accordion .panel-default:last-child {
-    border-bottom: 1px solid #e6e6e6; }
-  .stripe-bag #accordion h5.panel-title {
-    padding-top: 10px;
-    border-top: 1px solid #e6e6e6; }
-    .stripe-bag #accordion h5.panel-title a {
-      display: block; }
+      margin: 0 auto; }
+      @media (max-width: 767px) {
+        .stripe-bag .bag-wrapper .circle {
+          border-radius: 0;
+          border: none;
+          width: 100%;
+          height: auto; } }
+      .stripe-bag .bag-wrapper .circle .pois {
+        overflow: hidden; }
+      .stripe-bag .bag-wrapper .circle a.poi {
+        display: block;
+        width: 6em;
+        height: 6em;
+        border-radius: 50%;
+        background: white;
+        border: 1px solid #b3b3b3;
+        cursor: pointer; }
+        .stripe-bag .bag-wrapper .circle a.poi::after {
+          border: 10px solid red; }
+        .stripe-bag .bag-wrapper .circle a.poi.active, .stripe-bag .bag-wrapper .circle a.poi:hover {
+          -webkit-animation: none;
+               -o-animation: none;
+                  animation: none;
+          background: #0089b0;
+          border: none;
+          -webkit-box-shadow: 0 0 0 10px #0089b0;
+                  box-shadow: 0 0 0 10px #0089b0; }
+          .stripe-bag .bag-wrapper .circle a.poi.active i, .stripe-bag .bag-wrapper .circle a.poi:hover i {
+            color: white; }
+        .stripe-bag .bag-wrapper .circle a.poi i {
+          color: #0089b0;
+          font-size: 70px;
+          line-height: 80px; }
+          .stripe-bag .bag-wrapper .circle a.poi i::before {
+            margin: 0; }
+          .stripe-bag .bag-wrapper .circle a.poi i.icon-pic-clock {
+            font-size: 60px; }
+        @media (min-width: 768px) {
+          .stripe-bag .bag-wrapper .circle a.poi {
+            display: block;
+            margin: -3em;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 15em = half the width of the wrapper */ }
+            .stripe-bag .bag-wrapper .circle a.poi.one {
+              -webkit-transform: rotate(300deg) translate(15em) rotate(-300deg);
+                  -ms-transform: rotate(300deg) translate(15em) rotate(-300deg);
+                   -o-transform: rotate(300deg) translate(15em) rotate(-300deg);
+                      transform: rotate(300deg) translate(15em) rotate(-300deg); }
+            .stripe-bag .bag-wrapper .circle a.poi.two {
+              -webkit-transform: translate(15em);
+                  -ms-transform: translate(15em);
+                   -o-transform: translate(15em);
+                      transform: translate(15em); }
+            .stripe-bag .bag-wrapper .circle a.poi.three {
+              -webkit-transform: rotate(60deg) translate(15em) rotate(-60deg);
+                  -ms-transform: rotate(60deg) translate(15em) rotate(-60deg);
+                   -o-transform: rotate(60deg) translate(15em) rotate(-60deg);
+                      transform: rotate(60deg) translate(15em) rotate(-60deg); }
+            .stripe-bag .bag-wrapper .circle a.poi.four {
+              -webkit-transform: rotate(120deg) translate(15em) rotate(-120deg);
+                  -ms-transform: rotate(120deg) translate(15em) rotate(-120deg);
+                   -o-transform: rotate(120deg) translate(15em) rotate(-120deg);
+                      transform: rotate(120deg) translate(15em) rotate(-120deg); }
+            .stripe-bag .bag-wrapper .circle a.poi.five {
+              -webkit-transform: translate(-15em);
+                  -ms-transform: translate(-15em);
+                   -o-transform: translate(-15em);
+                      transform: translate(-15em); }
+            .stripe-bag .bag-wrapper .circle a.poi.six {
+              -webkit-transform: rotate(240deg) translate(15em) rotate(-240deg);
+                  -ms-transform: rotate(240deg) translate(15em) rotate(-240deg);
+                   -o-transform: rotate(240deg) translate(15em) rotate(-240deg);
+                      transform: rotate(240deg) translate(15em) rotate(-240deg); } }
+    @media (max-width: 767px) {
+      .stripe-bag .bag-wrapper {
+        background-position: center -10%;
+        padding-top: 0;
+        padding-bottom: 0;
+        max-height: 400px; }
+        .stripe-bag .bag-wrapper .circle {
+          padding: 200px 0 0; }
+          .stripe-bag .bag-wrapper .circle a.poi {
+            display: inline-block;
+            width: 4.5em;
+            height: 4.5em;
+            margin: 10px; }
+            .stripe-bag .bag-wrapper .circle a.poi i {
+              font-size: 50px;
+              line-height: 60px; }
+              .stripe-bag .bag-wrapper .circle a.poi i.icon-pic-clock {
+                font-size: 45px; } }
+  .stripe-bag #accordion {
+    text-align: left;
+    margin-top: 40px; }
+    .stripe-bag #accordion .panel-default:last-child {
+      border-bottom: 1px solid #e6e6e6; }
+    .stripe-bag #accordion h5.panel-title {
+      padding-top: 10px;
+      border-top: 1px solid #e6e6e6; }
+      .stripe-bag #accordion h5.panel-title a {
+        display: block; }
 
 .stripe-contact {
+  text-align: center;
   background: url("../img/bg-stripe-contact.jpg") center center/cover no-repeat; }
   .stripe-contact p {
     font-size: 18px; }
 
 .stripe-additional {
-  background: #e6e6e6; }
+  background: #e6e6e6;
+  text-align: center; }
   .stripe-additional .pic {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5565,15 +5608,16 @@ img.vacs-stripe {
         display: block;
         padding: 20px 30px !important; } }
 
-.stripe-order h2 {
-  margin-top: 40px;
-  margin-bottom: 40px; }
-
-@media (min-width: 768px) {
-  .stripe-order .form-inline .btn,
-  .stripe-order .form-inline .input-group {
-    margin-right: 20px;
-    min-width: 230px; } }
+.stripe-order {
+  text-align: center; }
+  .stripe-order h2 {
+    margin-top: 40px;
+    margin-bottom: 40px; }
+  @media (min-width: 768px) {
+    .stripe-order .form-inline .btn,
+    .stripe-order .form-inline .input-group {
+      margin-right: 20px;
+      min-width: 230px; } }
 
 body.modal-open .main {
   -webkit-filter: blur(10px);
@@ -6288,6 +6332,11 @@ Main components
 /* No Touch devices */
 .cd-nav-trigger {
   display: none; }
+
+#cd-vertical-nav {
+  display: none; }
+  #cd-vertical-nav.show {
+    display: block; }
 
 .no-touch #cd-vertical-nav {
   position: fixed;

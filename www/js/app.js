@@ -45,6 +45,7 @@
 		if (viewport.is('<=sm')) {
 			funcReadMore();
 		}
+
 		// Execute code each time window size changes
 		$(window).resize(
 			viewport.changed(function () {
@@ -57,20 +58,17 @@
 			})
 		);
 
+		// smooth scroll ;)
+		initSmoothScroll();
+
+		// trigger whisper
+		whisperFocus();
+
 		// reveal things when scrolled
 		revealThings();
 
-		// smooth scroll ;)
-		smoothScroll.init({
-			offset: 60, // Integer. How far to offset the scrolling anchor location in pixels
-			updateURL: false
-		});
-
 		// home dots
 		homeDots();
-
-		// scroll to main input search when focused
-		
 
 	});
 })(jQuery, ResponsiveBootstrapToolkit);
@@ -79,6 +77,26 @@ $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
 	event.preventDefault();
 	$(this).ekkoLightbox();
 });
+
+function initSmoothScroll() {
+	smoothScroll.init({
+		offset: 60, // Integer. How far to offset the scrolling anchor location in pixels
+		updateURL: false
+	});
+}
+
+function whisperFocus() {
+	$("#search-input").focus(function () {
+		$("#whisper").addClass("show");
+		var anchor = document.querySelector('#search-input');
+		smoothScroll.animateScroll(anchor);
+	});
+	$("#search-input").blur(function () {
+		if ($("#search-input").val().length == 0) {
+			$("#whisper").removeClass("show");
+		};
+	});
+}
 
 function funcReadMore() {
 	$('.readmore').readmore({
@@ -122,6 +140,7 @@ function revealThings() {
 }
 
 function homeDots() {
+	$("#cd-vertical-nav").addClass("show");
 	var contentSections = $('.cd-section'),
 		navigationItems = $('#cd-vertical-nav a');
 
@@ -165,9 +184,9 @@ function homeDots() {
 
 	function smoothScroll(target) {
 		$('body,html').animate({
-				'scrollTop': target.offset().top
-			},
-			600
-		);
-	}
+			'scrollTop': target.offset().top
+		},
+		600
+	);
+}
 }
