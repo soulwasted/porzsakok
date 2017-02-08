@@ -95,6 +95,10 @@ function whisperFocus() {
 		if ($("#search-input").val().length == 0) {
 			$("#whisper").removeClass("show");
 		};
+		$("i.icon-search").removeClass("anim");
+	});
+	$("#search-input").keypress(function () {
+		$("i.icon-search").addClass("anim");
 	});
 }
 

@@ -5118,7 +5118,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   min-height: 70vh;
-  padding: 80px 0 60px 0; }
+  padding: 80px 0 60px; }
   @media screen and (orientation: portrait) {
     .search {
       min-height: 50vh; } }
@@ -5129,7 +5129,7 @@ footer {
               background-size: cover; } }
   @media (max-width: 767px) {
     .search {
-      padding: 40px 0 20px 0; } }
+      padding: 40px 0 20px; } }
   .search .container {
     border-bottom: none; }
   .search .intro h1 {
@@ -5185,16 +5185,83 @@ a.find {
       #search-fulltext form input {
         height: 60px;
         font-size: 14px; } }
-  #search-fulltext form i.icon-placeholder {
+  #search-fulltext form .icon-placeholder {
     float: left;
     position: relative;
     margin-left: 20px;
-    margin-top: -67px;
-    font-size: 32px;
-    color: rgba(0, 0, 0, 0.2); }
-    @media (max-width: 991px) {
-      #search-fulltext form i.icon-placeholder {
-        display: none; } }
+    margin-top: -67px; }
+    #search-fulltext form .icon-placeholder i {
+      font-size: 32px;
+      color: rgba(0, 0, 0, 0.2);
+      position: relative; }
+      @media (max-width: 991px) {
+        #search-fulltext form .icon-placeholder i {
+          display: none; } }
+      #search-fulltext form .icon-placeholder i.anim {
+        color: #FF585B;
+        -webkit-animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear;
+             -o-animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear;
+                animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear; }
+
+@-webkit-keyframes leftRight {
+  0% {
+    left: 0; }
+  25% {
+    left: 8px; }
+  75% {
+    left: -8px; }
+  100% {
+    left: 0; } }
+
+@-o-keyframes leftRight {
+  0% {
+    left: 0; }
+  25% {
+    left: 8px; }
+  75% {
+    left: -8px; }
+  100% {
+    left: 0; } }
+
+@keyframes leftRight {
+  0% {
+    left: 0; }
+  25% {
+    left: 8px; }
+  75% {
+    left: -8px; }
+  100% {
+    left: 0; } }
+
+@-webkit-keyframes topBottom {
+  0% {
+    top: 0; }
+  25% {
+    top: 8px; }
+  75% {
+    top: -8px; }
+  100% {
+    top: 0; } }
+
+@-o-keyframes topBottom {
+  0% {
+    top: 0; }
+  25% {
+    top: 8px; }
+  75% {
+    top: -8px; }
+  100% {
+    top: 0; } }
+
+@keyframes topBottom {
+  0% {
+    top: 0; }
+  25% {
+    top: 8px; }
+  75% {
+    top: -8px; }
+  100% {
+    top: 0; } }
 
 #search-fulltext .btn {
   float: right;
@@ -5236,7 +5303,7 @@ a.find {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
           box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
-  padding: 110px 20px 20px 20px;
+  padding: 110px 20px 20px;
   margin-left: -20px;
   margin-top: -110px;
   z-index: 1;
