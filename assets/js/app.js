@@ -87,13 +87,13 @@ function initSmoothScroll() {
 
 function whisperFocus() {
 	$("#search-input").focus(function () {
-		$("#whisper").addClass("show");
+		$(".tt-menu").addClass("show");
 		var anchor = document.querySelector('#search-input');
 		smoothScroll.animateScroll(anchor);
 	});
 	$("#search-input").blur(function () {
 		if ($("#search-input").val().length == 0) {
-			$("#whisper").removeClass("show");
+			$(".tt-menu").removeClass("show");
 		};
 		$("i.icon-search").removeClass("anim");
 	});

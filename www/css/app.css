@@ -5292,7 +5292,8 @@ a.find {
       display: block;
       font-size: 24px; } }
 
-#whisper {
+.tt-menu {
+  display: none;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: visibility 0.3s, opacity 0.3s linear;
@@ -5309,56 +5310,100 @@ a.find {
   z-index: 1;
   width: -webkit-calc(100% + 10px);
   width: calc(100% + 10px); }
-  #whisper.show {
+  .tt-menu.show {
     -webkit-transition: visibility 0s, opacity 0.5s linear;
     -o-transition: visibility 0s, opacity 0.5s linear;
     transition: visibility 0s, opacity 0.5s linear;
     visibility: visible;
     opacity: 1; }
-  #whisper .content {
+  .tt-menu .content {
     height: 75vh;
     overflow-y: scroll; }
-    #whisper .content h5 {
+    .tt-menu .content h5 {
       font-size: 12px;
       color: #b3b3b3;
       padding-left: 86px;
-      text-transform: none; }
-    #whisper .content ul {
-      line-height: 30px; }
-      #whisper .content ul.top {
-        line-height: 50px; }
-      #whisper .content ul li a {
-        font-size: 18px;
-        text-decoration: underline;
-        display: block; }
-        #whisper .content ul li a img {
-          height: 100%;
-          width: 66px; }
-        #whisper .content ul li a .link {
-          display: inline-block;
-          width: -webkit-calc(100% - 76px);
-          width: calc(100% - 76px);
-          margin-left: 10px;
-          border-radius: 5px;
-          cursor: pointer; }
-          #whisper .content ul li a .link:hover {
-            background: #0089b0; }
-            #whisper .content ul li a .link:hover span {
+      margin-top: 15px;
+      text-transform: none;
+      overflow: hidden; }
+      .tt-menu .content h5 > span {
+        position: relative;
+        display: inline-block; }
+      .tt-menu .content h5 > span:before, .tt-menu .content h5 > span:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 1px solid;
+        width: 591px;
+        /* half of limiter*/
+        margin: 0 20px;
+        color: #e6e6e6; }
+      .tt-menu .content h5 > span:before {
+        right: 100%; }
+      .tt-menu .content h5 > span:after {
+        left: 100%; }
+    .tt-menu .content .top {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .tt-menu .content .top .tt-dataset {
+        width: 47%; }
+      @media (max-width: 767px) {
+        .tt-menu .content .top {
+          display: block; }
+          .tt-menu .content .top .tt-dataset {
+            width: 100%; } }
+    .tt-menu .content .tt-dataset {
+      line-height: 40px; }
+      .tt-menu .content .tt-dataset .row {
+        margin: 0; }
+        .tt-menu .content .tt-dataset .row a {
+          font-size: 18px;
+          text-decoration: underline;
+          display: block; }
+          .tt-menu .content .tt-dataset .row a img {
+            height: 100%;
+            width: 66px; }
+          .tt-menu .content .tt-dataset .row a .link {
+            display: inline-block;
+            width: -webkit-calc(100% - 76px);
+            width: calc(100% - 76px);
+            margin-left: 10px;
+            padding-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #323232; }
+            .tt-menu .content .tt-dataset .row a .link strong.tt-highlight {
+              color: #0089b0;
+              font-weight: 700; }
+            .tt-menu .content .tt-dataset .row a .link span.price {
+              float: right;
+              margin-right: 10px;
+              font-size: 14px;
+              color: #000000; }
+              .tt-menu .content .tt-dataset .row a .link span.price span {
+                color: #e6e6e6; }
+              .tt-menu .content .tt-dataset .row a .link span.price span.stock {
+                text-transform: uppercase;
+                color: #0089b0;
+                font-size: 12px;
+                font-weight: 700;
+                padding-left: 10px; }
+            .tt-menu .content .tt-dataset .row a .link:hover {
+              background: #0089b0;
               color: white; }
-        #whisper .content ul li a span {
-          margin-left: 10px; }
-          #whisper .content ul li a span span.ac-match {
-            margin-left: 0;
-            color: black;
-            font-weight: 700;
-            text-decoration: underline; }
-        #whisper .content ul li a span.price {
-          float: right;
-          margin-right: 10px;
-          font-size: 14px;
-          color: #000000; }
-          #whisper .content ul li a span.price span {
-            color: #e6e6e6; }
+              .tt-menu .content .tt-dataset .row a .link:hover .tt-highlight {
+                color: white; }
+              .tt-menu .content .tt-dataset .row a .link:hover span {
+                color: white; }
+                .tt-menu .content .tt-dataset .row a .link:hover span span.stock {
+                  color: white; }
 
 .stripe, .stripe-benefits, .stripe-guarantee, .stripe-bag, .stripe-contact, .stripe-additional, .stripe-order {
   text-align: center;

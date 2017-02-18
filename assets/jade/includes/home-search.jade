@@ -12,37 +12,80 @@
 					button.btn(type='submit') 
 						span Hledat 
 						i.icon-search
-				#whisper
+				.tt-menu
 					.content
-						h5 Nejhledanější značky
-						ul.top
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-electrolux.png")
+						.top
+							.tt-dataset.top-brands
+								h5 
+									span Nejhledanější značky
+								.row.tt-suggestion.tt-selectable
+									a(href='seznam-modelu.html')
+										img(src='img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
+										.link
+											| AEG - 
+											strong.tt-highlight ELE
+											| CTROLUX
+								.row.tt-suggestion.tt-selectable
+									a(href='/eta')
+										img(src='img/dummy-brand-eta.png', alt='ETA')
+										.link ETA
+								.row.tt-suggestion.tt-selectable
+									a(href='/rowenta')
+										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link ROWENTA
+							.tt-dataset.top-bags
+								h5 
+									span Nejhledanější sáčky
+								.row.tt-suggestion.tt-selectable
+									a(href='seznam-modelu.html')
+										img(src='img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
+										.link
+											| AEG - 
+											strong.tt-highlight ELE
+											| CTROLUX
+								.row.tt-suggestion.tt-selectable
+									a(href='/eta')
+										img(src='img/dummy-brand-eta.png', alt='ETA')
+										.link ETA
+								.row.tt-suggestion.tt-selectable
+									a(href='/rowenta')
+										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link ROWENTA
+						.tt-dataset.tt-dataset-all-firms
+							h5 
+								span Nejhledanější značky
+							.row.tt-suggestion.tt-selectable
+								a(href='seznam-modelu.html')
+									img(src='img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
 									.link
-										span.result 
-											span.ac-match Ele
-											| ctrolux
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-rowenta.png")
-									.link
-										span.result Rowenta
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-eta.png")
-									.link
-										span.result Eta
+										| AEG - 
+										strong.tt-highlight ELE
+										| CTROLUX
+							.row.tt-suggestion.tt-selectable
+								a(href='/eta')
+									img(src='img/dummy-brand-eta.png', alt='ETA')
+									.link ETA
+							.row.tt-suggestion.tt-selectable
+								a(href='/rowenta')
+									img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+									.link ROWENTA
 										span.price 
 											span od 
 											| 0.49 € / kus
-						h5 Všechny značky
-						include ./search-brands.jade
-						ul
+											span.stock skladem
+						.tt-dataset.tt-dataset-all-models
+							include ./search-brands.jade
+							h5 
+								span Všechny firmy
 							for brand in brands
-								li
-									a(href="#")
-										img
-										.link
-											span= brand
+								.row.tt-suggestion.tt-selectable
+									a(href='/acec/')
+										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link= brand
+					//- 	ul
+					//- 			li
+					//- 				a(href="#")
+					//- 					img
+					//- 					.link
+					//- 						span= brand
 				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
