@@ -2,7 +2,10 @@ body.home h1.special, body.home p.lead, body.home p.lead strong {
     color: white;
 }
 .search {
-    background: url("../img/porzsakok-carpet.jpg") center center no-repeat;
+    /*background: url("../img/porzsakok-carpet.jpg") center center no-repeat;*/
+}
+#search-fulltext form .icon-placeholder {
+    margin-top: -45px;
 }
 #search-brand select {
     background-image: none !important;
