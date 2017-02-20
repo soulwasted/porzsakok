@@ -1,5 +1,5 @@
 $sliderButtSize: 50px;
-$buttonRadius: 5px;
+$buttonRadius: 50%;
 
 .sliderBenefits {
 	min-height: 180px;
@@ -29,17 +29,17 @@ $buttonRadius: 5px;
 			.icon {
 				border-radius: 50%;
 				text-align: center;
-				background: lighten($brand-secondary, 60);
+				background: lighten($brand-success, 60);
 				width: 50px;
 				height: 50px;
 				i {
-					color: $brand-secondary;
+					color: $brand-success;
 					font-size: 36px;
 				}
 			}
 			.text {
 				width: 70px;
-				color: $brand-secondary;
+				color: $brand-success;
 				font-size: 12px;
 				padding-left: 6px;
 				@media screen and (max-width: $screen-sm-max) {
@@ -77,11 +77,19 @@ $buttonRadius: 5px;
 }
 #slider {
 	margin: 34px 20px 60px;
-	background: $brand-secondary;
-	// background: lighten($brand-secondary, 10);
-	height: 15px;
-	box-shadow: none;
-	border: 0;
+	&.noUi-target {
+		height: 6px;
+		background: $brand-success;
+		border-radius: 3px;
+		box-shadow: 0px 0px 0px 5px $light-blue;
+		border: none;
+	}
+	.noUi-background {
+		// background: $gray-lighter !important;
+		background: $light-blue;
+		border-radius: 3px;
+		box-shadow: 0px 0px 0px 5px $light-blue;
+	}
 	.noUi-value {
 		top: 20px;
 		font-weight: 700;
@@ -93,37 +101,32 @@ $buttonRadius: 5px;
 	.noUi-handle {
 		width: $sliderButtSize;
 		height: $sliderButtSize;
-		left: -25px;
-		top: -19px;
-		background: $brand-secondary;
 		border-radius: $buttonRadius;
+		left: -25px;
+		top: -23px;
+		background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
 		border: 0;
-		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 		cursor: pointer;
 		transition: box-shadow 0.5s;
 		&:hover {
-			background: lighten($brand-secondary,4);
+			background: lighten($brand-success,4);
 			box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
 		}
-		&::before {
+		&::before, &::after  {
 			height: 20px;
 			width: 2px;
 			left: 20px;
 			top: 15px;
-			background: darken($brand-primary, 10);
+			background: $brand-secondary;
+			box-shadow: 1px 0 0 0 #000000;
+			opacity: 0.15;
 		}
 		&::after {
-			height: 20px;
-			width: 2px;
 			left: 26px;
 			top: 15px;
-			background: darken($brand-primary, 10);
 		}
 	}
-}
-.noUi-background {
-	// background: $gray-lighter !important;
-	background: lighten($brand-secondary, 60) !important;
 }
 .stepper {
 	display: flex;
