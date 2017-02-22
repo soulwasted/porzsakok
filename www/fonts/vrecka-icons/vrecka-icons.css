@@ -1,0 +1,122 @@
+/**
+vrecka-icons Webfont
+*/
+@font-face {
+	font-family: 'vrecka-icons';
+	src: url('vrecka-icons.eot?1485628515291');
+	src: url('vrecka-icons.eot?#iefix-1485628515291') format('embedded-opentype'),
+		url('vrecka-icons.woff2?1485628515291') format('woff2'),
+		url('vrecka-icons.woff?1485628515291') format('woff'),
+		url('vrecka-icons.ttf?1485628515291') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'vrecka-icons';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+Glyphs list
+*/
+
+.icon-bags:before {
+	content: '\ea01';
+}
+
+.icon-bomb:before {
+	content: '\ea02';
+}
+
+.icon-cart:before {
+	content: '\ea03';
+}
+
+.icon-check:before {
+	content: '\ea04';
+}
+
+.icon-checked:before {
+	content: '\ea05';
+}
+
+.icon-clock:before {
+	content: '\ea06';
+}
+
+.icon-euro:before {
+	content: '\ea07';
+}
+
+.icon-gift:before {
+	content: '\ea08';
+}
+
+.icon-heart:before {
+	content: '\ea09';
+}
+
+.icon-pic-clock:before {
+	content: '\ea0a';
+}
+
+.icon-pic-closing:before {
+	content: '\ea0b';
+}
+
+.icon-pic-filter:before {
+	content: '\ea0c';
+}
+
+.icon-pic-join:before {
+	content: '\ea0d';
+}
+
+.icon-pic-magnify:before {
+	content: '\ea0e';
+}
+
+.icon-pic-space:before {
+	content: '\ea0f';
+}
+
+.icon-piggy:before {
+	content: '\ea10';
+}
+
+.icon-plus:before {
+	content: '\ea11';
+}
+
+.icon-search:before {
+	content: '\ea12';
+}
+
+.icon-star:before {
+	content: '\ea13';
+}
+
+.icon-thumbs_up:before {
+	content: '\ea14';
+}
+
+.icon-transport:before {
+	content: '\ea15';
+}
+
+.icon-user:before {
+	content: '\ea16';
+}

@@ -1,33 +1,91 @@
 .container-fluid.search#section-01.cd-section
-	.row.intro
-		.col-lg-12.text-center
-			h1.special Porzsákok
-			p.lead Sáčky pro více než 15 000 typů vysavačů
-	.row.tabs
-		// Tab panes
-		.tab-content.col-xs-12
-			#search-brand.tab-pane.fade(role='tabpanel')
-				form(action='seznam-znacek.html')
-					select#frm-firmSelectForm-firm(name='firm')
-						<option value="">Vyberte značku vysavače</option>
-						include ./search-select.jade
+	.container
+		.row.intro
+			.col-lg-7.col-md-6.col-sm-9.col-xs-10
+				h1 Sáčky pro více než <nobr>15&thinsp;000</nobr>&nbsp;typů vysavačů
+		.row
+			.col-lg-7.col-md-8.col-sm-12#search-fulltext
+				form(action='seznam-modelu.html', data-scroll-id='search-form')
+					input#search-input(type='text', placeholder='Hledejte značku / typ vysavače')
+					.icon-placeholder
+						i.icon-search
+					button.btn(type='submit') 
+						span Hledat 
+						i.icon-search
+				.tt-menu
+					.content
+						.top
+							.tt-dataset.top-brands
+								h5 
+									span Nejhledanější značky
+								.row.tt-suggestion.tt-selectable
+									a(href='seznam-modelu.html')
+										img(src='./img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
+										.link
+											| AEG - 
+											strong.tt-highlight ELE
+											| CTROLUX
+								.row.tt-suggestion.tt-selectable
+									a(href='/eta')
+										img(src='./img/dummy-brand-eta.png', alt='ETA')
+										.link ETA
+								.row.tt-suggestion.tt-selectable
+									a(href='/rowenta')
+										img(src='./img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link ROWENTA
+							.tt-dataset.top-bags
+								h5 
+									span Nejhledanější sáčky
+								.row.tt-suggestion.tt-selectable
+									a(href='seznam-modelu.html')
+										//- img(src='./img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
+										.link
+											| AEG - 
+											strong.tt-highlight ELE
+											| CTROLUX
+								.row.tt-suggestion.tt-selectable
+									a(href='/eta')
+										//- img(src='./img/dummy-brand-eta.png', alt='ETA')
+										.link ETA
+								.row.tt-suggestion.tt-selectable
+									a(href='/rowenta')
+										//- img(src='./img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link ROWENTA
+						.tt-dataset.tt-dataset-all-firms
+							h5 
+								span Nejhledanější značky
+							.row.tt-suggestion.tt-selectable
+								a(href='seznam-modelu.html')
+									img(src='img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
+									.link
+										| AEG - 
+										strong.tt-highlight ELE
+										| CTROLUX
+							.row.tt-suggestion.tt-selectable
+								a(href='/eta')
+									img(src='img/dummy-brand-eta.png', alt='ETA')
+									.link ETA
+							.row.tt-suggestion.tt-selectable
+								a(href='/rowenta')
+									img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+									.link ROWENTA
+										span.price 
+											span od 
+											| 0.49 € / kus
+											span.stock skladem
+						.tt-dataset.tt-dataset-all-models
+							include ./search-brands.jade
+							h5 
+								span Všechny firmy
+							for brand in brands
+								.row.tt-suggestion.tt-selectable
+									a(href='/acec/')
+										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
+										.link= brand
+					//- 	ul
+					//- 			li
+					//- 				a(href="#")
+					//- 					img
+					//- 					.link
+					//- 						span= brand
 				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
-			#search-fulltext.tab-pane.fade.in.active(role='tabpanel')
-				form(action='seznam-modelu.html')
-					input(type='text', placeholder='Napište značku a/nebo typ vysavače')
-					button.btn(type='submit')
-						span.glyphicon.glyphicon-search(aria-hidden='true')
-				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
-			#search-list.tab-pane.fade(role='tabpanel')
-				.row
-					ul.list-links
-						include ./search-list-links.jade
-				a.find(href='seznam-znacek.html') všechny značky…
-		// Nav tabs
-		ul.nav.nav-pills(role='tablist')
-			li.col-xs-4(role='presentation')
-				a(href='#search-brand', aria-controls='search-brand', role='tab', data-toggle='tab') Podle značky a typu
-			li.col-xs-4.active(role='presentation')
-				a(href='#search-fulltext', aria-controls='search-fulltext', role='tab', data-toggle='tab') Fulltextové hledání
-			li.col-xs-4(role='presentation')
-				a(href='#search-list', aria-controls='search-list', role='tab', data-toggle='tab') Nejhledanější
