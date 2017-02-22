@@ -38,6 +38,14 @@ h4 {
 		margin-top: 20px;
 	}
 }
+h4.hand {
+	font-family: 'hand_of_seanregular';
+	color: $brand-secondary;
+	text-transform: none;
+	// transform: rotate(-5deg);
+	opacity: 0.4;
+	font-size: 14px;
+}
 h6 {
 	font-weight: 500;
 	font-size: 10px;

@@ -6,7 +6,11 @@
 	display: flex;
 	align-items: center;
 	min-height: 70vh;
+<<<<<<< HEAD
 	padding: 80px 0 60px 0;
+=======
+	padding: 80px 0 60px;
+>>>>>>> master
 	@media screen and (orientation:portrait) {
 		min-height: 50vh;
 	}
@@ -16,20 +20,38 @@
 		// background-position: 70% center;
 	}
 	@media (max-width: $screen-xs-max) {
+<<<<<<< HEAD
 		padding: 40px 0 20px 0;
 	}
+=======
+		padding: 40px 0 20px;
+	}
+
+>>>>>>> master
 	.container {
 		// padding: 0;
 		border-bottom: none;
 	}
+
 	.intro {
 		// padding: 20px 0;
 		h1 {
 			text-align: left;
+<<<<<<< HEAD
+=======
+			font-size: 56px;
+			color: $black;
+			font-weight: 700;
+			@media (max-width: $screen-xs-max) {
+				font-size: 36px;
+			}
+>>>>>>> master
 		}
+
 		p.lead {
 			color: black;
 			font-size: 24px;
+
 			strong {
 				// color: white;
 			}
@@ -50,8 +72,13 @@ a.find {
 	// font-size: 18px;
 	font-size: 14px;
 	text-decoration: underline;
+<<<<<<< HEAD
 	@media (max-width: $screen-xs-max) {
 	}
+=======
+	@media (max-width: $screen-xs-max) {}
+
+>>>>>>> master
 	&:hover {
 		text-decoration: none;
 	}
@@ -65,6 +92,10 @@ a.find {
 		@media (max-width: $screen-xs-max) {
 			padding-top: 30px;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 		input {
 			width: calc(100% - 170px);
 			// max-width: 600px;
@@ -85,18 +116,75 @@ a.find {
 				font-size: 14px;
 			}
 		}
+<<<<<<< HEAD
 		i.icon-placeholder {
+=======
+
+		.icon-placeholder {
+>>>>>>> master
 			float: left;
 			position: relative;
 			margin-left: 20px;
 			margin-top: -67px;
+<<<<<<< HEAD
 			font-size: 32px;
 			color: rgba(0,0,0,0.2);
 			@media (max-width: $screen-sm-max) {
 				display: none;
 			}
+=======
+
+			i {
+				font-size: 32px;
+				color: rgba(0,0,0,0.2);
+				position: relative;
+				@media (max-width: $screen-sm-max) {
+					display: none;
+				}
+
+				&.anim {
+					color: $brand-red;
+					animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear;
+				}
+				@keyframes leftRight {
+					0% {
+						left: 0;
+					}
+					25% {
+						left: 8px;
+					}
+
+					75% {
+						left: -8px;
+					}
+
+					100% {
+						left: 0;
+					}
+				}
+				@keyframes topBottom {
+					0% {
+						top: 0;
+					}
+
+					25% {
+						top: 8px;
+					}
+
+					75% {
+						top: -8px;
+					}
+
+					100% {
+						top: 0;
+					}
+				}
+			}
+
+>>>>>>> master
 		}
 	}
+
 	.btn {
 		float: right;
 		position: relative;
@@ -108,6 +196,10 @@ a.find {
 		margin-right: 15px;
 		margin-top: -65px;
 		cursor: pointer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 		&:hover {
 			background-color: darken($brand-primary, 20);
 		}
@@ -118,6 +210,10 @@ a.find {
 		@media (max-width: 480px) {
 			width: 50px;
 		}
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 		i {
 			display: none;
 		}
@@ -125,6 +221,10 @@ a.find {
 			span {
 				display: none;
 			}
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 			i {
 				display: block;
 				font-size: 24px;
@@ -132,32 +232,53 @@ a.find {
 		}
 	}
 }
+<<<<<<< HEAD
 #whisper {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0.3s, opacity 0.3s linear;
 
+=======
+
+.tt-menu {
+	display: none;
+	// visibility: hidden;
+	// opacity: 0;
+	transition: visibility 0.3s, opacity 0.3s linear;
+>>>>>>> master
 
 	position: absolute;
 	background: white;
 	border-radius: 5px;
 	box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
+<<<<<<< HEAD
 	padding: 110px 20px 20px 20px;
+=======
+	padding: 110px 20px 20px;
+>>>>>>> master
 	margin-left: -20px;
 	margin-top: -110px;
 	z-index: 1;
 	width: calc(100% + 10px);
 
 	&.show {
+<<<<<<< HEAD
 		transition: visibility 0s, opacity 0.5s linear;
 		visibility: visible;
 		opacity: 1;
+=======
+		// transition: visibility 0s, opacity 0.5s linear;
+		// visibility: visible;
+		// opacity: 1;
+		display: block;
+>>>>>>> master
 	}
 
 	.content {
 		// max-height: 400px;
 		height: 75vh;
 		overflow-y: scroll;
+<<<<<<< HEAD
 		h5 {
 			font-size: 12px;
 			color: $gray-light;
@@ -187,14 +308,84 @@ a.find {
 				line-height: 50px;
 			}
 			li {
+=======
+
+		h5 {
+			font-size: 12px;
+			color: $gray;
+			padding-left: 86px;
+			margin-top: 15px;
+			text-transform: none;
+			overflow: hidden;
+
+			& > span {
+				position: relative;
+				display: inline-block;
+			}
+
+			& > span:after,
+			& > span:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				border-bottom: 1px solid;
+				width: 591px;
+				/* half of limiter*/
+				margin: 0 20px;
+				color: $gray-light;
+			}
+
+			& > span:before {
+				right: 100%;
+			}
+
+			& > span:after {
+				left: 100%;
+			}
+		}
+
+		.top {
+			display: flex;
+			justify-content: space-between;
+
+			.top-brands {
+				width: 38%;
+			}
+			.top-bags {
+				width: 58%;
+				h5 {
+					padding-left: 20px;
+				}
+			}
+			@media (max-width: $screen-xs-max) {
+				display: block;
+
+				.tt-dataset {
+					width: 100%;
+				}
+			}
+		}
+
+		.tt-dataset {
+			line-height: 40px;
+
+			.row {
+				margin: 0;
+
+>>>>>>> master
 				a {
 					font-size: 18px;
 					text-decoration: underline;
 					display: block;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 					img {
 						height: 100%;
 						width: 66px;
 					}
+<<<<<<< HEAD
 					.link {
 						display: inline-block;
 						width: calc(100% - 76px);
@@ -226,8 +417,68 @@ a.find {
 							color: $gray-lighter;
 						}
 					}
+=======
+
+					.link {
+						display: inline-block;
+						width: calc(100% - 76px); // img width + padding-left
+						margin-left: 10px;
+						padding-left: 10px;
+						border-radius: 5px;
+						cursor: pointer;
+						color: $gray-darker;
+
+						strong.tt-highlight {
+							color: $brand-secondary;
+							font-weight: 700;
+						}
+
+						span.price {
+							float: right;
+							margin-right: 10px;
+							font-size: 14px;
+							color: $black;
+
+							span {
+								color: $gray-lighter;
+							}
+
+							span.stock {
+								text-transform: uppercase;
+								color: $brand-secondary;
+								font-size: 12px;
+								font-weight: 700;
+								padding-left: 10px;
+							}
+						}
+
+						&:hover {
+							background: $brand-secondary;
+							color: white;
+
+							.tt-highlight {
+								color: white;
+							}
+
+							span {
+								color: white;
+
+								span.stock {
+									color: white;
+								}
+							}
+						}
+					}
+
+>>>>>>> master
 				}
 			}
 		}
 	}
+<<<<<<< HEAD
+=======
+}
+.tt-menu .content .tt-dataset.top-bags .row a .link {
+	width: calc(100% - 20px);
+>>>>>>> master
 }

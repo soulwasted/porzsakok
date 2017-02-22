@@ -4,6 +4,7 @@ $gray-light:                #b3b3b3;
 $gray-lighter:              #e6e6e6;
 $gray-lightest:             #f7f7f7;
 $gray-dark:					#5D707E;
+<<<<<<< HEAD
 
 // $brand-primary:              #18823a;
 $brand-primary:             #FF585B;
@@ -18,6 +19,25 @@ $font-family-raleway:       Raleway, Arial, sans-serif;
 // $font-family-special:        Sarina, "Open Sans", sans-serif;
 $font-family-special:       $font-family-raleway;
 $font-family-base:          $font-family-raleway;
+=======
+$gray-darker:				#323232;
+
+$brand-primary:             #18823a;
+// $brand-primary:             #FF585B;
+$brand-secondary:			#0089b0;
+$brand-success:             #0089b0;
+$brand-red:                 #FF585B;
+
+$light-blue:                #D9EEF3;
+
+$text-color:                $gray-dark;
+
+$font-family-open-sans:     "Open Sans", sans-serif;
+// $font-family-raleway:       Raleway, Arial, sans-serif;
+$font-family-special:       Sarina, "Open Sans", sans-serif;
+// $font-family-special:       $font-family-raleway;
+$font-family-base:          $font-family-open-sans;
+>>>>>>> master
 
 $font-size-base:            14px;
 $font-size-nav:             ceil(($font-size-base)); // ~14px
