@@ -1,9 +1,5 @@
 @charset "UTF-8";
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Raleway:500,700&subset=latin-ext");
-=======
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext);
-@import url(https://fonts.googleapis.com/css?family=Sarina);
 @import url(ekko-lightbox.min.css);
 @import url(nouislider.min.css);
 @font-face {
@@ -12,7 +8,6 @@
   font-weight: normal;
   font-style: normal; }
 
->>>>>>> master
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5063,17 +5058,11 @@ strong.info {
     transition: box-shadow 0.8s linear;
     transition: box-shadow 0.8s linear, -webkit-box-shadow 0.8s linear; }
   .navbar .navbar-brand {
-<<<<<<< HEAD
     color: #FF585B;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em; }
-=======
-    color: #0089b0;
-    font-size: 16px;
-    font-weight: 700; }
->>>>>>> master
   .navbar .navbar-nav li a {
     font-size: 14px;
     color: #000; }
@@ -5148,11 +5137,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   min-height: 70vh;
-<<<<<<< HEAD
-  padding: 80px 0 60px 0; }
-=======
   padding: 80px 0 60px; }
->>>>>>> master
   @media screen and (orientation: portrait) {
     .search {
       min-height: 50vh; } }
@@ -5163,13 +5148,6 @@ footer {
               background-size: cover; } }
   @media (max-width: 767px) {
     .search {
-<<<<<<< HEAD
-      padding: 40px 0 20px 0; } }
-  .search .container {
-    border-bottom: none; }
-  .search .intro h1 {
-    text-align: left; }
-=======
       padding: 40px 0 20px; } }
   .search .container {
     border-bottom: none; }
@@ -5181,7 +5159,6 @@ footer {
     @media (max-width: 767px) {
       .search .intro h1 {
         font-size: 36px; } }
->>>>>>> master
   .search .intro p.lead {
     color: black;
     font-size: 24px; }
@@ -5227,18 +5204,6 @@ a.find {
       #search-fulltext form input {
         height: 60px;
         font-size: 14px; } }
-<<<<<<< HEAD
-  #search-fulltext form i.icon-placeholder {
-    float: left;
-    position: relative;
-    margin-left: 20px;
-    margin-top: -67px;
-    font-size: 32px;
-    color: rgba(0, 0, 0, 0.2); }
-    @media (max-width: 991px) {
-      #search-fulltext form i.icon-placeholder {
-        display: none; } }
-=======
   #search-fulltext form .icon-placeholder {
     float: left;
     position: relative;
@@ -5252,7 +5217,7 @@ a.find {
         #search-fulltext form .icon-placeholder i {
           display: none; } }
       #search-fulltext form .icon-placeholder i.anim {
-        color: #FF585B;
+        color: #b5143b;
         -webkit-animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear;
              -o-animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear;
                 animation: leftRight 2s infinite linear, topBottom 2.5s infinite linear; }
@@ -5316,16 +5281,11 @@ a.find {
     top: -8px; }
   100% {
     top: 0; } }
->>>>>>> master
 
 #search-fulltext .btn {
   float: right;
   position: relative;
-<<<<<<< HEAD
   background: #FF585B;
-=======
-  background: #18823a;
->>>>>>> master
   color: white;
   width: 167px;
   height: 50px;
@@ -5334,11 +5294,7 @@ a.find {
   margin-top: -65px;
   cursor: pointer; }
   #search-fulltext .btn:hover {
-<<<<<<< HEAD
     background-color: #f10004; }
-=======
-    background-color: #082c14; }
->>>>>>> master
   @media (max-width: 767px) {
     #search-fulltext .btn {
       margin-top: -55px;
@@ -5355,14 +5311,8 @@ a.find {
       display: block;
       font-size: 24px; } }
 
-<<<<<<< HEAD
-#whisper {
-  visibility: hidden;
-  opacity: 0;
-=======
 .tt-menu {
   display: none;
->>>>>>> master
   -webkit-transition: visibility 0.3s, opacity 0.3s linear;
   -o-transition: visibility 0.3s, opacity 0.3s linear;
   transition: visibility 0.3s, opacity 0.3s linear;
@@ -5371,68 +5321,12 @@ a.find {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
           box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
-<<<<<<< HEAD
-  padding: 110px 20px 20px 20px;
-=======
   padding: 110px 20px 20px;
->>>>>>> master
   margin-left: -20px;
   margin-top: -110px;
   z-index: 1;
   width: -webkit-calc(100% + 10px);
   width: calc(100% + 10px); }
-<<<<<<< HEAD
-  #whisper.show {
-    -webkit-transition: visibility 0s, opacity 0.5s linear;
-    -o-transition: visibility 0s, opacity 0.5s linear;
-    transition: visibility 0s, opacity 0.5s linear;
-    visibility: visible;
-    opacity: 1; }
-  #whisper .content {
-    height: 75vh;
-    overflow-y: scroll; }
-    #whisper .content h5 {
-      font-size: 12px;
-      color: #b3b3b3;
-      padding-left: 86px;
-      text-transform: none; }
-    #whisper .content ul {
-      line-height: 30px; }
-      #whisper .content ul.top {
-        line-height: 50px; }
-      #whisper .content ul li a {
-        font-size: 18px;
-        text-decoration: underline;
-        display: block; }
-        #whisper .content ul li a img {
-          height: 100%;
-          width: 66px; }
-        #whisper .content ul li a .link {
-          display: inline-block;
-          width: -webkit-calc(100% - 76px);
-          width: calc(100% - 76px);
-          margin-left: 10px;
-          border-radius: 5px;
-          cursor: pointer; }
-          #whisper .content ul li a .link:hover {
-            background: #0089b0; }
-            #whisper .content ul li a .link:hover span {
-              color: white; }
-        #whisper .content ul li a span {
-          margin-left: 10px; }
-          #whisper .content ul li a span span.ac-match {
-            margin-left: 0;
-            color: black;
-            font-weight: 700;
-            text-decoration: underline; }
-        #whisper .content ul li a span.price {
-          float: right;
-          margin-right: 10px;
-          font-size: 14px;
-          color: #000000; }
-          #whisper .content ul li a span.price span {
-            color: #e6e6e6; }
-=======
   .tt-menu.show {
     display: block; }
   .tt-menu .content {
@@ -5488,28 +5382,50 @@ a.find {
       .tt-menu .content .tt-dataset .row {
         margin: 0; }
         .tt-menu .content .tt-dataset .row a {
-          font-size: 18px;
-          text-decoration: underline;
-          display: block; }
+          text-decoration: none;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
           .tt-menu .content .tt-dataset .row a img {
             height: 100%;
             width: 66px; }
           .tt-menu .content .tt-dataset .row a .link {
-            display: inline-block;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -js-display: flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             width: -webkit-calc(100% - 76px);
             width: calc(100% - 76px);
             margin-left: 10px;
             padding-left: 10px;
             border-radius: 5px;
             cursor: pointer;
-            color: #323232; }
+            color: #222222;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 40px; }
             .tt-menu .content .tt-dataset .row a .link strong.tt-highlight {
               color: #0089b0;
               font-weight: 700; }
             .tt-menu .content .tt-dataset .row a .link span.price {
-              float: right;
               margin-right: 10px;
               font-size: 14px;
+              line-height: 16px;
               color: #000000; }
               .tt-menu .content .tt-dataset .row a .link span.price span {
                 color: #e6e6e6; }
@@ -5532,7 +5448,6 @@ a.find {
 .tt-menu .content .tt-dataset.top-bags .row a .link {
   width: -webkit-calc(100% - 20px);
   width: calc(100% - 20px); }
->>>>>>> master
 
 .stripe, .stripe-benefits, .stripe-guarantee, .stripe-bag, .stripe-contact, .stripe-additional, .stripe-order {
   padding-bottom: 60px; }

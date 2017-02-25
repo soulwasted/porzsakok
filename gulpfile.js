@@ -390,12 +390,12 @@ gulp.task('production', gulpSequence(
 	// 'delete-useless-files'
 ));
 
-var myFontaName = 'vrecka-icons';
+var myFontName = 'vrecka-icons';
 
 gulp.task('iconfont', function () {
 	return gulp.src('assets/svg/*.svg')
 		.pipe(iconfont({
-			fontName: myFontaName,
+			fontName: myFontName,
 			formats: ['ttf', 'eot', 'woff', 'woff2'],
 			appendCodepoints: true,
 			appendUnicode: false,

@@ -2,54 +2,11 @@
 	.container
 		.row.intro
 			.col-lg-7.col-md-6.col-sm-9.col-xs-10
-<<<<<<< HEAD
-				h1.special Sáčky pro více než <nobr>15&thinsp;000</nobr>&nbsp;typů vysavačů
-=======
 				h1 Sáčky pro více než <nobr>15&thinsp;000</nobr>&nbsp;typů vysavačů
->>>>>>> master
 		.row
 			.col-lg-7.col-md-8.col-sm-12#search-fulltext
 				form(action='seznam-modelu.html', data-scroll-id='search-form')
 					input#search-input(type='text', placeholder='Hledejte značku / typ vysavače')
-<<<<<<< HEAD
-					i.icon-search.icon-placeholder
-					button.btn(type='submit') 
-						span Hledat 
-						i.icon-search
-				#whisper
-					.content
-						h5 Nejhledanější značky
-						ul.top
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-electrolux.png")
-									.link
-										span.result 
-											span.ac-match Ele
-											| ctrolux
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-rowenta.png")
-									.link
-										span.result Rowenta
-							li
-								a(href="seznam-modelu.html")
-									img(src="img/dummy-brand-eta.png")
-									.link
-										span.result Eta
-										span.price 
-											span od 
-											| 0.49 € / kus
-						h5 Všechny značky
-						include ./search-brands.jade
-						ul
-							for brand in brands
-								li
-									a(href="#")
-										img
-										.link
-											span= brand
-=======
 					.icon-placeholder
 						i.icon-search
 					button.btn(type='submit') 
@@ -65,17 +22,20 @@
 									a(href='seznam-modelu.html')
 										img(src='./img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
 										.link
-											| AEG - 
-											strong.tt-highlight ELE
-											| CTROLUX
+											.name
+												| AEG - 
+												strong.tt-highlight ELE
+												| CTROLUX
 								.row.tt-suggestion.tt-selectable
 									a(href='/eta')
 										img(src='./img/dummy-brand-eta.png', alt='ETA')
-										.link ETA
+										.link 
+											.name ETA
 								.row.tt-suggestion.tt-selectable
 									a(href='/rowenta')
 										img(src='./img/dummy-brand-rowenta.png', alt='ROWENTA')
-										.link ROWENTA
+										.link 
+											.name ROWENTA
 							.tt-dataset.top-bags
 								h5 
 									span Nejhledanější sáčky
@@ -83,17 +43,20 @@
 									a(href='seznam-modelu.html')
 										//- img(src='./img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
 										.link
-											| AEG - 
-											strong.tt-highlight ELE
-											| CTROLUX
+											.name 
+												| AEG - 
+												strong.tt-highlight ELE
+												| CTROLUX
 								.row.tt-suggestion.tt-selectable
 									a(href='/eta')
 										//- img(src='./img/dummy-brand-eta.png', alt='ETA')
-										.link ETA
+										.link 
+											.name ETA
 								.row.tt-suggestion.tt-selectable
 									a(href='/rowenta')
 										//- img(src='./img/dummy-brand-rowenta.png', alt='ROWENTA')
-										.link ROWENTA
+										.link 
+											.name ROWENTA
 						.tt-dataset.tt-dataset-all-firms
 							h5 
 								span Nejhledanější značky
@@ -101,20 +64,21 @@
 								a(href='seznam-modelu.html')
 									img(src='img/dummy-brand-electrolux.png', alt='ELECTROLUX', width='60px;')
 									.link
-										| AEG - 
-										strong.tt-highlight ELE
-										| CTROLUX
+										.name 
+											| AEG - 
+											strong.tt-highlight ELE
+											| CTROLUX
 							.row.tt-suggestion.tt-selectable
 								a(href='/eta')
 									img(src='img/dummy-brand-eta.png', alt='ETA')
-									.link ETA
+									.link 
+										.name ETA
 							.row.tt-suggestion.tt-selectable
 								a(href='/rowenta')
 									img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
-									.link ROWENTA
-										span.price 
-											span od 
-											| 0.49 € / kus
+									.link 
+										.name ROWENTA
+										span.price od 0.49 € / kus
 											span.stock skladem
 						.tt-dataset.tt-dataset-all-models
 							include ./search-brands.jade
@@ -124,12 +88,12 @@
 								.row.tt-suggestion.tt-selectable
 									a(href='/acec/')
 										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
-										.link= brand
+										.link
+											.name= brand
 					//- 	ul
 					//- 			li
 					//- 				a(href="#")
 					//- 					img
 					//- 					.link
 					//- 						span= brand
->>>>>>> master
 				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?

@@ -87,27 +87,18 @@ function initSmoothScroll() {
 
 function whisperFocus() {
 	$("#search-input").focus(function () {
-<<<<<<< HEAD
-		$("#whisper").addClass("show");
-=======
 		$(".tt-menu").addClass("show");
->>>>>>> master
 		var anchor = document.querySelector('#search-input');
 		smoothScroll.animateScroll(anchor);
 	});
 	$("#search-input").blur(function () {
 		if ($("#search-input").val().length == 0) {
-<<<<<<< HEAD
-			$("#whisper").removeClass("show");
-		};
-=======
 			$(".tt-menu").removeClass("show");
 		};
 		$("i.icon-search").removeClass("anim");
 	});
 	$("#search-input").keypress(function () {
 		$("i.icon-search").addClass("anim");
->>>>>>> master
 	});
 }
 

@@ -6,11 +6,7 @@
 	display: flex;
 	align-items: center;
 	min-height: 70vh;
-<<<<<<< HEAD
-	padding: 80px 0 60px 0;
-=======
 	padding: 80px 0 60px;
->>>>>>> master
 	@media screen and (orientation:portrait) {
 		min-height: 50vh;
 	}
@@ -20,14 +16,9 @@
 		// background-position: 70% center;
 	}
 	@media (max-width: $screen-xs-max) {
-<<<<<<< HEAD
-		padding: 40px 0 20px 0;
-	}
-=======
 		padding: 40px 0 20px;
 	}
 
->>>>>>> master
 	.container {
 		// padding: 0;
 		border-bottom: none;
@@ -37,15 +28,12 @@
 		// padding: 20px 0;
 		h1 {
 			text-align: left;
-<<<<<<< HEAD
-=======
 			font-size: 56px;
 			color: $black;
 			font-weight: 700;
 			@media (max-width: $screen-xs-max) {
 				font-size: 36px;
 			}
->>>>>>> master
 		}
 
 		p.lead {
@@ -72,13 +60,8 @@ a.find {
 	// font-size: 18px;
 	font-size: 14px;
 	text-decoration: underline;
-<<<<<<< HEAD
-	@media (max-width: $screen-xs-max) {
-	}
-=======
 	@media (max-width: $screen-xs-max) {}
 
->>>>>>> master
 	&:hover {
 		text-decoration: none;
 	}
@@ -92,10 +75,7 @@ a.find {
 		@media (max-width: $screen-xs-max) {
 			padding-top: 30px;
 		}
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 		input {
 			width: calc(100% - 170px);
 			// max-width: 600px;
@@ -116,23 +96,12 @@ a.find {
 				font-size: 14px;
 			}
 		}
-<<<<<<< HEAD
-		i.icon-placeholder {
-=======
 
 		.icon-placeholder {
->>>>>>> master
 			float: left;
 			position: relative;
 			margin-left: 20px;
 			margin-top: -67px;
-<<<<<<< HEAD
-			font-size: 32px;
-			color: rgba(0,0,0,0.2);
-			@media (max-width: $screen-sm-max) {
-				display: none;
-			}
-=======
 
 			i {
 				font-size: 32px;
@@ -150,6 +119,7 @@ a.find {
 					0% {
 						left: 0;
 					}
+
 					25% {
 						left: 8px;
 					}
@@ -180,8 +150,6 @@ a.find {
 					}
 				}
 			}
-
->>>>>>> master
 		}
 	}
 
@@ -196,10 +164,7 @@ a.find {
 		margin-right: 15px;
 		margin-top: -65px;
 		cursor: pointer;
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 		&:hover {
 			background-color: darken($brand-primary, 20);
 		}
@@ -210,10 +175,7 @@ a.find {
 		@media (max-width: 480px) {
 			width: 50px;
 		}
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 		i {
 			display: none;
 		}
@@ -221,10 +183,7 @@ a.find {
 			span {
 				display: none;
 			}
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 			i {
 				display: block;
 				font-size: 24px;
@@ -232,83 +191,34 @@ a.find {
 		}
 	}
 }
-<<<<<<< HEAD
-#whisper {
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0.3s, opacity 0.3s linear;
-
-=======
 
 .tt-menu {
 	display: none;
 	// visibility: hidden;
 	// opacity: 0;
 	transition: visibility 0.3s, opacity 0.3s linear;
->>>>>>> master
 
 	position: absolute;
 	background: white;
 	border-radius: 5px;
 	box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
-<<<<<<< HEAD
-	padding: 110px 20px 20px 20px;
-=======
 	padding: 110px 20px 20px;
->>>>>>> master
 	margin-left: -20px;
 	margin-top: -110px;
 	z-index: 1;
 	width: calc(100% + 10px);
 
 	&.show {
-<<<<<<< HEAD
-		transition: visibility 0s, opacity 0.5s linear;
-		visibility: visible;
-		opacity: 1;
-=======
 		// transition: visibility 0s, opacity 0.5s linear;
 		// visibility: visible;
 		// opacity: 1;
 		display: block;
->>>>>>> master
 	}
 
 	.content {
 		// max-height: 400px;
 		height: 75vh;
 		overflow-y: scroll;
-<<<<<<< HEAD
-		h5 {
-			font-size: 12px;
-			color: $gray-light;
-			padding-left: 86px;
-			text-transform: none;
-			// &:before,
-			// &:after {
-			// 	content: "";
-			// 	position: relative;
-			// 	display: block;
-			// 	height: 1px;
-			// 	border-bottom: 1px solid $gray-lighter;
-			// 	left: 20px;
-			// 	margin-top: 5px;
-			// 	width: 66px;
-			// }
-			// &:after {
-			// 	// width: 100%;
-			// 	width: 445px;
-			// 	left: 245px;
-			// 	// left: 0;
-			// }
-		}
-		ul {
-			line-height: 30px;
-			&.top {
-				line-height: 50px;
-			}
-			li {
-=======
 
 		h5 {
 			font-size: 12px;
@@ -351,8 +261,10 @@ a.find {
 			.top-brands {
 				width: 38%;
 			}
+
 			.top-bags {
 				width: 58%;
+
 				h5 {
 					padding-left: 20px;
 				}
@@ -372,61 +284,31 @@ a.find {
 			.row {
 				margin: 0;
 
->>>>>>> master
 				a {
-					font-size: 18px;
-					text-decoration: underline;
-					display: block;
-<<<<<<< HEAD
-=======
+					// font-size: 18px;
+					text-decoration: none;
+					display: flex;
+					align-items: center;
 
->>>>>>> master
 					img {
 						height: 100%;
 						width: 66px;
 					}
-<<<<<<< HEAD
-					.link {
-						display: inline-block;
-						width: calc(100% - 76px);
-						margin-left: 10px;
-						border-radius: 5px;
-						cursor: pointer;
-						&:hover {
-							background: $brand-secondary;
-							span {
-								color: white;
-							}
-						}
-					}
-					span {
-						margin-left: 10px;
-						span.ac-match {
-							margin-left: 0;
-							color: black;
-							font-weight: 700;
-							text-decoration: underline;
-						}
-					}
-					span.price {
-						float: right;
-						margin-right: 10px;
-						font-size: 14px;
-						color: $black;
-						span {
-							color: $gray-lighter;
-						}
-					}
-=======
 
 					.link {
-						display: inline-block;
+						// display: inline-block;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
 						width: calc(100% - 76px); // img width + padding-left
 						margin-left: 10px;
 						padding-left: 10px;
 						border-radius: 5px;
 						cursor: pointer;
 						color: $gray-darker;
+						font-size: 16px;
+						line-height: 20px;
+						min-height: 40px;
 
 						strong.tt-highlight {
 							color: $brand-secondary;
@@ -434,9 +316,9 @@ a.find {
 						}
 
 						span.price {
-							float: right;
 							margin-right: 10px;
 							font-size: 14px;
+							line-height: 16px;
 							color: $black;
 
 							span {
@@ -470,15 +352,12 @@ a.find {
 						}
 					}
 
->>>>>>> master
 				}
 			}
 		}
 	}
-<<<<<<< HEAD
-=======
 }
+
 .tt-menu .content .tt-dataset.top-bags .row a .link {
 	width: calc(100% - 20px);
->>>>>>> master
 }
