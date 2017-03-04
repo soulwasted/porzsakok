@@ -11,24 +11,32 @@ html(lang='en')
 			//- 			span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
 			//- 			| Zpět na modely vysavače Philips
 			.container
+				ul.breadcrumb
+					li
+						a(href='#') Domů
+					li
+						a(href='#') Electrolux
+					li.active Ingenio Z 2540
 				.row
 					.col-xs-12
-						h1.h3
-							| Sáčky do vysavače PHILIPS Vision Vitall: 
-							strong HR 6340-6800, HR 6938-6939, HR 6983
-					.col-xs-12.heureka-offer
-						strong
-							| Špeciálna ponuka 
-						img.heureka-logo(src="img/heureka-logo.png" alt="heureka")
+						h1
+							| Sáčky do vysavače 
+							a(href='#') PHILIPS
+							|  Vision Vitall: HR 6340-6800, HR 6938-6939, HR 6983
+				.row
+					.col-xs-12
+						.heureka-offer
+							strong
+								| Špeciálna ponuka 
+							img.heureka-logo(src="img/heureka-logo.png" alt="heureka")
 			.container-fluid.sliderWrapper
 				.container
-					.row
-						.col-xs-12
-							h4.hand Vyberte si počet sáčků…
 					.row.sliderRow
 						.col-xs-12.col-sm-8
 							.row
 								.col-xs-12
+									h4.hand.bags
+										span Vyberte si počet sáčků…
 									#slider
 										//- .gap
 							.row.sliderBenefits
@@ -37,55 +45,67 @@ html(lang='en')
 										.icon
 											i.icon-transport(aria-hidden='true')
 										.text Doprava 
-											span 4 EUR
-									.benefit
-										.icon
-											i.icon-piggy(aria-hidden='true')
-										.text sleva 
-											span 0%
-								.allBenefits
-									.benefit
-										.icon
-											i.icon-gift(aria-hidden='true')
-										.text Doprava 
-											span zdarma
-									.benefit
-										.icon
-											i.icon-piggy(aria-hidden='true')
-										.text sleva 
-											span 22%
-								.allBenefits
-									.benefit
-										.icon
-											i.icon-star(aria-hidden='true')
-										.text Doprava 
-											span zdarma
-									.benefit
-										.icon
-											i.icon-thumbs_up(aria-hidden='true')
-										.text sleva 
-											span 33%
-									.benefit
-										.icon
-											i.icon-check(aria-hidden='true')
-										.text 1 vůně 
-											span zdarma
-								.allBenefits
+											span 3,90 EUR
 									.benefit
 										.icon
 											i.icon-euro(aria-hidden='true')
+										.text 
+											span 1,20 € / ks
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
 										.text Doprava 
-											span zdarma
+											span ZADARMO
+									.benefit
+										.icon
+											i.icon-bags(aria-hidden='true')
+										.text + 4 sáčky 
+											span ZADARMO
+									.benefit
+										.icon
+											i.icon-euro(aria-hidden='true')
+										.text  
+											span 0,90 € / ks
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span ZADARMO
+									.benefit
+										.icon
+											i.icon-bags(aria-hidden='true')
+										.text + 8 sáčků 
+											span ZADARMO
 									.benefit
 										.icon
 											i.icon-heart(aria-hidden='true')
-										.text sleva 
-											span 44%
+										.text Oblíbené balení 
+											span 0,86 € / ks
+								.allBenefits
+									.benefit
+										.icon
+											i.icon-transport(aria-hidden='true')
+										.text Doprava 
+											span ZADARMO
+									.benefit
+										.icon
+											i.icon-bags(aria-hidden='true')
+										.text + 20 sáčků 
+											span ZADARMO
 									.benefit
 										.icon
 											i.icon-bomb(aria-hidden='true')
-										.text výhodná cena 
-											span €0,89
+										.text Cenová bomba 
+											span 0,80 € / ks
+							.row
+								.col-xs-12
+									p.note 
+										i.icon-plus
+										| Ke každým 4 sáčkům získáte 1 motorový filtr ZADARMO.
+										br
+										a(href="#") Co je to motorový filtr?
 						.col-xs-12.col-sm-4
 							.row
 								.col-xs-12
@@ -98,18 +118,15 @@ html(lang='en')
 									.stepperLabel sáčků
 							.row.discounts
 								include includes/detail-summary.jade
-					.row
-						.col-xs-12
-							p.note Ke každým 4 sáčkům obdržíte 1 filtr zdarma. Nyní získáte 
-								strong 10 filtrů zdarma!
 			.container.cartButtons
 				.row
-					.col-xs-12.col-sm-4
-						a.btn.btn-primary.btn-lg.btn-block(href="#") Vložit do košíku
-					.col-xs-12.col-sm-8
-						span nebo 
-						a.btn.btn-default#btnOnePiece(href="#") Chcete vyzkoušet 1 sáček zdarma?
-						span  (zaplatíte pouze 4€ za dopravu)
+					.col-xs-12
+						a.btn.btn-primary.btn-lg(href="#") Vložit do košíku
+							i.icon-cart
+					//- .col-xs-12.col-sm-8
+					//- 	span nebo 
+					//- 	a.btn.btn-default#btnOnePiece(href="#") Chcete vyzkoušet 1 sáček zdarma?
+					//- 	span  (zaplatíte pouze 4€ za dopravu)
 			.container
 				.row
 					.col-sm-6.hidden-xs.gallery

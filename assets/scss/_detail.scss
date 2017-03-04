@@ -1,3 +1,15 @@
+.main.detail {
+	.container:nth-of-type(1) {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.sliderWrapper {
+		&>.container {
+			// border-bottom: none;
+			padding-top: 0;
+		}
+	}
+}
 .sliderWrapper {
 	h4 {
 		@media screen and (max-width: $screen-xs-max) {
@@ -8,19 +20,29 @@
 .heureka-offer {
 	display: flex;
 	align-items: center;
+	// padding-left: 20px;
 	strong {
-		padding-top: 5px;
+		// padding-top: 5px;
+		font-size: 14px;
 	}
 	.heureka-logo {
 		width: 100%;
-		max-width: 150px;
+		max-width: 100px;
 	}
 }
 .cartButtons {
 	.row {
-		-js-display: flex;
+		text-align: center;
 		display: flex;
 		align-items: center;
+		a.btn {
+			padding-left: 40px;
+			padding-right: 40px;
+			i {
+				font-size: 24px;
+				margin-left: 7px;
+			}
+		}
 		@media screen and (max-width: $screen-xs-max) {
 			display: block;
 			text-align: center;
@@ -39,50 +61,78 @@
 	}
 }
 .discounts {
-	margin-top: 18px;
+	margin-top: 12px;
 	@media screen and (max-width: $screen-sm) {
+		margin-top: 0;
 		display: flex;
 		align-items: center;
 		&>div {
 			padding: 0;
 		}
 	}
-	.prices-before, .prices-after, .prices-sale {
-		text-transform: uppercase;
+	@media screen and (max-width: $screen-sm) {
+		top: -30px;
+	}
+	.summary {
 		text-align: center;
-		font-size: 10px;
-	}
-	.prices-before {
-		strong {
-			text-decoration: line-through;
-		}
-	}
-	strong {
-		color: $brand-primary;
-		font-size: 18px;
-	}
-	.prices-sale {
-		@media screen and (min-width: $screen-sm) {
-			margin-top: 10px;
+		font-size: 13px;
+		line-height: 16px;
+		margin-top: 20px;
+		.item {
 			margin-bottom: 10px;
-		}
-		.badge-sale {
-			padding: 7px 6px;
-			width: auto;
-			height: 60px;
-			// border: 2px solid $brand-red;
-			background: $brand-primary;
-			border-radius: 12px;
-			display: inline-block;
-			color: white;
-			text-transform: none;
-			strong {
+			span {
 				display: block;
-				color: white;
-				// font-size: 10px;
+				font-weight: bold;
+				font-size: 16px;
+				.icon-check2 {
+					color: $brand-secondary;
+					font-size: 19px;
+					margin-right: 4px;
+				}
+			}
+		}
+		.price {
+			text-align: center;
+			width: 151px;
+			height: 85px;
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 30px;
+			background: url("../img/circle/circle.png");
+			background: url("../img/circle/circle.svg");
+			background-repeat: no-repeat;
+			span {
+				font-size: 24px;
+				color: $brand-primary;
 			}
 		}
 	}
+	// strong {
+	// 	color: $brand-primary;
+	// 	font-size: 18px;
+	// }
+	// .prices-sale {
+	// 	@media screen and (min-width: $screen-sm) {
+	// 		margin-top: 10px;
+	// 		margin-bottom: 10px;
+	// 	}
+	// 	.badge-sale {
+	// 		padding: 7px 6px;
+	// 		width: auto;
+	// 		height: 60px;
+	// 		// border: 2px solid $brand-red;
+	// 		background: $brand-primary;
+	// 		border-radius: 12px;
+	// 		display: inline-block;
+	// 		color: white;
+	// 		text-transform: none;
+	// 		strong {
+	// 			display: block;
+	// 			color: white;
+	// 			// font-size: 10px;
+	// 		}
+	// 	}
+	// }
 }
 
 .gallery {

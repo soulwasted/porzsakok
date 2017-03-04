@@ -4802,11 +4802,13 @@ nav .container {
 .breadcrumb {
   border-bottom: 1px solid #e6e6e6;
   background: none;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 0;
   display: inline-block; }
+  .breadcrumb a {
+    color: #0089b0; }
 
 ul.simple {
   list-style: none;
@@ -4979,6 +4981,11 @@ h1.special {
 h1 {
   margin: 30px 0 20px;
   font-weight: 700; }
+  @media screen and (max-width: 767px) {
+    .h1,
+    h1 {
+      font-size: 24px;
+      line-height: 36px; } }
 
 .h2,
 h2 {
@@ -5020,11 +5027,6 @@ h1, h2, h3, h4, h5, h6 {
 p b,
 p strong {
   color: #5D707E; }
-
-p.note {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 12px; }
 
 strong.info {
   text-transform: uppercase;
@@ -5482,7 +5484,8 @@ a.find {
     color: white; }
 
 .stripe-benefits .benefit {
-  min-height: 200px; }
+  min-height: 200px;
+  text-align: center; }
 
 .stripe-benefits .icon i {
   color: #0089b0;
@@ -5828,7 +5831,8 @@ body.modal-open .main {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      opacity: 0.3; }
       @media screen and (max-width: 991px) {
         .sliderBenefits .allBenefits .benefit {
           width: 50px;
@@ -5839,18 +5843,18 @@ body.modal-open .main {
                   flex-direction: column;
           text-align: center; } }
       .sliderBenefits .allBenefits .benefit .icon {
-        border-radius: 50%;
         text-align: center;
-        background: #e3f9ff;
+        height: 50px;
         width: 50px;
-        height: 50px; }
+        overflow: hidden; }
         .sliderBenefits .allBenefits .benefit .icon i {
-          color: #0089b0;
-          font-size: 36px; }
+          color: #000000;
+          font-size: 32px; }
       .sliderBenefits .allBenefits .benefit .text {
-        width: 70px;
-        color: #0089b0;
+        width: 90px;
+        color: #000000;
         font-size: 12px;
+        line-height: 14px;
         padding-left: 6px; }
         @media screen and (max-width: 991px) {
           .sliderBenefits .allBenefits .benefit .text {
@@ -5858,12 +5862,20 @@ body.modal-open .main {
             color: #4d4d4d; } }
         .sliderBenefits .allBenefits .benefit .text span {
           display: block;
-          font-size: 14px;
-          font-weight: 700;
-          text-transform: uppercase; }
+          font-size: 13px;
+          font-weight: 700; }
           @media screen and (max-width: 991px) {
             .sliderBenefits .allBenefits .benefit .text span {
               font-size: 11px; } }
+    .sliderBenefits .allBenefits.active .benefit {
+      opacity: 1; }
+      .sliderBenefits .allBenefits.active .benefit .icon {
+        height: 50px; }
+        .sliderBenefits .allBenefits.active .benefit .icon i {
+          color: #FF585B;
+          font-size: 40px; }
+          .sliderBenefits .allBenefits.active .benefit .icon i:before {
+            margin-top: -20px; }
     .sliderBenefits .allBenefits:nth-child(1) {
       left: -webkit-calc(0% + 10px);
       left: calc(0% + 10px); }
@@ -5878,12 +5890,22 @@ body.modal-open .main {
       left: calc(100% - 60px); }
 
 #slider {
-  margin: 34px 20px 60px;
-  background: #0089b0;
-  height: 15px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: 0; }
+  margin: 34px 20px 60px; }
+  @media screen and (max-width: 767px) {
+    #slider {
+      margin-bottom: 45px; } }
+  #slider.noUi-target {
+    height: 6px;
+    background: #0089b0;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 0 5px #D9EEF3;
+            box-shadow: 0 0 0 5px #D9EEF3;
+    border: none; }
+  #slider .noUi-background {
+    background: #D9EEF3;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 0 5px #D9EEF3;
+            box-shadow: 0 0 0 5px #D9EEF3; }
   #slider .noUi-value {
     top: 20px;
     font-weight: 700;
@@ -5893,13 +5915,16 @@ body.modal-open .main {
   #slider .noUi-handle {
     width: 50px;
     height: 50px;
+    border-radius: 50%;
     left: -25px;
-    top: -19px;
-    background: #0089b0;
-    border-radius: 5px;
+    top: -23px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0cdcd));
+    background-image: -webkit-linear-gradient(top, #ffffff, #d0cdcd);
+    background-image: -o-linear-gradient(top, #ffffff, #d0cdcd);
+    background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
     border: 0;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
     -webkit-transition: -webkit-box-shadow 0.5s;
     transition: -webkit-box-shadow 0.5s;
@@ -5910,21 +5935,25 @@ body.modal-open .main {
       background: #0099c4;
       -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
               box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
-    #slider .noUi-handle::before {
+    #slider .noUi-handle::after, #slider .noUi-handle::before {
       height: 20px;
       width: 2px;
       left: 20px;
       top: 15px;
-      background: #ff2529; }
+      background: #0089b0;
+      -webkit-box-shadow: 1px 0 0 0 #000000;
+              box-shadow: 1px 0 0 0 #000000;
+      opacity: 0.15; }
     #slider .noUi-handle::after {
-      height: 20px;
-      width: 2px;
       left: 26px;
-      top: 15px;
-      background: #ff2529; }
-
-.noUi-background {
-  background: #e3f9ff !important; }
+      top: 15px; }
+  #slider .noUi-pips-horizontal {
+    padding-top: 5px; }
+  #slider .noUi-marker-large, #slider .noUi-marker-sub {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#d9eef3), to(#0089b0));
+    background-image: -webkit-linear-gradient(top, #d9eef3, #0089b0);
+    background-image: -o-linear-gradient(top, #d9eef3, #0089b0);
+    background-image: linear-gradient(to bottom, #d9eef3, #0089b0); }
 
 .stepper {
   display: -webkit-box;
@@ -5939,21 +5968,30 @@ body.modal-open .main {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  margin-top: 48px; }
   @media screen and (max-width: 767px) {
     .stepper {
       margin-top: 15px; } }
-  .stepper #stepperMinus, .stepper #stepperPlus {
+  .stepper #stepperMinus,
+  .stepper #stepperPlus {
     width: 50px;
     height: 50px;
     background: #FF585B;
     cursor: pointer;
-    color: white;
+    color: black;
     font-weight: 700;
     font-size: 20px;
     text-align: center;
-    line-height: 50px; }
-    .stepper #stepperMinus:hover, .stepper #stepperPlus:hover {
+    line-height: 50px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d0cdcd));
+    background-image: -webkit-linear-gradient(top, #ffffff, #d0cdcd);
+    background-image: -o-linear-gradient(top, #ffffff, #d0cdcd);
+    background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5); }
+    .stepper #stepperMinus:hover,
+    .stepper #stepperPlus:hover {
       background: #ff2529; }
   .stepper #stepperMinus {
     border-radius: 5px 0 0 5px; }
@@ -5964,8 +6002,13 @@ body.modal-open .main {
     height: 80px;
     border: 2px solid #FF585B;
     font-size: 36px;
+    border-radius: 5px;
+    background-color: white;
+    border: solid 2px #0089b0;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    color: black;
+    padding-bottom: 10px; }
     .stepper #sliderInput.over100 {
       font-size: 24px; }
     .stepper #sliderInput::-webkit-inner-spin-button, .stepper #sliderInput::-webkit-outer-spin-button {
@@ -5991,10 +6034,12 @@ body.modal-open .main {
     .main.cart .stepper {
       margin-top: 10px;
       margin-bottom: 10px; } }
-  .main.cart .stepper #stepperMinus, .main.cart .stepper #stepperPlus {
+  .main.cart .stepper #stepperMinus,
+  .main.cart .stepper #stepperPlus {
     background: #e6e6e6;
     color: #4d4d4d; }
-    .main.cart .stepper #stepperMinus:hover, .main.cart .stepper #stepperPlus:hover {
+    .main.cart .stepper #stepperMinus:hover,
+    .main.cart .stepper #stepperPlus:hover {
       background: #343434; }
   .main.cart .stepper #sliderInput {
     width: 50px;
@@ -6027,6 +6072,59 @@ body.modal-open .main {
     .sliderRow #slider {
       margin-top: 20px; } }
 
+h4.hand span {
+  display: inline-block; }
+
+h4.hand.bags span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 480px) {
+    h4.hand.bags span {
+      margin-left: -70px;
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.bags span:after {
+    content: url("../img/arrows/arrow01.svg");
+    top: 30px;
+    position: relative; }
+
+h4.hand.summary {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left; }
+  @media screen and (max-width: 480px) {
+    h4.hand.summary {
+      margin-top: -5px; } }
+  h4.hand.summary span {
+    text-align: left;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+         -o-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+
+p.note {
+  margin-top: 15px;
+  font-size: 12px;
+  color: black; }
+  p.note i {
+    font-size: 28px;
+    color: #0089b0;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    margin-top: -6px; }
+
+.main.detail .container:nth-of-type(1) {
+  border-bottom: none;
+  padding-bottom: 0; }
+
+.main.detail .sliderWrapper > .container {
+  padding-top: 0; }
+
 @media screen and (max-width: 767px) {
   .sliderWrapper h4 {
     text-align: center; } }
@@ -6042,21 +6140,28 @@ body.modal-open .main {
       -ms-flex-align: center;
           align-items: center; }
   .heureka-offer strong {
-    padding-top: 5px; }
+    font-size: 14px; }
   .heureka-offer .heureka-logo {
     width: 100%;
-    max-width: 150px; }
+    max-width: 100px; }
 
 .cartButtons .row {
-  -js-display: flex;
+  text-align: center;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
+  -js-display: flex;
   display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .cartButtons .row a.btn {
+    padding-left: 40px;
+    padding-right: 40px; }
+    .cartButtons .row a.btn i {
+      font-size: 24px;
+      margin-left: 7px; }
   @media screen and (max-width: 767px) {
     .cartButtons .row {
       display: block;
@@ -6073,9 +6178,10 @@ body.modal-open .main {
         margin: 15px 0; } }
 
 .discounts {
-  margin-top: 18px; }
+  margin-top: 12px; }
   @media screen and (max-width: 768px) {
     .discounts {
+      margin-top: 0;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -6087,31 +6193,37 @@ body.modal-open .main {
               align-items: center; }
       .discounts > div {
         padding: 0; } }
-  .discounts .prices-before, .discounts .prices-after, .discounts .prices-sale {
-    text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    .discounts {
+      top: -30px; } }
+  .discounts .summary {
     text-align: center;
-    font-size: 10px; }
-  .discounts .prices-before strong {
-    text-decoration: line-through; }
-  .discounts strong {
-    color: #FF585B;
-    font-size: 18px; }
-  @media screen and (min-width: 768px) {
-    .discounts .prices-sale {
-      margin-top: 10px;
-      margin-bottom: 10px; } }
-  .discounts .prices-sale .badge-sale {
-    padding: 7px 6px;
-    width: auto;
-    height: 60px;
-    background: #FF585B;
-    border-radius: 12px;
-    display: inline-block;
-    color: white;
-    text-transform: none; }
-    .discounts .prices-sale .badge-sale strong {
-      display: block;
-      color: white; }
+    font-size: 13px;
+    line-height: 16px;
+    margin-top: 20px; }
+    .discounts .summary .item {
+      margin-bottom: 10px; }
+      .discounts .summary .item span {
+        display: block;
+        font-weight: bold;
+        font-size: 16px; }
+        .discounts .summary .item span .icon-check2 {
+          color: #0089b0;
+          font-size: 19px;
+          margin-right: 4px; }
+    .discounts .summary .price {
+      text-align: center;
+      width: 151px;
+      height: 85px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 30px;
+      background: url("../img/circle/circle.png");
+      background: url("../img/circle/circle.svg");
+      background-repeat: no-repeat; }
+      .discounts .summary .price span {
+        font-size: 24px;
+        color: #FF585B; }
 
 .gallery a {
   padding: 0;

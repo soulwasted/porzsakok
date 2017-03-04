@@ -1,5 +1,6 @@
 $sliderButtSize: 50px;
-$buttonRadius: 5px;
+$buttonRadius: 50%;
+$buttonStepperRadius: 5px;
 
 .sliderBenefits {
 	min-height: 180px;
@@ -7,163 +8,236 @@ $buttonRadius: 5px;
 	@media screen and (max-width: $screen-sm-max) {
 		min-height: 270px;
 	}
+
 	.allBenefits {
 		position: absolute;
 		display: flex;
 		flex-direction: column;
 		// opacity: 0.4;
-		&:nth-child(4){
+		&:nth-child(4) {
 			// opacity: 1.0;
 		}
+
 		.benefit {
 			width: 120px;
 			margin-bottom: 10px;
 			text-align: left;
 			display: flex;
 			align-items: center;
+			opacity: 0.3;
 			@media screen and (max-width: $screen-sm-max) {
 				width: 50px;
 				flex-direction: column;
 				text-align: center;
 			}
+
 			.icon {
-				border-radius: 50%;
+				// border-radius: 50%;
 				text-align: center;
-				background: lighten($brand-secondary, 60);
-				width: 50px;
+				// background: lighten($brand-success, 60);
+				// width: 32px;
 				height: 50px;
+				width: 50px;
+				overflow: hidden;
+
 				i {
-					color: $brand-secondary;
-					font-size: 36px;
+					color: $black;
+					font-size: 32px;
 				}
 			}
+
 			.text {
-				width: 70px;
-				color: $brand-secondary;
+				width: 90px;
+				color: $black;
 				font-size: 12px;
+				line-height: 14px;
 				padding-left: 6px;
 				@media screen and (max-width: $screen-sm-max) {
 					font-size: 11px;
 					color: $gray;
 				}
+
 				span {
 					display: block;
-					font-size: 14px;
+					font-size: 13px;
 					font-weight: 700;
-					text-transform: uppercase;
+					// text-transform: uppercase;
 					@media screen and (max-width: $screen-sm-max) {
 						font-size: 11px;
 					}
 				}
 			}
 		}
+
+		&.active {
+			.benefit {
+				opacity: 1;
+
+				.icon {
+					height: 50px;
+
+					i {
+						color: $brand-primary;
+						font-size: 40px;
+
+						&:before {
+							margin-top: -20px;
+						}
+					}
+				}
+
+				.text {
+					}
+			}
+		}
+
 		&:nth-child(1) {
 			left: calc(0% + 10px);
 		}
+
 		&:nth-child(2) {
 			left: calc(33% - 13px);
 		}
+
 		&:nth-child(3) {
 			left: calc(66% - 36px);
 		}
+
 		&:nth-child(4) {
 			left: calc(100% - 60px);
 		}
-		@media screen and (min-width: $screen-sm-min) {
-		}
-		@media screen and (min-width: $screen-md-min) {
-		}
+		@media screen and (min-width: $screen-sm-min) {}
+		@media screen and (min-width: $screen-md-min) {}
 	}
 }
+
 #slider {
 	margin: 34px 20px 60px;
-	background: $brand-secondary;
-	// background: lighten($brand-secondary, 10);
-	height: 15px;
-	box-shadow: none;
-	border: 0;
+	@media screen and (max-width: $screen-xs-max) {
+		margin-bottom: 45px;
+	}
+
+	&.noUi-target {
+		height: 6px;
+		background: $brand-success;
+		border-radius: 3px;
+		box-shadow: 0 0 0 5px $light-blue;
+		border: none;
+	}
+
+	.noUi-background {
+		// background: $gray-lighter !important;
+		background: $light-blue;
+		border-radius: 3px;
+		box-shadow: 0 0 0 5px $light-blue;
+	}
+
 	.noUi-value {
 		top: 20px;
 		font-weight: 700;
 		color: $gray;
+
 		&:last-child {
 			width: 60px;
 		}
 	}
+
 	.noUi-handle {
 		width: $sliderButtSize;
 		height: $sliderButtSize;
-		left: -25px;
-		top: -19px;
-		background: $brand-secondary;
 		border-radius: $buttonRadius;
+		left: -25px;
+		top: -23px;
+		background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
 		border: 0;
-		box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 		cursor: pointer;
 		transition: box-shadow 0.5s;
+
 		&:hover {
-			background: lighten($brand-secondary,4);
+			background: lighten($brand-success,4);
 			box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
 		}
+
+		&::after,
 		&::before {
 			height: 20px;
 			width: 2px;
 			left: 20px;
 			top: 15px;
-			background: darken($brand-primary, 10);
+			background: $brand-secondary;
+			box-shadow: 1px 0 0 0 #000000;
+			opacity: 0.15;
 		}
+
 		&::after {
-			height: 20px;
-			width: 2px;
 			left: 26px;
 			top: 15px;
-			background: darken($brand-primary, 10);
 		}
 	}
+	.noUi-pips-horizontal {
+		padding-top: 5px;
+	}
+	.noUi-marker-large, .noUi-marker-sub {
+		background-image: linear-gradient(to bottom, #d9eef3, #0089b0);
+	}
 }
-.noUi-background {
-	// background: $gray-lighter !important;
-	background: lighten($brand-secondary, 60) !important;
-}
+
 .stepper {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 48px;
 	@media screen and (max-width: $screen-xs-max) {
 		margin-top: 15px;
 	}
-	#stepperMinus, #stepperPlus {
+
+	#stepperMinus,
+	#stepperPlus {
 		width: $sliderButtSize;
 		height: $sliderButtSize;
 		background: $brand-primary;
 		cursor: pointer;
-		color: white;
+		color: black;
 		font-weight: 700;
 		font-size: 20px;
 		text-align: center;
 		line-height: $sliderButtSize;
+		background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
 		&:hover {
 			background: darken($brand-primary, 10);
 		}
 	}
+
 	#stepperMinus {
-		border-radius: $buttonRadius 0 0 $buttonRadius;
+		border-radius: $buttonStepperRadius 0 0 $buttonStepperRadius;
 		// line-height: 45px;
 	}
+
 	#stepperPlus {
-		border-radius: 0 $buttonRadius $buttonRadius 0;
+		border-radius: 0 $buttonStepperRadius $buttonStepperRadius 0;
 	}
+
 	#sliderInput {
 		width: 80px;
 		height: 80px;
 		border: 2px solid $brand-primary;
 		font-size: 36px;
+		border-radius: $buttonStepperRadius;
+		background-color: white;
+		border: solid 2px $brand-secondary;
 		// padding-bottom: 3px;
 		font-weight: 700;
 		text-align: center;
+		color: black;
+		padding-bottom: 10px;
+
 		&.over100 {
 			font-size: 24px;
 		}
+
 		&::-webkit-inner-spin-button,
 		&::-webkit-outer-spin-button {
 			/* display: none; <- Crashes Chrome on hover */
@@ -171,17 +245,20 @@ $buttonRadius: 5px;
 			margin: 0;
 			/* <-- Apparently some margin are still there even though it's hidden */
 		}
+
 		&:hover {
 			border-color: darken($brand-primary, 10);
 		}
 	}
 }
+
 .stepperLabel {
 	text-align: center;
 	font-size: 12px;
 	top: -20px;
 	position: relative;
 }
+
 .main.cart {
 	.stepper {
 		justify-content: flex-start;
@@ -189,22 +266,28 @@ $buttonRadius: 5px;
 			margin-top: 10px;
 			margin-bottom: 10px;
 		}
-		#stepperMinus, #stepperPlus {
+
+		#stepperMinus,
+		#stepperPlus {
 			background: $gray-lighter;
 			color: $gray;
+
 			&:hover {
 				background: darken($gray, 10);
 			}
 		}
+
 		#sliderInput {
 			width: $sliderButtSize;
 			height: $sliderButtSize;
 			border: 1px solid $gray;
 			font-size: 20px;
+
 			&:hover {
 				border-color: darken($gray, 10);
 			}
 		}
+
 		.stepperLabel {
 			position: static;
 			padding-left: 10px;
@@ -219,8 +302,60 @@ $buttonRadius: 5px;
 		flex-direction: column-reverse;
 		// flex-direction: row;
 		align-items: center;
+
 		#slider {
 			margin-top: 20px;
 		}
+	}
+}
+
+h4.hand {
+	span {
+		display: inline-block;
+	}
+
+	&.bags {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-xs) {
+				margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:after {
+				content: url("../img/arrows/arrow01.svg");
+				top: 30px;
+				position: relative;
+			}
+		}
+	}
+	&.summary {
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 20px;
+		text-align: left;
+		@media screen and (max-width: $screen-xs) {
+			margin-top: -5px;
+		}
+		span {
+			text-align: left;
+			transform: rotate(-15deg);
+			// margin-left: -90px;
+		}
+	}
+}
+
+p.note {
+	margin-top: 15px;
+	font-size: 12px;
+	color: black;
+	i {
+		font-size: 28px;
+		color: $brand-secondary;
+		display: block;
+		float: left;
+		margin-right: 10px;
+		margin-top: -6px;
 	}
 }

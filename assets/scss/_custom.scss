@@ -78,11 +78,14 @@ nav .container {
 .breadcrumb {
 	border-bottom: 1px solid $gray-lighter;
 	background: none;
-	font-size: 12px;
+	font-size: 14px;
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: 0;
 	display: inline-block;
+	a {
+		color: $brand-secondary;
+	}
 }
 ul.simple {
 	list-style: none;
