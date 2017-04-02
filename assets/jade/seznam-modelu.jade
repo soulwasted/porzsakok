@@ -21,12 +21,21 @@ html(lang='en')
 					.col-xs-12
 						h1 Electrolux
 						p.readmore Pripravili sme širokú ponuku antibakteriálnych sáčků do vysávačov Electrolux. Jedná sa o plnohodnotnú efektívnu náhradu za originálne vrecká do vysávačov Electrolux. Vrecká sú vyrobené z kvalitnej 5 vrstvovej netkanej textílie, majú veľmi dobré filtračné schopnosti a sú vhodné aj pre alergikov. Ponúkame rôzne výhodné balenia, zľavy a možnosť dopravy a dobierky zadarmo. Pokiaľ v našej ponuke nenájdete Váš model vysávača, neváhajte nás kontaktovať. Radi Vám pomôžeme s výberom, prípadne pre vás správne sáček zoženieme.
+				.row
+					.col-xs-12.col-sm-6
 						#search-fulltext
 							form(action='seznam-modelu.html')
 								input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
-								button.btn(type='submit')
-									span.glyphicon.glyphicon-search(aria-hidden='true')
-							a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
+								.icon-placeholder
+									i.icon-search
+								//- button.btn(type='submit')
+								//- 	span.glyphicon.glyphicon-search(aria-hidden='true')
+					.col-xs-12.col-sm-6
+						h4.hand.arrow02
+							span Napište několik písmen z názvu modelu…
+				.row
+					.col-xs-12
+						a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
 			.container
 				.row
 					//- .col-xs-12

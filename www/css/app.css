@@ -4868,7 +4868,6 @@ ul.list-models {
       display: -ms-flexbox;
       -js-display: flex;
       display: flex;
-      background: #f7f7f7;
       -webkit-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s;
@@ -4890,6 +4889,9 @@ ul.list-models {
 
 ul.list-brands {
   padding: 10px 0 15px; }
+
+#modelsTabContent {
+  margin-top: 20px; }
 
 .prices-after,
 .prices-before,
@@ -5016,6 +5018,78 @@ h6 {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000000; }
+
+h4.hand span {
+  display: inline-block; }
+
+h4.hand.bags span, h4.hand.arrow01 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 480px) {
+    h4.hand.bags span, h4.hand.arrow01 span {
+      margin-left: -70px;
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.bags span:after, h4.hand.arrow01 span:after {
+    content: url("../img/arrows/arrow01.svg");
+    top: 30px;
+    position: relative; }
+
+h4.hand.arrow02 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 768px) {
+    h4.hand.arrow02 span {
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+           -o-transform: rotate(0deg);
+              transform: rotate(0deg);
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.arrow02 span:before {
+    content: url("../img/arrows/arrow02.svg");
+    top: 30px;
+    position: relative; }
+  @media screen and (max-width: 768px) {
+    h4.hand.arrow02 span:before {
+      content: url("../img/arrows/arrow03.svg"); } }
+
+h4.hand.arrow03 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 480px) {
+    h4.hand.arrow03 span {
+      margin-left: -70px;
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.arrow03 span:before {
+    content: url("../img/arrows/arrow03.svg");
+    top: 30px;
+    position: relative; }
+
+h4.hand.summary {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left; }
+  @media screen and (max-width: 480px) {
+    h4.hand.summary {
+      margin-top: -5px; } }
+  h4.hand.summary span {
+    text-align: left;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+         -o-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
 
 .main.text h3, .main.text h4, .main.text h5 {
   text-transform: none;
@@ -5312,6 +5386,9 @@ a.find {
     #search-fulltext .btn i {
       display: block;
       font-size: 24px; } }
+
+.main.seznam-modelu #search-fulltext form {
+  padding-top: 30px; }
 
 .tt-menu {
   display: none;
@@ -6071,40 +6148,6 @@ body.modal-open .main {
             align-items: center; }
     .sliderRow #slider {
       margin-top: 20px; } }
-
-h4.hand span {
-  display: inline-block; }
-
-h4.hand.bags span {
-  margin-left: 20px;
-  -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-       -o-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
-  @media screen and (max-width: 480px) {
-    h4.hand.bags span {
-      margin-left: -70px;
-      margin-top: -30px;
-      margin-bottom: 10px; } }
-  h4.hand.bags span:after {
-    content: url("../img/arrows/arrow01.svg");
-    top: 30px;
-    position: relative; }
-
-h4.hand.summary {
-  width: 150px;
-  margin: 0 auto;
-  margin-top: 20px;
-  text-align: left; }
-  @media screen and (max-width: 480px) {
-    h4.hand.summary {
-      margin-top: -5px; } }
-  h4.hand.summary span {
-    text-align: left;
-    -webkit-transform: rotate(-15deg);
-        -ms-transform: rotate(-15deg);
-         -o-transform: rotate(-15deg);
-            transform: rotate(-15deg); }
 
 p.note {
   margin-top: 15px;

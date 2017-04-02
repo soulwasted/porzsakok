@@ -142,7 +142,7 @@ ul.list-models {
 		padding: 0;
 		a {
 			display: flex;
-			background: $gray-lightest;
+			// background: $gray-lightest;
 			transition: all 0.5s;
 			align-items: center;
 			&:hover {
@@ -170,6 +170,9 @@ ul.list-brands {
 	// @media screen and (max-width: $screen-xs-max) {
 	// 	column-count: 2;
 	// }
+}
+#modelsTabContent {
+	margin-top: 20px;
 }
 .prices-after,
 .prices-before,

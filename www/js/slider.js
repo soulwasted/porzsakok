@@ -103,13 +103,9 @@ $(document).ready(function() {
 
     function toggleBenefits(benefitNum) {
         // console.log(benefitNum);
-        // $(".allBenefits").css('opacity', benefitDisabled);
-        // if(benefitNum != 0) {
-        //     $(".allBenefits:nth-child(" + benefitNum + ")").css('opacity', benefitEnabled);
-        // }
-        $(".allBenefits").removeClass('active');
+        $(".allBenefits").css('opacity', benefitDisabled);
         if(benefitNum != 0) {
-            $(".allBenefits:nth-child(" + benefitNum + ")").addClass('active');
+            $(".allBenefits:nth-child(" + benefitNum + ")").css('opacity', benefitEnabled);
         }
     }
     function updateInputSize() {

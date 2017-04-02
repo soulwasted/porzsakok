@@ -309,43 +309,6 @@ $buttonStepperRadius: 5px;
 	}
 }
 
-h4.hand {
-	span {
-		display: inline-block;
-	}
-
-	&.bags {
-		span {
-			margin-left: 20px;
-			transform: rotate(-5deg);
-			@media screen and (max-width: $screen-xs) {
-				margin-left: -70px;
-				margin-top: -30px;
-				margin-bottom: 10px;
-			}
-			&:after {
-				content: url("../img/arrows/arrow01.svg");
-				top: 30px;
-				position: relative;
-			}
-		}
-	}
-	&.summary {
-		width: 150px;
-		margin: 0 auto;
-		margin-top: 20px;
-		text-align: left;
-		@media screen and (max-width: $screen-xs) {
-			margin-top: -5px;
-		}
-		span {
-			text-align: left;
-			transform: rotate(-15deg);
-			// margin-left: -90px;
-		}
-	}
-}
-
 p.note {
 	margin-top: 15px;
 	font-size: 12px;

@@ -59,6 +59,85 @@ h1, h2, h3, h4, h5, h6 {
 	color: $black;
 }
 
+
+
+h4.hand {
+	span {
+		display: inline-block;
+	}
+
+	&.bags, &.arrow01 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-xs) {
+				margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:after {
+				content: url("../img/arrows/arrow01.svg");
+				top: 30px;
+				position: relative;
+			}
+		}
+	}
+	&.arrow02 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-sm) {
+				transform: rotate(0deg);
+				// margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:before {
+				content: url("../img/arrows/arrow02.svg");
+				top: 30px;
+				position: relative;
+			}
+			@media screen and (max-width: $screen-sm) {
+				// margin-top: -50px;
+				&:before {
+					content: url("../img/arrows/arrow03.svg");
+				}
+			}
+		}
+	}
+	&.arrow03 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-xs) {
+				margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:before {
+				content: url("../img/arrows/arrow03.svg");
+				top: 30px;
+				position: relative;
+			}
+		}
+	}
+	&.summary {
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 20px;
+		text-align: left;
+		@media screen and (max-width: $screen-xs) {
+			margin-top: -5px;
+		}
+		span {
+			text-align: left;
+			transform: rotate(-15deg);
+			// margin-left: -90px;
+		}
+	}
+}
+
+
 .main.text {
 	h3, h4, h5 {
 		text-transform: none;
