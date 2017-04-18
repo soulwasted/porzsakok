@@ -159,6 +159,10 @@ ul.list-models {
 				padding: 0 20px;
 				text-align: left;
 				width: 100%;
+				u {
+					text-decoration: underline;
+					color: $black;
+				}
 			}
 		}
 	}

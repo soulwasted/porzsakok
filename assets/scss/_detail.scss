@@ -62,6 +62,7 @@
 }
 .discounts {
 	margin-top: 12px;
+	color: $brand-primary;
 	@media screen and (max-width: $screen-sm) {
 		margin-top: 0;
 		display: flex;
