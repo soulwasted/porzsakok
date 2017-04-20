@@ -5138,9 +5138,8 @@ strong.info {
     transition: box-shadow 0.8s linear, -webkit-box-shadow 0.8s linear; }
   .navbar .navbar-brand {
     color: #FF585B;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 0.1em; }
   .navbar .navbar-nav li a {
     font-size: 14px;
