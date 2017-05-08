@@ -5474,7 +5474,7 @@ a.find {
               -ms-flex-align: center;
                   align-items: center; }
           .tt-menu .content .tt-dataset .row a img {
-            height: 100%;
+            height: auto;
             width: 66px; }
           .tt-menu .content .tt-dataset .row a .link {
             display: -webkit-box;
@@ -5562,23 +5562,21 @@ a.find {
   .stripe-inverse strong, .stripe-guarantee strong, .stripe-contact strong {
     color: white; }
 
-.stripe-benefits .benefit {
-  min-height: 200px;
+.stripe-benefits {
   text-align: center; }
-
-.stripe-benefits .icon i {
-  color: #0089b0;
-  font-size: 70px;
-  line-height: 1em; }
-
-@media screen and (max-width: 991px) and (min-width: 768px) {
-  .stripe-benefits .row > div:nth-child(4) {
-    clear: both; } }
-
-@media screen and (max-width: 767px) {
-  .stripe-benefits .row > div:nth-child(3),
-  .stripe-benefits .row > div:nth-child(5) {
-    clear: both; } }
+  .stripe-benefits .benefit {
+    min-height: 200px; }
+  .stripe-benefits .icon i {
+    color: #0089b0;
+    font-size: 70px;
+    line-height: 1em; }
+  @media screen and (max-width: 991px) and (min-width: 768px) {
+    .stripe-benefits .row > div:nth-child(4) {
+      clear: both; } }
+  @media screen and (max-width: 767px) {
+    .stripe-benefits .row > div:nth-child(3),
+    .stripe-benefits .row > div:nth-child(5) {
+      clear: both; } }
 
 .badge-100 {
   letter-spacing: 200;

@@ -42,6 +42,7 @@
 }
 .stripe-benefits {
 	@extend .stripe;
+	text-align: center;
 	.row {
 		// display: flex;
 		// flex-wrap: wrap;
@@ -52,7 +53,6 @@
 		// 	width: 50%;
 		// }
 		min-height: 200px;
-		text-align: center;
 	}
 	.icon {
 		i {
