@@ -5973,14 +5973,13 @@ body.modal-open .main {
       .discounts > div {
         padding: 0; } }
   .discounts .prices-before, .discounts .prices-after, .discounts .prices-sale {
-    text-transform: uppercase;
     text-align: center;
-    font-size: 10px; }
+    font-size: 11px; }
   .discounts .prices-before strong {
     text-decoration: line-through; }
   .discounts strong {
     color: #18823a;
-    font-size: 18px; }
+    font-size: 16px; }
   @media screen and (min-width: 768px) {
     .discounts .prices-sale {
       margin-top: 10px;
@@ -5989,14 +5988,12 @@ body.modal-open .main {
     padding: 7px 6px;
     width: auto;
     height: 60px;
-    background: #18823a;
+    border: 2px solid #18823a;
     border-radius: 12px;
     display: inline-block;
-    color: white;
     text-transform: none; }
     .discounts .prices-sale .badge-sale strong {
-      display: block;
-      color: white; }
+      display: block; }
 
 .gallery a {
   padding: 0;

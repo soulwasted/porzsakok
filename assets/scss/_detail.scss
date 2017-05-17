@@ -48,9 +48,9 @@
 		}
 	}
 	.prices-before, .prices-after, .prices-sale {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		text-align: center;
-		font-size: 10px;
+		font-size: 11px;
 	}
 	.prices-before {
 		strong {
@@ -59,7 +59,7 @@
 	}
 	strong {
 		color: $brand-primary;
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.prices-sale {
 		@media screen and (min-width: $screen-sm) {
@@ -70,15 +70,15 @@
 			padding: 7px 6px;
 			width: auto;
 			height: 60px;
-			// border: 2px solid $brand-red;
-			background: $brand-primary;
+			border: 2px solid $brand-primary;
+			// background: $brand-primary;
 			border-radius: 12px;
 			display: inline-block;
-			color: white;
+			// color: white;
 			text-transform: none;
 			strong {
 				display: block;
-				color: white;
+				// color: white;
 				// font-size: 10px;
 			}
 		}

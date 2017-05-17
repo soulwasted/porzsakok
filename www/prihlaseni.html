@@ -1,4 +1,105 @@
-<!DOCTYPE html><html lang="en"><title>Porzsákok / Přihlášení</title><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="description" content=""><meta name="author" content=""><title>Přihlášení</title><link rel="shortcut icon" href="img/favicon.png"><link href="fonts/fontello/css/vrecka.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet"><link href="css/app.css" rel="stylesheet"><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries--><!-- WARNING: Respond.js doesn't work if you view the page via file://--><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
-<!--[if lte IE 9]><link href="css/ie9.css" rel="stylesheet"><script src="js/flexibility.js"></script><![endif]--></head><body><div class="main text"><nav class="navbar navbar-default navbar-fixed-top"><div class="container-fluid"><div class="navbar-header pull-left"><a href="index.html" class="navbar-brand special">Porzsákok</a></div><div class="navbar-header pull-right cart"><ul class="nav navbar-nav pull-left"><li class="hidden-xs"><a href="prihlaseni.html" class="cart">Přihlášení<span aria-hidden="true" class="glyphicon glyphicon-user"></span></a></li><li><a href="kosik.html" class="cart">Košík<span aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span><span class="badge">2</span></a></li></ul><button type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div id="menu" class="collapse navbar-collapse navbar-left"><ul class="nav navbar-nav"><li><a href="o-nas.html">O nás</a></li><li class="active"><a href="jak-nakoupit.html">Jak nakoupit</a></li><li><a href="kontakt.html">Kontakt</a></li><li><a href="moje-objednavka.html">Moje objednávka</a></li><li class="visible-xs"><a href="prihlaseni.html" class="cart">Přihlášení<span aria-hidden="true" class="glyphicon glyphicon-user"></span></a></li></ul></div></div></nav><div class="container"><ul class="breadcrumb"><li><a href="/">Domov</a></li><li class="active">Prihlásenie</li></ul><div class="row"><div class="col-xs-12"><h1> Prihlásenie do osobného účtu</h1></div></div><form id="frm-signInForm" action="/prihlasit" method="post" novalidate="" class="form-horizontal"><div class="row same-height"><div class="col-xs-12 col-sm-5"><div class="col-xs-12"><div class="form-group"><label for="form-login-username" class="control-label">Přihlašovací jméno</label><input id="form-login-username" type="text" placeholder="" class="btn-high form-control"></div></div><div class="col-xs-12"><div class="form-group"><label for="form-login-pass" class="control-label">Heslo</label><input id="form-login-pass" type="password" placeholder="" class="btn-high form-control"></div></div><div class="col-xs-12"><div class="form-group"><button type="submit" name="send" class="btn btn-primary btn-lg btn-block"><i class="glyphicon glyphicon-ok"></i> Prihlásiť</button></div></div></div><div class="col-xs-12 col-sm-6 col-sm-offset-1 info-block"><div>Nemôžete sa prihlásiť? Možno ste údaje jednoducho zabudli - to sa predsa stáva. <br><br><a href="zadost.html"><strong>Nechajte si údaje poslať e-mailom</strong></a><strong>!</strong><input type="hidden" name="do" value="signInForm-submit"></div></div></div></form></div><div id="section-03" class="container-fluid stripe-guarantee cd-section"><div class="row"><h2 class="special">Nadstandardní garance</h2></div><div class="row badge-100"><span class="reveal">100 %</span>na vrácení zboží</div><div class="row"><p>můžete vrátit zboží <strong>do 3 měsíců od nákupu</strong> bez udání důvodu</p><div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></div><p>můžete vrátit i <strong>rozbalené balení</strong> sáčků</p><div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></div><p>můžete vrátit balení i v případě, že <strong>jeden sáček je použitý a chybí</strong></p></div></div><footer><div class="container"><div class="row"><div class="col-xs-12 col-sm-5"><small>Porzsákok © 2016<br>Opavská 8, 831 01 Bratislava<br><span class="glyphicon glyphicon-phone-alt"></span> +421 948 394 420 
+<!DOCTYPE html>
+<html lang="en">
+    <title>Porzsákok / Přihlášení</title>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Přihlášení</title>
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link href="fonts/fontello/css/vrecka.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file://-->
+        <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+        <!--[if lte IE 9]><link href="css/ie9.css" rel="stylesheet"><script src="js/flexibility.js"></script><![endif]-->
+    </head>
+
+    <body>
+        <div class="main text">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header pull-left"><a href="index.html" class="navbar-brand special">Porzsákok</a></div>
+                    <div class="navbar-header pull-right cart">
+                        <ul class="nav navbar-nav pull-left">
+                            <li class="hidden-xs"><a href="prihlaseni.html" class="cart">Přihlášení<span aria-hidden="true" class="glyphicon glyphicon-user"></span></a></li>
+                            <li><a href="kosik.html" class="cart">Košík<span aria-hidden="true" class="glyphicon glyphicon-shopping-cart"></span><span class="badge">2</span></a></li>
+                        </ul><button type="button" data-toggle="collapse" data-target="#menu" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+                    <div
+                        id="menu" class="collapse navbar-collapse navbar-left">
+                        <ul class="nav navbar-nav">
+                            <li><a href="o-nas.html">O nás</a></li>
+                            <li class="active"><a href="jak-nakoupit.html">Jak nakoupit</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                            <li><a href="moje-objednavka.html">Moje objednávka</a></li>
+                            <li class="visible-xs"><a href="prihlaseni.html" class="cart">Přihlášení<span aria-hidden="true" class="glyphicon glyphicon-user"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="/">Domov</a></li>
+                    <li class="active">Prihlásenie</li>
+                </ul>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1> Prihlásenie do osobného účtu</h1>
+                    </div>
+                </div>
+                <form id="frm-signInForm" action="/prihlasit" method="post" novalidate="" class="form-horizontal">
+                    <div class="row same-height">
+                        <div class="col-xs-12 col-sm-5">
+                            <div class="col-xs-12">
+                                <div class="form-group"><label for="form-login-username" class="control-label">Přihlašovací jméno</label><input id="form-login-username" type="text" placeholder="" class="btn-high form-control"></div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group"><label for="form-login-pass" class="control-label">Heslo</label><input id="form-login-pass" type="password" placeholder="" class="btn-high form-control"></div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group"><button type="submit" name="send" class="btn btn-primary btn-lg btn-block"><i class="glyphicon glyphicon-ok"></i> Prihlásiť</button></div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-1 info-block">
+                            <div>Nemôžete sa prihlásiť? Možno ste údaje jednoducho zabudli - to sa predsa stáva. <br><br><a href="zadost.html"><strong>Nechajte si údaje poslať e-mailom</strong></a><strong>!</strong><input type="hidden" name="do" value="signInForm-submit"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="section-03" class="container-fluid stripe-guarantee cd-section">
+                <div class="row">
+                    <h2 class="special">Nadstandardní garance</h2>
+                </div>
+                <div class="row badge-100"><span class="reveal">100 %</span>na vrácení zboží</div>
+                <div class="row">
+                    <p>můžete vrátit zboží <strong>do 3 měsíců od nákupu</strong> bez udání důvodu</p>
+                    <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span
+                            aria-hidden="true" class="glyphicon glyphicon-star"></span></div>
+                    <p>můžete vrátit i <strong>rozbalené balení</strong> sáčků</p>
+                    <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span
+                            aria-hidden="true" class="glyphicon glyphicon-star"></span></div>
+                    <p>můžete vrátit balení i v případě, že <strong>jeden sáček je použitý a chybí</strong></p>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-5"><small>Porzsákok © 2016<br>Opavská 8, 831 01 Bratislava<br><span class="glyphicon glyphicon-phone-alt"></span> +421 948 394 420 
 &nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-envelope"></span><a href="mailto:info@vrecka-vysavace.sk"> 
- info@vrecka-vysavace.sk</a></small></div><div class="col-xs-12 col-sm-3"><small><a href="/kontakt.html">Kontakt</a><br><a href="/pravna-dolozka">Právna doložka</a><br><a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a></small></div><div class="col-xs-12 col-sm-4 text-right"><small>design &amp; coding by <a href="http://www.strapa.cz/" target="_blank">strapa.cz</a><br>developed by <a href="http://www.devpoint.cz" target="_blank">devPOINT</a></small></div></div></div></footer></div></body><!-- jQuery Version 1.11.1 --><script src="js/scripts.js"></script><script src="js/app.js"></script></html>
+ info@vrecka-vysavace.sk</a></small></div>
+                        <div class="col-xs-12 col-sm-3"><small><a href="/kontakt.html">Kontakt</a><br><a href="/pravna-dolozka">Právna doložka</a><br><a href="/ochrana-osobnych-udajov">Ochrana osobných údajov</a></small></div>
+                        <div class="col-xs-12 col-sm-4 text-right"><small>design &amp; coding by <a href="http://www.strapa.cz/" target="_blank">strapa.cz</a><br>developed by <a href="http://www.devpoint.cz" target="_blank">devPOINT</a></small></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+
+</html>
