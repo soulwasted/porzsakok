@@ -35,6 +35,89 @@ h4 {
 		margin-top: 20px;
 	}
 }
+h4.hand {
+	font-family: 'hand_of_seanregular';
+	color: $brand-primary;
+	text-transform: none;
+	// transform: rotate(-5deg);
+	opacity: 0.4;
+	font-size: 14px;
+}
+h4.hand {
+	span {
+		display: inline-block;
+	}
+
+	&.bags, &.arrow01 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-xs) {
+				margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:after {
+				content: url("../img/arrows/arrow01.svg");
+				top: 30px;
+				position: relative;
+			}
+		}
+	}
+	&.arrow02 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-sm) {
+				transform: rotate(0deg);
+				// margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:before {
+				content: url("../img/arrows/arrow02.svg");
+				top: 30px;
+				position: relative;
+			}
+			@media screen and (max-width: $screen-sm) {
+				// margin-top: -50px;
+				&:before {
+					content: url("../img/arrows/arrow03.svg");
+				}
+			}
+		}
+	}
+	&.arrow03 {
+		span {
+			margin-left: 20px;
+			transform: rotate(-5deg);
+			@media screen and (max-width: $screen-xs) {
+				margin-left: -70px;
+				margin-top: -30px;
+				margin-bottom: 10px;
+			}
+			&:before {
+				content: url("../img/arrows/arrow03.svg");
+				top: 30px;
+				position: relative;
+			}
+		}
+	}
+	&.summary {
+		width: 150px;
+		margin: 0 auto;
+		margin-top: 20px;
+		text-align: left;
+		@media screen and (max-width: $screen-xs) {
+			margin-top: -5px;
+		}
+		span {
+			text-align: left;
+			transform: rotate(-15deg);
+			// margin-left: -90px;
+		}
+	}
+}
 h6 {
 	font-weight: 500;
 	font-size: 10px;

@@ -41,6 +41,8 @@
 .discounts {
 	margin-top: 18px;
 	@media screen and (max-width: $screen-sm) {
+		margin-top: 9px;
+		margin-bottom: 18px;
 		display: flex;
 		align-items: center;
 		&>div {
@@ -67,12 +69,13 @@
 			margin-bottom: 10px;
 		}
 		.badge-sale {
-			padding: 7px 6px;
+			padding: 8px 10px;
 			width: auto;
 			height: 60px;
-			border: 2px solid $brand-primary;
-			// background: $brand-primary;
-			border-radius: 12px;
+			border: 1px solid #bbb;
+			color: black;
+			background: #eee;
+			border-radius: 4px;
 			display: inline-block;
 			// color: white;
 			text-transform: none;

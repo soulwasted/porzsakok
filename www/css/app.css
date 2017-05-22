@@ -1,14 +1,20 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Sarina);
+@import url(ekko-lightbox.min.css);
+@import url(nouislider.min.css);
+@font-face {
+  font-family: 'hand_of_seanregular';
+  src: url("../fonts/handsean/handsean-webfont.woff2") format("woff2"), url("../fonts/handsean/handsean-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(ekko-lightbox.min.css);
-@import url(nouislider.min.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -4989,6 +4995,85 @@ h4 {
   h4 {
     margin-top: 20px; } }
 
+h4.hand {
+  font-family: 'hand_of_seanregular';
+  color: #18823a;
+  text-transform: none;
+  opacity: 0.4;
+  font-size: 14px; }
+
+h4.hand span {
+  display: inline-block; }
+
+h4.hand.bags span, h4.hand.arrow01 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 480px) {
+    h4.hand.bags span, h4.hand.arrow01 span {
+      margin-left: -70px;
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.bags span:after, h4.hand.arrow01 span:after {
+    content: url("../img/arrows/arrow01.svg");
+    top: 30px;
+    position: relative; }
+
+h4.hand.arrow02 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 768px) {
+    h4.hand.arrow02 span {
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+           -o-transform: rotate(0deg);
+              transform: rotate(0deg);
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.arrow02 span:before {
+    content: url("../img/arrows/arrow02.svg");
+    top: 30px;
+    position: relative; }
+  @media screen and (max-width: 768px) {
+    h4.hand.arrow02 span:before {
+      content: url("../img/arrows/arrow03.svg"); } }
+
+h4.hand.arrow03 span {
+  margin-left: 20px;
+  -webkit-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+          transform: rotate(-5deg); }
+  @media screen and (max-width: 480px) {
+    h4.hand.arrow03 span {
+      margin-left: -70px;
+      margin-top: -30px;
+      margin-bottom: 10px; } }
+  h4.hand.arrow03 span:before {
+    content: url("../img/arrows/arrow03.svg");
+    top: 30px;
+    position: relative; }
+
+h4.hand.summary {
+  width: 150px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left; }
+  @media screen and (max-width: 480px) {
+    h4.hand.summary {
+      margin-top: -5px; } }
+  h4.hand.summary span {
+    text-align: left;
+    -webkit-transform: rotate(-15deg);
+        -ms-transform: rotate(-15deg);
+         -o-transform: rotate(-15deg);
+            transform: rotate(-15deg); }
+
 h6 {
   font-weight: 500;
   font-size: 10px; }
@@ -5961,6 +6046,8 @@ body.modal-open .main {
   margin-top: 18px; }
   @media screen and (max-width: 768px) {
     .discounts {
+      margin-top: 9px;
+      margin-bottom: 18px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -5985,11 +6072,13 @@ body.modal-open .main {
       margin-top: 10px;
       margin-bottom: 10px; } }
   .discounts .prices-sale .badge-sale {
-    padding: 7px 6px;
+    padding: 8px 10px;
     width: auto;
     height: 60px;
-    border: 2px solid #18823a;
-    border-radius: 12px;
+    border: 1px solid #bbb;
+    color: black;
+    background: #eee;
+    border-radius: 4px;
     display: inline-block;
     text-transform: none; }
     .discounts .prices-sale .badge-sale strong {
