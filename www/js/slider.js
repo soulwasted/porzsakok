@@ -104,10 +104,27 @@ $(document).ready(function () {
 	function toggleBenefits(benefitNum) {
 		// console.log(benefitNum);
 		$(".allBenefits").removeClass('active');
-		$(".allBenefits3").removeClass('active');
+		// $(".allBenefits3").removeClass('active');
 		if (benefitNum != 0) {
 			$(".allBenefits:nth-child(" + benefitNum + ")").addClass('active');
-			$(".allBenefits3:nth-child(" + benefitNum + ")").addClass('active');
+			// $(".allBenefits3:nth-child(" + benefitNum + ")").addClass('active');
+		}
+		console.log("benefit num: " + benefitNum);
+		$(".summary .sum-item").addClass('active');
+		switch (benefitNum) {
+			case 1:
+				$(".summary .sum-bags").removeClass('active');
+				$(".summary .sum-transport").removeClass('active');
+				// $(".summary.sum-filters").removeClass('active');
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			default:
+
 		}
 	}
 

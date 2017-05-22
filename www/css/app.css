@@ -6225,7 +6225,6 @@ p.note {
   color: #FF585B; }
   @media screen and (max-width: 768px) {
     .discounts {
-      margin-top: 0;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -6243,14 +6242,19 @@ p.note {
   .discounts .summary {
     text-align: center;
     font-size: 13px;
-    line-height: 16px;
-    margin-top: 20px; }
+    line-height: 16px; }
+    .discounts .summary .sum-item {
+      opacity: 0.3; }
+      .discounts .summary .sum-item.active {
+        opacity: 1; }
     .discounts .summary .item {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      white-space: nowrap; }
       .discounts .summary .item span {
         display: block;
         font-weight: bold;
-        font-size: 16px; }
+        font-size: 14px;
+        white-space: nowrap; }
         .discounts .summary .item span .icon-check2 {
           color: #0089b0;
           font-size: 19px;
