@@ -5163,15 +5163,22 @@ strong.info {
     font-size: 12px !important; } }
 
 .fast-contact {
-  height: 40px;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  text-align: center; }
+  background: #0089b0;
+  height: 25px;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  text-align: center;
+  color: white; }
   .fast-contact a {
+    color: white;
     margin-right: 20px; }
+  @media (max-width: 991px) {
+    .fast-contact {
+      padding-top: 5px !important;
+      font-size: 12px; } }
 
 body {
-  padding-top: 80px; }
+  padding-top: 65px; }
   body .main.home {
     margin-top: -50px; }
 

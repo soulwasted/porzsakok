@@ -74,20 +74,27 @@
 	// left: 0;
 	// right: 0;
 	// z-index: 100;
-	height: 40px;
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+	background: $brand-secondary;
+	height: 25px;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
 	text-align: center;
+	color: white;
 	a {
+		color: white;
 		margin-right: 20px;
 	}
 	// height: 30px;
     // margin-bottom: 30px;
+	@media (max-width: $screen-sm-max) {
+		padding-top: 5px !important;
+		font-size: 12px;
+	}
 }
 
 
 body {
-	padding-top: 80px;
+	padding-top: 65px;
 	.main.home {
 		margin-top: -50px;
 	}
