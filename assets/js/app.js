@@ -80,7 +80,7 @@ $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
 
 function initSmoothScroll() {
 	smoothScroll.init({
-		offset: 60, // Integer. How far to offset the scrolling anchor location in pixels
+		offset: 100, // Integer. How far to offset the scrolling anchor location in pixels
 		updateURL: false
 	});
 }
