@@ -4794,11 +4794,6 @@ hr {
       padding-top: 15px;
       padding-bottom: 15px; } }
 
-nav .container {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  border: 0 !important; }
-
 .breadcrumb {
   border-bottom: 1px solid #e6e6e6;
   background: none;
@@ -5167,8 +5162,16 @@ strong.info {
     padding-right: 10px;
     font-size: 12px !important; } }
 
+.fast-contact {
+  height: 40px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  text-align: center; }
+  .fast-contact a {
+    margin-right: 20px; }
+
 body {
-  padding-top: 50px; }
+  padding-top: 80px; }
   body .main.home {
     margin-top: -50px; }
 
@@ -5200,6 +5203,17 @@ footer {
     color: #e6e6e6; }
     footer a:hover {
       color: #e6e6e6; }
+
+.eu-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  text-align: center; }
 
 .search {
   background: white url("../img/bg-search-1600.jpg") 60% center no-repeat;
