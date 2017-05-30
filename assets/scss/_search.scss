@@ -213,11 +213,21 @@ a.find {
 			padding: 10px 0;
 			input {
 				border-color: $brand-success;
-				max-width: 800px;
+				// max-width: 800px;
+				width: 100%;
 			}
 			.btn {
 				background: $brand-success;
 				border: 2px solid $brand-success;
+			}
+		}
+	}
+	.search-row {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			#search-fulltext {
+				order: 2;
 			}
 		}
 	}

@@ -79,10 +79,12 @@ h4.hand {
 				top: 30px;
 				position: relative;
 			}
-			@media screen and (max-width: $screen-sm) {
+			@media screen and (max-width: 767px) {
 				// margin-top: -50px;
 				&:before {
-					content: url("../img/arrows/arrow03.svg");
+					content: url("../img/arrows/arrow04.svg");
+					left: -20px;
+					top: 20px;
 				}
 			}
 		}

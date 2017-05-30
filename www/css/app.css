@@ -5039,9 +5039,11 @@ h4.hand.arrow02 span {
     content: url("../img/arrows/arrow02.svg");
     top: 30px;
     position: relative; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     h4.hand.arrow02 span:before {
-      content: url("../img/arrows/arrow03.svg"); } }
+      content: url("../img/arrows/arrow04.svg");
+      left: -20px;
+      top: 20px; } }
 
 h4.hand.arrow03 span {
   margin-left: 20px;
@@ -5411,10 +5413,28 @@ a.find {
   padding: 10px 0; }
   .main.seznam-modelu #search-fulltext form input {
     border-color: #0089b0;
-    max-width: 800px; }
+    width: 100%; }
   .main.seznam-modelu #search-fulltext form .btn {
     background: #0089b0;
     border: 2px solid #0089b0; }
+
+@media (max-width: 768px) {
+  .main.seznam-modelu .search-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .main.seznam-modelu .search-row #search-fulltext {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; } }
 
 #search-list {
   width: 100%; }
