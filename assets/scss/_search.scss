@@ -194,7 +194,16 @@ a.find {
 .main.seznam-modelu {
 	#search-fulltext {
 		form {
-			padding-top: 30px
+			padding-top: 10px;
+		}
+	}
+	.search-row {
+		@media (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			#search-fulltext {
+				order: 2;
+			}
 		}
 	}
 }

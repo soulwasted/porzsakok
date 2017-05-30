@@ -5036,27 +5036,31 @@ h4.hand.bags span, h4.hand.arrow01 span {
     top: 30px;
     position: relative; }
 
-h4.hand.arrow02 span {
-  margin-left: 20px;
-  -webkit-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-       -o-transform: rotate(-5deg);
-          transform: rotate(-5deg); }
-  @media screen and (max-width: 768px) {
-    h4.hand.arrow02 span {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-           -o-transform: rotate(0deg);
-              transform: rotate(0deg);
-      margin-top: -30px;
-      margin-bottom: 10px; } }
-  h4.hand.arrow02 span:before {
-    content: url("../img/arrows/arrow02.svg");
-    top: 30px;
-    position: relative; }
-  @media screen and (max-width: 768px) {
+h4.hand.arrow02 {
+  margin-top: 0; }
+  h4.hand.arrow02 span {
+    margin-left: 20px;
+    -webkit-transform: rotate(-5deg);
+        -ms-transform: rotate(-5deg);
+         -o-transform: rotate(-5deg);
+            transform: rotate(-5deg); }
+    @media screen and (max-width: 768px) {
+      h4.hand.arrow02 span {
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+             -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+        margin-top: -30px;
+        margin-bottom: 10px; } }
     h4.hand.arrow02 span:before {
-      content: url("../img/arrows/arrow03.svg"); } }
+      content: url("../img/arrows/arrow02.svg");
+      top: 30px;
+      position: relative; }
+    @media screen and (max-width: 768px) {
+      h4.hand.arrow02 span:before {
+        content: url("../img/arrows/arrow04.svg");
+        left: -20px;
+        top: 20px; } }
 
 h4.hand.arrow03 span {
   margin-left: 20px;
@@ -5411,7 +5415,25 @@ a.find {
       font-size: 24px; } }
 
 .main.seznam-modelu #search-fulltext form {
-  padding-top: 30px; }
+  padding-top: 10px; }
+
+@media (max-width: 768px) {
+  .main.seznam-modelu .search-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -js-display: flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .main.seznam-modelu .search-row #search-fulltext {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; } }
 
 .tt-menu {
   display: none;

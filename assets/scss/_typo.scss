@@ -83,6 +83,7 @@ h4.hand {
 		}
 	}
 	&.arrow02 {
+		margin-top: 0;
 		span {
 			margin-left: 20px;
 			transform: rotate(-5deg);
@@ -97,10 +98,13 @@ h4.hand {
 				top: 30px;
 				position: relative;
 			}
-			@media screen and (max-width: $screen-sm) {
+			// @media screen and (max-width: $screen-sm) {
+			@media screen and (max-width: 768px) {
 				// margin-top: -50px;
 				&:before {
-					content: url("../img/arrows/arrow03.svg");
+					content: url("../img/arrows/arrow04.svg");
+					left: -20px;
+					top: 20px;
 				}
 			}
 		}
