@@ -45,14 +45,14 @@ var paths = {
 	scripts: {
 		src: [
 			"bower_components/jquery/dist/jquery.js",
-			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js",
+			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js",
 			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js",
-			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
+			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
 			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js",
 			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
@@ -270,7 +270,10 @@ function processProductionSass() {
 		// .pipe(pixrem(pixremOptions))
 		.pipe(rename(paths.sass.min))
 		// .pipe(cssnano(cssnanoOptions))
-		.pipe(cleancss())
+		// .pipe(cleancss())
+		.pipe(cleancss({
+			inline: ['none']
+		}))
 		.pipe(gulp.dest(paths.sass.dest));
 }
 gulp.task('process-sass', function () {

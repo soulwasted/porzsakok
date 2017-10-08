@@ -1,0 +1,76 @@
+// Modal
+#myModal--advices.modal.modal--full.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-body
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') × 
+				h3 Rady pro vyhledání správného modelu vysavače
+				.container
+					.row
+						.col-sm-3.col-xs-12
+							img(src="./img/advices-img_01.jpg" alt="Vyplňte název modelu")
+						.col-sm-6.col-xs-12
+							ul
+								li 
+									span 
+										i.icon-check2
+									div Název značky 
+										strong ELECTROLUX
+										|  do políčka 
+										strong nevyplňujte
+										|  , protože se již nacházíte na stránce všech modelů této značky.
+								li 
+									span 
+										i.icon-check2
+									div Zadávejte 
+										strong spíše kratší řetězec
+										|  písmen (maximálně 3-5 znaků) nebo čísel 
+										strong bez mezer
+										|  a sledujte jaké modely se vám pod vyhledávacím políčkem vyberou.
+								li 
+									span 
+										i.icon-check2
+									div
+										strong Zkrácený název modelu
+										|  vysavače najdete na přední straně vysavače. Na obrázku je např. model 
+										srong „ultraone“
+										|  značky ELECTROLUX.
+								li 
+									span 
+										i.icon-check2
+									div
+										strong Přesný název modelu
+										|  vysavače najdete na zadní straně vysavače.
+										br
+										| Na obrázku je např. model 
+										strong „SVC 900“
+										|  značky SENCOR.						
+						.col-sm-3.col-xs-12
+							img(src="./img/advices-img_02.jpg" alt="Na zadní straně vysavače jsou zpravidla všechny důležité informace")
+						
+				button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Už vím!
+
+#myModal--properties.modal.modal--full.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-body
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') × 
+				h3 Jaké jsou vlastnosti našich vysavačů?
+				.container.stripe-bag
+					include ./stripe-bag-content.jade
+				button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Už vím!
+
+#myModal--accessories.modal.modal--full.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-body
+				button.close(type='button', data-dismiss='modal', aria-label='Close')
+					span(aria-hidden='true') × 
+				h3 Máme pro vás i doplňkové zboží
+				.container.recommendation
+					.row
+						- for (var x = 0; x < 9; x++)
+							include ./detail-accessory.jade
+				button.btn.btn-primary.btn-lg(type='button', data-dismiss='modal') Už vím!

@@ -109,7 +109,7 @@ $(document).ready(function () {
 			$(".allBenefits:nth-child(" + benefitNum + ")").addClass('active');
 			// $(".allBenefits3:nth-child(" + benefitNum + ")").addClass('active');
 		}
-		console.log("benefit num: " + benefitNum);
+		// console.log("benefit num: " + benefitNum);
 		$(".summary .sum-item").addClass('active');
 		switch (benefitNum) {
 			case 1:

@@ -1,27 +1,64 @@
 body.modal-open .main {
-    -webkit-filter: blur(10px);
-    -moz-filter: blur(10px);
-    -o-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
 }
+
 .modal-backdrop {
-    background-color: white;
+	background-color: white;
 }
+
 .modal-content {
-    box-shadow: none;
-    border: none;
-    .modal-body {
-        text-align: center;
-        .btn {
-            margin: 20px 0;
-        }
-    }
+	box-shadow: none;
+	border: none;
+
+	.modal-body {
+		text-align: center;
+
+		.btn {
+			margin: 20px 0;
+		}
+	}
 }
 
 .modal-header {
-    .close {
-        font-size: 40px;
-        margin-top: -12px;
-    }
+	.close {
+		font-size: 40px;
+		margin-top: -12px;
+	}
+}
+
+body .modal--full {
+	.modal-dialog {
+		width: 100%;
+	}
+}
+
+.close {
+	font-size: 28px;
+}
+
+#myModal--advices {
+	ul {
+		list-style-image: none;
+		text-align: left;
+		li {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 16px;
+			span {
+				display: block;
+				margin-right: 16px;
+				.icon-check2 {
+					color: $brand-success;
+					font-size: 24px;
+				}
+			}
+			div {
+				display: block;
+			}
+		}
+	}
 }

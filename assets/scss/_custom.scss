@@ -93,10 +93,24 @@ ul.simple {
 	margin: 0;
 }
 .readmore {
+	// height: 20px;
+	// max-height: 20px;
+	// overflow: hidden;
 	@media screen and (max-width: $screen-xs-max) {
-		max-height: 6em;
+		max-height: 40px;
 	}
 }
+
+.readmoreModels {
+	// height: 20px;
+	max-height: 20px;
+	overflow: hidden;
+	margin-bottom: 0;
+	@media screen and (max-width: $screen-xs-max) {
+		// max-height: 40px;
+	}
+}
+
 @media (min-width: 768px) {
 	.form-horizontal .control-label {
 		text-align: left;
@@ -236,5 +250,30 @@ ul.list-brands {
 @media screen and (min-width: $screen-sm) {
 	.visible-xs {
 		display: none !important;
+	}
+}
+
+.tooltip {
+	.tooltip-inner {
+		box-shadow: 0 5px 20px 0 rgba(10, 52, 64, 0.3);
+		border-radius: 3px;
+		padding: 15px 10px;
+	}
+}
+
+
+.dummy-heureka {
+	position: fixed;
+	left: 0;
+	top: 160px;
+	width: 36px;
+	height: 188px;
+	background: url("../img/dummy-heureka.png") 0 0 no-repeat;
+	display: none;
+	&:hover {
+		opacity: 0.5;
+	}
+	@media screen and (min-width: $screen-sm) {
+		display: block;
 	}
 }

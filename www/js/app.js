@@ -41,6 +41,8 @@
 			}
 		});
 
+		funcReadMoreModels();
+
 		// Executes only in SM breakpoint
 		if (viewport.is('<=sm')) {
 			funcReadMore();
@@ -57,6 +59,9 @@
 				}
 			})
 		);
+
+		// Tooltips
+		$('.benefits-small a').tooltip();
 
 		// smooth scroll ;)
 		initSmoothScroll();
@@ -105,7 +110,14 @@ function whisperFocus() {
 function funcReadMore() {
 	$('.readmore').readmore({
 		moreLink: '<a href="#">zobrazit více</a>',
-		lessLink: '<a href="#">skrýt</a>'
+		lessLink: '<a href="#">skrýt</a>',
+		collapsedHeight: 20
+	});
+}
+function funcReadMoreModels() {
+	$('.readmoreModels').readmore({
+		moreLink: '<a href="#">Více&hellip;</a>',
+		lessLink: '<a href="#">Skrýt</a>'
 	});
 }
 

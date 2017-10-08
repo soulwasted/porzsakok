@@ -3,11 +3,11 @@ iconfont Webfont
 */
 @font-face {
 	font-family: 'iconfont';
-	src: url('iconfont.eot?1507462045316');
-	src: url('iconfont.eot?#iefix-1507462045316') format('embedded-opentype'),
-		url('iconfont.woff2?1507462045316') format('woff2'),
-		url('iconfont.woff?1507462045316') format('woff'),
-		url('iconfont.ttf?1507462045316') format('truetype');
+	src: url('iconfont.eot?1507267465489');
+	src: url('iconfont.eot?#iefix-1507267465489') format('embedded-opentype'),
+		url('iconfont.woff2?1507267465489') format('woff2'),
+		url('iconfont.woff?1507267465489') format('woff'),
+		url('iconfont.ttf?1507267465489') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -49,66 +49,62 @@ Glyphs list
 	content: '\ea04';
 }
 
-.icon-check2:before {
+.icon-checked:before {
 	content: '\ea05';
 }
 
-.icon-checked:before {
+.icon-clock:before {
 	content: '\ea06';
 }
 
-.icon-clock:before {
+.icon-euro:before {
 	content: '\ea07';
 }
 
-.icon-euro:before {
+.icon-gift:before {
 	content: '\ea08';
 }
 
-.icon-gift:before {
+.icon-heart:before {
 	content: '\ea09';
 }
 
-.icon-heart:before {
+.icon-pic-clock:before {
 	content: '\ea0a';
 }
 
-.icon-pic-clock:before {
+.icon-pic-closing:before {
 	content: '\ea0b';
 }
 
-.icon-pic-closing:before {
+.icon-pic-filter:before {
 	content: '\ea0c';
 }
 
-.icon-pic-filter:before {
+.icon-pic-join:before {
 	content: '\ea0d';
 }
 
-.icon-pic-join:before {
+.icon-pic-magnify:before {
 	content: '\ea0e';
 }
 
-.icon-pic-magnify:before {
+.icon-pic-space:before {
 	content: '\ea0f';
 }
 
-.icon-pic-space:before {
+.icon-piggy:before {
 	content: '\ea10';
 }
 
-.icon-piggy:before {
+.icon-star:before {
 	content: '\ea11';
 }
 
-.icon-star:before {
+.icon-thumbs_up:before {
 	content: '\ea12';
 }
 
-.icon-thumbs_up:before {
-	content: '\ea13';
-}
-
 .icon-transport:before {
-	content: '\ea14';
+	content: '\ea13';
 }
