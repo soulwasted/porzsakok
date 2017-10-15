@@ -36,8 +36,19 @@ body .modal--full {
 	}
 }
 
+body .modal--wide {
+	.modal-dialog {
+		@media screen and (min-width: $screen-xs) {
+			width: 100%;
+		}
+		@media screen and (min-width: $screen-lg) {
+			width: $screen-lg;
+		}
+	}
+}
+
 .close {
-	font-size: 28px;
+	font-size: 52px;
 }
 
 #myModal--advices {

@@ -3,11 +3,11 @@ iconfont Webfont
 */
 @font-face {
 	font-family: 'iconfont';
-	src: url('iconfont.eot?1507462045316');
-	src: url('iconfont.eot?#iefix-1507462045316') format('embedded-opentype'),
-		url('iconfont.woff2?1507462045316') format('woff2'),
-		url('iconfont.woff?1507462045316') format('woff'),
-		url('iconfont.ttf?1507462045316') format('truetype');
+	src: url('iconfont.eot?1508099438043');
+	src: url('iconfont.eot?#iefix-1508099438043') format('embedded-opentype'),
+		url('iconfont.woff2?1508099438043') format('woff2'),
+		url('iconfont.woff?1508099438043') format('woff'),
+		url('iconfont.ttf?1508099438043') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -101,14 +101,18 @@ Glyphs list
 	content: '\ea11';
 }
 
-.icon-star:before {
+.icon-plus:before {
 	content: '\ea12';
 }
 
-.icon-thumbs_up:before {
+.icon-star:before {
 	content: '\ea13';
 }
 
-.icon-transport:before {
+.icon-thumbs_up:before {
 	content: '\ea14';
+}
+
+.icon-transport:before {
+	content: '\ea15';
 }

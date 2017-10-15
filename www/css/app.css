@@ -6059,8 +6059,16 @@ body.modal-open .main {
 body .modal--full .modal-dialog {
   width: 100%; }
 
+@media screen and (min-width: 480px) {
+  body .modal--wide .modal-dialog {
+    width: 100%; } }
+
+@media screen and (min-width: 1200px) {
+  body .modal--wide .modal-dialog {
+    width: 1200px; } }
+
 .close {
-  font-size: 28px; }
+  font-size: 52px; }
 
 #myModal--advices ul {
   list-style-image: none;
