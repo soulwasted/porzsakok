@@ -8,11 +8,18 @@ nav.navbar.navbar-default.navbar-fixed-top
 					a.cart(href='prihlaseni.html')
 						| Přihlášení
 						span.glyphicon.glyphicon-user(aria-hidden='true')
-				li
+				li.dropdown
+					//- a.cart(href='kosik.html', class="dropdown-toggle", data-toggle="dropdown")
 					a.cart(href='kosik.html')
 						| Košík
 						span.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
 						span.badge 2
+					ul.dropdown-menu.hidden-xs
+						li
+							include item--cart.jade
+						li
+							include item--cart.jade
+						a.btn.btn-primary.btn-lg(href="#") Přejít do košíku
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu', aria-expanded='false')
 				span.sr-only Toggle navigation
 				span.icon-bar

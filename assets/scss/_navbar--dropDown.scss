@@ -1,0 +1,23 @@
+.dropdown-menu {
+	border: none;
+	box-shadow: none;
+	background: $gray-lighter;
+	right: 0;
+	left: auto;
+	padding: 0;
+
+	li {
+		padding: 15px;
+		// width: 100%;
+		width: 680px;
+		max-width: 680px;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	a.btn {
+		float: right;
+		margin: 15px;
+	}
+}
