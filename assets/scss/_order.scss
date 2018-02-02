@@ -1,0 +1,72 @@
+.order {}
+
+	.order__choice {
+		display: flex;
+	}
+
+	.order__price {
+		margin-left: auto;
+		padding-left: 10px;
+		padding-right: 15px;
+	}
+
+	.order__summary {
+		display: flex;
+		align-items: flex-end;
+		@media screen and (max-width: $screen-xs-max) {
+			flex-direction: column;
+		}
+	}
+	.order__discount {
+		margin-bottom: 16px;
+	}
+	.order__summary-box {
+		padding: 15px;
+		background: $gray-lightest;
+		border-bottom: 1px solid $gray;
+		margin-left: auto;
+	}
+
+	.order__summary__row {
+		display: flex;
+		.order__price {
+			padding-right: 0;
+		}
+	}
+
+
+
+
+	.order__contact {
+		display: flex;
+		justify-content: space-between;
+		// background: $gray-lightest;
+		&:before, &:after {
+			display: none;
+		}
+		@media screen and (max-width: $screen-sm-max) {
+			flex-wrap: wrap;
+		}
+	}
+		.order__contact__group {
+			width: 30%;
+			// background: $gray-lighter;
+				@media screen and (max-width: $screen-sm-max) {
+					width: 48%;
+				}
+				@media screen and (max-width: $screen-xs-max) {
+					width: 100%;
+				}
+
+			.form-group {
+				display: flex;
+				align-items: center;
+				label {
+					padding-right: 5px;
+					width: 80px;
+				}
+				input {
+
+				}
+			}
+		}

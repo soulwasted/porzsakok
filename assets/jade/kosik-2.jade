@@ -1,0 +1,195 @@
+doctype html
+html(lang='en')
+	- var title= "Košík"
+	include ./includes/head.jade
+	body
+		.main.cart
+			include ./includes/nav.jade
+			.container
+				h2 Košík
+			- for (var x = 0; x < 2; x++)
+				.container
+					include ./includes/item--cart.jade
+			.container
+				h2 Doprava
+				.radio
+					.order__choice
+						label
+							input(type="radio", name="radiosPayment") 
+							| Magyar Posta
+							span (ZDARMA)
+						.order__price ZDARMA
+				.radio
+					.order__choice				
+						label
+							input(type="radio", name="radiosPayment") 
+							| GLS
+							span (305 Ft)
+						.order__price 305 Ft
+				.checkbox
+					.order__choice
+						label
+							input(type="checkbox") 
+							| Expresní expedice
+							span Vaše objednávka bude odeslána do 24&nbsp;h
+							span (305 Ft)
+						.order__price 305 Ft
+			.container
+				h2 Platba
+				.radio
+					.order__choice
+						label
+							input(type="radio", name="radiosPayment") 
+							| Dobírka
+							span (305 Ft)
+						.order__price 305 Ft
+				.radio
+					.order__choice				
+						label
+							input(type="radio", name="radiosPayment") 
+							| Bankovní převod
+							span (ZDARMA)
+						.order__price ZDARMA
+			.container.order__summary
+				.order__discount
+					h2.h5 Máte slevový kód?
+					form.form-inline
+						.form-group
+							label.sr-only(for='cart-code') Slevový kód
+							.input-group
+								.input-group-addon
+									span.glyphicon.glyphicon-star(aria-hidden='true')
+								input#cart-code.form-control(type='number', placeholder='Číslo objednávky')
+						button.btn.btn-default(type='submit') Uplatnit kód
+				.order__summary-box
+					.order__summary__row 
+						.order__summary__title Cena objednávky CELKEM (bez DPH)
+						.order__price 14.720 Ft
+					.order__summary__row 
+						.order__summary__title DPH (27%)
+						.order__price 3.974 Ft
+					.order__summary__row 
+						.order__summary__title Zaokrouhlení
+						.order__price 4 Ft
+					.order__summary__row 
+						.order__summary__title
+							strong Cena objednávky (vč. DPH)
+						.order__price 
+							strong 18.690 Ft
+			form.container.order__contact
+				.order__contact__group
+					h2 Kontaktní osoba
+					p (vždy zadejte osobu, ne firmu)
+					.order__contact__group__items
+						.form-group
+							label.control-label(for='form-cart-name') Jméno
+							input#form-cart-name.form-control(type='text', placeholder='')				
+						.form-group
+							label.control-label(for='form-cart-surname') Příjmení
+							input#form-cart-surname.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-phone') Telefon
+							input#form-cart-phone.form-control(type='tel', placeholder='+420')
+						.form-group
+							label.control-label(for='form-cart-mail') E-mail
+							input#form-cart-mail.form-control(type='email', placeholder='')
+				.order__contact__group
+					h2 Fakturační adresa
+					.radio
+						.order__choice				
+							label
+								input(type="radio", name="radiosBuy", checked="checked") 
+								| Nakupuji jako fyzická osoba / občan
+					.radio
+						.order__choice				
+							label
+								input(type="radio", name="radiosBuy") 
+								| Nakupuji jako firma
+					.order__contact__group__items.order__contact__group__items--person
+						.form-group
+							label.control-label(for='form-cart-name2') Jméno a příjmení
+							input#form-cart-name2.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address') Ulice
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-number') Číslo popisné
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-city') Město
+							input#form-cart-city.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-psc') PSČ
+							input#form-cart-address-psc.form-control(type='text', placeholder='')
+					.order__contact__group__items.order__contact__group__items--company
+						.form-group
+							label.control-label(for='form-cart-name2') IČO
+							input#form-cart-name2.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-name2') DIČ
+							input#form-cart-name2.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-name2') Obchodní jméno
+							input#form-cart-name2.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address') Ulice
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-number') Číslo popisné
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-city') Město
+							input#form-cart-city.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-psc') PSČ
+							input#form-cart-address-psc.form-control(type='text', placeholder='')
+				.order__contact__group
+					.checkbox
+						h2
+							label
+								input#cart-toggle-another-address-cb(type="checkbox") 
+								| Jiná doručovací adresa
+					.order__contact__group__items.cart-toggle-another-address-cb
+						.form-group
+							label.control-label(for='form-cart-name2') Jméno a příjmení
+							input#form-cart-name2.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address') Ulice
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-number') Číslo popisné
+							input#form-cart-address.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-city') Město
+							input#form-cart-city.form-control(type='text', placeholder='')
+						.form-group
+							label.control-label(for='form-cart-address-psc') PSČ
+							input#form-cart-address-psc.form-control(type='text', placeholder='')
+			.container
+				.row
+					.col-xs-12
+						h3.h5 Ostatní informace pro e-shop
+				.row.choice
+					.col-xs-12
+						.col-xs-12
+							.form-group
+								label.control-label(for='form-cart-note') Upřesnění objednávky
+								textarea#form-cart-note.form-control(rows='3')
+				.row.choice
+					.checkbox
+						label
+							input(type="checkbox") 
+							strong Souhlasím s obchodními podmínkami
+					.checkbox
+						label
+							input(type="checkbox") 
+							| Chci získávat novinky
+			.container.stripe-buttons
+				.row
+					a.btn.btn-primary.btn-lg.btn-block(href="souhrn.html") 
+						| Odeslat objednávku
+						span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+					p Zkontrolujete si ještě jednou svou objednávku a pak ji můžete v klidu odeslat
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+	include ./includes/scripts.jade

@@ -1,25 +1,24 @@
 .item.item--cart
-	.item__image
+	.item__image.item__image--big
 		a(href='/electrolux/100-ce')
 			img
-	.item__name
-		a(href='/electrolux/100-ce')
-			strong ELECTROLUX UltraOne Z 8810
-	.item__stepper
-		.stepper
-			//- #stepperMinus
-			//- 	span.glyphicon.glyphicon-minus(aria-hidden='true')
-			input#sliderInput(type="number" value="20")
-			//- #stepperPlus
-				//- span.glyphicon.glyphicon-plus(aria-hidden='true')
-			.item__stepper__label sáčků
-	.item__price 22,99 € 
-		.item__price__small (1,15 € / ks)
-	.item__remove
-		//- a.btn.btn-default.btn-small(href="#")
-		a(href='#')
-			span.glyphicon.glyphicon-remove(aria-hidden='true')
-		//- a.btn.btn-default.btn-small.btn-close(href="#")
-		//- 	span.glyphicon.glyphicon-remove(aria-hidden='true')
-		//- 	span.text odebrat
-		
+	.item__content
+		.item__name
+			a(href='/electrolux/100-ce')
+				strong ELECTROLUX S-bag (Sleva 15%)
+			.item__benefit + 10 motorových filtrů ZDARMA
+			.item__benefit + 1 vůně ZDARMA
+		.item__remove--cart
+			a.btn.btn-default.btn-small.btn-close(href="#")
+				span.glyphicon.glyphicon-remove(aria-hidden='true')
+				span.text odebrat
+		.item__price.item__price--piece 230 Ft
+		.item__stepper
+			.stepper
+				#stepperMinus
+					span.glyphicon.glyphicon-minus(aria-hidden='true')
+				input#sliderInput(type="number" value="20")
+				#stepperPlus
+					span.glyphicon.glyphicon-plus(aria-hidden='true')
+				.item__stepper__label sáčků
+		.item__price.item__price--total 9200 Ft
