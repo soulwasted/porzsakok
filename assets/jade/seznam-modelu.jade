@@ -24,9 +24,12 @@ html(lang='en')
 							br
 							| Ač už se vysavače ETA skoro nevyrábějí, je tato značka neustále zapsána v srdcích zákazníků jako kvalitní česká značka vysavačů. Proto i my Vám nabízíme náhradní sáčky do vysavačů této značka z pětivrstvé antibakteriální netkané textilie, která ochrání Vaše zdraví mnohem lépe než papírové sáčky. Revoluční konstrukce umožňuje sáčku zachytit více jemného prachu a jemných částic než běžné papírové sáčky. Samozřejmostí jsou množstevní slevy, doprava a doběrečné zdarma. Kromě toho Vám pošleme i dárek k nákupu. Objednané sáčky expedujeme rychle, protože všechny sáčky máme skladem. Zboží můžete vrátit do 3 měsíců bez udání důvodů.
 				.row.search-row
-					#search-fulltext.col-xs-12.col-sm-6
-						form(action='seznam-modelu.html', data-spy='affix', data-offset-top='60', data-offset-bottom='200')
+					//- #search-fulltext.col-xs-12.col-sm-6(data-spy='affix', data-offset-top='190', data-offset-bottom='90')
+					#search-fulltext.col-xs-12.col-sm-6(data-spy='affix', data-offset-top='190', data-offset-bottom='90')
+						form(action='seznam-modelu.html')
 							input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
+							.icon-placeholder
+								i#icon-search.icon-search
 							//- button.btn(type='submit')
 							//- 	span.glyphicon.glyphicon-search(aria-hidden='true')
 						.two-links

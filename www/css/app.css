@@ -4989,7 +4989,7 @@ ul.list-models {
         text-decoration: none; }
       ul.list-models li a img {
         border: 1px solid #f7f7f7;
-        width: 100px;
+        width: 75px;
         height: 50px; }
       ul.list-models li a strong {
         padding: 0 20px;
@@ -6377,6 +6377,13 @@ p.note {
     margin-right: 10px;
     margin-top: -6px; }
 
+#search-fulltext.affix {
+  top: 75px;
+  z-index: 100;
+  background: white; }
+  #search-fulltext.affix input {
+    height: 48px; }
+
 .benefits-models {
   margin-top: -36px; }
 
@@ -6441,7 +6448,7 @@ p.note {
       width: 100%; } }
 
 .list-models--wrapper h4 {
-  padding-left: 110px; }
+  padding-left: 85px; }
 
 .main.detail .container:nth-of-type(1) {
   border-bottom: none;

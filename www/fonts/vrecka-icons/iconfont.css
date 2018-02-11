@@ -1,20 +1,20 @@
 /**
-iconfont Webfont
+vrecka-icons Webfont
 */
 @font-face {
-	font-family: 'iconfont';
-	src: url('iconfont.eot?1508099438043');
-	src: url('iconfont.eot?#iefix-1508099438043') format('embedded-opentype'),
-		url('iconfont.woff2?1508099438043') format('woff2'),
-		url('iconfont.woff?1508099438043') format('woff'),
-		url('iconfont.ttf?1508099438043') format('truetype');
+	font-family: 'vrecka-icons';
+	src: url('vrecka-icons.eot?1518329312169');
+	src: url('vrecka-icons.eot?#iefix-1518329312169') format('embedded-opentype'),
+		url('vrecka-icons.woff2?1518329312169') format('woff2'),
+		url('vrecka-icons.woff?1518329312169') format('woff'),
+		url('vrecka-icons.ttf?1518329312169') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^='icon-']:before,
 [class*=' icon-']:before {
-	font-family: 'iconfont';
+	font-family: 'vrecka-icons';
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
@@ -45,74 +45,86 @@ Glyphs list
 	content: '\ea03';
 }
 
-.icon-check:before {
+.icon-cart:before {
 	content: '\ea04';
 }
 
-.icon-check2:before {
+.icon-check:before {
 	content: '\ea05';
 }
 
-.icon-checked:before {
+.icon-check2:before {
 	content: '\ea06';
 }
 
-.icon-clock:before {
+.icon-checked:before {
 	content: '\ea07';
 }
 
-.icon-euro:before {
+.icon-clock:before {
 	content: '\ea08';
 }
 
-.icon-gift:before {
+.icon-euro:before {
 	content: '\ea09';
 }
 
-.icon-heart:before {
+.icon-gift:before {
 	content: '\ea0a';
 }
 
-.icon-pic-clock:before {
+.icon-heart:before {
 	content: '\ea0b';
 }
 
-.icon-pic-closing:before {
+.icon-pic-clock:before {
 	content: '\ea0c';
 }
 
-.icon-pic-filter:before {
+.icon-pic-closing:before {
 	content: '\ea0d';
 }
 
-.icon-pic-join:before {
+.icon-pic-filter:before {
 	content: '\ea0e';
 }
 
-.icon-pic-magnify:before {
+.icon-pic-join:before {
 	content: '\ea0f';
 }
 
-.icon-pic-space:before {
+.icon-pic-magnify:before {
 	content: '\ea10';
 }
 
-.icon-piggy:before {
+.icon-pic-space:before {
 	content: '\ea11';
 }
 
-.icon-plus:before {
+.icon-piggy:before {
 	content: '\ea12';
 }
 
-.icon-star:before {
+.icon-plus:before {
 	content: '\ea13';
 }
 
-.icon-thumbs_up:before {
+.icon-search:before {
 	content: '\ea14';
 }
 
-.icon-transport:before {
+.icon-star:before {
 	content: '\ea15';
+}
+
+.icon-thumbs_up:before {
+	content: '\ea16';
+}
+
+.icon-transport:before {
+	content: '\ea17';
+}
+
+.icon-user:before {
+	content: '\ea18';
 }

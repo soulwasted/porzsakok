@@ -396,7 +396,7 @@ gulp.task('production', gulpSequence(
 var myFontName = 'vrecka-icons';
 
 gulp.task('iconfont', function () {
-	return gulp.src('assets/svg/*.svg')
+	return gulp.src('assets/iconfont-src/svg/*.svg')
 		.pipe(iconfont({
 			fontName: myFontName,
 			formats: ['ttf', 'eot', 'woff', 'woff2'],
@@ -407,7 +407,7 @@ gulp.task('iconfont', function () {
 			centerHorizontally: true
 		}))
 		.on('glyphs', function (glyphs, options) {
-			gulp.src('assets/css/vrecka-icons.css')
+			gulp.src('assets/iconfont-src/iconfont.css')
 				.pipe(consolidate('underscore', {
 					glyphs: glyphs,
 					fontName: options.fontName,
@@ -415,7 +415,7 @@ gulp.task('iconfont', function () {
 				}))
 				.pipe(gulp.dest('www/fonts/vrecka-icons'));
 
-			gulp.src('assets/html/index.html')
+			gulp.src('assets/iconfont-src/index.html')
 				.pipe(consolidate('underscore', {
 					glyphs: glyphs,
 					fontName: options.fontName

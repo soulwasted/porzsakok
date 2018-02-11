@@ -1,20 +1,20 @@
 /**
-<%= fontName %> Webfont
+iconfont Webfont
 */
 @font-face {
-	font-family: '<%= fontName %>';
-	src: url('<%= fontName %>.eot?<%= fontDate %>');
-	src: url('<%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
-		url('<%= fontName %>.woff2?<%= fontDate %>') format('woff2'),
-		url('<%= fontName %>.woff?<%= fontDate %>') format('woff'),
-		url('<%= fontName %>.ttf?<%= fontDate %>') format('truetype');
+	font-family: 'iconfont';
+	src: url('iconfont.eot?1518191842207');
+	src: url('iconfont.eot?#iefix-1518191842207') format('embedded-opentype'),
+		url('iconfont.woff2?1518191842207') format('woff2'),
+		url('iconfont.woff?1518191842207') format('woff'),
+		url('iconfont.ttf?1518191842207') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^='icon-']:before,
 [class*=' icon-']:before {
-	font-family: '<%= fontName %>';
+	font-family: 'iconfont';
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
@@ -32,8 +32,95 @@
 /*
 Glyphs list
 */
-<% _.each(glyphs, function(icon){ %>
-.icon-<%= icon.name %>:before {
-	content: '\<%= icon.unicode[0].charCodeAt(0).toString(16) %>';
+
+.icon-bags:before {
+	content: '\ea01';
 }
-<% }) %>
+
+.icon-bomb:before {
+	content: '\ea02';
+}
+
+.icon-cart:before {
+	content: '\ea03';
+}
+
+.icon-check:before {
+	content: '\ea04';
+}
+
+.icon-check2:before {
+	content: '\ea05';
+}
+
+.icon-checked:before {
+	content: '\ea06';
+}
+
+.icon-clock:before {
+	content: '\ea07';
+}
+
+.icon-euro:before {
+	content: '\ea08';
+}
+
+.icon-gift:before {
+	content: '\ea09';
+}
+
+.icon-heart:before {
+	content: '\ea0a';
+}
+
+.icon-pic-clock:before {
+	content: '\ea0b';
+}
+
+.icon-pic-closing:before {
+	content: '\ea0c';
+}
+
+.icon-pic-filter:before {
+	content: '\ea0d';
+}
+
+.icon-pic-join:before {
+	content: '\ea0e';
+}
+
+.icon-pic-magnify:before {
+	content: '\ea0f';
+}
+
+.icon-pic-space:before {
+	content: '\ea10';
+}
+
+.icon-piggy:before {
+	content: '\ea11';
+}
+
+.icon-plus:before {
+	content: '\ea12';
+}
+
+.icon-search:before {
+	content: '\ea13';
+}
+
+.icon-star:before {
+	content: '\ea14';
+}
+
+.icon-thumbs_up:before {
+	content: '\ea15';
+}
+
+.icon-transport:before {
+	content: '\ea16';
+}
+
+.icon-user:before {
+	content: '\ea17';
+}
