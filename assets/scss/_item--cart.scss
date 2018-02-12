@@ -85,7 +85,10 @@
 
 }
 .item__remove--cart {
-	position: relative;
-	top: 9px;
+	// position: relative;
+	// top: 9px;
 	margin-left: auto;
+	span.text {
+		margin-left: 3px;
+	}
 }

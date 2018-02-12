@@ -29,6 +29,20 @@
 		$("#cart-toggle-another-address-cb").click(function () {
 			$("#cart-toggle-another-address").slideToggle();
 		});
+		// $("#cart-toggle-company").slideDown();
+		$("#cart-toggle-person-rb").click(function () {
+			$("#cart-toggle-person").slideUp();
+			$("#cart-toggle-company").slideDown();
+		});
+		$("#cart-toggle-company-rb").click(function () {
+			$("#cart-toggle-person").slideDown();
+			$("#cart-toggle-company").slideUp();
+		});
+
+		// new cart design toggles
+		$("#cart-toggle-delivery-address-cb").click(function () {
+			$("#cart-toggle-delivery-address").slideToggle();
+		});
 
 		// add class to nav when scrolled
 		$(window).scroll(function () {

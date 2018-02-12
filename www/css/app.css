@@ -4769,14 +4769,21 @@ button.close {
   line-height: 40px;
   min-width: 40px; }
 
+form .input-group {
+  display: inline-table; }
+
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
-  width: 24px;
-  height: 24px;
+  width: 24px !important;
+  height: 24px !important;
   margin-left: -30px;
   margin-top: -3px; }
+
+label span {
+  padding-left: 5px;
+  opacity: 0.6; }
 
 .checkbox label,
 .radio label {
@@ -4984,11 +4991,6 @@ h2 {
   margin: 20px 0 15px; }
 
 h5 {
-  text-transform: uppercase; }
-
-h3,
-h4 {
-  color: #0089b0 !important;
   text-transform: uppercase; }
 
 @media screen and (max-width: 767px) {
@@ -6345,9 +6347,9 @@ body.modal-open .main {
   font-size: 12px; }
 
 .item__remove--cart {
-  position: relative;
-  top: 9px;
   margin-left: auto; }
+  .item__remove--cart span.text {
+    margin-left: 3px; }
 
 .order__choice {
   display: -webkit-box;
@@ -6381,6 +6383,8 @@ body.modal-open .main {
 
 .order__discount {
   margin-bottom: 16px; }
+  .order__discount label {
+    display: block; }
 
 .order__summary-box {
   padding: 15px;
@@ -6423,6 +6427,8 @@ body.modal-open .main {
   @media screen and (max-width: 767px) {
     .order__contact__group {
       width: 100%; } }
+  .order__contact__group input[type="checkbox"] {
+    margin-top: 3px; }
   .order__contact__group .form-group {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6435,7 +6441,11 @@ body.modal-open .main {
             align-items: center; }
     .order__contact__group .form-group label {
       padding-right: 5px;
-      width: 80px; }
+      width: 100px; }
+
+#cart-toggle-company,
+#cart-toggle-delivery-address {
+  display: none; }
 
 .content ol,
 .content ul,

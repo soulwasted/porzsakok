@@ -19,6 +19,9 @@
 	}
 	.order__discount {
 		margin-bottom: 16px;
+		label {
+			display: block;
+		}
 	}
 	.order__summary-box {
 		padding: 15px;
@@ -57,16 +60,23 @@
 				@media screen and (max-width: $screen-xs-max) {
 					width: 100%;
 				}
-
+			input[type="checkbox"] {
+				margin-top: 3px;
+			}
 			.form-group {
 				display: flex;
 				align-items: center;
 				label {
 					padding-right: 5px;
-					width: 80px;
+					width: 100px;
 				}
 				input {
 
 				}
+
 			}
 		}
+	#cart-toggle-company,
+	#cart-toggle-delivery-address {
+		display: none;
+	}
