@@ -174,25 +174,26 @@ html(lang='en')
 							h3 Ostatní informace pro e-shop
 					.row.choice
 						.col-xs-12
-							.col-xs-12
-								.form-group
-									label.control-label(for='form-cart-note') Upřesnění objednávky
-									textarea#form-cart-note.form-control(rows='3')
+							.form-group
+								label.control-label(for='form-cart-note') Upřesnění objednávky
+								textarea#form-cart-note.form-control(rows='3')
 					.row.choice
-						.checkbox
-							label
-								input(type="checkbox") 
-								strong Souhlasím s obchodními podmínkami
-						.checkbox
-							label
-								input(type="checkbox") 
-								| Chci získávat novinky
+						.col-xs-12
+							.checkbox
+								label
+									input(type="checkbox") 
+									strong Souhlasím s obchodními podmínkami
+							.checkbox
+								label
+									input(type="checkbox") 
+									| Chci získávat novinky
 				.container.stripe-buttons
 					.row
-						a.btn.btn-primary.btn-lg.btn-block(href="souhrn.html") 
-							| Odeslat objednávku
-							span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-						p Zkontrolujete si ještě jednou svou objednávku a pak ji můžete v klidu odeslat
+						.col-xs-12
+							a.btn.btn-primary.btn-lg.btn-block(href="souhrn.html") 
+								| Odeslat objednávku
+								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+							p Zkontrolujete si ještě jednou svou objednávku a pak ji můžete v klidu odeslat
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 	include ./includes/scripts.jade

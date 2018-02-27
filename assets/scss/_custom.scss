@@ -56,15 +56,20 @@ input[type="email"],
 input[type="number"],
 input[type="text"] {}
 
+input[type=checkbox]:checked {
+	background: red;
+}
+
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
-	width: 24px !important;
-	height: 24px !important;
+	width: 20px !important;
+	height: 20px !important;
 	// transform: scale(1.1);
 	margin-left: -30px;
 	margin-top: -3px;
+	background: $brand-primary;
 }
 label {
 	span {

@@ -28,6 +28,9 @@
 		background: $gray-lightest;
 		border-bottom: 1px solid $gray;
 		margin-left: auto;
+		@media (max-width: $screen-xs-max) {
+			width: 100%;
+		}
 	}
 
 	.order__summary__row {
