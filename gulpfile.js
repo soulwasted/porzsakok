@@ -272,7 +272,7 @@ function processProductionSass() {
 		// .pipe(pixrem(pixremOptions))
 		.pipe(rename(paths.sass.min))
 		// .pipe(cssnano(cssnanoOptions))
-		.pipe(cleancss())
+		// .pipe(cleancss())
 		.pipe(gulp.dest(paths.sass.dest));
 }
 gulp.task('process-sass', function () {
