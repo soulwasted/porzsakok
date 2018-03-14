@@ -52,7 +52,7 @@ var paths = {
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js",
-			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
+			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js",
 			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js",
 			// "bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js",
 			"bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
