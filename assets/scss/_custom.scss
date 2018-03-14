@@ -69,7 +69,12 @@ input[type=checkbox]:checked {
 	// transform: scale(1.1);
 	margin-left: -30px;
 	margin-top: -3px;
-	background: $brand-primary;
+	&:checked {
+		background: $brand-primary;
+	}
+}
+label input[type="radio"]:checked {
+	font-weight: bold;
 }
 label {
 	span {

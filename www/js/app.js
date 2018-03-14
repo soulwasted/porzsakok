@@ -23,25 +23,24 @@
 		})
 
 		// toggle additional fields in cart section
-		$("#cart-toggle-company-cb").click(function () {
-			$("#cart-toggle-company").slideToggle();
-		});
-		$("#cart-toggle-another-address-cb").click(function () {
-			$("#cart-toggle-another-address").slideToggle();
-		});
-		// $("#cart-toggle-company").slideDown();
-		$("#cart-toggle-person-rb").click(function () {
-			$("#cart-toggle-person").slideUp();
-			$("#cart-toggle-company").slideDown();
-		});
-		$("#cart-toggle-company-rb").click(function () {
-			$("#cart-toggle-person").slideDown();
-			$("#cart-toggle-company").slideUp();
-		});
+		// $("#cart-toggle-company-cb").click(function () {
+		// 	$("#cart-toggle-company").slideToggle();
+		// });
+		// $("#cart-toggle-another-address-cb").click(function () {
+		// 	$("#cart-toggle-another-address").slideToggle();
+		// });
 
 		// new cart design toggles
 		$("#cart-toggle-delivery-address-cb").click(function () {
 			$("#cart-toggle-delivery-address").slideToggle();
+		});
+		$("#cart-toggle-person-rb").click(function () {
+			$("#cart-toggle-person").slideDown();
+			$("#cart-toggle-company").slideUp();
+		});
+		$("#cart-toggle-company-rb").click(function () {
+			$("#cart-toggle-company").slideDown();
+			$("#cart-toggle-person").slideUp();
 		});
 
 		// add class to nav when scrolled

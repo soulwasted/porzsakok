@@ -5,15 +5,16 @@
 	.item__content
 		.item__name
 			a(href='/electrolux/100-ce')
-				strong ELECTROLUX S-bag (Sleva 15%)
-			.item__benefit + 10 motorových filtrů ZDARMA
-			.item__benefit + 1 vůně ZDARMA
+				strong ELECTROLUX S-bag #{__discount}
+			.item__benefit #{__bonus__transport}
+			.item__benefit #{__bonus__delivery}
+			.item__benefit #{__bonus__filter}
 		.item__remove--cart
 			//- a.btn.btn-default.btn-small.btn-close(href="#")
 			a(href="#")
 				span.glyphicon.glyphicon-remove(aria-hidden='true')
-				span.text odebrat
-		.item__price.item__price--piece 230 Ft
+				span.text #{__remove}
+		.item__price.item__price--piece 230 #{__currency}
 		.item__stepper
 			.stepper
 				#stepperMinus
@@ -22,4 +23,4 @@
 				#stepperPlus
 					span.glyphicon.glyphicon-plus(aria-hidden='true')
 				.item__stepper__label sáčků
-		.item__price.item__price--total 9200 Ft
+		.item__price.item__price--total 9200 #{__currency}
