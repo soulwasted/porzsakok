@@ -68,10 +68,14 @@
 			}
 			.form-group {
 				display: flex;
-				align-items: center;
+				// RO
+				flex-direction: column;
+				// RO
+				// align-items: center;
 				label {
 					padding-right: 5px;
-					width: 100px;
+					// RO
+					// width: 100px;
 				}
 				input {
 

@@ -85,6 +85,9 @@
 		// home dots
 		homeDots();
 
+		// Tooltips overall
+		$("body").tooltip({ selector: '[data-toggle=tooltip]' });
+
 	});
 })(jQuery, ResponsiveBootstrapToolkit);
 
