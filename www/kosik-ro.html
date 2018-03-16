@@ -82,9 +82,7 @@
             </div>
             <div class="container">
                 <div class="item item--cart">
-                    <div class="item__image">
-                        <a href="/electrolux/100-ce"><img></a>
-                    </div>
+                    <a href="/electrolux/100-ce"><img src="img/vacs-bag/vacs-bag-detail-03-tn.jpg" class="item__image"></a>
                     <div class="item__content">
                         <div class="item__name"><a href="/electrolux/100-ce"><strong>ELECTROLUX S-bag Reducere 15%</strong></a>
                             <div class="item__benefit">+ transport gratuit</div>
@@ -105,9 +103,7 @@
             </div>
             <div class="container">
                 <div class="item item--cart">
-                    <div class="item__image">
-                        <a href="/electrolux/100-ce"><img></a>
-                    </div>
+                    <a href="/electrolux/100-ce"><img src="img/vacs-bag/vacs-bag-detail-03-tn.jpg" class="item__image"></a>
                     <div class="item__content">
                         <div class="item__name"><a href="/electrolux/100-ce"><strong>ELECTROLUX S-bag Reducere 15%</strong></a>
                             <div class="item__benefit">+ transport gratuit</div>
@@ -209,18 +205,21 @@
                         </div>
                         <div id="cart-toggle-person" class="order__contact__group__items order__contact__group__items--person">
                             <div class="form-group"><label for="form-cart-person-name" class="control-label">*&nbsp;Numele şi prenumele</label><input id="form-cart-person-name" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-person-address" class="control-label">*&nbsp;Strada, nr., sector, bloc, scara, apartament:</label><textarea id="form-cart-person-address" placeholder="" class="form-control"></textarea></div>
-                            <div class="form-group"><label for="form-cart-person-address-number" class="control-label">*&nbsp;Judeţ</label><select class="form-control"><option>First district</option><option>Second district</option><option>Third district</option></select></div>
+                            <div class="form-group"><label for="form-cart-person-address" class="control-label">*&nbsp;Strada, nr., sector, bloc, scara, apartament:</label><textarea id="form-cart-person-address" placeholder="" rows="3" class="form-control"></textarea></div>
                             <div
-                                class="form-group"><label for="form-cart-person-city" class="control-label">*&nbsp;Oraş</label><select class="form-control"><option>First city</option><option>Second city</option><option>Third city</option></select></div>
+                                class="form-group"><label for="form-cart-person-disctrict" class="control-label">*&nbsp;Judeţ</label><select id="form-cart-person-disctrict" class="form-control"><option>First district</option><option>Second district</option><option>Third district</option></select></div>
+                            <div
+                                class="form-group"><label for="form-cart-person-city" class="control-label">*&nbsp;Oraş</label><select id="form-cart-person-city" class="form-control"><option>First city</option><option>Second city</option><option>Third city</option></select></div>
                         </div>
                         <div id="cart-toggle-company" class="order__contact__group__items order__contact__group__items--company">
-                            <div class="form-group"><label for="form-cart-company-dic" class="control-label">*&nbsp;Nr. Oficiul Registrului Comerţului (J)</label><input id="form-cart-company-dic" type="text" placeholder="" class="form-control"></div>
                             <div class="form-group"><label for="form-cart-company-ico" class="control-label">*&nbsp;Cod fiscal (CUI)</label><input id="form-cart-company-ico" type="text" placeholder="" class="form-control"></div>
+                            <div class="form-group"><label for="form-cart-company-dic" class="control-label">*&nbsp;Nr. Oficiul Registrului Comerţului (J)</label><input id="form-cart-company-dic" type="text" placeholder="" class="form-control"></div>
                             <div class="form-group"><label for="form-cart-company-name" class="control-label">*&nbsp;Compania</label><input id="form-cart-company-name" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-company-address" class="control-label">*&nbsp;Strada, nr., sector, bloc, scara, apartament:</label><input id="form-cart-company-address" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-company-address-disctrict" class="control-label">*&nbsp;Judeţ</label><input id="form-cart-company-address-disctrict" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-company-city" class="control-label">*&nbsp;Oraş</label><input id="form-cart-company-city" type="text" placeholder="" class="form-control"></div>
+                            <div class="form-group"><label for="form-cart-company-address" class="control-label">*&nbsp;Strada, nr., sector, bloc, scara, apartament:</label><textarea id="form-cart-company-address" placeholder="" rows="3" class="form-control"></textarea></div>
+                            <div
+                                class="form-group"><label for="form-cart-company-address-disctrict" class="control-label">*&nbsp;Judeţ</label><select id="form-cart-company-address-disctrict" class="form-control"><option>First district</option><option>Second district</option><option>Third district</option></select></div>
+                            <div
+                                class="form-group"><label for="form-cart-company-city" class="control-label">*&nbsp;Oraş</label><select id="form-cart-company-city" class="form-control"><option>First city</option><option>Second city</option><option>Third city</option></select></div>
                         </div>
                     </div>
                     <div class="order__contact__group">
@@ -229,8 +228,11 @@
                         </div>
                         <div id="cart-toggle-delivery-address" class="order__contact__group__items">
                             <div class="form-group"><label for="form-cart-delivery-name" class="control-label">Numele şi prenumele/ firma</label><input id="form-cart-delivery-name" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-delivery-address" class="control-label">Strada, nr., sector, bloc, scara, apartament</label><input id="form-cart-delivery-address" type="text" placeholder="" class="form-control"></div>
-                            <div class="form-group"><label for="form-cart-delivery-city" class="control-label">Oraş</label><input id="form-cart-delivery-city" type="text" placeholder="" class="form-control"></div>
+                            <div class="form-group"><label for="form-cart-delivery-address" class="control-label">Strada, nr., sector, bloc, scara, apartament</label><textarea id="form-cart-delivery-address" placeholder="" rows="3" class="form-control"></textarea></div>
+                            <div
+                                class="form-group"><label for="form-cart-delivery-disctrict" class="control-label">*&nbsp;Judeţ</label><select id="form-cart-delivery-disctrict" class="form-control"><option>First district</option><option>Second district</option><option>Third district</option></select></div>
+                            <div
+                                class="form-group"><label for="form-cart-delivery-city" class="control-label">*&nbsp;Oraş</label><select id="form-cart-delivery-city" class="form-control"><option>First city</option><option>Second city</option><option>Third city</option></select></div>
                         </div>
                     </div>
                 </div>

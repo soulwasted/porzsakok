@@ -118,18 +118,18 @@ html(lang='en')
 							.form-group
 								label.control-label(for='form-cart-person-address') *&nbsp;#{__address__person__address}
 								//- input#form-cart-person-address.form-control(type='text', placeholder='')
-								textarea#form-cart-person-address.form-control(placeholder='')
+								textarea#form-cart-person-address.form-control(placeholder='', rows='3')
 							.form-group
-								label.control-label(for='form-cart-person-address-number') *&nbsp;#{__address__person__district}
+								label.control-label(for='form-cart-person-disctrict') *&nbsp;#{__address__person__district}
 								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
-								select.form-control
+								select.form-control#form-cart-person-disctrict
 									option First district
 									option Second district
 									option Third district
 								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
 							.form-group
 								label.control-label(for='form-cart-person-city') *&nbsp;#{__address__person__city}
-								select.form-control
+								select.form-control#form-cart-person-city
 									option First city
 									option Second city
 									option Third city
@@ -139,11 +139,11 @@ html(lang='en')
 							//- 	input#form-cart-person-address-code.form-control(type='text', placeholder='')
 						.order__contact__group__items.order__contact__group__items--company#cart-toggle-company
 							.form-group
-								label.control-label(for='form-cart-company-dic') *&nbsp;#{__address__company__dic}
-								input#form-cart-company-dic.form-control(type='text', placeholder='')
-							.form-group
 								label.control-label(for='form-cart-company-ico') *&nbsp;#{__address__company__ico}
 								input#form-cart-company-ico.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-dic') *&nbsp;#{__address__company__dic}
+								input#form-cart-company-dic.form-control(type='text', placeholder='')
 							//- .form-group
 							//- 	label.control-label(for='form-cart-company-ico') #{__address__company__ico}
 							//- 	input#form-cart-company-ico.form-control(type='text', placeholder='')
@@ -155,16 +155,31 @@ html(lang='en')
 								input#form-cart-company-name.form-control(type='text', placeholder='')
 							.form-group
 								label.control-label(for='form-cart-company-address') *&nbsp;#{__address__company__address}
-								input#form-cart-company-address.form-control(type='text', placeholder='')
-							.form-group
-								label.control-label(for='form-cart-company-address-disctrict') *&nbsp;#{__address__company__district}
-								input#form-cart-company-address-disctrict.form-control(type='text', placeholder='')
-							.form-group
-								label.control-label(for='form-cart-company-city') *&nbsp;#{__address__company__city}
-								input#form-cart-company-city.form-control(type='text', placeholder='')
+								//- input#form-cart-company-address.form-control(type='text', placeholder='')
+								textarea#form-cart-company-address.form-control(placeholder='', rows='3')
+							//- .form-group
+							//- 	label.control-label(for='form-cart-company-address-disctrict') *&nbsp;#{__address__company__district}
+							//- 	input#form-cart-company-address-disctrict.form-control(type='text', placeholder='')
+							//- .form-group
+							//- 	label.control-label(for='form-cart-company-city') *&nbsp;#{__address__company__city}
+							//- 	input#form-cart-company-city.form-control(type='text', placeholder='')
 							//- .form-group
 							//- 	label.control-label(for='form-cart-company-address-code') *&nbsp;#{__address__postcode}
 							//- 	input#form-cart-company-address-code.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-address-disctrict') *&nbsp;#{__address__person__district}
+								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
+								select.form-control#form-cart-company-address-disctrict
+									option First district
+									option Second district
+									option Third district
+								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-city') *&nbsp;#{__address__person__city}
+								select.form-control#form-cart-company-city
+									option First city
+									option Second city
+									option Third city
 					.order__contact__group
 						.checkbox
 							h3
@@ -177,16 +192,31 @@ html(lang='en')
 								input#form-cart-delivery-name.form-control(type='text', placeholder='')
 							.form-group
 								label.control-label(for='form-cart-delivery-address') #{__address__delivery__address}
-								input#form-cart-delivery-address.form-control(type='text', placeholder='')
+								//- input#form-cart-delivery-address.form-control(type='text', placeholder='')
+								textarea#form-cart-delivery-address.form-control(placeholder='', rows='3')
 							//- .form-group
 							//- 	label.control-label(for='form-cart-delivery-address-number') Číslo popisné
 							//- 	input#form-cart-delivery-address-number.form-control(type='text', placeholder='')
-							.form-group
-								label.control-label(for='form-cart-delivery-city') #{__address__delivery__city}
-								input#form-cart-delivery-city.form-control(type='text', placeholder='')
+							//- .form-group
+							//- 	label.control-label(for='form-cart-delivery-city') #{__address__delivery__city}
+							//- 	input#form-cart-delivery-city.form-control(type='text', placeholder='')
 							//- .form-group
 							//- 	label.control-label(for='form-cart-delivery-address-code') #{__address__postcode}
 							//- 	input#form-cart-delivery-address-code.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-disctrict') *&nbsp;#{__address__person__district}
+								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
+								select.form-control#form-cart-delivery-disctrict
+									option First district
+									option Second district
+									option Third district
+								//- input#form-cart-person-address-number.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-city') *&nbsp;#{__address__person__city}
+								select.form-control#form-cart-delivery-city
+									option First city
+									option Second city
+									option Third city
 				.container
 					.row
 						.col-xs-12
