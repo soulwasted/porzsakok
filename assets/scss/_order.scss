@@ -7,7 +7,7 @@
 	.order__price {
 		margin-left: auto;
 		padding-left: 10px;
-		padding-right: 15px;
+		// padding-right: 15px;
 	}
 
 	.order__summary {
@@ -17,6 +17,10 @@
 			flex-direction: column;
 		}
 	}
+		.order__summary--resume {
+			display: block;
+			margin-left: -15px;
+		}
 	.order__discount {
 		margin-bottom: 16px;
 		label {
@@ -28,18 +32,37 @@
 		background: $gray-lightest;
 		border-bottom: 1px solid $gray;
 		margin-left: auto;
+		margin-right: -15px;
+		min-width: 33%;
 		@media (max-width: $screen-xs-max) {
-			width: 100%;
+			width: calc(100% + 30px);
+			margin-left: -15px;
+		}
+	}
+	.cart-resume {
+		.order__summary-box {
+			margin-left: 0;
+			width: calc(100% + 15px);
+			@media (max-width: $screen-xs-max) {
+				// margin-left: -15px;
+			}
 		}
 	}
 
 	.order__summary__row {
 		display: flex;
+		padding: 5px 0;
 		.order__price {
 			padding-right: 0;
 		}
 	}
 
+	.order__summary--prices {
+		.order__choice {
+			padding: 5px 0;
+		}
+		border-bottom: 0;
+	}
 
 
 

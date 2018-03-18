@@ -1,0 +1,116 @@
+doctype html
+html(lang='en')
+	- var title= "Souhrn objednávky"
+	include ./includes/head.jade
+	body
+		.main.cart-resume
+			include ./includes/nav.jade
+			.container
+				h1 Souhrn objednávky
+			.container.order__contact
+				.order__contact__group
+					h3 #{__contact_person}
+					p
+						| Lenuta Iliescu
+						br
+						| +40123456789
+						br
+						| lenuta.iliescu@gmail.com
+				.order__contact__group
+					h3 #{__billing__address}
+					p
+						| Lenuta Iliescu
+						br
+						| Strada Oltet 10, 200395, Dolj
+						br
+						| Craiova
+						br
+						| Craiova
+				.order__contact__group
+					h3 #{__address__delivery}
+					p
+						| Lenuta Iliescu
+						br
+						| Aleea Chimistilor 1, Bl.34, Ap.3
+						br
+						| Braila
+						br
+						| Braila
+			.container.order__items
+				h3 #{__cart}
+				- for (var x = 0; x < 2; x++)
+					include ./includes/item--summary.jade
+			.container.order__summary--prices
+				.order__choice
+					label
+						strong #{__transport}
+						|  — DPD
+						span (#{__free})
+						i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
+					.order__price #{__free}
+				.order__choice
+					label
+						strong #{__express_expedition}
+						span (305 #{__currency})
+						i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
+					.order__price 305 #{__currency}
+				.order__choice
+					label
+						strong #{__payment_type}
+						|  — #{__bank_transfer}
+						span (#{__free})
+					.order__price #{__free}
+				.order__summary.order__summary--resume
+					.order__summary-box
+						.order__summary__row 
+							.order__summary__title #{__order_total_without_tax}
+							.order__price 14.720 #{__currency}
+						.order__summary__row 
+							.order__summary__title #{__tax}
+							.order__price 3.974 #{__currency}
+						.order__summary__row 
+							.order__summary__title Zaokrouhlení
+							.order__price 4 #{__currency}
+						.order__summary__row 
+							.order__summary__title
+								h4
+									strong #{__order_total_with_tax}
+							.order__price 
+								h4
+									strong 18.690 #{__currency}
+			//- .container
+			//- 	.row
+			//- 		.col-xs-12
+			//- 			.row.resume-prices
+			//- 				.col-xs-8
+			//- 					h3.h5 Dopravné
+			//- 				.col-xs-4
+			//- 					h3.h5 0 €
+			//- 				.col-xs-8
+			//- 					h3.h5 Klasický bankovní převod
+			//- 				.col-xs-4
+			//- 					h3.h5 0 €
+			//- 				.col-xs-8
+			//- 					h3.h5 Zboží
+			//- 				.col-xs-4
+			//- 					h3.h5 45,98 €
+			//- 				.col-xs-8
+			//- 					h3.h4
+			//- 						strong Celkem k úhradě
+			//- 				.col-xs-4
+			//- 					h3.h4
+			//- 						strong 45,98 €
+			.container.stripe-buttons
+				.row
+					.col-xs-2.col-sm-3.col-md-2
+						a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="kosik.html")
+							span.glyphicon.glyphicon-chevron-left(aria-hidden='true') 
+							span.hidden-xs Zpět do košíku
+					.col-xs-10.col-sm-9.col-md-offset-1
+						a.btn.btn-primary.btn-lg.btn-block(href="#step-02")
+							| Odeslat objednávku
+							span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+						p Tímto odešlete objednávku a obdržíte potvrzení o objednávce
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+	include ./includes/scripts.jade

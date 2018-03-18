@@ -16,6 +16,12 @@
 
 		}
 	}
+.main.cart-resume {
+	.item--cart {
+		padding: 20px 0;
+	}
+}
+
 
 .item__image {
 	border: 1px solid $gray-lightest;
@@ -106,6 +112,10 @@
 	.item__price__small {
 		font-weight: normal;
 		font-size: 12px;
+	}
+	.item__price--total {
+		color: $black-new;
+		padding-right: 0;
 	}
 
 .item__remove {
