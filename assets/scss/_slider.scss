@@ -187,7 +187,7 @@ $buttonStepperRadius: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 48px;
+	margin-top: 34px;
 	@media screen and (max-width: $screen-xs-max) {
 		margin-top: 15px;
 	}
@@ -263,28 +263,44 @@ $buttonStepperRadius: 5px;
 	.stepper {
 		justify-content: flex-start;
 		@media screen and (max-width: $screen-xs-max) {
-			margin-top: 10px;
-			margin-bottom: 10px;
+			// margin-top: 10px;
+			// margin-bottom: 10px;
 		}
 
 		#stepperMinus,
 		#stepperPlus {
-			background: $gray-lighter;
-			color: $gray;
+			width: 32px;
+			height: 32px;
+			font-size: 12px;
+			line-height: 32px;
+		}
+		#sliderInput {
+			width: 40px;
+			height: 40px;
+			font-size: 20px;
+			line-height: 32px;
+			border-width: 1px;
+			padding-bottom: 0;
+		}
+
+		#stepperMinus,
+		#stepperPlus {
+			// background: $gray-lighter;
+			// color: $gray;
 
 			&:hover {
-				background: darken($gray, 10);
+				// background: darken($gray, 10);
 			}
 		}
 
 		#sliderInput {
-			width: $sliderButtSize;
-			height: $sliderButtSize;
-			border: 1px solid $gray;
-			font-size: 20px;
+			// width: $sliderButtSize;
+			// height: $sliderButtSize;
+			// border: 1px solid $gray;
+			// font-size: 20px;
 
 			&:hover {
-				border-color: darken($gray, 10);
+				// border-color: darken($gray, 10);
 			}
 		}
 

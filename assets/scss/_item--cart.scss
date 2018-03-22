@@ -57,11 +57,11 @@
 	.stepper {
 		#stepperMinus,
 		#stepperPlus {
-			width: 32px !important;
-			height: 32px !important;
-			font-size: 12px !important;
-			line-height: 32px !important;
-			background: $gray;
+			// width: 32px !important;
+			// height: 32px !important;
+			// font-size: 12px !important;
+			// line-height: 32px !important;
+			// background: $gray;
 		}
 		#stepperMinus {
 			border-radius: 2px 0 0 2px;
@@ -70,10 +70,10 @@
 			border-radius: 0 2px 2px 0;
 		}
 		#sliderInput {
-			width: 32px !important;
-			height: 32px !important;
-			font-size: 14px !important;
-			border: 1px solid $gray;
+			// width: 32px !important;
+			// height: 32px !important;
+			// font-size: 14px !important;
+			// border: 1px solid $gray;
 		}
 		.item__stepper__label {
 			font-size: 12px;

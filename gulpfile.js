@@ -280,9 +280,9 @@ function processProductionSass() {
 		.pipe(rename(paths.sass.min))
 		// .pipe(cssnano(cssnanoOptions))
 		// .pipe(cleancss())
-		.pipe(cleancss({
-			inline: ['none']
-		}))
+		// .pipe(cleancss({
+		// 	inline: ['none']
+		// }))
 		.pipe(gulp.dest(paths.sass.dest));
 }
 gulp.task('process-sass', function () {

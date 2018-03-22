@@ -6260,7 +6260,7 @@ body .modal--full .modal-dialog {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 48px; }
+  margin-top: 34px; }
   @media screen and (max-width: 767px) {
     .stepper {
       margin-top: 15px; } }
@@ -6321,24 +6321,19 @@ body .modal--full .modal-dialog {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  @media screen and (max-width: 767px) {
-    .main.cart .stepper {
-      margin-top: 10px;
-      margin-bottom: 10px; } }
   .main.cart .stepper #stepperMinus,
   .main.cart .stepper #stepperPlus {
-    background: #e6e6e6;
-    color: #4d4d4d; }
-    .main.cart .stepper #stepperMinus:hover,
-    .main.cart .stepper #stepperPlus:hover {
-      background: #343434; }
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px; }
   .main.cart .stepper #sliderInput {
-    width: 50px;
-    height: 50px;
-    border: 1px solid #4d4d4d;
-    font-size: 20px; }
-    .main.cart .stepper #sliderInput:hover {
-      border-color: #343434; }
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 32px;
+    border-width: 1px;
+    padding-bottom: 0; }
   .main.cart .stepper .stepperLabel {
     position: static;
     padding-left: 10px;
@@ -6785,22 +6780,10 @@ p.note {
       -webkit-flex: 1 0 auto;
           -ms-flex: 1 0 auto;
               flex: 1 0 auto; } }
-  .item__stepper .stepper #stepperMinus,
-  .item__stepper .stepper #stepperPlus {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 12px !important;
-    line-height: 32px !important;
-    background: #4d4d4d; }
   .item__stepper .stepper #stepperMinus {
     border-radius: 2px 0 0 2px; }
   .item__stepper .stepper #stepperPlus {
     border-radius: 0 2px 2px 0; }
-  .item__stepper .stepper #sliderInput {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 14px !important;
-    border: 1px solid #4d4d4d; }
   .item__stepper .stepper .item__stepper__label {
     font-size: 12px;
     padding: 0 5px; }
