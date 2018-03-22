@@ -37,6 +37,9 @@ h4 {
 	// text-transform: uppercase;
 	font-weight: 700;
 }
+h3 > label {
+	font-weight: 700 !important;
+}
 h4 {
 	@media screen and (max-width: $screen-xs-max) {
 		margin-top: 20px;

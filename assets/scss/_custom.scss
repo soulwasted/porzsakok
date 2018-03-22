@@ -7,7 +7,6 @@
 }
 .btn {
 	font-weight: 700;
-	border-radius: 5px;
 	&.back {
 		@extend .btn;
 		background: $gray;
@@ -19,7 +18,7 @@
 	}
 }
 .btn-default {
-	color: $brand-secondary;
+	color: $brand-success;
 }
 .btn-higher {
 	height: 50px;
@@ -40,17 +39,48 @@
 		min-width: 40px;
 	}
 }
+
+
+form {
+	.input-group {
+		// width: inherit !important;
+		display: inline-table;
+	}
+	input {
+		// width: inherit !important;
+	}
+}
+
+
 input[type="email"],
 input[type="number"],
 input[type="text"] {}
+
+input[type=checkbox]:checked {
+	background: red;
+}
+
 .checkbox input[type="checkbox"],
 .checkbox-inline input[type="checkbox"],
 .radio input[type="radio"],
 .radio-inline input[type="radio"] {
-	width: 24px;
-	height: 24px;
+	width: 20px !important;
+	height: 20px !important;
+	// transform: scale(1.1);
 	margin-left: -30px;
 	margin-top: -3px;
+	&:checked {
+		background: $brand-primary;
+	}
+}
+label input[type="radio"]:checked {
+	font-weight: bold;
+}
+label {
+	span {
+		padding-left: 5px;
+		opacity: 0.6;
+	}
 }
 .checkbox label,
 .radio label {
@@ -71,21 +101,18 @@ hr {
 }
 
 nav .container {
-	// padding-top: 0 !important;
-	// padding-bottom: 0 !important;
-	// border: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border: 0 !important;
 }
 .breadcrumb {
 	border-bottom: 1px solid $gray-lighter;
 	background: none;
-	font-size: 14px;
+	font-size: 12px;
 	padding-left: 0;
 	padding-right: 0;
 	margin-bottom: 0;
 	display: inline-block;
-	a {
-		color: $brand-secondary;
-	}
 }
 ul.simple {
 	list-style: none;
@@ -93,14 +120,10 @@ ul.simple {
 	margin: 0;
 }
 .readmore {
-	// height: 20px;
-	// max-height: 20px;
-	// overflow: hidden;
 	@media screen and (max-width: $screen-xs-max) {
-		max-height: 40px;
+		max-height: 6em;
 	}
 }
-
 .readmoreModels {
 	// height: 20px;
 	max-height: 20px;
@@ -110,7 +133,6 @@ ul.simple {
 		// max-height: 40px;
 	}
 }
-
 @media (min-width: 768px) {
 	.form-horizontal .control-label {
 		text-align: left;
@@ -156,7 +178,7 @@ ul.list-models {
 		padding: 0;
 		a {
 			display: flex;
-			// background: $gray-lightest;
+			background: $gray-lightest;
 			transition: all 0.5s;
 			align-items: center;
 			&:hover {
@@ -166,17 +188,13 @@ ul.list-models {
 			}
 			img {
 				border: 1px solid $gray-lightest;
-				width: 75px;
+				width: 100px;
 				height: 50px;
 			}
 			strong {
 				padding: 0 20px;
 				text-align: left;
 				width: 100%;
-				u {
-					text-decoration: underline;
-					color: $black;
-				}
 			}
 		}
 	}
@@ -188,9 +206,6 @@ ul.list-brands {
 	// @media screen and (max-width: $screen-xs-max) {
 	// 	column-count: 2;
 	// }
-}
-#modelsTabContent {
-	margin-top: 20px;
 }
 .prices-after,
 .prices-before,
@@ -250,30 +265,5 @@ ul.list-brands {
 @media screen and (min-width: $screen-sm) {
 	.visible-xs {
 		display: none !important;
-	}
-}
-
-.tooltip {
-	.tooltip-inner {
-		box-shadow: 0 5px 20px 0 rgba(10, 52, 64, 0.3);
-		border-radius: 3px;
-		padding: 15px 10px;
-	}
-}
-
-
-.dummy-heureka {
-	position: fixed;
-	left: 0;
-	top: 160px;
-	width: 36px;
-	height: 188px;
-	background: url("../img/dummy-heureka.png") 0 0 no-repeat;
-	display: none;
-	&:hover {
-		opacity: 0.5;
-	}
-	@media screen and (min-width: $screen-sm) {
-		display: block;
 	}
 }

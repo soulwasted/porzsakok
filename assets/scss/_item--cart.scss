@@ -1,4 +1,5 @@
-.item,
+.main.cart .item,
+.main.cart-resume .item,
 .item--cart--dropdown {
 	display: flex;
 	align-items: center;
@@ -87,8 +88,12 @@
 .item--cart {
 	.item__stepper {
 		margin-left: inherit;
+		.stepper {
+			margin-top: 0;
+		}
 	}
 }
+
 
 
 .item__price {

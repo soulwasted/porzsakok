@@ -15,12 +15,15 @@
 }
 .main.seznam-modelu {
 	@media (min-width: $screen-sm-min) {
-		padding-top: 327px;
+		// padding-top: 327px;
 	}
 }
 
 .benefits-models {
 	margin-top: -36px;
+	@media screen and (max-width: $screen-xs-max) {
+		margin-top: 0;
+	}
 }
 
 .benefits-small {
@@ -73,5 +76,10 @@
 .list-models--wrapper {
 	h4 {
 		padding-left: 85px;
+	}
+}
+h4.arrow01 {
+	@media screen and (max-width: $screen-xs-max) {
+		display: none;
 	}
 }

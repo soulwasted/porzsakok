@@ -55,6 +55,9 @@
 		.order__price {
 			padding-right: 0;
 		}
+		&:last-child {
+			color: $black-new;
+		}
 	}
 
 	.order__summary--prices {
