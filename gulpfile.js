@@ -20,6 +20,10 @@ var uglify = require('gulp-uglify');
 var consolidate = require('gulp-consolidate');
 var iconfont = require('gulp-iconfont');
 
+var fs = require('fs');
+var data = require('gulp-data');
+
+
 var env = "";
 
 var paths = {
@@ -190,9 +194,14 @@ function processJade() {
 	var YOUR_LOCALS = {};
 	var isErr = false;
 	return gulp.src(paths.jade.src)
-		.pipe(jade({
-			locals: YOUR_LOCALS
+		.pipe(data(function (file) {
+			// return require('./assets/json/cart-cs.json')
+			return require('./assets/json/cart-ro.json')
 		}))
+		.pipe(jade())
+		// .pipe(jade({
+		// 	locals: YOUR_LOCALS
+		// }))
 		.pipe(gulp.dest(paths.jade.dest))
 }
 gulp.task('process-jade', function () {

@@ -6,87 +6,89 @@ html(lang='en')
 	body
 		.main.seznam-modelu
 			include ./includes/nav.jade
-			.container
-				ul.breadcrumb
-					li
-						a(href='/') Domov
-					li
-						a(href='/seznam-znacek.html') Seznam značek
-					li.active Electrolux
-					//- .row
-					//- 	a.btn.back(href='seznam-znacek.html') 
-					//- 		span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-					//- 		| Zpět na seznam značek vysavačů
-				.row
-					.col-xs-12
-						h1 Electrolux
-						p.readmoreModels Sháníte sáčky pro vysavače ETA? Značka ETA má dlouhodobou tradici na trhu.
-							br
-							| Ač už se vysavače ETA skoro nevyrábějí, je tato značka neustále zapsána v srdcích zákazníků jako kvalitní česká značka vysavačů. Proto i my Vám nabízíme náhradní sáčky do vysavačů této značka z pětivrstvé antibakteriální netkané textilie, která ochrání Vaše zdraví mnohem lépe než papírové sáčky. Revoluční konstrukce umožňuje sáčku zachytit více jemného prachu a jemných částic než běžné papírové sáčky. Samozřejmostí jsou množstevní slevy, doprava a doběrečné zdarma. Kromě toho Vám pošleme i dárek k nákupu. Objednané sáčky expedujeme rychle, protože všechny sáčky máme skladem. Zboží můžete vrátit do 3 měsíců bez udání důvodů.
-				.row.search-row
-					//- #search-fulltext.col-xs-12.col-sm-6(data-spy='affix', data-offset-top='190', data-offset-bottom='90')
-					#search-fulltext.col-xs-12.col-sm-6(data-spy='affix', data-offset-top='190', data-offset-bottom='90')
-						form(action='seznam-modelu.html')
-							input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
-							.icon-placeholder
-								i#icon-search.icon-search
-							//- button.btn(type='submit')
-							//- 	span.glyphicon.glyphicon-search(aria-hidden='true')
-						.two-links
-							a.two-links__link(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit model vysavače?
-							a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--advices") Jak hledat?
-					.col-xs-12.col-sm-6.benefits-models
-						.row
-							h4.hand.arrow01
-								span Benefity
-						.row.benefits-small
-							a(title="Čím více sáčků si koupíte, tím <strong>nižší cenu za jeden sáček</strong> získáte" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-piggy
-								.benefits-small__title 
-									| Množstevní 
-									br
-									| slevy
-							a(title="Zajistíme sáčky pro <strong>jakýkoliv model vysavače</strong>" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-bags
-								.benefits-small__title 
-									| Největší 
-									br
-									| výběr
-							a(title="U vybraných balení <strong>doprava zdarma</strong>" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-transport
-								.benefits-small__title 
-									| Doprava 
-									br
-									| zdarma
-							a(title="U vybraných balení <strong>sáčky do vysavače zdarma</strong>" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-gift
-								.benefits-small__title 
-									| Dárek 
-									br 
-									| k nákupu
-							a(title="Vaši objednávku umíme vyexpedovat <strong>do 24 hodin</strong>" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-clock
-								.benefits-small__title 
-									| Expresní 
-									br
-									| expedice
-							a(title="<strong>100% záruka</strong> na vrácení zboží" data-html="true").benefits-small__card
-								.benefits-small__icon
-									i.icon-badge
-								.benefits-small__title 
-									| Nadstandardní 
-									br
-									| garance
-						.two-links.two-links
-							a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--properties") 
-								strong Jaké jsou vlastnosti našich vysavačů?
-							a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--accessories") 
-								strong Máme pro vás i doplňkové zboží
+			//- .container-fluid.search-fixed
+			.container-fluid.search-fixed
+				.container
+					ul.breadcrumb
+						li
+							a(href='/') Domov
+						li
+							a(href='/seznam-znacek.html') Seznam značek
+						li.active Electrolux
+						//- .row
+						//- 	a.btn.back(href='seznam-znacek.html') 
+						//- 		span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+						//- 		| Zpět na seznam značek vysavačů
+					.row
+						.col-xs-12
+							h1 Electrolux
+							p.readmoreModels Sháníte sáčky pro vysavače ETA? Značka ETA má dlouhodobou tradici na trhu.
+								br
+								| Ač už se vysavače ETA skoro nevyrábějí, je tato značka neustále zapsána v srdcích zákazníků jako kvalitní česká značka vysavačů. Proto i my Vám nabízíme náhradní sáčky do vysavačů této značka z pětivrstvé antibakteriální netkané textilie, která ochrání Vaše zdraví mnohem lépe než papírové sáčky. Revoluční konstrukce umožňuje sáčku zachytit více jemného prachu a jemných částic než běžné papírové sáčky. Samozřejmostí jsou množstevní slevy, doprava a doběrečné zdarma. Kromě toho Vám pošleme i dárek k nákupu. Objednané sáčky expedujeme rychle, protože všechny sáčky máme skladem. Zboží můžete vrátit do 3 měsíců bez udání důvodů.
+					.row.search-row
+						//- #search-fulltext.col-xs-12.col-sm-6(data-spy='affix', data-offset-top='190', data-offset-bottom='90')
+						#search-fulltext.col-xs-12.col-sm-6
+							form(action='seznam-modelu.html')
+								input(type='text', placeholder='Hledejte konkrétní typ vysavače Electrolux')
+								.icon-placeholder
+									i#icon-search.icon-search
+								//- button.btn(type='submit')
+								//- 	span.glyphicon.glyphicon-search(aria-hidden='true')
+							.two-links
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit model vysavače?
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--advices") Jak hledat?
+						.col-xs-12.col-sm-6.benefits-models
+							.row
+								h4.hand.arrow01
+									span Benefity
+							.row.benefits-small
+								a(title="Čím více sáčků si koupíte, tím <strong>nižší cenu za jeden sáček</strong> získáte" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-piggy
+									.benefits-small__title 
+										| Množstevní 
+										br
+										| slevy
+								a(title="Zajistíme sáčky pro <strong>jakýkoliv model vysavače</strong>" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-bags
+									.benefits-small__title 
+										| Největší 
+										br
+										| výběr
+								a(title="U vybraných balení <strong>doprava zdarma</strong>" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-transport
+									.benefits-small__title 
+										| Doprava 
+										br
+										| zdarma
+								a(title="U vybraných balení <strong>sáčky do vysavače zdarma</strong>" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-gift
+									.benefits-small__title 
+										| Dárek 
+										br 
+										| k nákupu
+								a(title="Vaši objednávku umíme vyexpedovat <strong>do 24 hodin</strong>" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-clock
+									.benefits-small__title 
+										| Expresní 
+										br
+										| expedice
+								a(title="<strong>100% záruka</strong> na vrácení zboží" data-html="true").benefits-small__card
+									.benefits-small__icon
+										i.icon-badge
+									.benefits-small__title 
+										| Nadstandardní 
+										br
+										| garance
+							.two-links.two-links
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--properties") 
+									strong Jaké jsou vlastnosti našich vysavačů?
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--accessories") 
+									strong Máme pro vás i doplňkové zboží
 			.container
 				.row
 					//- .col-xs-12

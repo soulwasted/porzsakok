@@ -140,8 +140,10 @@ html(lang='en')
 											| Dobírka 
 											span (€ 0,00)
 								.col-xs-3
-									.info-icon
-										| i
+									//- .info-icon
+									//- 	| i
+									a(data-toggle="tooltip", data-placement="top", title="Some text.")
+										i.glyphicon.glyphicon-info-sign.text-muted
 							.row.choice
 								.col-xs-9
 									.radio

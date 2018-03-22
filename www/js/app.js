@@ -60,8 +60,11 @@
 			})
 		);
 
-		// Tooltips
+		// Tooltips for benefits
 		$('.benefits-small a').tooltip();
+
+		// Tooltips overall
+		$("body").tooltip({ selector: '[data-toggle=tooltip]' });
 
 		// smooth scroll ;)
 		initSmoothScroll();
