@@ -130,3 +130,9 @@ i.glyphicon-info-sign {
 #cart-toggle-another-address {
 	display: none;
 }
+
+a.ajax {
+	&:hover {
+		text-decoration: none;
+	}
+}

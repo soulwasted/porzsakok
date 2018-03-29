@@ -5092,6 +5092,9 @@ ul.list-brands {
   .visible-xs {
     display: none !important; } }
 
+.help-block.text-danger {
+  color: #FF585B; }
+
 .special {
   font-family: Raleway, Arial, sans-serif; }
 
@@ -5623,11 +5626,14 @@ a.find {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between; }
-      .tt-menu .content .top .top-brands {
+      .tt-menu .content .top .top-brands,
+      .tt-menu .content .top .tt-dataset-top-brands {
         width: 38%; }
-      .tt-menu .content .top .top-bags {
+      .tt-menu .content .top .top-bags,
+      .tt-menu .content .top .tt-dataset-top-bags {
         width: 58%; }
-        .tt-menu .content .top .top-bags h5 {
+        .tt-menu .content .top .top-bags h5,
+        .tt-menu .content .top .tt-dataset-top-bags h5 {
           padding-left: 20px; }
       @media (max-width: 767px) {
         .tt-menu .content .top {
@@ -6752,11 +6758,11 @@ p.note {
   border: 1px solid #f7f7f7;
   background: white;
   width: 64px;
-  height: 64px; }
+  height: 43px; }
   @media (min-width: 992px) {
     .item__image {
       width: 100px;
-      height: 100px; } }
+      height: 67px; } }
 
 .item__name {
   padding: 0 10px; }
@@ -6944,6 +6950,9 @@ i.glyphicon-info-sign {
 #cart-toggle-company,
 #cart-toggle-another-address {
   display: none; }
+
+a.ajax:hover {
+  text-decoration: none; }
 
 .order__choice {
   display: -webkit-box;

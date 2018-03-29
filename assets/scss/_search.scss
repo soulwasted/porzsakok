@@ -274,11 +274,13 @@ a.find {
 			display: flex;
 			justify-content: space-between;
 
-			.top-brands {
+			.top-brands,
+			.tt-dataset-top-brands {
 				width: 38%;
 			}
 
-			.top-bags {
+			.top-bags,
+			.tt-dataset-top-bags {
 				width: 58%;
 
 				h5 {

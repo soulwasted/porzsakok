@@ -102,11 +102,12 @@ html(lang='en')
 			//- 						strong 45,98 €
 			.container.stripe-buttons
 				.row
-					.col-xs-2.col-sm-3.col-md-2
+					.col-xs-2.col-sm-5.col-md-4
 						a.btn.btn-default.btn-high.btn-block.btn-cart-back(href="kosik.html")
 							span.glyphicon.glyphicon-chevron-left(aria-hidden='true') 
-							span.hidden-xs Zpět do košíku
-					.col-xs-10.col-sm-9.col-md-offset-1
+							//- span.hidden-xs Zpět do košíku
+							span.hidden-xs #{__summary__back_to_cart}
+					.col-xs-10.col-sm-7.col-md-offset-1
 						a.btn.btn-primary.btn-lg.btn-block(href="#step-02")
 							| Odeslat objednávku
 							span.glyphicon.glyphicon-chevron-right(aria-hidden='true')

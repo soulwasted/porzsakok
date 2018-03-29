@@ -13,24 +13,26 @@ html(lang='en')
 			form#cart
 				.container
 					h3 #{__transport}
-					.radio
-						.order__choice
-							label
-								input(type="radio", name="radiosPayment") 
-								//- | Magyar Posta
-								| DPD
-								span (#{__free})
-								i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
-							.order__price #{__free}
-					.radio
-						.order__choice
-							label
-								input(type="radio", name="radiosPayment") 
-								//- | GLS
-								| FUN Courier
-								span (305 #{__currency})
-								i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
-							.order__price 305 #{__currency}
+					a.ajax
+						.radio
+							.order__choice
+								label
+									input(type="radio", name="radiosPayment") 
+									//- | Magyar Posta
+									| DPD
+									span (#{__free})
+									i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
+								.order__price #{__free}
+					a.ajax
+						.radio
+							.order__choice
+								label
+									input(type="radio", name="radiosPayment") 
+									//- | GLS
+									| FUN Courier
+									span (305 #{__currency})
+									i.glyphicon.glyphicon-info-sign.text-muted(data-toggle="tooltip", data-placement="top", title="Some text.")
+								.order__price 305 #{__currency}
 				.container
 					h3 #{__express_expedition}
 					.checkbox
@@ -95,7 +97,7 @@ html(lang='en')
 								input#form-cart-surname.form-control(type='text', placeholder='')
 							.form-group
 								label.control-label(for='form-cart-phone') *&nbsp;#{__phone}
-								input#form-cart-phone.form-control(type='tel', placeholder='+40')
+								input#form-cart-phone.form-control(type='tel', placeholder='', value='+40')
 							.form-group
 								label.control-label(for='form-cart-mail') *&nbsp;#{__email}
 								input#form-cart-mail.form-control(type='email', placeholder='')
@@ -111,6 +113,10 @@ html(lang='en')
 								label
 									input#cart-toggle-company-rb(type="radio", name="radiosBuy") 
 									| #{__address__company__checkbox}
+								//- span#icotxt_message.help-block.text-danger
+								//- 	i.glyphicon.glyphicon-exclamation-sign(aria-hidden='true')
+								//- 	|  Introduceţi CUI-ul firmei - celelalte date se vor completa automat!
+
 						.order__contact__group__items.order__contact__group__items--person#cart-toggle-person
 							.form-group
 								label.control-label(for='form-cart-person-name') *&nbsp;#{__address__person__name}
