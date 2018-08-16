@@ -5,13 +5,7 @@
 				h1 Sáčky pro více než <nobr>15&thinsp;000</nobr>&nbsp;typů vysavačů
 		.row
 			.col-lg-7.col-md-8.col-sm-12#search-fulltext
-				form(action='seznam-modelu.html', data-scroll-id='search-form')
-					input#search-input(type='text', placeholder='Hledejte značku / typ vysavače')
-					.icon-placeholder
-						i.icon-search
-					button.btn(type='submit') 
-						span Hledat 
-						i.icon-search
+				include ./search-fulltext.jade
 				.tt-menu
 					.content
 						.top
@@ -90,10 +84,4 @@
 										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
 										.link
 											.name= brand
-					//- 	ul
-					//- 			li
-					//- 				a(href="#")
-					//- 					img
-					//- 					.link
-					//- 						span= brand
 				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?

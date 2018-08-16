@@ -1,0 +1,87 @@
+//- seznam-modelu-2.jade
+doctype html
+html(lang='en')
+	- var title= "Seznam modelů Electrolux"
+	include ./includes/head.jade
+	body
+		.main.seznam-modelu
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li
+						a(href='/seznam-znacek.html') Seznam značek
+					li.active Electrolux
+					//- .row
+					//- 	a.btn.back(href='seznam-znacek.html') 
+					//- 		span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+					//- 		| Zpět na seznam značek vysavačů
+				.row
+					.col-xs-12
+						h1 Electrolux
+							img(src="https://chci-vysavat.cz/images/firms/electrolux.jpg", alt="Electrolux")
+						p Sháníte sáčky pro vysavače ETA? Značka ETA má dlouhodobou tradici na trhu. Ač už se vysavače ETA skoro nevyrábějí, je tato značka neustále zapsána v srdcích zákazníků jako kvalitní česká značka vysavačů. 
+						//- Proto i my Vám nabízíme náhradní sáčky do vysavačů této značka z pětivrstvé antibakteriální netkané textilie, která ochrání Vaše zdraví mnohem lépe než papírové sáčky. Revoluční konstrukce umožňuje sáčku zachytit více jemného prachu a jemných částic než běžné papírové sáčky. Samozřejmostí jsou množstevní slevy, doprava a doběrečné zdarma. Kromě toho Vám pošleme i dárek k nákupu. Objednané sáčky expedujeme rychle, protože všechny sáčky máme skladem. Zboží můžete vrátit do 3 měsíců bez udání důvodů.
+				.row
+					.col-xs-12.col-sm-6#search-fulltext
+						include ./includes/search-fulltext.jade
+						p.info 
+							strong Stačí začít psát model svého vysavače
+							|  a nabídka sáčků se začne zužovat až najdete ten, co hledáte. Nevíte, jaký máte model? Nevadí, najdete ho většinou 
+							strong na spodní straně vysavače
+							| .
+					.col-xs-12.col-sm-6.benefits-models
+						include ./includes/benefits-small.jade
+						div
+							.two-links
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--properties") 
+									strong Jaké jsou vlastnosti našich vysavačů?
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--accessories") 
+									strong Máme pro vás i doplňkové zboží
+
+			.container
+				.row
+					.col-xs-12
+						h3 Nejprodávanější sáčky
+						ul.list-models--columns
+							include ./includes/electrolux-models-6.jade
+				.row
+					.col-xs-12
+						p Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu. Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně, balónky působí jako jakási fata morgána uprostřed pouště. 
+			
+			.container
+				.row
+					.col-xs-12
+						h3 Prvních 30 modelů sáčků
+						ul.list-models--columns
+							- for (var i = 0; i < 5; ++i) {
+								include ./includes/electrolux-models-6.jade
+							- }
+			.container
+				.row
+					.col-xs-12.col-md-6.backToSearch
+						a(href="").btn.btn-link#btn-backToSearch Vyhledat model
+					.col-xs-12.col-md-6.pagination
+						.btn-toolbar
+							.btn-group
+								button(type="button").btn.btn-default.disabled první
+							.btn-group
+								button(type="button").btn.btn-default.disabled 1
+								button(type="button").btn.btn-default 2
+								button(type="button").btn.btn-default 3
+							.btn-group
+								button(type="button").btn.btn-default 13
+								button(type="button").btn.btn-default 14
+							.btn-group
+								button(type="button").btn.btn-default poslední
+				.row
+					.col-xs-12.loadMore
+						a.btn.btn-primary.btn-lg(href="#") Načíst dalších 30 modelů sáčků
+							| 
+							i.icon-plus
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
+		include ./includes/modal-models.jade
+		include ./includes/scripts.jade

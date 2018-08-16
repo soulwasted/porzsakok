@@ -51,6 +51,16 @@
 			@media (max-width: $screen-xs-max) {
 				margin-right: 20px;
 			}
+			a {
+				@media (max-width: $screen-xs-max) {
+					padding-top: 7px;
+				}
+				@media (max-width: 320px) {
+					padding-right: 2px;
+					padding-left: 0;
+					font-size: 12px;
+				}
+			}
 		}
 	}
 	.navbar-collapse {
