@@ -1,0 +1,84 @@
+//- hledani.jade
+doctype html
+html(lang='en')
+	- var title= 'Výsledek hledání "BS"'
+	include ./includes/head.jade
+	body
+		.main.seznam-modelu
+			include ./includes/nav.jade
+			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domov
+					li.active Výsledek hledání "BS"
+				.row
+					.col-xs-12
+						h1 Výsledek hledání "BS"
+						//- h3 2 značky
+						//- h3 682 modelů sáčků
+				.row
+					.col-xs-12.col-sm-6#search-fulltext
+						- var searchValue = 'BS'
+						include ./includes/search-fulltext.jade
+						p.info 
+							strong Stačí začít psát model svého vysavače
+							|  a nabídka sáčků se začne zužovat až najdete ten, co hledáte. Nevíte, jaký máte model? Nevadí, najdete ho většinou 
+							strong na spodní straně vysavače
+							| .
+					.col-xs-12.col-sm-6.benefits-models
+						include ./includes/benefits-small.jade
+						div
+							.two-links
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--properties") 
+									strong Jaké jsou vlastnosti našich vysavačů?
+								a.two-links__link(href='#', data-toggle="modal", data-target="#myModal--accessories") 
+									strong Máme pro vás i doplňkové zboží
+
+			.container
+				.row
+					.col-xs-12
+						h3 Nalezeny 2 značky
+						ul.list-models--columns
+							li
+								a(href='/electrolux/100-c')
+									img(src="https://chci-vysavat.cz/images/firms/electrolux.jpg", alt="Electrolux")
+									strong BSK
+							li
+								a(href='/electrolux/100-ce')
+									img(src="https://chci-vysavat.cz/images/firms/electrolux.jpg", alt="Electrolux")
+									strong JACOBS			
+			.container
+				.row
+					.col-xs-12
+						h3 Prvních 30 modelů sáčků z 682 nalezených
+						ul.list-models--columns
+							- for (var i = 0; i < 5; ++i) {
+								include ./includes/electrolux-models-6.jade
+							- }
+			.container
+				.row
+					.col-xs-12.col-md-6.backToSearch
+						a(href="").btn.btn-link#btn-backToSearch Vyhledat model
+					.col-xs-12.col-md-6.pagination
+						.btn-toolbar
+							.btn-group
+								button(type="button").btn.btn-default.disabled první
+							.btn-group
+								button(type="button").btn.btn-default.disabled 1
+								button(type="button").btn.btn-default 2
+								button(type="button").btn.btn-default 3
+							.btn-group
+								button(type="button").btn.btn-default 13
+								button(type="button").btn.btn-default 14
+							.btn-group
+								button(type="button").btn.btn-default poslední
+				.row
+					.col-xs-12.loadMore
+						a.btn.btn-primary.btn-lg(href="#") Načíst dalších 30 modelů sáčků
+							| 
+							i.icon-plus
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
+		include ./includes/modal-models.jade
+		include ./includes/scripts.jade

@@ -84,6 +84,9 @@
 		// trigger whisper
 		whisperFocus();
 
+		// back to search
+		backToSearch();
+
 		// reveal things when scrolled
 		revealThings();
 
@@ -120,6 +123,14 @@ function whisperFocus() {
 	$("#search-input").keypress(function () {
 		$("i.icon-search").addClass("anim");
 	});
+}
+
+function backToSearch() {
+	$('#backToSearch').click(function() {
+		$('#search-input').focus();
+		var anchor = document.querySelector('#search-input');
+		smoothScroll.animateScroll(anchor);
+	})
 }
 
 function funcReadMore() {

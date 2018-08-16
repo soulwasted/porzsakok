@@ -91,7 +91,7 @@ a.find {
 			@media (max-width: $screen-sm-max) {
 				padding: 0 10px;
 			}
-			@media (max-width: $screen-xs-max) {
+			@media (max-width: $screen-sm) {
 				height: 60px;
 				font-size: 14px;
 			}
@@ -107,7 +107,7 @@ a.find {
 				font-size: 32px;
 				color: rgba(0,0,0,0.2);
 				position: relative;
-				@media (max-width: $screen-sm-max) {
+				@media (max-width: $screen-sm) {
 					display: none;
 				}
 
@@ -168,25 +168,24 @@ a.find {
 		&:hover {
 			background-color: darken($brand-primary, 20);
 		}
-		@media (max-width: $screen-xs-max) {
+		@media (max-width: $screen-sm) {
 			margin-top: -55px;
 			margin-right: 5px;
 		}
-		@media (max-width: 480px) {
+		@media (max-width: $screen-sm) {
 			width: 50px;
 		}
 
 		i {
 			display: none;
-		}
-		@media (max-width: 480px) {
-			span {
-				display: none;
-			}
-
-			i {
+			@media (max-width: $screen-sm) {
 				display: block;
 				font-size: 24px;
+			}
+		}
+		span {
+			@media (max-width: $screen-sm) {
+				display: none;
 			}
 		}
 	}

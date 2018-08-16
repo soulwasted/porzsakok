@@ -1,0 +1,10 @@
+form(action='seznam-modelu.html', data-scroll-id='search-form')
+	if searchValue
+		input#search-input(type='text', placeholder='Hledejte typ vysavače', value='#{searchValue}')
+	else
+		input#search-input(type='text', placeholder='Hledejte typ vysavače')
+	.icon-placeholder
+		i.icon-search
+	button.btn(type='submit') 
+		span Hledat 
+		i.icon-search

@@ -29,9 +29,9 @@ $font-size-nav:             ceil(($font-size-base)); // ~14px
 
 $link-color:                $brand-secondary;
 
-$border-radius-base:        0;
-$border-radius-large:       0;
-$border-radius-small:       0;
+$border-radius-base:        2px;
+$border-radius-large:       4px;
+$border-radius-small:       6px;
 
 $btn-default-bg:            transparent;
 $btn-default-border:        $brand-secondary;
