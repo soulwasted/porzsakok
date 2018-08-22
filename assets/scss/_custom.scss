@@ -434,11 +434,21 @@ ul.list-brands {
 	color: $brand-primary;
 }
 
+// .sideThings {
+// 	position: fixed;
+// 	right: 0;
+// 	@include center(y); // see partials > _mixins.scss
+// 	// display: flex;
+// 	// justify-content: flex-end;
+// 	// flex-direction: column;
+// }
 
 .heureka {
+	right: 0;
 	position: fixed;
+	// top: 120px;
 	top: 50%;
-	margin-top: -94px;
+	margin-top: -240px;
 	// z-index: -1;
 	img {
 		@media screen and (max-width: $screen-sm) {
