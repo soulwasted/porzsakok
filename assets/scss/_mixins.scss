@@ -1,5 +1,27 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
 
 @mixin background-opacity($color, $opacity: 0.9) {
     background: $color; /* The Fallback */
     background: rgba($color, $opacity);
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+     @if $xy == xy{
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        @include transform(translateX(-50%) translateY(-50%));
+    }
+    @else if $xy == x {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    @else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        @include transform(translateY(-50%));
+    }
 }
