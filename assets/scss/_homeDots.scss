@@ -28,31 +28,11 @@ $L: 1170px; // media queries
     font-size: $size;
     font-size: calculateRem($size);
 }
-// center vertically and/or horizontally an absolute positioned element
-@mixin center($xy:xy) {
-     @if $xy == xy{
-        left: 50%;
-        top: 50%;
-        bottom: auto;
-        right: auto;
-        @include transform(translateX(-50%) translateY(-50%));
-    }
-    @else if $xy == x {
-        left: 50%;
-        right: auto;
-        @include transform(translateX(-50%));
-    }
-    @else if $xy == y {
-        top: 50%;
-        bottom: auto;
-        @include transform(translateY(-50%));
-    }
-}
+
 // border radius
 @mixin border-radius($radius:.25em) {
     border-radius: $radius;
 }
-@import 'bourbon/bourbon'; // http://bourbon.io/
 /* --------------------------------
 
 Main components
@@ -87,12 +67,15 @@ Main components
 .no-touch #cd-vertical-nav {
     position: fixed;
     right: 0;
+    top: 50%;
+    // margin-top: 100px;
     // padding: 15px;
-    @include center(y); // see partials > _mixins.scss
+    // @include center(y); // see partials > _mixins.scss
     z-index: 20;
 	transition: transform 0.2s, background-color 0.5s;
 	transition: box-shadow 0.2s linear;
 	background-color: transparent;
+    border-radius: 8px 0 0 8px;
 
     ul {
         list-style-type: none !important;
@@ -156,9 +139,11 @@ Main components
 		border-left: 1px solid $gray-lighter;
 		&.first {
 			border-top: 1px solid $gray-lighter;
+            border-radius: 8px 0 0 0;
 		}
 		&.last {
 			border-bottom: 1px solid $gray-lighter;
+            border-radius: 0 0 0 8px;
 		}
     }
 
