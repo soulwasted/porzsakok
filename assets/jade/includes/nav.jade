@@ -40,5 +40,7 @@ nav.navbar.navbar-default.navbar-fixed-top
 						| Přihlásit
 						i.icon-user(aria-hidden='true')
 
-.heureka
-	img(src="img/dummy-heureka.png" alt="Heuréka")
+
+include ./heureka.jade
+if title == "Home" 
+	include ./home-dots.jade
