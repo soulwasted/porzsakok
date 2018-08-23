@@ -4987,6 +4987,10 @@ ul.simple {
     font-size: 11px;
     font-weight: 700;
     line-height: 14px; }
+    @media screen and (max-width: 480px) {
+      .benefits-small__card .benefits-small__title {
+        text-transform: lowercase;
+        font-size: 10px; } }
 
 .two-links {
   display: -webkit-box;
@@ -5039,7 +5043,6 @@ ul.simple {
               justify-content: center; } }
 
 .pagination {
-  margin-bottom: 16px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5066,7 +5069,13 @@ ul.simple {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 16px;
   margin-bottom: 40px; }
+
+.results__header {
+  padding: 10px 0 20px 0; }
+  .results__header h3 {
+    margin-top: 5px; }
 
 ul.list-links {
   width: 100%;
@@ -5184,10 +5193,6 @@ ul.list-brands--columns {
           -ms-flex-align: center;
               align-items: center;
       padding: 8px; }
-      ul.list-models--columns li a:hover,
-      ul.list-brands--columns li a:hover {
-        border: 1px solid #b3b3b3;
-        text-decoration: none; }
       ul.list-models--columns li a img,
       ul.list-brands--columns li a img {
         width: 100px;
@@ -5199,6 +5204,25 @@ ul.list-brands--columns {
         padding: 0 16px;
         text-align: left;
         width: 100%; }
+      ul.list-models--columns li a .item__info,
+      ul.list-brands--columns li a .item__info {
+        font-size: 10px;
+        text-align: left;
+        color: #b3b3b3;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+        ul.list-models--columns li a .item__info span,
+        ul.list-brands--columns li a .item__info span {
+          display: block;
+          font-weight: 700; }
+      ul.list-models--columns li a:hover,
+      ul.list-brands--columns li a:hover {
+        border: 1px solid #b3b3b3;
+        text-decoration: none; }
+        ul.list-models--columns li a:hover .item__info,
+        ul.list-brands--columns li a:hover .item__info {
+          color: #5D707E; }
 
 ul.list-brands--columns li a img {
   width: 200px;
@@ -5287,12 +5311,13 @@ ul.list-brands {
   color: #FF585B; }
 
 .heureka {
+  right: 0;
   position: fixed;
   top: 50%;
-  margin-top: -94px; }
+  margin-top: -240px; }
   @media screen and (max-width: 768px) {
-    .heureka img {
-      width: 20px; } }
+    .heureka {
+      display: none; } }
 
 .special {
   font-family: Raleway, Arial, sans-serif; }
@@ -5508,6 +5533,8 @@ strong.info {
       padding-right: 2px;
       padding-left: 0;
       font-size: 12px; } }
+  .navbar .navbar-collapse {
+    background-color: white; }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar .navbar-nav li a {
@@ -7451,11 +7478,6 @@ Main components
   position: fixed;
   right: 0;
   top: 50%;
-  bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
   z-index: 20;
   -webkit-transition: background-color 0.5s, -webkit-transform 0.2s;
   transition: background-color 0.5s, -webkit-transform 0.2s;
@@ -7467,7 +7489,8 @@ Main components
   -o-transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear;
   transition: box-shadow 0.2s linear, -webkit-box-shadow 0.2s linear;
-  background-color: transparent; }
+  background-color: transparent;
+  border-radius: 8px 0 0 8px; }
   .no-touch #cd-vertical-nav ul {
     list-style-type: none !important;
     margin-bottom: 0; }
@@ -7517,9 +7540,11 @@ Main components
     padding: 10px;
     border-left: 1px solid #e6e6e6; }
     .no-touch #cd-vertical-nav .cd-dot-wrapper.first {
-      border-top: 1px solid #e6e6e6; }
+      border-top: 1px solid #e6e6e6;
+      border-radius: 8px 0 0 0; }
     .no-touch #cd-vertical-nav .cd-dot-wrapper.last {
-      border-bottom: 1px solid #e6e6e6; }
+      border-bottom: 1px solid #e6e6e6;
+      border-radius: 0 0 0 8px; }
   .no-touch #cd-vertical-nav .cd-dot {
     position: relative;
     /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/

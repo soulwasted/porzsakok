@@ -179,6 +179,10 @@ ul.simple {
 		font-size: 11px;
 		font-weight: 700;
 		line-height: 14px;
+		@media screen and (max-width: $screen-xs) {
+			text-transform: lowercase;
+			font-size: 10px;
+		}
 	}
 }
 
@@ -216,7 +220,7 @@ h4.arrow01 {
 	}
 }
 .pagination {
-	margin-bottom: 16px;
+	// margin-bottom: 16px;
 	display: flex;
 	justify-content: flex-end;
 	@media (max-width: $screen-md) {
@@ -226,7 +230,16 @@ h4.arrow01 {
 .loadMore {
 	display: flex;
 	justify-content: center;
+	margin-top: 16px;
 	margin-bottom: 40px;
+}
+
+
+.results__header {
+	padding: 10px 0 20px 0;
+	h3 {
+		margin-top: 5px;
+	}
 }
 
 
@@ -322,11 +335,6 @@ ul.list-brands--columns {
 			transition: all 0.5s;
 			align-items: center;
 			padding: 8px;
-			&:hover {
-				border: 1px solid $gray-light;
-				// color: white;
-				text-decoration: none;
-			}
 			img {
 				// border: 1px solid $gray-lightest;
 				width: 100px;
@@ -340,6 +348,24 @@ ul.list-brands--columns {
 				padding: 0 16px;
 				text-align: left;
 				width: 100%;
+			}
+			.item__info {
+				font-size: 10px;
+				text-align: left;
+				color: $gray-light;
+				transition: all 0.5s;
+				span {
+					display: block;
+					font-weight: 700;
+				}
+			}
+			&:hover {
+				border: 1px solid $gray-light;
+				// color: white;
+				text-decoration: none;
+				.item__info {
+					color: $gray-dark;
+				}
 			}
 		}
 	}
@@ -450,10 +476,8 @@ ul.list-brands {
 	top: 50%;
 	margin-top: -240px;
 	// z-index: -1;
-	img {
-		@media screen and (max-width: $screen-sm) {
-			width: 20px;
-		}
+	@media screen and (max-width: $screen-sm) {
+		display: none;
 	}
 
 }

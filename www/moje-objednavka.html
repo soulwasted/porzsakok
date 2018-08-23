@@ -43,39 +43,39 @@
                             <li><a href="moje-objednavka.html">Moje objednávka</a></li>
                             <li class="visible-xs"><a href="prihlaseni.html" class="cart">Přihlásit<i aria-hidden="true" class="icon-user"></i></a></li>
                         </ul>
+                </div>
+        </div>
+        </nav>
+        <div class="heureka"><img src="img/dummy-heureka-right.png" alt="Heuréka"></div>
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="/">Domov</a></li>
+                <li class="active">Stav objednávky</li>
+            </ul>
+            <h1> Zistiť stav objednávky</h1>
+            <form id="frm-signInForm" action="/prihlasit" method="post" novalidate="" class="form-horizontal">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 label11">
+                        <li><span class="glyphicon glyphicon-paperclip"></span> Stav Vašej objednávky môžete zistiť aj keď ste sa neprihlásili do svojho osobného účtu.</li>
+                        <div class="col-xs-12">
+                            <div class="form-group"><label for="form-order-number" class="control-label">Číslo objednávky</label><input id="form-order-number" type="text" placeholder="" class="btn-high form-control"></div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group"><label for="form-order-mail" class="control-label">Váš e-mail</label><input id="form-order-mail" type="mail" placeholder="" class="btn-high form-control"></div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="form-group"><button type="submit" name="send" class="btn btn-primary btn-lg btn-block"><i class="glyphicon glyphicon-ok"></i> Prihlásiť</button></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-1 label11">
+                        <li><span class="glyphicon glyphicon-paperclip"></span> Keď sa prihlásite do Vášho osobného účtu môžete si sami:<br>
+                            <div class="list-offset">- zmeniť osobné údaje<br>- zmeniť heslo<br>- sledovať stav Vašej aktuálnej objednávky<br>- nájsť kompletný prehľad a históriu svojich objednávok<br>- vytvoriť novú objednávku bez nutnosti vyplňovať identifikačné údaje<br>-
+                                vytlačiť akúkoľvek historickú objednávku alebo faktúru.</div>
+                        </li>
                     </div>
                 </div>
-            </nav>
-            <div class="heureka"><img src="img/dummy-heureka.png" alt="Heuréka"></div>
-            <div class="container">
-                <ul class="breadcrumb">
-                    <li><a href="/">Domov</a></li>
-                    <li class="active">Stav objednávky</li>
-                </ul>
-                <h1> Zistiť stav objednávky</h1>
-                <form id="frm-signInForm" action="/prihlasit" method="post" novalidate="" class="form-horizontal">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-5 label11">
-                            <li><span class="glyphicon glyphicon-paperclip"></span> Stav Vašej objednávky môžete zistiť aj keď ste sa neprihlásili do svojho osobného účtu.</li>
-                            <div class="col-xs-12">
-                                <div class="form-group"><label for="form-order-number" class="control-label">Číslo objednávky</label><input id="form-order-number" type="text" placeholder="" class="btn-high form-control"></div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group"><label for="form-order-mail" class="control-label">Váš e-mail</label><input id="form-order-mail" type="mail" placeholder="" class="btn-high form-control"></div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group"><button type="submit" name="send" class="btn btn-primary btn-lg btn-block"><i class="glyphicon glyphicon-ok"></i> Prihlásiť</button></div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-sm-offset-1 label11">
-                            <li><span class="glyphicon glyphicon-paperclip"></span> Keď sa prihlásite do Vášho osobného účtu môžete si sami:<br>
-                                <div class="list-offset">- zmeniť osobné údaje<br>- zmeniť heslo<br>- sledovať stav Vašej aktuálnej objednávky<br>- nájsť kompletný prehľad a históriu svojich objednávok<br>- vytvoriť novú objednávku bez nutnosti vyplňovať identifikačné údaje<br>-
-                                    vytlačiť akúkoľvek historickú objednávku alebo faktúru.</div>
-                            </li>
-                        </div>
-                    </div>
-                </form>
-            </div>
+            </form>
+        </div>
         </div>
     </body>
     <div id="section-03" class="container-fluid stripe-guarantee cd-section">
@@ -85,11 +85,15 @@
         <div class="row badge-100"><span class="reveal">100 %</span>na vrácení zboží</div>
         <div class="row">
             <p>můžete vrátit zboží <strong>do 3 měsíců od nákupu</strong> bez udání důvodu</p>
-            <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span
-                    aria-hidden="true" class="glyphicon glyphicon-star"></span></div>
+            <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+                <span
+                    aria-hidden="true" class="glyphicon glyphicon-star"></span>
+            </div>
             <p>můžete vrátit i <strong>rozbalené balení</strong> sáčků</p>
-            <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span
-                    aria-hidden="true" class="glyphicon glyphicon-star"></span></div>
+            <div class="star-divider"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span>
+                <span
+                    aria-hidden="true" class="glyphicon glyphicon-star"></span>
+            </div>
             <p>můžete vrátit balení i v případě, že <strong>jeden sáček je použitý a chybí</strong></p>
         </div>
     </div>
