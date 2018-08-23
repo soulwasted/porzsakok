@@ -51,9 +51,24 @@ html(lang='en')
 						p Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu. Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně, balónky působí jako jakási fata morgána uprostřed pouště. 
 			
 			.container
+				.row.results__header
+					.col-xs-12.col-md-6
+						h3 Prvních 30 modelů sáčků z 682
+					.col-xs-12.col-md-6.pagination
+						.btn-toolbar
+							.btn-group
+								button(type="button").btn.btn-default.disabled první
+							.btn-group
+								button(type="button").btn.btn-default.disabled 1
+								button(type="button").btn.btn-default 2
+								button(type="button").btn.btn-default 3
+							.btn-group
+								button(type="button").btn.btn-default 13
+								button(type="button").btn.btn-default 14
+							.btn-group
+								button(type="button").btn.btn-default poslední
 				.row
 					.col-xs-12
-						h3 Prvních 30 modelů sáčků
 						ul.list-models--columns
 							- for (var i = 0; i < 5; ++i) {
 								include ./includes/electrolux-models-6.jade
@@ -61,7 +76,9 @@ html(lang='en')
 			.container
 				.row
 					.col-xs-12.col-md-6.backToSearch
-						a(href="").btn.btn-link#btn-backToSearch Vyhledat model
+						a(href="").btn.btn-default Načíst dalších 30 modelů sáčků
+							| 
+							i.icon-plus
 					.col-xs-12.col-md-6.pagination
 						.btn-toolbar
 							.btn-group
@@ -77,9 +94,13 @@ html(lang='en')
 								button(type="button").btn.btn-default poslední
 				.row
 					.col-xs-12.loadMore
-						a.btn.btn-primary.btn-lg(href="#") Načíst dalších 30 modelů sáčků
+						a.btn.btn-primary.btn-lg#btn-backToSearch(href="#") Vyhledat model
 							| 
-							i.icon-plus
+							i.icon-search
+			.container
+				.row
+					.col-xs-12
+						p Vítr skoro nefouká a tak by se na první pohled mohlo zdát, že se balónky snad vůbec nepohybují. Jenom tak klidně levitují ve vzduchu. Jelikož slunce jasně září a na obloze byste od východu k západu hledali mráček marně, balónky působí jako jakási fata morgána uprostřed pouště. Zkrátka široko daleko nikde nic, jen zelenkavá tráva, jasně modrá obloha a tři křiklavě barevné pouťové balónky, které se téměř nepozorovatelně pohupují ani ne moc vysoko, ani moc nízko nad zemí. Kdyby pod balónky nebyla sytě zelenkavá tráva, ale třeba suchá silnice či beton, možná by bylo vidět jejich barevné stíny - to jak přes poloprůsvitné barevné balónky prochází ostré sluneční paprsky. 
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade

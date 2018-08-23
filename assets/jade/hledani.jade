@@ -21,9 +21,11 @@ html(lang='en')
 						- var searchValue = 'BS'
 						include ./includes/search-fulltext.jade
 						p.info 
-							strong Stačí začít psát model svého vysavače
+							strong Stačí začít psát 
+								a(href='#', data-toggle="modal", data-target="#myModal") model svého vysavače
 							|  a nabídka sáčků se začne zužovat až najdete ten, co hledáte. Nevíte, jaký máte model? Nevadí, najdete ho většinou 
-							strong na spodní straně vysavače
+							strong 
+								a(href='#', data-toggle="modal", data-target="#myModal") na spodní straně vysavače
 							| .
 					.col-xs-12.col-sm-6.benefits-models
 						include ./includes/benefits-small.jade
@@ -48,9 +50,24 @@ html(lang='en')
 									img(src="https://chci-vysavat.cz/images/firms/electrolux.jpg", alt="Electrolux")
 									strong JACOBS			
 			.container
+				.row.results__header
+					.col-xs-12.col-md-6
+						h3 Prvních 30 modelů sáčků z 682 nalezených
+					.col-xs-12.col-md-6.pagination
+						.btn-toolbar
+							.btn-group
+								button(type="button").btn.btn-default.disabled první
+							.btn-group
+								button(type="button").btn.btn-default.disabled 1
+								button(type="button").btn.btn-default 2
+								button(type="button").btn.btn-default 3
+							.btn-group
+								button(type="button").btn.btn-default 13
+								button(type="button").btn.btn-default 14
+							.btn-group
+								button(type="button").btn.btn-default poslední
 				.row
 					.col-xs-12
-						h3 Prvních 30 modelů sáčků z 682 nalezených
 						ul.list-models--columns
 							- for (var i = 0; i < 5; ++i) {
 								include ./includes/electrolux-models-6.jade
@@ -58,7 +75,9 @@ html(lang='en')
 			.container
 				.row
 					.col-xs-12.col-md-6.backToSearch
-						a(href="").btn.btn-link#btn-backToSearch Vyhledat model
+						a(href="").btn.btn-default Načíst dalších 30 modelů sáčků
+							| 
+							i.icon-plus
 					.col-xs-12.col-md-6.pagination
 						.btn-toolbar
 							.btn-group
@@ -74,9 +93,9 @@ html(lang='en')
 								button(type="button").btn.btn-default poslední
 				.row
 					.col-xs-12.loadMore
-						a.btn.btn-primary.btn-lg(href="#") Načíst dalších 30 modelů sáčků
+						a.btn.btn-primary.btn-lg#btn-backToSearch(href="#") Vyhledat model
 							| 
-							i.icon-plus
+							i.icon-search
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade
