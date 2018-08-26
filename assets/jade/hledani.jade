@@ -56,7 +56,8 @@ html(lang='en')
 					.col-xs-12.col-md-6.pagination
 						.btn-toolbar
 							.btn-group
-								button(type="button").btn.btn-default.disabled první
+								button(type="button").btn.btn-default.disabled.hidden-xs první
+								button(type="button").btn.btn-default.disabled.visible-xs |<
 							.btn-group
 								button(type="button").btn.btn-default.disabled 1
 								button(type="button").btn.btn-default 2
@@ -65,7 +66,8 @@ html(lang='en')
 								button(type="button").btn.btn-default 13
 								button(type="button").btn.btn-default 14
 							.btn-group
-								button(type="button").btn.btn-default poslední
+								button(type="button").btn.btn-default.hidden-xs poslední
+								button(type="button").btn.btn-default.visible-xs >|
 				.row
 					.col-xs-12
 						ul.list-models--columns
@@ -81,7 +83,8 @@ html(lang='en')
 					.col-xs-12.col-md-6.pagination
 						.btn-toolbar
 							.btn-group
-								button(type="button").btn.btn-default.disabled první
+								button(type="button").btn.btn-default.disabled.hidden-xs první
+								button(type="button").btn.btn-default.disabled.visible-xs |<
 							.btn-group
 								button(type="button").btn.btn-default.disabled 1
 								button(type="button").btn.btn-default 2
@@ -90,12 +93,13 @@ html(lang='en')
 								button(type="button").btn.btn-default 13
 								button(type="button").btn.btn-default 14
 							.btn-group
-								button(type="button").btn.btn-default poslední
+								button(type="button").btn.btn-default.hidden-xs poslední
+								button(type="button").btn.btn-default.visible-xs >|
 				.row
 					.col-xs-12.loadMore
-						a.btn.btn-primary.btn-lg#btn-backToSearch(href="#") Vyhledat model
-							| 
-							i.icon-search
+						a.btn.btn-primary.btn-lg#btn-backToSearch(href="#") Přejít na vyhledávání
+							//- | 
+							//- i.icon-search
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 		include ./includes/modal-type.jade
