@@ -4872,6 +4872,13 @@ button.close {
   padding-top: 0;
   padding-bottom: 0; }
 
+.btn-active {
+  border-color: transparent;
+  color: #000000; }
+
+.btn-group span {
+  line-height: 30px; }
+
 form .input-group {
   display: inline-table; }
 

@@ -32,6 +32,19 @@
 	padding-top: 0;
 	padding-bottom: 0;
 }
+.btn-active {
+	border-color: transparent;
+	color: $black;
+	&:hover {
+		// border-color: transparent;
+	}
+}
+
+.btn-group {
+	span {
+		line-height: 30px;
+	}
+}
 // .btn-group {
 // 	.btn {
 // 		height: 40px;
