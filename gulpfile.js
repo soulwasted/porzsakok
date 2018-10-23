@@ -33,6 +33,7 @@ var paths = {
 		js: "assets/js/**/*.js",
 		sass: "assets/scss/**/*.scss",
 		css: "assets/css/**/*.css",
+		svg: "assets/svg/**/*.svg",
 		images: "assets/images/**/*"
 	},
 	fonts: {
@@ -76,7 +77,8 @@ var paths = {
 		min: "scripts.min.js",
 		justcopy: [
 			"assets/js/app.js",
-			"assets/js/slider.js"
+			"assets/js/slider.js",
+			"assets/js/detail-2.js"
 		]
 	},
 	sass: {
@@ -88,6 +90,10 @@ var paths = {
 	css: {
 		src: "assets/css/**/*.css",
 		dest: "www/css"
+	},
+	svg: {
+		src: "assets/svg/**/*.svg",
+		dest: "www/img/svg"
 	},
 	cleanPreprocessStyles: "assets/preprocess/**/*",
 	cleanFilesInProduction: [
@@ -310,6 +316,14 @@ gulp.task('process-css', function () {
 	processCopyCss();
 });
 
+function processCopySvg() {
+	return gulp.src(paths.svg.src)
+		.pipe(gulp.dest(paths.svg.dest));
+}
+gulp.task('process-svg', function () {
+	processCopySvg();
+});
+
 function processCopyScripts() {
 	return gulp.src(paths.scripts.justcopy)
 		.pipe(gulp.dest(paths.scripts.dest));
@@ -381,6 +395,7 @@ gulp.task('default', gulpSequence(
 	'process-scripts',
 	'process-sass',
 	'process-css',
+	'process-svg',
 	// 'process-livereload',
 	// 'process-fonts',
 	'watch'

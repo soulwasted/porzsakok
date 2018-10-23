@@ -1,0 +1,98 @@
+form(action="#").selection
+	.package.package--xl
+		input(type="radio", id="package-xl", name="package", value="package-xl")
+		label(for="package-xl") 
+			| XL
+			.small 32 sáčků
+		.package__price
+			| € 42
+			.package__price-before € 57
+		.package__benefits
+			.package__benefit
+				.icon
+					i.icon-transport(aria-hidden='true')
+				.text Doprava 
+					strong zadarmo
+			.package__benefit
+				.icon
+					i.icon-save-hand(aria-hidden='true')
+				.text Sleva 
+					strong 26 %
+			.package__benefit
+				.icon
+					i.icon-microfilter(aria-hidden='true')
+				.text 8× mikrofiltr 
+					strong zadarmo
+			.package__benefit
+				.icon
+					i.icon-gift(aria-hidden='true')
+				.text 1× vůně 
+					strong zadarmo
+	.package.package--l.package--selected
+		input(type="radio", id="package-l", name="package", value="package-l", "checked")
+		label(for="package-l") 
+			| L
+			.small 24 sáčků
+		.package__price
+			//- .package__price-before &nbsp;
+			| € 36
+			.package__price-before € 44
+		.package__benefits
+			.package__benefit
+				.icon
+					i.icon-transport(aria-hidden='true')
+				.text Doprava 
+					strong zadarmo
+			.package__benefit
+				.icon
+					i.icon-save-hand(aria-hidden='true')
+				.text Sleva 
+					strong 19 %
+			.package__benefit
+				.icon
+					i.icon-microfilter(aria-hidden='true')
+				.text 6× mikrofiltr 
+					strong zadarmo
+	.package.package--m
+		input(type="radio", id="package-m", name="package", value="package-m")
+		label(for="package-m") 
+			| M
+			.small 16 sáčků
+		.package__price
+			| € 30
+			.package__price-before € 34
+		.package__benefits
+			.package__benefit
+				.icon
+					i.icon-transport(aria-hidden='true')
+				.text Doprava 
+					strong zadarmo
+			.package__benefit
+				.icon
+					i.icon-save-hand(aria-hidden='true')
+				.text Sleva 
+					strong 12 %
+			.package__benefit
+				.icon
+					i.icon-microfilter(aria-hidden='true')
+				.text 4× mikrofiltr 
+					strong zadarmo
+	.package.package--s
+		input(type="radio", id="package-s", name="package", value="package-s")
+		label(for="package-s") 
+			| S
+			.small 8 sáčků
+		.package__price
+			| € 17
+			//- .price-before € 57
+		.package__benefits
+			.package__benefit
+				.icon
+					i.icon-transport(aria-hidden='true')
+				.text Doprava 
+					strong za € 2
+			.package__benefit
+				.icon
+					i.icon-microfilter(aria-hidden='true')
+				.text 2× mikrofiltr 
+					strong zadarmo

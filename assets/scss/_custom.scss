@@ -485,9 +485,9 @@ ul.list-brands {
 .heureka {
 	right: 0;
 	position: fixed;
-	// top: 120px;
 	top: 50%;
 	margin-top: -240px;
+	// z-index: 10;
 	// z-index: -1;
 	@media screen and (max-width: $screen-sm) {
 		display: none;

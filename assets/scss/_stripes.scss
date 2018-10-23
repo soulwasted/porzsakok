@@ -92,6 +92,8 @@
 	@extend .stripe-inverse;
 	text-align: center;
 	background: url('../img/bg-stripe-guarantee.jpg') center center / cover no-repeat;
+	// background-color: $brand-primary;
+	// background-blend-mode: multiply;
 	h2 {
 		margin-bottom: 30px;
 	}

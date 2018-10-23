@@ -6,15 +6,24 @@ $gray-new:					#808080;
 $gray-light:                #b3b3b3;
 $gray-lighter:              #e6e6e6;
 $gray-lightest:             #f7f7f7;
-$gray-dark:					#5D707E;
+// $gray-dark:					#5D707E;
+// violet
+$gray-dark:					#251D3C;
 
 // $brand-primary:              #18823a;
-$brand-primary:             #FF585B;
-$brand-secondary:			#0089b0;
-$brand-success:             #0089b0;
+// $brand-primary:             #FF585B;
+// $brand-secondary:			#0089b0;
+// $brand-success:             #0089b0;
+$brand-violet:              #5736B9;
 $brand-red:                 #b5143b;
-
 $light-blue:                #D9EEF3;
+
+
+$brand-success:             $brand-violet;
+
+$brand-primary:             $brand-violet;
+$brand-secondary:			$brand-violet;
+
 
 $text-color:                $gray-dark;
 
@@ -29,9 +38,9 @@ $font-size-nav:             ceil(($font-size-base)); // ~14px
 
 $link-color:                $brand-secondary;
 
-$border-radius-base:        2px;
-$border-radius-large:       4px;
-$border-radius-small:       6px;
+$border-radius-small:       2px;
+$border-radius-base:        4px;
+$border-radius-large:       6px;
 
 $btn-default-bg:            transparent;
 $btn-default-border:        $brand-secondary;
