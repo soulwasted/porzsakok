@@ -463,6 +463,7 @@ ul.list-brands {
 }
 
 .hidden-xs {
+	line-height: inherit !important;
 	@media screen and (max-width: $screen-xs) {
 		display: none !important;
 	}

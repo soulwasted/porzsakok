@@ -5310,9 +5310,11 @@ ul.list-brands {
   .visible-xs {
     display: none !important; } }
 
-@media screen and (max-width: 480px) {
-  .hidden-xs {
-    display: none !important; } }
+.hidden-xs {
+  line-height: inherit !important; }
+  @media screen and (max-width: 480px) {
+    .hidden-xs {
+      display: none !important; } }
 
 .help-block.text-danger {
   color: #5736B9; }
