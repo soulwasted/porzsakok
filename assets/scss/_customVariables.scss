@@ -7,22 +7,20 @@ $gray-light:                #b3b3b3;
 $gray-lighter:              #e6e6e6;
 $gray-lightest:             #f7f7f7;
 // $gray-dark:					#5D707E;
-// violet
+
 $gray-dark:					#251D3C;
 
-// $brand-primary:              #18823a;
-// $brand-primary:             #FF585B;
-// $brand-secondary:			#0089b0;
-// $brand-success:             #0089b0;
 $brand-violet:              #5736B9;
-$brand-red:                 #b5143b;
+$brand-red:                 #FF585B;
+$brand-blue:                #0089b0;
 $light-blue:                #D9EEF3;
 
 
-$brand-success:             $brand-violet;
 
-$brand-primary:             $brand-violet;
-$brand-secondary:			$brand-violet;
+$brand-success:             $brand-blue;
+
+$brand-primary:             $brand-red;
+$brand-secondary:			$brand-blue;
 
 
 $text-color:                $gray-dark;
