@@ -1,25 +1,29 @@
 nav.navbar.navbar-default.navbar-fixed-top
 	.container-fluid
+		.eu-cookies.row.alert-info
+			.container
+				.col-sm-12
+					button.close.btn.btn-sm(type='button') &times;
+					| Ez a weboldal a szolg&aacute;ltat&aacute;sny&uacute;jt&aacute;shoz &eacute;s a l&aacute;togat&aacute;s-elemz&eacute;shez cookies f&aacute;jlokat haszn&aacute;l. A weboldal hazn&aacute;lat&aacute;val &Ouml;n ezt elfogadja. 
+					a.alert-link(href='https://www.google.com/policies/technologies/cookies/') Tov&aacute;bbi inform&aacute;ci&oacute;k
+		
+		noscript
+			style.
+				.eu-cookies { display:none }
 		.navbar-header.pull-left
-			a.navbar-brand.special(href='index.html') Porzsákok
+			a.navbar-brand.special(href='index.html') chci-vysávat.cz
 		.navbar-header.pull-right.cart
 			ul.nav.navbar-nav.pull-left
 				li.hidden-xs
 					a.cart(href='prihlaseni.html')
-						| Přihlášení
 						span.glyphicon.glyphicon-user(aria-hidden='true')
-				li.dropdown
-					//- a.cart(href='kosik.html', class="dropdown-toggle", data-toggle="dropdown")
+						| Přihlásit
+				li
 					a.cart(href='kosik.html')
-						| Košík
 						span.glyphicon.glyphicon-shopping-cart(aria-hidden='true')
-						span.badge 2
-					ul.dropdown-menu.hidden-xs
-						li
-							include item--cart--dropdown.jade
-						li
-							include item--cart--dropdown.jade
-						a.btn.btn-primary.btn-lg(href="#") Přejít do košíku
+						span.badge 2 
+							span.hidden-xs balení
+						|  1360 Kč
 			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#menu', aria-expanded='false')
 				span.sr-only Toggle navigation
 				span.icon-bar
@@ -28,8 +32,9 @@ nav.navbar.navbar-default.navbar-fixed-top
 		#menu.collapse.navbar-collapse.navbar-left
 			ul.nav.navbar-nav
 				li
-					a(href='o-nas.html') O nás
-				li.active
+					a(href='o-nas.html') Více o sáčcích VACS
+				//- li.active
+				li
 					a(href='jak-nakoupit.html') Jak nakoupit
 				li
 					a(href='kontakt.html') Kontakt
@@ -37,5 +42,5 @@ nav.navbar.navbar-default.navbar-fixed-top
 					a(href='moje-objednavka.html') Moje objednávka
 				li.visible-xs
 					a.cart(href='prihlaseni.html')
-						| Přihlášení
+						| Přihlásit
 						span.glyphicon.glyphicon-user(aria-hidden='true')

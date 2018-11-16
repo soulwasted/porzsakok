@@ -1,0 +1,154 @@
+/**
+vrecka-icons Webfont
+*/
+@font-face {
+	font-family: 'vrecka-icons';
+	src: url('vrecka-icons.eot?1540217857297');
+	src: url('vrecka-icons.eot?#iefix-1540217857297') format('embedded-opentype'),
+		url('vrecka-icons.woff2?1540217857297') format('woff2'),
+		url('vrecka-icons.woff?1540217857297') format('woff'),
+		url('vrecka-icons.ttf?1540217857297') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'vrecka-icons';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*
+Glyphs list
+*/
+
+.icon-badge:before {
+	content: '\ea01';
+}
+
+.icon-bags:before {
+	content: '\ea02';
+}
+
+.icon-bomb:before {
+	content: '\ea03';
+}
+
+.icon-cart:before {
+	content: '\ea04';
+}
+
+.icon-check:before {
+	content: '\ea05';
+}
+
+.icon-check2:before {
+	content: '\ea06';
+}
+
+.icon-check4:before {
+	content: '\ea07';
+}
+
+.icon-checked:before {
+	content: '\ea08';
+}
+
+.icon-clock:before {
+	content: '\ea09';
+}
+
+.icon-euro:before {
+	content: '\ea0a';
+}
+
+.icon-form-checked:before {
+	content: '\ea0b';
+}
+
+.icon-form-empty:before {
+	content: '\ea0c';
+}
+
+.icon-gift:before {
+	content: '\ea0d';
+}
+
+.icon-heart:before {
+	content: '\ea0e';
+}
+
+.icon-microfilter:before {
+	content: '\ea0f';
+}
+
+.icon-pic-clock:before {
+	content: '\ea10';
+}
+
+.icon-pic-closing:before {
+	content: '\ea11';
+}
+
+.icon-pic-filter:before {
+	content: '\ea12';
+}
+
+.icon-pic-join:before {
+	content: '\ea13';
+}
+
+.icon-pic-magnify:before {
+	content: '\ea14';
+}
+
+.icon-pic-space:before {
+	content: '\ea15';
+}
+
+.icon-piggy:before {
+	content: '\ea16';
+}
+
+.icon-plus:before {
+	content: '\ea17';
+}
+
+.icon-save-hand:before {
+	content: '\ea18';
+}
+
+.icon-search:before {
+	content: '\ea19';
+}
+
+.icon-star:before {
+	content: '\ea1a';
+}
+
+.icon-stopwatch-48h:before {
+	content: '\ea1b';
+}
+
+.icon-thumbs_up:before {
+	content: '\ea1c';
+}
+
+.icon-transport:before {
+	content: '\ea1d';
+}
+
+.icon-user:before {
+	content: '\ea1e';
+}

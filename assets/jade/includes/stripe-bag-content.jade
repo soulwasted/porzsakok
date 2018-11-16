@@ -1,0 +1,82 @@
+.row
+	img.vacs-stripe.img-responsive(src='img/vacs-logo-stripe.png', alt='VACS')
+.row.pois
+	.col-xs-12.col-sm-8
+		.bag-wrapper
+			.circle
+				a.poi.one.active(href='#accordion', data-scroll)
+					i.icon-pic-magnify
+				a.poi.two(href='#accordion', data-scroll)
+					i.icon-pic-clock
+				a.poi.three(href='#accordion', data-scroll)
+					i.icon-pic-filter
+				a.poi.four(href='#accordion', data-scroll)
+					i.icon-pic-space
+				a.poi.five(href='#accordion', data-scroll)
+					i.icon-pic-join
+				a.poi.six(href='#accordion', data-scroll)
+					i.icon-pic-closing
+	.col-xs-12.col-sm-4
+		#accordion.panel-group(role='tablist', aria-multiselectable='true')
+			.panel.panel-default
+				#headingOne.panel-heading(role='tab')
+					h5.panel-title
+						a(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-one', aria-expanded='true', aria-controls='collapseOne')
+							| PÉČE O VAŠE ZDRAVÍ
+				#poi-text-one.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+					.panel-body
+						p
+							| Sáčky VACS jsou vyrobené z antibakteriální netkané textílie, která má 
+							strong 5 filtračních vrstev
+							|  a představuje špičkovou technologii pro ochranu vašeho zdraví.
+			.panel.panel-default
+				#headingTwo.panel-heading(role='tab')
+					h5.panel-title
+						a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-two', aria-expanded='false', aria-controls='collapseTwo')
+							| PRODLOUŽENA ŽIVOTNOST
+				#poi-text-two.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+					.panel-body
+						p
+							| Sáčky VACS mají ve srovnání s papírovými sáčky 
+							strong o 50 % delší živnostnost
+							| . Šetříme Vaše peníze, protože nemusí vyměňovat sáčky tak často.
+			.panel.panel-default
+				#headingThree.panel-heading(role='tab')
+					h5.panel-title
+						a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-three', aria-expanded='false', aria-controls='collapseThree')
+							| ÚČINNĚJŠÍ FILTRACE
+				#poi-text-three.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+					.panel-body
+						p
+							| Syntetická netkaná textílie 
+							strong odfiltruje až 99 % částic
+							|  o velikosti jeden mikron - to je až o 40% více oproti papírovému sáčku. Je to dáno skladbou stěny sáčků. Moderní netkané textilie se při výrobě sáčků pokládají ve vrstvách na sebe (sáčky VACS mají 5 vrstev), přičemž každá vrstva je specificky určená pro jinou funkci – od filtrace různých velikostí částic nečistot až po ochrannou funkci.
+			.panel.panel-default
+				#headingFour.panel-heading(role='tab')
+					h5.panel-title
+						a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-four', aria-expanded='false', aria-controls='collapseThree')
+							| LEPŠÍ VYUŽITÍ PROSTORU
+				#poi-text-four.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+					.panel-body
+						p
+							| Sáčky VACS nemají skládání, na první pohled vypadají větší než jiné sáčky. Díky pružnosti netkané textilie se 
+							strong sáček snadno přizpůsobí svému prostoru
+							|  ve vysavači a pojme minimálně o 15 % více nečistot než papírový sáček.
+			.panel.panel-default
+				#headingFive.panel-heading(role='tab')
+					h5.panel-title
+						a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-five', aria-expanded='false', aria-controls='collapseFive')
+							| PEVNOST SPOJE
+				#poi-text-five.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
+					.panel-body
+						p
+							| Papírové sáčky mají lepené spoje, které jsou velice náchylné na poškození. Pokud není lepení kvalitní, může se sáček rozlepit a přestane plnit svou funkci. Nekvalitní papír navíc v místech ohybu může praskat. U sáčků z netkané textilie se jednotlivé díly sáčků se k sobě "taví" a mají podstatně vyšší pevnost.
+			.panel.panel-default
+				#headingSix.panel-heading(role='tab')
+					h5.panel-title
+						a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', href='#poi-text-six', aria-expanded='false', aria-controls='collapseSix')
+							| HYGIENICKÝ UZÁVĚR
+				#poi-text-six.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingSix')
+					.panel-body
+						p
+							| Zejména při výměně sáčku ve vysavači se může do vzduchu dostat jemný prach, který ohrožuje vaše zdraví. Hygienický uzávěr udrží prach přesně tam, kam patří – tedy v sáčku.

@@ -84,6 +84,9 @@
 
 		// home dots
 		homeDots();
+		
+		// Tooltips for benefits
+		$('.benefits-small a').tooltip();
 
 		// Tooltips overall
 		$("body").tooltip({ selector: '[data-toggle=tooltip]' });
