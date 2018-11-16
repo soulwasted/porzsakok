@@ -4957,7 +4957,8 @@ ul.simple {
   margin-top: -36px; }
   @media screen and (max-width: 767px) {
     .benefits-models {
-      margin-top: 0; } }
+      margin-top: 0;
+      margin-bottom: 16px; } }
 
 .benefits-small {
   display: -webkit-box;
