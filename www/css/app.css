@@ -5958,6 +5958,19 @@ a.find {
                 color: white; }
                 .tt-menu .content .tt-dataset .row a .link:hover span span.stock {
                   color: white; }
+            .tt-menu .content .tt-dataset .row a .link.more {
+              background: #0089b0;
+              color: white;
+              width: 100%;
+              margin-left: 0;
+              margin-top: 4px;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              font-weight: bold; }
+              .tt-menu .content .tt-dataset .row a .link.more:hover {
+                background: #00617d; }
 
 .tt-menu .content .tt-dataset.top-bags .row a .link {
   width: -webkit-calc(100% - 20px);

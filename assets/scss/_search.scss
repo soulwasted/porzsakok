@@ -367,6 +367,18 @@ a.find {
 								}
 							}
 						}
+						&.more {
+							background: $brand-secondary;
+							color: white;
+							width: 100%;
+							margin-left: 0;
+							margin-top: 4px;
+							justify-content: center;
+							font-weight: bold;
+							&:hover {
+								background: darken($brand-secondary, 10%);
+							}
+						}
 					}
 
 				}

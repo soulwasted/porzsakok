@@ -75,7 +75,7 @@
 										span.price od 0.49 € / kus
 											span.stock skladem
 						.tt-dataset.tt-dataset-all-models
-							include ./search-brands.jade
+							include ./search-brands0.jade
 							h5 
 								span Všechny firmy
 							for brand in brands
@@ -84,4 +84,9 @@
 										img(src='img/dummy-brand-rowenta.png', alt='ROWENTA')
 										.link
 											.name= brand
+							.row.tt-suggestion.tt-selectable
+								a(href='/seznam-modelu.html')
+									.link.more
+										| Další výsledky pro „manoa“
+											
 				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
