@@ -494,5 +494,44 @@ ul.list-brands {
 	@media screen and (max-width: $screen-sm) {
 		display: none;
 	}
-
 }
+
+.ribbon {
+    --p: 15px;
+    background-color: $brand-secondary;
+	color: white;
+	font-weight: 700;
+    display: inline-block;
+    // height: 60px;
+    margin-bottom: 10px;
+    // margin-top: 20px;
+    padding: var(--p) calc(var(--p)*2);
+    position: relative;
+    right: calc(var(--p)*2);
+    text-align: center;
+	box-shadow: 4px 5px 11px 1px rgba(0,0,0,0.28);
+    // width: 100%;
+}
+
+.ribbon:before {
+    background-color: inherit;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: calc(var(--p)/2);
+    width: var(--p);
+    filter: brightness(.8);
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: 0;
+	top: 4px;
+    transform: skewy(30deg);
+}
+
+// .ribbon:after {
+//     right: 0;
+//     transform: skewy(-45deg);
+// }

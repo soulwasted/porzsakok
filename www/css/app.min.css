@@ -5317,6 +5317,43 @@ ul.list-brands {
     .heureka {
       display: none; } }
 
+.ribbon {
+  --p: 15px;
+  background-color: #0089b0;
+  color: white;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: var(--p) -webkit-calc(var(--p)*2);
+  padding: var(--p) calc(var(--p)*2);
+  position: relative;
+  right: -webkit-calc(var(--p)*2);
+  right: calc(var(--p)*2);
+  text-align: center;
+  -webkit-box-shadow: 4px 5px 11px 1px rgba(0, 0, 0, 0.28);
+          box-shadow: 4px 5px 11px 1px rgba(0, 0, 0, 0.28); }
+
+.ribbon:before {
+  background-color: inherit;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: -webkit-calc(var(--p)/2);
+  top: calc(var(--p)/2);
+  width: var(--p);
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+  z-index: -1; }
+
+.ribbon:before {
+  left: 0;
+  top: 4px;
+  -webkit-transform: skewy(30deg);
+      -ms-transform: skewy(30deg);
+       -o-transform: skewy(30deg);
+          transform: skewy(30deg); }
+
 .special {
   font-family: Raleway, Arial, sans-serif; }
 
