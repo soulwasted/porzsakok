@@ -175,6 +175,9 @@ p {
 		font-size: 86%; // 12px
 		color: $gray-dark;
 	}
+	&.bigger {
+		font-size: 120%;
+	}
 }
 strong {
 	&.info {
@@ -185,4 +188,13 @@ strong {
 }
 .text-primary {
 	color: $brand-secondary;
+}
+.text--caption {
+	font-size: 12px;
+}
+.text--secondary {
+	opacity: 0.5;
+}
+small {
+	@extend .text--caption;
 }

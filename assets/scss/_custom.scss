@@ -183,10 +183,9 @@ ul.simple {
 		opacity: 1.0;
 	}
 	.benefits-small__icon {
-		color: $text-color;
+		color: $brand-success;
 		i {
 			font-size: 35px;
-			color: $brand-success;
 		}
 	}
 	.benefits-small__title {
@@ -196,6 +195,56 @@ ul.simple {
 		@media screen and (max-width: $screen-xs) {
 			text-transform: lowercase;
 			font-size: 10px;
+		}
+	}
+}
+
+.benefits-small.benefits-small--search {
+	height: 48px;
+	margin-bottom: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	@media screen and (max-width: $screen-sm) {
+		height: 80px;	
+	}
+}
+.benefits-small--search .benefits-small__card {
+	// cursor: pointer;
+	opacity: 1;
+	text-align: left;
+	width: auto;
+	max-width: calc(100% / 6);
+	display: flex;
+	align-items: center;
+	margin-top: 0;
+	margin-right: 24px;
+
+	@media screen and (max-width: $screen-sm) {
+		width: calc(100% / 3 - 24px);
+		max-width: none;
+		margin-bottom: 24px;
+	}
+	.benefits-small__icon {
+		height: 48px;
+		margin-right: 8px;
+		margin-top: -10px;
+		i {
+			font-size: 48px;
+			line-height: 48px;
+		}
+	}
+	&:hover {
+		.benefits-small__icon {
+			color: $black;
+		}
+	}
+	.benefits-small__title {
+		font-size: 13px;
+		line-height: 16px;
+		color: $black;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 10px;
+			line-height: 13px;
 		}
 	}
 }

@@ -285,3 +285,50 @@ img.vacs-stripe {
 		}
 	}
 }
+
+.stripe-testimonials {
+	background: lighten($brand-secondary,60) url("../img/testimonials-bg.jpg") center center no-repeat;
+	background-size: cover;
+	// margin: 32px 0;
+	.testimonial__card {
+		padding: 16px;
+		background: white;
+		box-shadow: $shadow;
+		border-radius: $border-radius-base;
+		margin-bottom: 15px;
+	}
+}
+.stars {
+	margin-top: 8px;
+	span {
+		font-size: 16px;
+		color: #FFC000;
+		margin-right: 2px;
+	}
+}
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	.brand {
+		width: calc(100% / 6);
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+		// @extend .text--secondary;
+		@media screen and (max-width: $screen-md) {
+			width: calc(100% / 4);
+		}
+		@media screen and (max-width: $screen-sm) {
+			width: calc(100% / 3);
+		}
+		img {
+			max-width: 120px;
+			height: auto;
+			@media screen and (max-width: $screen-sm) {
+				max-width: calc(100% - 10px);
+			}
+		}
+	}
+}

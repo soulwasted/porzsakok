@@ -1,4 +1,4 @@
-.container-fluid.search#section-01.cd-section
+.container-fluid.search.cd-section#s01
 	.container
 		.row.intro
 			.col-lg-7.col-md-6.col-sm-9.col-xs-10
@@ -88,5 +88,10 @@
 								a(href='/seznam-modelu.html')
 									.link.more
 										| Další výsledky pro „manoa“
-											
-				a.find(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit typ vysavače?
+		.row.search__links
+			.col-lg-7.col-md-8.col-sm-12
+				a(href='#', data-toggle="modal", data-target="#myModal") Jak hledat?
+				a(href='#', data-toggle="modal", data-target="#myModal") Jak zjistit model vysavače?
+				a(href='#', data-toggle="modal", data-target="#myModal") Hledáte doplňkové produkty?
+	.container
+		include ./benefits-search.jade		

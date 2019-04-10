@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+	- var title= "Home"
+	include ./includes/head.jade
+	body
+		.main.home
+			include ./includes/nav.jade
+			include ./includes/home-search.jade
+			include ./includes/stripe-testimonials.jade
+			include ./includes/stripe-brands.jade
+			include ./includes/stripe-bag.jade
+			include ./includes/stripe-contact.jade
+			include ./includes/stripe-order.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
+		include ./includes/scripts.jade

@@ -1,12 +1,13 @@
 .search {
-	background: white url("../img/bg-search-1600.jpg") 60% center no-repeat;
+	background: white url("../img/bg-search-1600.jpg") center center no-repeat;
 	background-size: cover;
 	// border-bottom: 1px solid $brand-secondary;
 	// box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.3), 0px 0px 30px 0px rgba(0,0,0,0.13);
 	display: flex;
+	flex-flow: column;
 	align-items: center;
-	min-height: 70vh;
-	padding: 80px 0 60px;
+	min-height: 50vh;
+	// padding: 80px 0 60px;
 	@media screen and (orientation:portrait) {
 		min-height: 50vh;
 	}
@@ -22,6 +23,16 @@
 	.container {
 		// padding: 0;
 		border-bottom: none;
+		&:first-child {
+			flex-grow: 1;
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			padding-top: 70px;
+			@media screen and (max-width: $screen-sm) {
+				padding-top: 40px;
+			}
+		}
 	}
 
 	.intro {
@@ -50,30 +61,31 @@
 	}
 }
 
-a.find {
-	display: inline-block;
-	padding: 10px 0;
-	// margin-top: 20px;
-	margin-bottom: 10px;
-	flex-shrink: 1;
-	color: black;
-	// font-size: 18px;
-	font-size: 14px;
-	text-decoration: underline;
-	@media (max-width: $screen-xs-max) {}
-
-	&:hover {
-		text-decoration: none;
+.search__links {
+	a {
+		display: inline-block;
+		padding: 10px 0;
+		// margin-bottom: 10px;
+		margin-right: 32px;
+		flex-shrink: 1;
+		font-size: 14px;
+		text-decoration: underline;
+		@media (max-width: $screen-xs-max) {}
+		
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
+
 #search-fulltext {
 	form {
-		padding: 60px 0 10px;
+		padding: 10px 0;
 		z-index: 2;
 		position: relative;
 		@media (max-width: $screen-xs-max) {
-			padding-top: 30px;
+			// padding-top: 30px;
 		}
 
 		input {
@@ -86,12 +98,10 @@ a.find {
 			background: white;
 			background: rgba(255,255,255,0.8);
 			// border: 2px solid white;
-			border: 1px solid $brand-secondary;
+			border: 2px solid $brand-secondary;
 			border-radius: 5px;
-			@media (max-width: $screen-sm-max) {
-				padding: 0 10px;
-			}
 			@media (max-width: $screen-sm) {
+				padding: 0 10px;
 				height: 60px;
 				font-size: 14px;
 			}
