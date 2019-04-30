@@ -163,7 +163,7 @@ img.vacs-stripe {
 }
 .stripe-additional {
 	@extend .stripe;
-	background: $gray-lighter;
+	// background: $gray-lighter;
 	text-align: center;
 	p {
 		// font-size: 18px;
@@ -213,7 +213,8 @@ img.vacs-stripe {
 			}
 
 		}
-		&.pic-02 {
+		&.pic-02,
+		&.pic-04 {
 			img {
 				order: 2;
 			}
@@ -227,7 +228,9 @@ img.vacs-stripe {
 			// margin-left: 100px;
 		}
 
-		&.pic-02, &.pic-03 {
+		&.pic-02, 
+		&.pic-03,
+		&.pic-04 {
 			img {
 				width: 130px;
 			}

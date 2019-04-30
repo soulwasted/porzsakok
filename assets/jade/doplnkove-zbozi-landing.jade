@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+	- var title= "Doplňkové zboží — Landing page"
+	include ./includes/head.jade
+	body
+		.main
+			include ./includes/nav.jade
+			.container
+				h1.center Doplňkové zboží — Landing page
+			.container.stripe-additional
+				.row
+					.col-xs-12
+						h4 &hellip;pořád máte pocit, že Vám něco chybí?
+							br
+							| Vyzkoušejte doplňkové zboží.
+				.row
+					.col-xs-12
+						.pic.pic-01
+							img(src='img/porzsakok-add-01.jpg', alt='Podlahové kartáče')
+							.text
+								h4 Podlahové kartáče
+								p Tito šikovní pomocníci Vám pomůžou s důkladným úklidem. Postarají se o koberce ale i hladké plochy, které vyčistí od prachu až po chlupy z domácích mazlíčků.
+								a(href='hq') Více o podlahových kartáčích
+						.pic.pic-02
+							img(src='img/porzsakok-add-02.jpg', alt='Vůně do vysavače')
+							.text
+								h4 Vůně do vysavače
+								p …a nyní Vám položíme kvízovou otázku. "Při vysávání provoní Váš byt. Co je to?" Není to maminčin parfém, je to vůně do vysávače.
+								a(href='hq') Více o vůních do vysavače
+						.pic.pic-03
+							img(src='img/porzsakok-add-03.jpg', alt='HEPA filtry')
+							.text
+								h4 HEPA filtry
+								p "High Efficiency Particulate Arrestance" - tato čtyři slova jsou důležitá nejenom pro děti a alergiky. HEPA filtry Vám zajistí, že Vaše vysávání bude z hlediska čistoty opravdu účinné.
+								a(href='hq') Více o HEPA filtrech
+						.pic.pic-04
+							img(src='img/porzsakok-add-03.jpg', alt='Motorové filtry')
+							.text
+								h4 Motorové filtry
+								p "High Efficiency Particulate Arrestance" - tato čtyři slova jsou důležitá nejenom pro děti a alergiky. HEPA filtry Vám zajistí, že Vaše vysávání bude z hlediska čistoty opravdu účinné.
+								a(href='hq') Více o HEPA filtrech
+				.row
+					a.btn.btn-default.btn-higher(href='#', role='button') Chci vědět více...
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+		include ./includes/scripts.jade

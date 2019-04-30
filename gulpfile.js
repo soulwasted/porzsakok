@@ -201,8 +201,8 @@ function processJade() {
 	var isErr = false;
 	return gulp.src(paths.jade.src)
 		.pipe(data(function (file) {
-			// return require('./assets/json/cart-cs.json')
-			return require('./assets/json/cart-ro.json')
+			return require('./assets/json/cart-cs.json')
+			// return require('./assets/json/cart-ro.json')
 		}))
 		.pipe(jade())
 		// .pipe(jade({

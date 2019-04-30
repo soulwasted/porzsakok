@@ -384,12 +384,16 @@ ul.list-brands--columns {
 		padding: 0;
 		width: calc((100%/3) - 16px);
 		// min-height: 80px;
-		@media (max-width: $screen-md) {
+		@media (max-width: $screen-lg) {
 			width: calc((100%/2) - 16px);
 		}
-		@media (max-width: $screen-xs) {
+		@media (max-width: $screen-md) {
+			// width: calc((100%/2) - 16px);
 			width: 100%;
 		}
+		// @media (max-width: $screen-xs) {
+		// 	width: 100%;
+		// }
 		a {
 			display: flex;
 			// background: $gray-lightest;
@@ -397,15 +401,19 @@ ul.list-brands--columns {
 			border-radius: 2px;
 			transition: all 0.5s;
 			align-items: center;
-			padding: 8px;
+			padding: 2px 8px 2px 2px;
 			img {
 				// border: 1px solid $gray-lightest;
 				width: 100px;
-				height: 75px;
+				// height: 75px;
 				// max-width: 100%;
 				// height: auto;
+				// !!!
 				object-fit: contain;
 				// object-position: 0 0;
+				@media (max-width: $screen-xs) {
+					width: 75px;
+				}
 			}
 			strong {
 				padding: 0 16px;
@@ -415,7 +423,7 @@ ul.list-brands--columns {
 			.item__info {
 				font-size: 10px;
 				text-align: left;
-				color: $gray-light;
+				color: $gray;
 				transition: all 0.5s;
 				span {
 					display: block;
@@ -427,7 +435,7 @@ ul.list-brands--columns {
 				// color: white;
 				text-decoration: none;
 				.item__info {
-					color: $gray-dark;
+					color: $black;
 				}
 			}
 		}
@@ -444,13 +452,46 @@ ul.list-brands--columns {
 	}
 }
 ul.list-brands {
-	// column-count: 3;
-	// padding-left: 0;
 	padding: 10px 0 $stripes-padding/4;
-	// @media screen and (max-width: $screen-xs-max) {
-	// 	column-count: 2;
-	// }
 }
+
+
+
+
+
+
+.goods {
+	display: flex;
+	align-items: flex-start;
+	border-top: 1px solid $gray-lighter;
+	padding: 20px 0;
+	// margin-top: 20px;
+	&:first-child {
+		border-top: none;
+	}
+}
+.goods__image {
+	max-width: 200px;
+	object-fit: contain;
+	border-radius: 4px;
+	@media (max-width: $screen-xs-max) {
+		max-width: 100px;
+		max-height: 100px;
+	}
+}
+.goods__side {
+	// width: calc(66% - 200px + 2px);
+	@media (max-width: $screen-md) {
+		width: 100%;	
+	}
+}
+
+
+
+
+
+
+
 .prices-after,
 .prices-before,
 .resume-bonuses {
@@ -578,6 +619,11 @@ ul.list-brands {
     left: 0;
 	top: 4px;
     transform: skewy(30deg);
+}
+
+
+.border-bottom-2 {
+	border-bottom: 2px solid $gray-lighter;
 }
 
 // .ribbon:after {

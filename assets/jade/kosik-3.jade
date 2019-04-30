@@ -1,0 +1,219 @@
+doctype html
+html(lang='en')
+	- var title= "Mezikošík"
+	include ./includes/head.jade
+	body
+		.main.cart
+			include ./includes/nav.jade
+			.container
+				h1 #{__cart}
+			- for (var x = 0; x < 2; x++)
+				.container
+					include ./includes/item--cart.jade
+			.container.border-bottom-2
+				h5
+					span.icon
+						i.icon-thumbs_up.text-c-primary
+					strong.text-c-primary #{__additional_goods}
+				p Přidejte si do košíku ještě tato příslušenství, která sedí k vašemu modelu ELECTROLUX XY
+				.checkbox
+					.order__choice
+						label
+							input(type="checkbox") 
+							strong Pylový filtr
+							span (99 #{__currency})
+						//- .order__price 99 #{__currency}
+			form#cart
+				.container
+					h3 #{__transport}
+					.radio
+						.order__choice
+							label
+								input(type="radio", name="radiosPayment") 
+								//- | Magyar Posta
+								| DPD
+								span (#{__free})
+							.order__price #{__free}
+					.radio
+						.order__choice
+							label
+								input(type="radio", name="radiosPayment") 
+								//- | GLS
+								| FUN Courier
+								span (305 #{__currency})
+							.order__price 305 #{__currency}
+				.container
+					h3 #{__express_expedition}
+					.checkbox
+						.order__choice
+							label
+								input(type="checkbox") 
+								| #{__express_expedition}
+								span #{__free}
+								span (305 #{__currency})
+							.order__price 305 #{__currency}
+				.container
+					h3 #{__payment_type}
+					.radio
+						.order__choice
+							label
+								input(type="radio", name="radiosPayment") 
+								| #{__cash_on_delivery}
+								span (305 #{__currency})
+							.order__price 305 #{__currency}
+					.radio
+						.order__choice
+							label
+								input(type="radio", name="radiosPayment") 
+								| #{__bank_transfer}
+								span (#{__free})
+							.order__price #{__free}
+				.container.order__summary
+					.order__discount
+						.form-inline
+							label(for='cart-code') #{__do_you_have_a_discount}
+							.form-group
+								.input-group
+									.input-group-addon
+										span.glyphicon.glyphicon-star(aria-hidden='true')
+									input#cart-code.form-control(type='number', placeholder='#{__enter_the_code_here}')
+							button.btn.btn-default(type='submit') #{__use_code}
+					.order__summary-box
+						.order__summary__row 
+							.order__summary__title #{__order_total_without_tax}
+							.order__price 14.720 #{__currency}
+						.order__summary__row 
+							.order__summary__title #{__tax}
+							.order__price 3.974 #{__currency}
+						.order__summary__row 
+							.order__summary__title Zaokrouhlení
+							.order__price 4 #{__currency}
+						.order__summary__row 
+							.order__summary__title
+								strong #{__order_total_with_tax}
+							.order__price 
+								strong 18.690 #{__currency}
+				.container.order__contact
+					.order__contact__group
+						h3 #{__contact_person}
+						p #{__contact_person__note}
+						.order__contact__group__items
+							.form-group
+								label.control-label(for='form-cart-name') *&nbsp;#{__name}
+								input#form-cart-name.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-surname') *&nbsp;#{__surname}
+								input#form-cart-surname.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-phone') *&nbsp;#{__phone}
+								input#form-cart-phone.form-control(type='tel', placeholder='+40')
+							.form-group
+								label.control-label(for='form-cart-mail') *&nbsp;#{__email}
+								input#form-cart-mail.form-control(type='email', placeholder='')
+					.order__contact__group
+						h3 #{__billing__address}
+						.radio
+							.order__choice
+								label
+									input#cart-toggle-person-rb(type="radio", name="radiosBuy", checked="checked") 
+									| #{__address__person__checkbox}
+						.radio
+							.order__choice
+								label
+									input#cart-toggle-company-rb(type="radio", name="radiosBuy") 
+									| #{__address__company__checkbox}
+						.order__contact__group__items.order__contact__group__items--person#cart-toggle-person
+							.form-group
+								label.control-label(for='form-cart-person-name') #{__address__person__name}
+								input#form-cart-person-name.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-person-address') #{__address__person__address}
+								input#form-cart-person-address.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-person-address-number') #{__address__person__district}
+								input#form-cart-person-address-number.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-person-city') #{__address__person__city}
+								input#form-cart-person-city.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-person-address-code') #{__address__postcode}
+								input#form-cart-person-address-code.form-control(type='text', placeholder='')
+						.order__contact__group__items.order__contact__group__items--company#cart-toggle-company
+							.form-group
+								label.control-label(for='form-cart-company-dic') #{__address__company__dic}
+								input#form-cart-company-dic.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-ico') #{__address__company__ico}
+								input#form-cart-company-ico.form-control(type='text', placeholder='')
+							//- .form-group
+							//- 	label.control-label(for='form-cart-company-ico') #{__address__company__ico}
+							//- 	input#form-cart-company-ico.form-control(type='text', placeholder='')
+							//- .form-group
+							//- 	label.control-label(for='form-cart-company-dic') #{__address__company__dic}
+							//- 	input#form-cart-company-dic.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-name') #{__address__company__name}
+								input#form-cart-company-name.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-address') #{__address__company__address}
+								input#form-cart-company-address.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-address-disctrict') #{__address__company__district}
+								input#form-cart-company-address-disctrict.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-city') #{__address__company__city}
+								input#form-cart-company-city.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-company-address-code') #{__address__postcode}
+								input#form-cart-company-address-code.form-control(type='text', placeholder='')
+					.order__contact__group
+						.checkbox
+							h3
+								label
+									input#cart-toggle-delivery-address-cb(type="checkbox") 
+									| #{__address__delivery}
+						.order__contact__group__items#cart-toggle-delivery-address
+							.form-group
+								label.control-label(for='form-cart-delivery-name') #{__address__delivery__name}
+								input#form-cart-delivery-name.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-address') #{__address__delivery__address}
+								input#form-cart-delivery-address.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-address-number') Číslo popisné
+								input#form-cart-delivery-address-number.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-city') #{__address__delivery__city}
+								input#form-cart-delivery-city.form-control(type='text', placeholder='')
+							.form-group
+								label.control-label(for='form-cart-delivery-address-code') #{__address__postcode}
+								input#form-cart-delivery-address-code.form-control(type='text', placeholder='')
+				.container
+					.row
+						.col-xs-12
+							h3 #{__other_information_for_eshop}
+					.row.choice
+						.col-xs-12
+							.form-group
+								label.control-label(for='form-cart-note') #{__order_specification_and_eshop_messages}
+								textarea#form-cart-note.form-control(rows='3')
+					.row.choice
+						.col-xs-12
+							.checkbox
+								label
+									input(type="checkbox") 
+									strong *&nbsp;#{__conditions__checkbox}
+							.checkbox
+								label
+									input(type="checkbox") 
+									| #{__newsletter__checkbox}
+				.container.stripe-buttons
+					.row
+						.col-xs-12
+							a.btn.btn-primary.btn-lg.btn-block(href="souhrn.html") 
+								| #{__check_order}
+								span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+							p #{__check_order__note}
+			include ./includes/stripe-guarantee.jade
+			include ./includes/footer.jade
+	include ./includes/scripts.jade

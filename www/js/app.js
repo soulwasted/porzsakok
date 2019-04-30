@@ -45,7 +45,7 @@
 		// add class to nav when scrolled
 		$(window).scroll(function () {
 			var nav = $('nav.navbar');
-			var top = 80;
+			var top = 10;
 			if ($(window).scrollTop() >= top) {
 				nav.addClass('fixed');
 			} else {
