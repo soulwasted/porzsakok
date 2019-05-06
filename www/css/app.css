@@ -5297,6 +5297,28 @@ ul.list-brands--columns li a img {
 ul.list-brands {
   padding: 10px 0 15px; }
 
+ul.list-models--columns--simple {
+  display: block;
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2; }
+  @media (max-width: 992px) {
+    ul.list-models--columns--simple {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
+  ul.list-models--columns--simple li {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    page-break-inside: avoid;
+    width: 100%;
+    margin: 0 0 8px 0; }
+  ul.list-models--columns--simple .item__info {
+    min-width: 130px; }
+    ul.list-models--columns--simple .item__info span {
+      display: inline !important;
+      margin-right: 8px; }
+
 .goods {
   display: -webkit-box;
   display: -webkit-flex;

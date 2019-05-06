@@ -455,6 +455,26 @@ ul.list-brands {
 	padding: 10px 0 $stripes-padding/4;
 }
 
+ul.list-models--columns--simple {
+	display: block;
+	column-count: 2;
+	@media (max-width: $screen-md) {
+		column-count: 1;
+	}
+	li {
+		break-inside: avoid-column;
+		page-break-inside: avoid;
+		width: 100%;
+		margin: 0 0 8px 0;
+	}
+	.item__info {
+		min-width: 130px;
+		span {
+			display: inline !important;
+			margin-right: 8px;
+		}
+	}
+}
 
 
 
