@@ -7,21 +7,77 @@ html(lang='en')
 			include ./includes/nav.jade
 			.container
 				h1 #{__cart}
-			- for (var x = 0; x < 2; x++)
-				.container
-					include ./includes/item--cart.jade
-			.container.border-bottom-2
+			//- - for (var x = 0; x < 2; x++)
+			.container
+				include ./includes/item--cart.jade
+				.item--additional
+					h5
+						span.icon
+							i.icon-thumbs_up.text-c-primary
+						strong.text-c-primary #{__additional_goods}
+					p K vašemu modelu vysavače by bylo dobré dokoupit ještě toto příslušenství:
+					- for (var x = 0; x < 2; x++)
+						.item__content
+							.item__name
+								button.btn.btn-default.btn-sm(type='submit', name='submit[]', value='186302')
+									span.glyphicon.glyphicon-plus(aria-hidden='true')
+									//- | Přidat
+								a(href='#', data-toggle='lightbox', data-gallery='gallery', data-title='Motorový filtr MF0105')
+									img.item__image__uni(alt='obrázek doplňku Motorový filtr MF0105', src='https://chci-vysavat.cz/images/assets/pack/myThumb/MF0105.jpg')
+								strong Motorový filtr MF0105
+								span (59.00 K&ccaron;)
+								a(href='#', data-toggle='modal', data-target='#myModalFilter0-0')
+									span.glyphicon.glyphicon-info-sign.text-muted
+			.container
+				include ./includes/item--cart-2.jade
+				.item--additional
+					h5
+						span.icon
+							i.icon-thumbs_up.text-c-primary
+						strong.text-c-primary #{__additional_goods}
+					p K vašemu modelu vysavače by bylo dobré dokoupit ještě toto příslušenství:
+					- for (var x = 0; x < 4; x++)
+						.item__content
+							.item__name
+								button.btn.btn-default.btn-sm(type='submit', name='submit[]', value='186302')
+									span.glyphicon.glyphicon-plus(aria-hidden='true')
+									//- | Přidat
+								a(href='#', data-toggle='lightbox', data-gallery='gallery', data-title='Motorový filtr MF0105')
+									img.item__image__uni(alt='obrázek doplňku Motorový filtr MF0105', src='https://chci-vysavat.cz/images/assets/pack/myThumb/MF0105.jpg')
+								strong Motorový filtr MF0105
+								span (59.00 K&ccaron;)
+								a(href='#', data-toggle='modal', data-target='#myModalFilter0-0')
+									span.glyphicon.glyphicon-info-sign.text-muted
+			.container
 				h5
 					span.icon
 						i.icon-thumbs_up.text-c-primary
 					strong.text-c-primary #{__additional_goods}
-				p Přidejte si do košíku ještě tato příslušenství, která sedí k vašemu modelu ELECTROLUX XY
-				.checkbox
-					.order__choice
-						label
-							input(type="checkbox") 
-							strong Pylový filtr
-							span (99 #{__currency})
+				p K vašemu modelu vysavače by bylo dobré dokoupit ještě toto příslušenství:
+				- for (var x = 0; x < 4; x++)
+					.item__content
+						.item__name
+							button.btn.btn-default.btn-sm(type='submit', name='submit[]', value='186302')
+								span.glyphicon.glyphicon-plus(aria-hidden='true')
+								//- | Přidat
+							a(href='#', data-toggle='lightbox', data-gallery='gallery', data-title='Motorový filtr MF0105')
+								img.item__image__uni(alt='obrázek doplňku Motorový filtr MF0105', src='https://chci-vysavat.cz/images/assets/pack/myThumb/MF0105.jpg')
+							strong Motorový filtr MF0105
+							span (59.00 K&ccaron;)
+							a(href='#', data-toggle='modal', data-target='#myModalFilter0-0')
+								span.glyphicon.glyphicon-info-sign.text-muted
+			.container.border-bottom-2
+				//- h5
+				//- 	span.icon
+				//- 		i.icon-thumbs_up.text-c-primary
+				//- 	strong.text-c-primary #{__additional_goods}
+				//- p Přidejte si do košíku ještě tato příslušenství, která sedí k vašemu modelu ELECTROLUX XY
+				//- .checkbox
+				//- 	.order__choice
+				//- 		label
+				//- 			input(type="checkbox") 
+				//- 			strong Pylový filtr
+				//- 			span (99 #{__currency})
 						//- .order__price 99 #{__currency}
 			form#cart
 				.container
