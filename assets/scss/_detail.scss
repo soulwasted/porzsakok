@@ -150,7 +150,7 @@
 		padding: 0;
 		margin-bottom: 10px;
 		&:nth-child(n+2) {
-			max-width: 160px;
+			// max-width: 160px;
 			// margin-right: 10px;
 			@media screen and (max-width: 560px) {
 				max-width: none;
@@ -165,11 +165,26 @@
 
 .recommendation {
 	text-align: left;
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		.row > div {
+			clear: both;
+		}
+	}
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		.row > div:nth-child(2n+1) {
+			clear: both;
+		}
+	}
+	@media (min-width: $screen-md-min) {
+		.row > div:nth-child(3n+1) {
+			clear: both;
+		}
+	}
 	.item {
 		display: flex;
 		margin-bottom: 30px;
 		img {
-			height: 60px;
+			// height: 60px;
 			width: 60px;
 			border: 1px solid $gray-lighter;
 			margin: 10px 10px 0 0;

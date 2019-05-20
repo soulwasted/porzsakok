@@ -58,7 +58,9 @@ html(lang='en')
 								span.info Počet filtračných vrstev: 
 								strong 5
 							p
-								| Sáčky pro vysavač ELECTROLUX SBAG od značky VACS jsou kvalitnější alternativou běžných papírových sáčků, které se obvykle skládají z pouhých dvou vrstev s nižší filtrační schopností. 
+								| Sáčky pro vysavač 
+								span.text-c-secondary ELECTROLUX SBAG 
+								| od značky VACS jsou kvalitnější alternativou běžných papírových sáčků, které se obvykle skládají z pouhých dvou vrstev s nižší filtrační schopností. 
 							P
 								| Tyto sáčky jsou plnohodnotnou alternativou k originálnímu výrobku. Sáčky s takto jemnou filtrací nejsou vhodné pro vysávání popela a brusného prachu.
 			.container
@@ -67,6 +69,13 @@ html(lang='en')
 						p.one-package
 							| Pokud chcete vyzkoušet kvalitu našich sáčků, můžete si objednat na zkoušku 1 sáček za cenu 35 Kč. Zaplatíte pouze tuto cenu a dopravu. 
 							a.btn.btn-default(href="#") Vložit do košíku 1 sáček
+			.container
+				.row
+					.col-xs-12
+						p.one-package
+							| Jste firma a potřebujete více než 40 sáčků? 
+							a(href="mailto:info@chci-vysavat.cz") Napište nám
+							|  a nabídneme vám ještě něco extra.
 			.container
 				.row
 					.col-xs-12
@@ -80,7 +89,10 @@ html(lang='en')
 					.col-xs-12
 						h2.h3 Doporučujeme
 				.row
-					- for (var x = 0; x < 12; x++)
+					- for (var x = 0; x < 4; x++)
+						include ./includes/detail-accessory.jade
+					include ./includes/detail-accessory-long_name.jade
+					- for (var x = 0; x < 4; x++)
 						include ./includes/detail-accessory.jade
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade

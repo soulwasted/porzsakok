@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+	- var title= "Detail"
+	include ./includes/head.jade
+	body
+		.main.detail
+			include ./includes/nav.jade
+			.container
+				.row
+					.col-xs-12
+						ul.breadcrumb
+							li
+								a(href='/') Dom&uring;
+							| &#x9;            
+							li
+								a(href='/znacky') Seznam zna&ccaron;ek
+							| &#x9;            
+							li
+								a(href='/hepa-filtry') Hepa filtry
+							| &#x9;                
+							li Hepa filtry do vysava&ccaron;&uring; ROWENTA
+				.row
+					.col-xs-12
+						h1 Hepa filtr do vysavačů Rowenta (HF0023)
+				.row.main-content-hepa
+					.col.primary
+						h3.center Vyberte si počet produktů
+						.stepper
+							#stepperMinus
+								span.glyphicon.glyphicon-minus(aria-hidden='true')
+							input#sliderInput(type="number" value="2")
+							#stepperPlus
+								span.glyphicon.glyphicon-plus(aria-hidden='true')
+						.row.discounts
+							.col-xs-12.summary
+								h4.hand.summary
+									span Vaše 
+										br
+										|  objednávka
+								.item.price cena
+									span 24,00 €
+								a.btn.btn-primary.btn-lg(href="#") Vložit do košíku
+									i.icon-cart
+					.col.secondary
+						.gallery.gallery--hepa
+							a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+								img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+							.gallery__thumbnails
+								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
+									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+			include ./includes/footer.jade
+	include ./includes/scripts.jade	
+	//- script(src='js/slider.js')
+	script(src='js/detail-2.js')

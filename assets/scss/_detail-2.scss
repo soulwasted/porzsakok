@@ -11,7 +11,7 @@ $screen-detail-selection: calc(#{$detail-selection} + 2*15px);
 		}
 	}
 	// @media screen and (min-width: $screen-xs-max) {
-		margin-top: 0;
+		// margin-top: 0;
 	// }
 }
 
@@ -40,6 +40,16 @@ $screen-detail-selection: calc(#{$detail-selection} + 2*15px);
 		margin-top: 24px;
 		.col.primary {
 			order: -1;
+		}
+	}
+}
+.main-content-hepa {
+	@extend .main-content;
+	top: 0;
+	.col {
+		width: 50%;
+		@media (max-width: $screen-sm-max) {
+			width: 100%;
 		}
 	}
 }
@@ -84,6 +94,13 @@ $screen-detail-selection: calc(#{$detail-selection} + 2*15px);
 	img {
 		max-width: 185px;
 	}
+}
+.gallery--hepa {
+	.gallery__thumbnails {
+		a {
+			width: 25%;
+		}	
+	}	
 }
 
 .btn-lg {
