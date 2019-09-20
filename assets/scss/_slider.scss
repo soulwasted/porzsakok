@@ -193,7 +193,8 @@ $buttonRadius: 5px;
 			background: $gray-lighter;
 			color: $gray;
 			&:hover {
-				background: darken($gray, 10);
+				background: darken($gray-lighter, 20);
+				// color: white;
 			}
 		}
 		#sliderInput {

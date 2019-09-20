@@ -6377,7 +6377,7 @@ body.modal-open .main {
     background: #e6e6e6;
     color: #2a2a2a; }
     .main.cart .stepper #stepperMinus:hover, .main.cart .stepper #stepperPlus:hover {
-      background: #111111; }
+      background: #b3b3b3; }
   .main.cart .stepper #sliderInput {
     width: 50px;
     height: 50px;
