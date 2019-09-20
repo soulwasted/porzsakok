@@ -1,0 +1,10 @@
+.eu-cookies {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .container {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+}

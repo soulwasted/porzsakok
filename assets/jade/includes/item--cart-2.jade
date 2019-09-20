@@ -1,0 +1,25 @@
+.item.item--cart
+	a(href='/electrolux/100-ce')
+		img.item__image(src="img/vacs-bag/vacs-bag-detail-03-tn.jpg")
+	.item__content
+		.item__name
+			a(href='/electrolux/100-ce')
+				strong ELECTROLUX S-bag and some longer text #{__discount}
+			.item__benefit #{__bonus__transport}
+			.item__benefit #{__bonus__delivery}
+			.item__benefit #{__bonus__filter}
+		.item__remove--cart
+			//- a.btn.btn-default.btn-small.btn-close(href="#")
+			a(href="#")
+				span.glyphicon.glyphicon-remove(aria-hidden='true')
+				span.text #{__remove}
+		.item__price.item__price--piece 230 #{__currency}
+		.item__stepper
+			.stepper
+				#stepperMinus
+					span.glyphicon.glyphicon-minus(aria-hidden='true')
+				input#sliderInput(type="number" value="20")
+				#stepperPlus
+					span.glyphicon.glyphicon-plus(aria-hidden='true')
+				//- .item__stepper__label sáčků
+		.item__price.item__price--total 9200 #{__currency}
