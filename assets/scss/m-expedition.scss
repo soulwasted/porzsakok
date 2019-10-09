@@ -1,0 +1,35 @@
+.expedition-in-XXh {
+	position: relative;
+	z-index: 10;
+	top: 8px;
+	width: 280px;
+	background: rgba(255, 255, 255, 0.5);
+	i {
+		color: $brand-secondary;
+		font-size: 48px;
+		line-height: 48px;
+		margin-right: 12px;
+	}
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	div {
+		text-align: left;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+	.expedition-in-XXh--small {
+		position: inherit;
+		top: 0;
+		width: auto;
+		@extend .text--caption;
+		i {
+			font-size: 32px;
+			line-height: 32px;
+			margin-right: 8px;
+		}
+	}

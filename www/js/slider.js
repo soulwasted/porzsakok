@@ -2,6 +2,7 @@ var sliderStep01 = 4;
 var sliderStep02 = 12;
 var sliderStep03 = 20;
 var sliderStep04 = 40;
+var sliderDensity = 4; // works for 4, 12, 20 values
 var benefitDisabled = 0.3;
 var benefitEnabled = 1.0;
 
@@ -10,10 +11,16 @@ var stepperMinus = document.getElementById('stepperMinus');
 var stepperPlus = document.getElementById('stepperPlus');
 
 $(document).ready(function () {
+	
+	// Absolute position of benefits. 
+	// We need to calculate height of benefits.
+	setBenefitsHeight();
+	
+	
 	var slider = document.getElementById('slider');
-
+	
 	noUiSlider.create(slider, {
-		start: [sliderStep04],
+		start: sliderStep04,
 		connect: 'lower',
 		step: 1,
 		range: {
@@ -23,9 +30,10 @@ $(document).ready(function () {
 			'max': [sliderStep04, 1]
 		},
 		pips: {
-			mode: 'values',
+			mode: 'range',
 			values: [sliderStep01, sliderStep02, sliderStep03, sliderStep04],
-			density: 3,
+			// density: ['min': sliderDensity, '33%': sliderDensity, '66%': 2],
+			density: sliderDensity,
 			stepped: true
 		},
 		format: wNumb({
@@ -102,30 +110,24 @@ $(document).ready(function () {
 	}
 
 	function toggleBenefits(benefitNum) {
-		// console.log(benefitNum);
 		$(".allBenefits").removeClass('active');
-		// $(".allBenefits3").removeClass('active');
 		if (benefitNum != 0) {
 			$(".allBenefits:nth-child(" + benefitNum + ")").addClass('active');
-			// $(".allBenefits3:nth-child(" + benefitNum + ")").addClass('active');
 		}
-		// console.log("benefit num: " + benefitNum);
 		$(".summary .sum-item").addClass('active');
-		switch (benefitNum) {
-			case 1:
-				$(".summary .sum-bags").removeClass('active');
-				$(".summary .sum-transport").removeClass('active');
-				// $(".summary.sum-filters").removeClass('active');
-				break;
-			case 2:
-				break;
-			case 3:
-				break;
-			case 4:
-				break;
-			default:
-
-		}
+		// switch (benefitNum) {
+		// 	case 1:
+		// 		$(".summary .sum-bags").removeClass('active');
+		// 		$(".summary .sum-transport").removeClass('active');
+		// 		break;
+		// 	case 2:
+		// 		break;
+		// 	case 3:
+		// 		break;
+		// 	case 4:
+		// 		break;
+		// 	default:
+		// }
 	}
 
 	function updateInputSize() {
@@ -136,5 +138,32 @@ $(document).ready(function () {
 			$(sliderInput).removeClass("over100");
 		}
 	}
+	
+	function setBenefitsHeight() {
+	    var benefitsHeight = $('.allBenefits:nth-child(4)').css("height");
+	    $('.sliderBenefits').css({'height': benefitsHeight});
+
+	    $(window).on('resize', function() {
+	       benefitsHeight = $('.allBenefits:nth-child(4)').css('height');
+		   $('.sliderBenefits').css({'height': benefitsHeight});
+	    });
+	}
+	
+	
+	// ——— this works for nouislider version 11 and above
+	// var pips = slider.querySelectorAll('.noUi-value');
+	// 
+	// function clickOnPip() {
+	//     var value = Number(this.getAttribute('data-value'));
+	//     slider.noUiSlider.set(value);
+	// }
+	// 
+	// for (var i = 0; i < pips.length; i++) {
+	// 
+	//     // For this example. Do this in CSS!
+	//     pips[i].style.cursor = 'pointer';
+	//     pips[i].addEventListener('click', clickOnPip);
+	// }
+	
 
 });

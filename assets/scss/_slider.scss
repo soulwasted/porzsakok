@@ -1,4 +1,4 @@
-$sliderButtSize: 50px;
+$sliderButtSize: 40px;
 $buttonRadius: 50%;
 $buttonStepperRadius: 5px;
 
@@ -20,7 +20,7 @@ $buttonStepperRadius: 5px;
 
 		.benefit {
 			width: 150px;
-			margin-bottom: 10px;
+			// margin-bottom: 4px;
 			text-align: left;
 			display: flex;
 			align-items: center;
@@ -36,21 +36,21 @@ $buttonStepperRadius: 5px;
 				text-align: center;
 				// background: lighten($brand-success, 60);
 				// width: 32px;
-				height: 50px;
-				width: 50px;
+				height: 44px;
+				width: 44px;
 				overflow: hidden;
 
 				i {
 					color: $black;
-					font-size: 32px;
+					font-size: 28px;
 				}
 			}
 
 			.text {
 				width: 130px;
 				color: $black;
-				font-size: 12px;
-				line-height: 14px;
+				font-size: 11px;
+				line-height: 13px;
 				padding-left: 6px;
 				@media screen and (max-width: $screen-sm-max) {
 					font-size: 11px;
@@ -59,7 +59,7 @@ $buttonStepperRadius: 5px;
 
 				span {
 					display: block;
-					font-size: 13px;
+					font-size: 12px;
 					font-weight: 700;
 					// text-transform: uppercase;
 					@media screen and (max-width: $screen-sm-max) {
@@ -74,14 +74,14 @@ $buttonStepperRadius: 5px;
 				opacity: 1;
 
 				.icon {
-					height: 50px;
+					height: 44px;
 
 					i {
 						color: $brand-primary;
-						font-size: 40px;
+						font-size: 36px;
 
 						&:before {
-							margin-top: -20px;
+							margin-top: -10px;
 						}
 					}
 				}
@@ -116,6 +116,8 @@ $buttonStepperRadius: 5px;
 	@media screen and (max-width: $screen-xs-max) {
 		margin-bottom: 45px;
 	}
+	
+
 
 	&.noUi-target {
 		height: 6px;
@@ -133,9 +135,10 @@ $buttonStepperRadius: 5px;
 	}
 
 	.noUi-value {
-		top: 20px;
+		top: 10px;
 		font-weight: 700;
 		color: $gray;
+		font-size: 17px;
 
 		&:last-child {
 			width: 60px;
@@ -146,8 +149,8 @@ $buttonStepperRadius: 5px;
 		width: $sliderButtSize;
 		height: $sliderButtSize;
 		border-radius: $buttonRadius;
-		left: -25px;
-		top: -23px;
+		left: -20px;
+		top: -18px;
 		background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
 		border: 0;
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -167,9 +170,10 @@ $buttonStepperRadius: 5px;
 			top: 15px;
 			background: $brand-secondary;
 			box-shadow: 1px 0 0 0 #000000;
-			opacity: 0.15;
+			// opacity: 0.15;
+			opacity: 0;
 		}
-
+		
 		&::after {
 			left: 26px;
 			top: 15px;
@@ -325,16 +329,3 @@ $buttonStepperRadius: 5px;
 	}
 }
 
-p.note {
-	margin-top: 15px;
-	font-size: 12px;
-	color: black;
-	i {
-		font-size: 28px;
-		color: $brand-secondary;
-		display: block;
-		float: left;
-		margin-right: 10px;
-		margin-top: -6px;
-	}
-}

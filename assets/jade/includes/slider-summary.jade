@@ -1,0 +1,29 @@
+.col-xs-12.col-sm-3.col-sm-offset-1.slider__summary
+    .row
+        .col-xs-12
+            .stepper
+                #stepperMinus
+                    span.glyphicon.glyphicon-minus(aria-hidden='true')
+                input#sliderInput(type="number" value="2")
+                #stepperPlus
+                    span.glyphicon.glyphicon-plus(aria-hidden='true')
+            .stepperLabel sáčků
+    .row
+        .col-xs-12
+            .expedition-in-XXh.expedition-in-XXh--small
+                i.icon-stopwatch-48h(aria-hidden='true')
+                div
+                    strong Odeslání do 48 hodin
+                    p Veškeré zboží máme skladem
+    .row.summary
+        .col-xs-12
+            h4.hand.summary
+                span Cena celkem
+            .summary__item.summary__item--price
+                //- | cena za balení
+                span.priceActual
+                    strong 24,00 €
+    .row.text-center
+        .col-xs-12
+            a.btn.btn-primary.btn-lg(href="#") Vložit do košíku
+                i.icon-cart

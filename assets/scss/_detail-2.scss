@@ -54,27 +54,6 @@ $screen-detail-selection: calc(#{$detail-selection} + 2*15px);
 	}
 }
 
-.expedition-in-XXh {
-	position: relative;
-	z-index: 10;
-	top: 8px;
-	width: 280px;
-	background: rgba(255, 255, 255, 0.5);
-	i {
-		color: $brand-secondary;
-		font-size: 48px;
-		line-height: 48px;
-		margin-right: 12px;
-	}
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
-	p {
-		margin-bottom: 0;
-	}
-}
-
 .gallery {
 	margin-bottom: 24px;
 	img {

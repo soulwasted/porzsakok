@@ -1,0 +1,31 @@
+.bag_benefits {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 16px;
+}
+
+.bag_benefits__benefit {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding: 0 16px 32px 0;
+	width: 50%;
+	@media screen and (min-width: $screen-lg-min) {
+		width: 33%;
+	}
+
+	i {
+		color: $brand-secondary;
+		font-size: 56px;
+		height: 56px;
+		margin-top: -32px;
+		margin-right: 4px;
+	}
+
+	span {
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+}

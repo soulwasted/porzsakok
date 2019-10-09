@@ -1,5 +1,5 @@
 .main.detail {
-	.container:nth-of-type(1) {
+	.container:nth-last-child(0) {
 		border-bottom: none;
 		padding-bottom: 0;
 	}
@@ -28,6 +28,7 @@
 	.heureka-logo {
 		width: 100%;
 		max-width: 100px;
+		mix-blend-mode: multiply;
 	}
 }
 .cartButtons {
@@ -59,90 +60,6 @@
 			}
 		}
 	}
-}
-.discounts {
-	margin-top: 12px;
-	color: $brand-primary;
-	@media screen and (max-width: $screen-sm) {
-		// margin-top: 0;
-		display: flex;
-		align-items: center;
-		&>div {
-			padding: 0;
-		}
-	}
-	@media screen and (max-width: $screen-sm) {
-		top: -30px;
-	}
-	.summary {
-		text-align: center;
-		font-size: 13px;
-		line-height: 16px;
-		// margin-top: 20px;
-		.sum-item {
-			opacity: 0.3;
-			// color: black;
-			&.active {
-				opacity: 1;
-			}
-		}
-		.item {
-			margin-bottom: 10px;
-			white-space: nowrap;
-			span {
-				display: block;
-				font-weight: bold;
-				font-size: 14px;
-				white-space: nowrap;
-				.icon-check2 {
-					color: $brand-secondary;
-					font-size: 19px;
-					margin-right: 4px;
-				}
-			}
-		}
-		.price {
-			text-align: center;
-			width: 151px;
-			height: 85px;
-			margin-left: auto;
-			margin-right: auto;
-			padding-top: 30px;
-			background: url("../img/circle/circle.png");
-			background: url("../img/circle/circle.svg");
-			background-repeat: no-repeat;
-			span {
-				font-size: 24px;
-				color: $brand-primary;
-			}
-		}
-	}
-	// strong {
-	// 	color: $brand-primary;
-	// 	font-size: 18px;
-	// }
-	// .prices-sale {
-	// 	@media screen and (min-width: $screen-sm) {
-	// 		margin-top: 10px;
-	// 		margin-bottom: 10px;
-	// 	}
-	// 	.badge-sale {
-	// 		padding: 7px 6px;
-	// 		width: auto;
-	// 		height: 60px;
-	// 		// border: 2px solid $brand-red;
-	// 		background: $brand-primary;
-	// 		border-radius: 12px;
-	// 		display: inline-block;
-	// 		color: white;
-	// 		text-transform: none;
-	// 		strong {
-	// 			display: block;
-	// 			color: white;
-	// 			// font-size: 10px;
-	// 		}
-	// 	}
-	// }
 }
 
 .gallery {
@@ -178,17 +95,6 @@
 	@media (min-width: $screen-md-min) {
 		.row > div:nth-child(3n+1) {
 			clear: both;
-		}
-	}
-	.item {
-		display: flex;
-		margin-bottom: 30px;
-		img {
-			// height: 60px;
-			width: 60px;
-			border: 1px solid $gray-lighter;
-			margin: 10px 10px 0 0;
-			align-self: flex-start;
 		}
 	}
 }

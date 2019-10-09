@@ -46,125 +46,142 @@ html(lang='en')
 									.benefit
 										.icon
 											i.icon-transport(aria-hidden='true')
-										.text Doprava 
-											span 3,90 EUR
+										.text doprava 
+											span 55 Kč
+									.benefit
+										.icon
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 0 %
+									.benefit
+										.icon
+											i.icon-microfilter(aria-hidden='true')
+										.text motorový filtr
+											span ZDARMA (1 ks)
 									.benefit
 										.icon
 											i.icon-euro(aria-hidden='true')
-										.text 
-											span 1,20 € / ks
+										.text jednotková cena
+											span 25,17 Kč/ks
 								.allBenefits
 									.benefit
 										.icon
 											i.icon-transport(aria-hidden='true')
-										.text Doprava 
+										.text doprava 
 											span ZDARMA
 									.benefit
 										.icon
-											i.icon-bags(aria-hidden='true')
-										.text + 4 sáčky 
-											span ZDARMA
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 20 %
+									.benefit
+										.icon
+											i.icon-microfilter(aria-hidden='true')
+										.text motorový filtr
+											span ZDARMA (3 ks)
 									.benefit
 										.icon
 											i.icon-euro(aria-hidden='true')
-										.text  
-											span 0,90 € / ks
+										.text jednotková cena
+											span 25,17 Kč/ks
 								.allBenefits
 									.benefit
 										.icon
 											i.icon-transport(aria-hidden='true')
-										.text Doprava 
+										.text doprava 
 											span ZDARMA
 									.benefit
 										.icon
-											i.icon-bags(aria-hidden='true')
-										.text + 8 sáčků 
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 28 %
+									.benefit
+										.icon
+											i.icon-microfilter(aria-hidden='true')
+										.text motorový filtr
+											span ZDARMA (5 ks)
+									.benefit
+										.icon
+											i.icon-plus(aria-hidden='true')
+										.text 1 vůně
 											span ZDARMA
 									.benefit
 										.icon
 											i.icon-heart(aria-hidden='true')
-										.text Oblíbené balení 
-											span 0,86 € / ks
+										.text oblíbené balení
+											span 25,17 Kč/ks
 								.allBenefits
 									.benefit
 										.icon
 											i.icon-transport(aria-hidden='true')
-										.text Doprava 
+										.text doprava 
 											span ZDARMA
 									.benefit
 										.icon
-											i.icon-bags(aria-hidden='true')
-										.text + 20 sáčků 
+											i.icon-piggy(aria-hidden='true')
+										.text sleva 
+											span 32 %
+									.benefit
+										.icon
+											i.icon-microfilter(aria-hidden='true')
+										.text motorový filtr
+											span ZDARMA (10 ks)
+									.benefit
+										.icon
+											i.icon-plus(aria-hidden='true')
+										.text 1 vůně
 											span ZDARMA
 									.benefit
 										.icon
 											i.icon-bomb(aria-hidden='true')
-										.text Cenová bomba 
-											span 24,67 Kč/ks
-							.row
-								.col-xs-12
-									p.note 
-										i.icon-plus
-										| Ke každým 4 sáčkům získáte 1 motorový filtr ZDARMA.
-										br
-										a(href="#") Co je to motorový filtr?
-									br
-									h5
-										a(href="#additional") Máme pro vás i doplňkové zboží
-						.col-xs-12.col-sm-4
-							.row
-								.col-xs-12
-									.stepper
-										#stepperMinus
-											span.glyphicon.glyphicon-minus(aria-hidden='true')
-										input#sliderInput(type="number" value="2")
-										#stepperPlus
-											span.glyphicon.glyphicon-plus(aria-hidden='true')
-									.stepperLabel sáčků
-							.row.discounts
-								include includes/detail-summary.jade
-			.container.cartButtons
-				.row
-					.col-xs-12
-						a.btn.btn-primary.btn-lg(href="#") Vložit do košíku
-							i.icon-cart
-					//- .col-xs-12.col-sm-8
-					//- 	span nebo 
-					//- 	a.btn.btn-default#btnOnePiece(href="#") Chcete vyzkoušet 1 sáček zdarma?
-					//- 	span  (zaplatíte pouze 4€ za dopravu)
+										.text cenová bomba
+											span 25,17 Kč/ks										
+										
+						include ./includes/slider-summary.jade
 			.container
 				.row
-					.col-sm-6.hidden-xs.gallery
+					.col-xs-12
+						.note 
+							i.icon-plus 
+							p Máme pro Vás i HEPA filtry, motorové filtry, kartáče a vůně…
+						.note 
+							i.icon-plus 
+							p Pokud 
+								strong chcete vyzkoušet kvalitu našich sáčků
+								| , můžete si objednat na zkoušku 1 sáček za cenu 35 Kč. Zaplatíte pouze tuto cenu a dopravu. Vložit do košíku 1 sáček na zkoušku.
+						.note 
+							i.icon-plus 
+							p
+								strong Potřebujete odeslat sáčky ještě dnes? 
+								| Objednávka musí být zadaná do 11:00 hod a v nákupním košíku zvoleno „expresní expedice“.
+						.note 
+							i.icon-plus 
+							p
+								a(href="#") Co je to motorový filtr? K čemu slouží vůně do vysavače?
+			.container
+				.row
+					.col-sm-6.gallery
 						a(href='./img/vacs-bag/vacs-bag-detail-03-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
 							img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-03-tn.jpg' alt="fotka sáčku")
+						
+						include ./includes/o-bag_benefits.jade
+							
 					.col-xs-12.col-sm-6
-						p
-							strong.info Skladem: 
-							strong Ano
-						p
-							strong.info Materiál:
-							|  Antibakteriální filtrační netkaná textilie
-						p
-							strong.info Počet filtračných vrestev: 
-							strong 5
-						p
-							| Sáčky pro vysavač ELECTROLUX UltraOne Z 8810 od značky VACS sú kvalitnejšou alternatívou bežných papierových sáčků, ktoré sú obvykle zložené iba z dvoch vrstiev s nižšou filtračnou schopnosťou. Tieto vrecká sú plnohodnotnou alternatívou k originálnemu výrobku.
-						.visible-xs
-							a(href='./img/vacs-bag/vacs-bag-detail-03-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-								img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-03-tn.jpg' alt="fotka sáčku")
-						.row
-							.col-xs-12.gallery
-							//- .col-xs-12
-							//- 	h2.h3 Fotografie
-							.col-xs-4
-								a(href='./img/vacs-bag/vacs-bag-detail-01-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-01-tn.jpg' alt="fotka sáčku")
-							.col-xs-4
-								a(href='./img/vacs-bag/vacs-bag-detail-02-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-02-tn.jpg' alt="fotka sáčku")
-							.col-xs-4
-								a(href='./img/vacs-bag/vacs-bag-detail-04-full.jpg', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='./img/vacs-bag/vacs-bag-detail-04-tn.jpg' alt="fotka sáčku")
+						h4 Detailní informace o sáčky do vysavače Electrolux S-BAG
+						p Sáčky do vysavačů značky VACS jsou vyrobeny v ČR. Jsou plnohodnotnou alternativou k originálnímu výrobku. 
+							strong Sáčky jsou vyrobené z netkané textilie, která má pět filtračních vrstev. 
+							| Díky tomu můžou sáčky plnit funkci účinného filtru, který chrání vaše zdraví a prodlužuje životnost vysavače. Sáčky z netkané textilie mají výrazně lepší filtrační vlastnosti v porovnání s papírovými sáčky. Prostě a jednoduše, papírový sáček pustí do ovzduší vašeho bytu mnoho násobně více prachových částic než sáček z netkané textilie.
+						p Důležitou součástí samotného sáčku je 
+							strong 
+							| úchyt, který může být vyrobený z plastu nebo z kartónu. Když se mluví o úchytu, je pro něj také někdy používáno označení příruba, nebo „kartonek“. Aby sáček plnil svoji funkci, je důležité, aby otvor v úchytu dobře těsnil. U některých sáčků plní tuto těsnící funkci těsnící gumička. Jsou ale i sáčky s úchytem, kde těsnící gumička není a těsnící funkci plní samotná netkaná textilie, resp. kruhový otvor se zpevněným okrajem, jakousi obrubou. Záleží na tom, do jakého modelu vysavače je daný sáček.
+						p Na fotografii je autentická podoba sáčku. Může se ale stát, že sáček, který je na fotce s plastovým úchytem bude mít v reálu kartonový úchyt. 
+							strong Jakožto zkušení specialisté z oboru vám garantujeme, že materiál úchytu nemá vliv na funkčnost sáčku jako celku.
+
+				.row
+					.col-xs-12
+						p Chcete se dozvědět o sáčcích VACS ještě více? Potřebujete další doplňující informace? Máte pro nás nový podnět? Jste s něčím nespokojeni? Nejste si jisti rozměrem sáčků? Jsme zde pro naše zákazníky denně od 8:00 do 16:00. Neváhejte nás kontaktovat prostřednictvím e-mailu 
+							a(href="mailto:info@chci-vysavat.cz") info@chci-vysavat.cz
+							|, nebo telefonicky +420 737 770 470.
 			.container
 				.row
 					.col-xs-12
@@ -173,6 +190,8 @@ html(lang='en')
 					.col-xs-12
 						p.readmore
 							include ./includes/detail-more-models.jade
+							
+				
 			a#additional
 			.container.recommendation
 				.row
@@ -181,6 +200,7 @@ html(lang='en')
 				.row
 					- for (var x = 0; x < 12; x++)
 						include ./includes/detail-accessory.jade
+			include ./includes/stripe-testimonials.jade
 			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 	include ./includes/scripts.jade	
