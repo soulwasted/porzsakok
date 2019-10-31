@@ -121,7 +121,8 @@ $buttonStepperRadius: 5px;
 
 	&.noUi-target {
 		height: 6px;
-		background: $brand-success;
+		// background: $brand-success;
+		background: $light-blue;
 		border-radius: 3px;
 		box-shadow: 0 0 0 5px $light-blue;
 		border: none;
@@ -211,7 +212,8 @@ $buttonStepperRadius: 5px;
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 
 		&:hover {
-			background: darken($brand-primary, 10);
+			// background: darken($brand-primary, 10);
+			background-image: linear-gradient(to top, #d4d4d4, #a2a1a1);
 		}
 	}
 

@@ -43,4 +43,12 @@
 			color: $brand-primary;
 		}
 	}
+	.summary {
+		@media screen and (min-width: $screen-md) {
+			margin-bottom: 4px;
+		}
+		@media screen and (min-width: $screen-lg) {
+			margin-bottom: 16px;
+		}
+	}
 }
