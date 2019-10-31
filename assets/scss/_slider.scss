@@ -121,8 +121,8 @@ $buttonStepperRadius: 5px;
 
 	&.noUi-target {
 		height: 6px;
-		// background: $brand-success;
-		background: $light-blue;
+		background: $brand-success;
+		// background: $light-blue;
 		border-radius: 3px;
 		box-shadow: 0 0 0 5px $light-blue;
 		border: none;
@@ -153,14 +153,18 @@ $buttonStepperRadius: 5px;
 		left: -20px;
 		top: -18px;
 		background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
-		border: 0;
+		// border: 0;
+		border: 5px solid $brand-success;
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 		cursor: pointer;
-		transition: box-shadow 0.5s;
+		transition: all 0.5s;
 
 		&:hover {
-			background: lighten($brand-success,4);
-			box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+			// background: lighten($brand-success,0.2);
+			// border-color: $brand-primary;
+			background: $brand-success;
+			// box-shadow: 0 0 30px 0 rgba(0,0,0,0.5);
+			box-shadow: 0 0 2px 0 rgba(0,0,0,0.7);
 		}
 
 		&::after,

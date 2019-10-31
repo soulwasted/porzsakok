@@ -6703,7 +6703,7 @@ body .modal--full .modal-dialog {
       margin-bottom: 45px; } }
   #slider.noUi-target {
     height: 6px;
-    background: #D9EEF3;
+    background: #0089b0;
     border-radius: 3px;
     -webkit-box-shadow: 0 0 0 5px #D9EEF3;
             box-shadow: 0 0 0 5px #D9EEF3;
@@ -6730,19 +6730,17 @@ body .modal--full .modal-dialog {
     background-image: -webkit-linear-gradient(top, #ffffff, #d0cdcd);
     background-image: -o-linear-gradient(top, #ffffff, #d0cdcd);
     background-image: linear-gradient(to bottom, #ffffff, #d0cdcd);
-    border: 0;
+    border: 5px solid #0089b0;
     -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    -webkit-transition: -webkit-box-shadow 0.5s;
-    transition: -webkit-box-shadow 0.5s;
-    -o-transition: box-shadow 0.5s;
-    transition: box-shadow 0.5s;
-    transition: box-shadow 0.5s, -webkit-box-shadow 0.5s; }
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
     #slider .noUi-handle:hover {
-      background: #0099c4;
-      -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-              box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5); }
+      background: #0089b0;
+      -webkit-box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.7);
+              box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.7); }
     #slider .noUi-handle::after, #slider .noUi-handle::before {
       height: 20px;
       width: 2px;
