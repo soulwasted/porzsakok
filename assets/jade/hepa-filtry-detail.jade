@@ -6,54 +6,182 @@ html(lang='en')
 		.main.detail
 			include ./includes/nav.jade
 			.container
+				ul.breadcrumb
+					li
+						a(href='/') Domů
+					li
+						a(href='#') Seznam značek
+					li
+						a(href='#') HEPA filtry
+					li.active(aria-current='page') HEPA filtr do vysavačů AEG (HF0001)
 				.row
 					.col-xs-12
-						ul.breadcrumb
-							li
-								a(href='/') Dom&uring;
-							| &#x9;            
-							li
-								a(href='/znacky') Seznam zna&ccaron;ek
-							| &#x9;            
-							li
-								a(href='/hepa-filtry') Hepa filtry
-							| &#x9;                
-							li Hepa filtry do vysava&ccaron;&uring; ROWENTA
+						h1 HEPA filtr do vysavačů AEG (HF0001)
+						p
+							| Kompatibilní s AEG AF51W, AFG AFG 9001677690. ALU 9001966697, H12 AEG AEFG12W Green, H13 AEG-ELECTROLUX £F51W.
 				.row
-					.col-xs-12
-						h1 Hepa filtr do vysavačů Rowenta (HF0023)
-				.row.main-content-hepa
-					.col.primary
-						h3.center Vyberte si počet produktů
-						.stepper
-							#stepperMinus
-								span.glyphicon.glyphicon-minus(aria-hidden='true')
-							input#sliderInput(type="number" value="2")
-							#stepperPlus
-								span.glyphicon.glyphicon-plus(aria-hidden='true')
-						.row.discounts
-							.col-xs-12.summary
-								h4.hand.summary
-									span Vaše 
-										br
-										|  objednávka
-								.item.price cena
-									span 24,00 €
-								a.btn.btn-primary.btn-lg(href="#") Vložit do košíku
+					.col-sm-6.col-xs-12
+						a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', data-toggle='lightbox', data-gallery='gallery', data-title='Fotka sáčku')
+							img.img-responsive(alt='Fotka sáčku', src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg')
+						.gallery.gallery--half
+							a.gallery__link(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', data-toggle='lightbox', data-gallery='gallery', data-title='Fotka sáčku')
+								img.img-responsive.gallery__img(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', alt='Fotka sáčku')
+							a.gallery__link(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', data-toggle='lightbox', data-gallery='gallery', data-title='Fotka sáčku')
+								img.img-responsive.gallery__img(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', alt='Fotka sáčku')
+							a.gallery__link(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', data-toggle='lightbox', data-gallery='gallery', data-title='Fotka sáčku')
+								img.img-responsive.gallery__img(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0001.jpg', alt='Fotka sáčku')
+						script(type='text/javascript', src='/js/ekko-lightbox.min.js')
+					.col-sm-6.col-xs-12
+						form.selection.selection--hepa(action='#')
+							.package.package--01
+								input#package-01(type='radio', name='package', value='package-01')
+								label(for='package-01')
+									| 1 ks
+								.package__price
+									| 180 Kč
+								.package__benefits
+									.package__benefit
+										.icon
+											i.icon-save-hand(aria-hidden='true')
+										.text
+											| Sleva
+											strong 0 %
+							.package.package--01.package--selected
+								input#package-01(type='radio', name='package', value='package-01', checked='')
+								label(for='package-01')
+									| 2 ks
+								.package__price
+									| 160 Kč
+									.package__price-before 180 Kč
+								.package__benefits
+									.package__benefit
+										.icon
+											i.icon-save-hand(aria-hidden='true')
+										.text
+											| Sleva
+											strong 10 %
+							.package.package--03
+								input#package-03(type='radio', name='package', value='package-03')
+								label(for='package-03')
+									| 3 ks
+								.package__price
+									| 140 Kč
+									.package__price-before 180 Kč
+								.package__benefits
+									.package__benefit
+										.icon
+											i.icon-save-hand(aria-hidden='true')
+										.text
+											| Sleva
+											strong 20 %
+						//- script(type='text/javascript', src='/js/selection-hepa.js')
+						.row
+							.col-md-12.col-lg-6.mb-3
+								.expedition-in-XXh.expedition-in-XXh--small
+									i.icon-stopwatch-48h(aria-hidden='true')
+									div
+										strong Odeslání do 48 hodin
+										p Veškeré zboží máme skladem
+							.col-md-12.col-lg-6
+								button.btn.btn-primary.btn-lg(type='button')
+									| Vložit do košíku
 									i.icon-cart
-					.col.secondary
-						.gallery.gallery--hepa
-							a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-								img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
-							.gallery__thumbnails
-								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
-								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
-								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
-								a(href='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG', data-toggle="lightbox", data-gallery="gallery", data-title="Fotka sáčku")
-									img.img-responsive(src='https://chci-vysavat.cz/images/assets/pack/myLarge/HF0023a.JPG' alt="fotka sáčku")
+				hr
+				.row
+					.col-md-6.col-sm-12
+						h4 Parametry HEPA filtru HF0001:
+						table
+							tbody
+								tr
+									td Pro značku
+									td ELECTROLUX
+								tr
+									td Vnější délka (A) x Vnější šířka (B)
+									td 120 x 80 mm
+								tr
+									td Vnitřní délka (A) x Vnitřní šířka (B)
+									td 110 x 70 mm
+								tr
+									td Výška (E)
+									td 25 mm
+								tr
+									td Omyvatelný
+									td NE
+						p.mt-3
+							| HEPA filtr je tedy „výstupní prachový filtr“. Zkratka HEPA je z anglického „high efficiency particulate arrestance“, resp. „zachytávání mikročástic s vysokou účinností“. Pozor, těmi mikročásticemi můžou být nejenom mikroskopické částečky prachu, ale i alergeny. Proto je pro lidi trpící alergií důležité, aby si při koupi vysavače vybrali právě takový model vysavače, který má výstupní prachový HEPA filtr.
+					.col-md-5.col-sm-12
+						img.img-responsive(alt='Fotka sáčku', src='/img/hepa-filter.jpg')
+				hr
+				.row
+					.col-xs-12
+						p
+							| Vysavač je vlastně docela jednoduché zařízení. Nasává do sebe vzduch a nečistoty. Nečistoty zůstanou v ideálním případě v sáčku, který je uvnitř vysavače. Ale co s tímto nasátým vzduchem? Ten je následně vypo uštěn do okolního prostředí. No a tady
+							| se dostáváme k „jádru pudla“. Protože vzduch, který odchází z vysavače je znečištěný většími nebo menšími nečistotami, je potřeba jej vyčistit. A protože člověk je vskutku tvor vynalézavý, přišel na to, že by bylo dob ré použít nějaký filtr
+							| vzduchu, chcete li HEPA filtr, který zachytí i velice drobné částice jejichž velikost může být například 300 nanometrů. Poznámka pro největší zvědavce. Jeden nanometr je 1 miliardtina metru. Například vzdálenosti atomů v pevných látk ách jsou
+							| řádově zlomky (typicky čtvrtina až pětina) nanometru.
+						p
+							| HEPA filtr je tedy „výstupní prachový filtr“. Zkratka HEPA je z anglického „high efficiency particulate arrestance“, resp. „zachytávání mikročástic s vysokou účinností“. Pozor, těmi mikročást icemi můžou být nejenom mikroskopické částečky prachu,
+							| ale i alergeny. Proto je pro lidi trpící alergií důležité, aby si při koupi vysavače vybrali právě takový model vysavače, který má výstupní prachový HEPA filtr.
+				hr
+				.row
+					.col-xs-12
+						.mb-3
+							h3 Potřebuji vědět, jestli HEPA filtr HF0001 pasuje do mého vysavače
+							.row
+								.col-sm-12.col-md-6.mb-3
+									//- FIXME: search input
+									input#search-input.form-control.form-control-lg.big_search__input(type='text', placeholder='Hledejte typ vysavače')
+									span.icon-placeholder.big_search__icon
+										i.icon-search
+								.col-sm-12.col-md-6
+									p
+										a(href='#', data-toggle='modal', data-target='#myModal--advices')
+											strong Stačí začít psát model svého vysavače
+										| 						a nabídka sáčků se začne zužovat až najdete ten, co hledáte. Nevíte, jaký máte model? Nevadí, najdete ho většinou
+										a(href='#', data-toggle='modal', data-target='#myModal')
+											strong na spodní straně vysavače
+										| .
+						div
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+							| , 
+							a(href='#') AEG AAM 6100-6160 EC AirMax
+						button.btn.btn-default.mt-2(type='button') Zobrazit všechny modely
+				hr
+				.row
+					.col-xs-12
+						h2.h3 Doporučujeme
+				.row
+					- for (var x = 0; x < 12; x++)
+						include ./includes/detail-accessory.jade
+
+				hr
+				.row
+					.col-xs-12.col-sm-4
+						img.img-responsive(src='/img/motorove-filtry-01.jpg', alt='Motorové filtry – krok 1')
+					.col-xs-12.col-sm-4
+						img.img-responsive(src='/img/motorove-filtry-02.jpg', alt='Motorové filtry – krok 2')
+					.col-xs-12.col-sm-4
+						img.img-responsive(src='/img/motorove-filtry-03.jpg', alt='Motorové filtry – krok 3')
+			//- include ./includes/stripe-testimonials.jade
+			include ./includes/stripe-guarantee.jade
 			include ./includes/footer.jade
 	include ./includes/scripts.jade	
 	//- script(src='js/slider.js')

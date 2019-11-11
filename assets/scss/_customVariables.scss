@@ -51,6 +51,19 @@ $stripes-padding:           60px;
 
 $shadow:                    0 2px 4px 0 rgba(12,0,51,0.10);
 
+
+$box-shadow-sm: 0 0.125rem 0.25rem rgba($black, .075);
+$box-shadow: 0 0.5rem 1rem rgba($black, .15);
+$box-shadow-lg: 0 1rem 3rem rgba($black, .175);
+// $box-shadow-slider: 0 1rem 3rem rgba($black, .175);
+$box-shadow-slider: 0 2px 4px 0 rgba($black, .4);
+
+
+$transition-base-time_and_effect: 0.3s ease-in-out;
+$transition-base: all 0.3s ease-in-out;
+$transition-fade: opacity 0.15s linear !default;
+$transition-collapse: height 0.35s ease !default;
+
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 // $grid-float-breakpoint:     820px;

@@ -1,0 +1,25 @@
+.selection--hepa {
+	.package {
+		label {
+			width: 64px !important;
+			font-size: 20px;
+		}
+	.package__price {
+		width: auto;
+		margin-left: auto;
+		display: block;
+		text-align: center;
+		.package__price-before {
+			display: block;
+			margin-left: 0;
+		}
+	}
+	.package__benefits {
+		flex-basis: auto;
+	}
+	.package__benefit {
+		width: 72px !important;
+		text-align: center !important;
+	}
+}
+}

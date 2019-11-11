@@ -140,6 +140,10 @@ $buttonStepperRadius: 5px;
 		font-weight: 700;
 		color: $gray;
 		font-size: 17px;
+		
+		&.noUi-value-sub {
+			font-size: 12px;
+		}
 
 		&:last-child {
 			width: 60px;

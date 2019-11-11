@@ -216,7 +216,9 @@ small {
 	color: black;
 	display: flex;
 	align-items: baseline;
-	// clear: both;
+	p {
+		margin-bottom: 0.3rem;
+	}
 	i {
 		font-size: 20px;
 		color: $brand-secondary;
