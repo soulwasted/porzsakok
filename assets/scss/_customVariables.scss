@@ -32,6 +32,16 @@ $font-family-special:       $font-family-raleway;
 $font-family-base:          $font-family-raleway;
 
 $font-size-base:            14px;
+
+$font-size-lg: $font-size-base * 1.42; // 20px
+$font-size-md: $font-size-base; // 14px
+$font-size-sm: $font-size-base; // 14px
+// $font-size-sm: $font-size-base * .875; // 14px
+$font-size-xs: $font-size-base * .9285; // 13px
+$font-size-xxs: $font-size-base * .7857; // 11px
+$font-size-xxxs: $font-size-base * .7142; // 10px
+
+
 $font-size-nav:             ceil(($font-size-base)); // ~14px
 
 $link-color:                $brand-secondary;

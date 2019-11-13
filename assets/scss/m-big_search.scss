@@ -1,0 +1,264 @@
+// .big_search {}
+
+#search-fulltext form {
+	z-index: 2;
+	position: relative;
+}
+
+input.big_search__input {
+	width: 100%;
+	height: 60px;
+	font-size: $font-size-sm;
+	border: 2px solid $brand-success;
+	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(sm) {
+		font-size: $font-size-md;
+		padding-left: 50px;
+	}
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-lg;
+		padding-left: 60px;
+		height: 80px;
+	}
+}
+
+.big_search__btn {
+	float: right;
+	margin-top: -55px;
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	position: relative;
+	z-index: 1000;
+	font-size: $font-size-md;
+	@include media-breakpoint-up(sm) {
+		width: 120px;
+	}
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-lg;
+		width: 167px;
+		// width: 60px;
+		margin-right: 15px;
+		margin-top: -65px;
+	}
+
+	span {
+		display: none;
+		@include media-breakpoint-up(sm) {
+			display: block;
+		}
+	}
+
+	span.icon-placeholder {
+		display: block;
+		margin-left: -20px;
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			display: none;
+		}
+	}
+}
+
+.big_search__icon {
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-top: -57px;
+	font-size: 32px;
+	color: rgba(0, 0, 0, 0.2);
+	display: none;
+	@include media-breakpoint-up(sm) {
+		display: block;
+	}
+	@include media-breakpoint-up(md) {
+		margin-left: 20px;
+		margin-top: -67px;
+	}
+}
+
+.tt-menu {
+	display: none;
+	// visibility: hidden;
+	// opacity: 0;
+	// transition: visibility 0.3s, opacity 0.3s linear;
+
+	position: absolute;
+	background: white;
+	border-radius: 5px;
+	// box-shadow: 0 0 30px 0 rgba(10, 52, 64, 0.62);
+	box-shadow: $box-shadow-lg;
+	padding: 100px 20px 20px;
+	margin-left: -20px;
+	margin-top: -100px;
+	z-index: 1;
+	width: calc(100% + 10px);
+
+	&.show {
+		// transition: visibility 0s, opacity 0.5s linear;
+		// visibility: visible;
+		// opacity: 1;
+		display: block;
+	}
+
+	.content {
+		// max-height: 400px;
+		height: 75vh;
+		overflow-y: scroll;
+
+		h5 {
+			font-size: 12px;
+			color: $gray;
+			padding-left: 86px;
+			margin-top: 15px;
+			text-transform: none;
+			overflow: hidden;
+
+			& > span {
+				position: relative;
+				display: inline-block;
+			}
+
+			& > span:after,
+			& > span:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				border-bottom: 1px solid;
+				width: 591px;
+				/* half of limiter*/
+				margin: 0 20px;
+				color: $gray-light;
+			}
+
+			& > span:before {
+				right: 100%;
+			}
+
+			& > span:after {
+				left: 100%;
+			}
+		}
+
+		.top {
+			display: flex;
+			justify-content: space-between;
+
+			.top-brands,
+			.tt-dataset-top-brands {
+				width: 38%;
+			}
+
+			.top-bags,
+			.tt-dataset-top-bags {
+				width: 58%;
+
+				h5 {
+					padding-left: 20px;
+				}
+			}
+			@media (max-width: $screen-xs-max) {
+				display: block;
+
+				.tt-dataset {
+					width: 100%;
+				}
+			}
+		}
+
+		.tt-dataset {
+			line-height: 40px;
+
+			.row {
+				margin: 0;
+
+				a {
+					// font-size: 18px;
+					text-decoration: none;
+					display: flex;
+					align-items: center;
+
+					img {
+						height: auto;
+						width: 66px;
+					}
+
+					.link {
+						// display: inline-block;
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						width: calc(100% - 76px); // img width + padding-left
+						margin-left: 10px;
+						padding-left: 10px;
+						border-radius: 5px;
+						cursor: pointer;
+						color: $gray-darker;
+						font-size: 16px;
+						line-height: 20px;
+						min-height: 40px;
+
+						strong.tt-highlight {
+							color: $brand-secondary;
+							font-weight: 700;
+						}
+
+						span.price {
+							margin-right: 10px;
+							font-size: 14px;
+							line-height: 16px;
+							color: $black;
+
+							span {
+								color: $gray-lighter;
+							}
+
+							span.stock {
+								text-transform: uppercase;
+								color: $brand-secondary;
+								font-size: 12px;
+								font-weight: 700;
+								padding-left: 10px;
+							}
+						}
+
+						&:hover {
+							background: $brand-secondary;
+							color: white;
+
+							.tt-highlight {
+								color: white;
+							}
+
+							span {
+								color: white;
+
+								span.stock {
+									color: white;
+								}
+							}
+						}
+
+						&.more {
+							background: $brand-secondary;
+							color: white;
+							width: 100%;
+							margin-left: 0;
+							margin-top: 4px;
+							justify-content: center;
+							font-weight: bold;
+
+							&:hover {
+								background: darken($brand-secondary, 10%);
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+}
+
+.tt-menu .content .tt-dataset.top-bags .row a .link {
+	width: calc(100% - 20px);
+}

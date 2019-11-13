@@ -9268,6 +9268,223 @@ table tr td {
 table tr:nth-child(odd) td {
   background-color: #e3f9ff; }
 
+#search-fulltext form {
+  z-index: 2;
+  position: relative; }
+
+input.big_search__input {
+  width: 100%;
+  height: 60px;
+  font-size: 14px;
+  border: 2px solid #0089b0; }
+  @media (min-width: 768px) {
+    input.big_search__input {
+      font-size: 14px;
+      padding-left: 50px; } }
+  @media (min-width: 992px) {
+    input.big_search__input {
+      font-size: 19.88px;
+      padding-left: 60px;
+      height: 80px; } }
+
+.big_search__btn {
+  float: right;
+  margin-top: -55px;
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  position: relative;
+  z-index: 1000;
+  font-size: 14px; }
+  @media (min-width: 768px) {
+    .big_search__btn {
+      width: 120px; } }
+  @media (min-width: 992px) {
+    .big_search__btn {
+      font-size: 19.88px;
+      width: 167px;
+      margin-right: 15px;
+      margin-top: -65px; } }
+  .big_search__btn span {
+    display: none; }
+    @media (min-width: 768px) {
+      .big_search__btn span {
+        display: block; } }
+  .big_search__btn span.icon-placeholder {
+    display: block;
+    margin-left: -20px; }
+    @media (min-width: 768px) {
+      .big_search__btn span.icon-placeholder {
+        margin-left: 0;
+        display: none; } }
+
+.big_search__icon {
+  float: left;
+  position: relative;
+  margin-left: 10px;
+  margin-top: -57px;
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0.2);
+  display: none; }
+  @media (min-width: 768px) {
+    .big_search__icon {
+      display: block; } }
+  @media (min-width: 992px) {
+    .big_search__icon {
+      margin-left: 20px;
+      margin-top: -67px; } }
+
+.tt-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  padding: 100px 20px 20px;
+  margin-left: -20px;
+  margin-top: -100px;
+  z-index: 1;
+  width: -webkit-calc(100% + 10px);
+  width: calc(100% + 10px); }
+  .tt-menu.show {
+    display: block; }
+  .tt-menu .content {
+    height: 75vh;
+    overflow-y: scroll; }
+    .tt-menu .content h5 {
+      font-size: 12px;
+      color: #4d4d4d;
+      padding-left: 86px;
+      margin-top: 15px;
+      text-transform: none;
+      overflow: hidden; }
+      .tt-menu .content h5 > span {
+        position: relative;
+        display: inline-block; }
+      .tt-menu .content h5 > span:after,
+      .tt-menu .content h5 > span:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-bottom: 1px solid;
+        width: 591px;
+        /* half of limiter*/
+        margin: 0 20px;
+        color: #b3b3b3; }
+      .tt-menu .content h5 > span:before {
+        right: 100%; }
+      .tt-menu .content h5 > span:after {
+        left: 100%; }
+    .tt-menu .content .top {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      -js-display: flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .tt-menu .content .top .top-brands,
+      .tt-menu .content .top .tt-dataset-top-brands {
+        width: 38%; }
+      .tt-menu .content .top .top-bags,
+      .tt-menu .content .top .tt-dataset-top-bags {
+        width: 58%; }
+        .tt-menu .content .top .top-bags h5,
+        .tt-menu .content .top .tt-dataset-top-bags h5 {
+          padding-left: 20px; }
+      @media (max-width: 767px) {
+        .tt-menu .content .top {
+          display: block; }
+          .tt-menu .content .top .tt-dataset {
+            width: 100%; } }
+    .tt-menu .content .tt-dataset {
+      line-height: 40px; }
+      .tt-menu .content .tt-dataset .row {
+        margin: 0; }
+        .tt-menu .content .tt-dataset .row a {
+          text-decoration: none;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -js-display: flex;
+          display: flex;
+          -webkit-box-align: center;
+          -webkit-align-items: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          .tt-menu .content .tt-dataset .row a img {
+            height: auto;
+            width: 66px; }
+          .tt-menu .content .tt-dataset .row a .link {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            -js-display: flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            width: -webkit-calc(100% - 76px);
+            width: calc(100% - 76px);
+            margin-left: 10px;
+            padding-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #222222;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 40px; }
+            .tt-menu .content .tt-dataset .row a .link strong.tt-highlight {
+              color: #0089b0;
+              font-weight: 700; }
+            .tt-menu .content .tt-dataset .row a .link span.price {
+              margin-right: 10px;
+              font-size: 14px;
+              line-height: 16px;
+              color: #000000; }
+              .tt-menu .content .tt-dataset .row a .link span.price span {
+                color: #e6e6e6; }
+              .tt-menu .content .tt-dataset .row a .link span.price span.stock {
+                text-transform: uppercase;
+                color: #0089b0;
+                font-size: 12px;
+                font-weight: 700;
+                padding-left: 10px; }
+            .tt-menu .content .tt-dataset .row a .link:hover {
+              background: #0089b0;
+              color: white; }
+              .tt-menu .content .tt-dataset .row a .link:hover .tt-highlight {
+                color: white; }
+              .tt-menu .content .tt-dataset .row a .link:hover span {
+                color: white; }
+                .tt-menu .content .tt-dataset .row a .link:hover span span.stock {
+                  color: white; }
+            .tt-menu .content .tt-dataset .row a .link.more {
+              background: #0089b0;
+              color: white;
+              width: 100%;
+              margin-left: 0;
+              margin-top: 4px;
+              -webkit-box-pack: center;
+              -webkit-justify-content: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              font-weight: bold; }
+              .tt-menu .content .tt-dataset .row a .link.more:hover {
+                background: #00617d; }
+
+.tt-menu .content .tt-dataset.top-bags .row a .link {
+  width: -webkit-calc(100% - 20px);
+  width: calc(100% - 20px); }
+
 .bag_benefits {
   display: -webkit-box;
   display: -webkit-flex;
