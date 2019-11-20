@@ -1,0 +1,65 @@
+// —————————————————
+// Card
+// —————————————————
+
+.card {
+	display: flex;
+	flex-flow: row nowrap;
+	border-radius: $border-radius-sm;
+	transition: $transition-base;
+	// width: 100%;
+	padding: 15px;
+	margin-left: calc(-1 * 15px);
+	margin-right: calc(-1 * 15px);
+	margin-bottom: 15px;
+
+	&:hover {
+		// text-decoration: none;
+		box-shadow: $box-shadow;
+		// background: lighten(theme-color("secondary"), 60%);
+		// background: gray("200");
+	}
+}
+
+	.card__image {
+		flex-basis: 30%;
+		padding-right: 12px;
+		display: block;
+		@media only screen and (max-width : 375px) {
+			display: none;	
+		}
+		@include media-breakpoint-down(sm) {
+			padding-right: 8px;
+		}
+		img {
+			// max-width: 50%;
+			width: 100%;
+			border-radius: $border-radius-sm;
+		}
+	}
+	.card__content {
+		flex-basis: 70%;
+		padding-left: 12px;
+		@include media-breakpoint-down(sm) {
+			padding-left: 8px;
+		}
+		@media only screen and (max-width : 375px) {
+			flex-basis: 100%;
+			padding-left: 0;
+		}
+	}
+		.card__title {
+			// margin-top: 16px;
+			h4 {
+				margin-top: 0;
+			}
+		}
+		.card__meta {
+			@extend .text-size-sm;
+			margin-bottom: 12px;
+		}
+			.card__date {}
+			.card__author {}
+		.card__text {
+			@extend .text-size-md;
+		}

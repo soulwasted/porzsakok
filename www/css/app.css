@@ -6608,6 +6608,21 @@ strong.info {
 .center {
   text-align: center; }
 
+.text-size-lg {
+  font-size: 19.88px; }
+
+.text-size-md, .card__text {
+  font-size: 14px; }
+
+.text-size-sm, .card__meta {
+  font-size: 14px; }
+
+.text-size-xs {
+  font-size: 12.999px; }
+
+.text-size-xxs {
+  font-size: 10.9998px; }
+
 .note {
   color: black;
   display: -webkit-box;
@@ -9258,6 +9273,68 @@ Main components
     @media screen and (max-width: 767px) {
       .item > div {
         display: block; } }
+
+.card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  -js-display: flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border-radius: 0.2rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 15px;
+  margin-left: -webkit-calc(-1 * 15px);
+  margin-left: calc(-1 * 15px);
+  margin-right: -webkit-calc(-1 * 15px);
+  margin-right: calc(-1 * 15px);
+  margin-bottom: 15px; }
+  .card:hover {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
+
+.card__image {
+  -webkit-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+  padding-right: 12px;
+  display: block; }
+  @media only screen and (max-width: 375px) {
+    .card__image {
+      display: none; } }
+  @media (max-width: 991.98px) {
+    .card__image {
+      padding-right: 8px; } }
+  .card__image img {
+    width: 100%;
+    border-radius: 0.2rem; }
+
+.card__content {
+  -webkit-flex-basis: 70%;
+      -ms-flex-preferred-size: 70%;
+          flex-basis: 70%;
+  padding-left: 12px; }
+  @media (max-width: 991.98px) {
+    .card__content {
+      padding-left: 8px; } }
+  @media only screen and (max-width: 375px) {
+    .card__content {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%;
+      padding-left: 0; } }
+
+.card__title h4 {
+  margin-top: 0; }
+
+.card__meta {
+  margin-bottom: 12px; }
 
 table tr td {
   width: 50%;
