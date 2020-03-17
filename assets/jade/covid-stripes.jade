@@ -1,0 +1,13 @@
+doctype html
+html(lang='en')
+	- var title= "Covid stripes"
+	include ./includes/head.jade
+	body
+		.main
+			include ./includes/nav.jade
+			include ./includes/stripe-covid.jade
+			div(style="height:150px;")
+			include ./includes/stripe-covid-pink.jade
+			include ./includes/footer.jade
+		include ./includes/modal-type.jade
+		include ./includes/scripts.jade

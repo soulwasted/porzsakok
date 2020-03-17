@@ -9693,10 +9693,13 @@ input.big_search__input {
   width: 72px !important;
   text-align: center !important; }
 
-.stripe-covid .container {
+.stripe-covid .container,
+.stripe-covid--pink .container {
   border-bottom: 0; }
 
-.stripe-covid:before, .stripe-covid:after {
+.stripe-covid:before, .stripe-covid:after,
+.stripe-covid--pink:before,
+.stripe-covid--pink:after {
   content: '';
   display: block;
   height: 24px;
@@ -9712,11 +9715,19 @@ input.big_search__input {
   backface-visibility: hidden;
   border-bottom: 0; }
 
-.stripe-covid:before {
+.stripe-covid:before,
+.stripe-covid--pink:before {
   top: 0; }
 
-.stripe-covid:after {
+.stripe-covid:after,
+.stripe-covid--pink:after {
   bottom: 0; }
+
+.stripe-covid--pink:before, .stripe-covid--pink:after {
+  background: transparent;
+  background: -webkit-repeating-linear-gradient(135deg, #FF585B, #FF585B 24px, transparent 24px, transparent 47px);
+  background: -o-repeating-linear-gradient(135deg, #FF585B, #FF585B 24px, transparent 24px, transparent 47px);
+  background: repeating-linear-gradient(-45deg, #FF585B, #FF585B 24px, transparent 24px, transparent 47px); }
 
 .stripe-covid--small {
   margin-top: 10px; }
