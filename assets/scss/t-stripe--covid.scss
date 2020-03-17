@@ -44,8 +44,6 @@
     }
 }
 .stripe-covid--pink {
-    
-    
     &:before,
     &:after {
       background: transparent;
@@ -59,7 +57,8 @@
     }
 }
 
-.stripe-covid--small {
+.stripe-covid--small,
+.stripe-covid--small--pink {
     margin-top: 10px;
     .container {
         padding-top: 12px;
@@ -93,5 +92,19 @@
     
     &:after {
       bottom: 0;
+    }
+}
+
+.stripe-covid--small--pink {
+    &:before,
+    &:after {
+      background: transparent;
+      background: repeating-linear-gradient(
+        -45deg,
+        $brand-primary,
+        $brand-primary 12px,
+        transparent 11px,
+        transparent 23px
+      );
     }
 }

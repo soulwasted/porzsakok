@@ -9729,12 +9729,16 @@ input.big_search__input {
   background: -o-repeating-linear-gradient(135deg, #FF585B, #FF585B 24px, transparent 24px, transparent 47px);
   background: repeating-linear-gradient(-45deg, #FF585B, #FF585B 24px, transparent 24px, transparent 47px); }
 
-.stripe-covid--small {
+.stripe-covid--small,
+.stripe-covid--small--pink {
   margin-top: 10px; }
-  .stripe-covid--small .container {
+  .stripe-covid--small .container,
+  .stripe-covid--small--pink .container {
     padding-top: 12px;
     padding-bottom: 0; }
-  .stripe-covid--small:before, .stripe-covid--small:after {
+  .stripe-covid--small:before, .stripe-covid--small:after,
+  .stripe-covid--small--pink:before,
+  .stripe-covid--small--pink:after {
     content: '';
     display: block;
     height: 12px;
@@ -9749,10 +9753,18 @@ input.big_search__input {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-bottom: 0; }
-  .stripe-covid--small:before {
+  .stripe-covid--small:before,
+  .stripe-covid--small--pink:before {
     top: 0; }
-  .stripe-covid--small:after {
+  .stripe-covid--small:after,
+  .stripe-covid--small--pink:after {
     bottom: 0; }
+
+.stripe-covid--small--pink:before, .stripe-covid--small--pink:after {
+  background: transparent;
+  background: -webkit-repeating-linear-gradient(135deg, #FF585B, #FF585B 12px, transparent 11px, transparent 23px);
+  background: -o-repeating-linear-gradient(135deg, #FF585B, #FF585B 12px, transparent 11px, transparent 23px);
+  background: repeating-linear-gradient(-45deg, #FF585B, #FF585B 12px, transparent 11px, transparent 23px); }
 
 .label11 {
   font-size: 1.1em;
