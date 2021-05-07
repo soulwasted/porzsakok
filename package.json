@@ -30,7 +30,7 @@
     "postcss-flexibility": "^1.0.3",
     "readmore-js": "^2.1.0",
     "spacing-bootstrap-3": "^1.0.0",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "vinyl-buffer": "^1.0.0"
   },
   "scripts": {
