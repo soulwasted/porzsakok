@@ -6624,6 +6624,13 @@ strong.info {
     color: #0089b0;
     margin-right: 10px; }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+    padding-left: 3em;
+    padding-right: 3em;
+    max-width: 1600px; } }
+
 @media (min-width: 992px) {
   .col-md-25 {
     width: 20%; } }

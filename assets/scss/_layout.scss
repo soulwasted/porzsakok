@@ -1,3 +1,11 @@
+.container {
+  @media (min-width: $screen-lg-min) {
+  	width: 100%;
+  	padding-left: 3em;
+  	padding-right: 3em;
+    max-width: 1600px;
+  }
+}
 @media (min-width: $screen-md-min) {
     .col-md-25 {
         width: 20%;
@@ -5,5 +13,5 @@
 }
 
 .just-two {
-    
+
 }
