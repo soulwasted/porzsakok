@@ -92,19 +92,19 @@ $buttonStepperRadius: 5px;
 		}
 
 		&:nth-child(1) {
-			left: calc(0% + 10px);
+			left: calc(0% + 28px);
 		}
-
 		&:nth-child(2) {
-			left: calc(33% - 13px);
+			left: calc(25%);
 		}
-
 		&:nth-child(3) {
-			left: calc(66% - 36px);
+			left: calc(50% - 28px);
 		}
-
 		&:nth-child(4) {
-			left: calc(100% - 60px);
+			left: calc(75% - 56px);
+		}
+		&:nth-child(5) {
+			left: calc(100% - 84px);
 		}
 		@media screen and (min-width: $screen-sm-min) {}
 		@media screen and (min-width: $screen-md-min) {}
@@ -112,7 +112,7 @@ $buttonStepperRadius: 5px;
 }
 
 #slider {
-	margin: 34px 20px 60px;
+	margin: 34px 40px 60px;
 	@media screen and (max-width: $screen-xs-max) {
 		margin-bottom: 45px;
 	}
@@ -193,6 +193,9 @@ $buttonStepperRadius: 5px;
 	}
 	.noUi-marker-large, .noUi-marker-sub {
 		background-image: linear-gradient(to bottom, #d9eef3, #0089b0);
+	}
+	.noUi-marker-normal {
+		display: none;
 	}
 }
 

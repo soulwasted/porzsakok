@@ -1,5 +1,6 @@
-var sliderSteps = [4, 12, 20, 40];
-var sliderSteps2 = [8, 16, 24, 28, 32, 36];
+var sliderSteps = [4, 12, 20, 40, 80];
+// var sliderSteps2 = [8, 16, 24, 28, 32, 36];
+var sliderSteps2 = [];
 var sliderStepsAll = sliderSteps.concat(sliderSteps2);
 
 // var sliderStep01 = 4;
@@ -33,10 +34,11 @@ $(document).ready(function () {
 		connect: 'lower',
 		step: 1,
 		range: {
-			'min': [sliderSteps[0], 1],
-			'33%': [sliderSteps[1], 1],
-			'66%': [sliderSteps[2], 1],
-			'max': [sliderSteps[3], 1]
+			'min': [sliderSteps[0], 4],
+			'25%': [sliderSteps[1], 4],
+			'50%': [sliderSteps[2], 4],
+			'75%': [sliderSteps[3], 4],
+			'max': [sliderSteps[4], 4]
 		},
 		pips: {
 			mode: 'values',
@@ -66,21 +68,21 @@ $(document).ready(function () {
 			slider.noUiSlider.set(sliderSteps[0]);
 			sliderInput.value = newNumber;
 			toggleBenefits(0);
-		} else if (newNumber >= sliderSteps[0] && newNumber <= sliderSteps[3]) {
+		} else if (newNumber >= sliderSteps[0] && newNumber <= sliderSteps[4]) {
 			slider.noUiSlider.set(newNumber);
 			sliderInput.value = newNumber;
-		} else if (newNumber > sliderSteps[3] && newNumber < 100) {
-			slider.noUiSlider.set(sliderSteps[3]);
+		} else if (newNumber > sliderSteps[4] && newNumber < 100) {
+			slider.noUiSlider.set(sliderSteps[4]);
 			sliderInput.value = newNumber;
 		} else if (newNumber >= 100) {
-			slider.noUiSlider.set(sliderSteps[3]);
+			slider.noUiSlider.set(sliderSteps[4]);
 			sliderInput.value = 99;
 		} else if (newNumber < sliderSteps[0]) {
 			slider.noUiSlider.set(sliderSteps[0]);
 			sliderInput.value = sliderSteps[0];
 		} else {
-			slider.noUiSlider.set(sliderSteps[3]);
-			sliderInput.value = sliderSteps[3];
+			slider.noUiSlider.set(sliderSteps[4]);
+			sliderInput.value = sliderSteps[4];
 		}
 		// updateInputSize();
 	}
@@ -105,7 +107,9 @@ $(document).ready(function () {
 
 	function updateBenefits() {
 		// console.log(sliderInput.value);
-		if (sliderInput.value >= sliderSteps[3]) {
+		if (sliderInput.value >= sliderSteps[4]) {
+			toggleBenefits(5);
+		} else if (sliderInput.value >= sliderSteps[3]) {
 			toggleBenefits(4);
 		} else if (sliderInput.value >= sliderSteps[2]) {
 			toggleBenefits(3);
@@ -134,6 +138,8 @@ $(document).ready(function () {
 			case 3:
 				break;
 			case 4:
+				break;
+			case 5:
 				break;
 			default:
 

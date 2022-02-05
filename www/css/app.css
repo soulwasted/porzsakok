@@ -7667,20 +7667,23 @@ body .modal--full .modal-dialog {
           .sliderBenefits .allBenefits.active .benefit .icon i:before {
             margin-top: -10px; }
     .sliderBenefits .allBenefits:nth-child(1) {
-      left: -webkit-calc(0% + 10px);
-      left: calc(0% + 10px); }
+      left: -webkit-calc(0% + 28px);
+      left: calc(0% + 28px); }
     .sliderBenefits .allBenefits:nth-child(2) {
-      left: -webkit-calc(33% - 13px);
-      left: calc(33% - 13px); }
+      left: -webkit-calc(25%);
+      left: calc(25%); }
     .sliderBenefits .allBenefits:nth-child(3) {
-      left: -webkit-calc(66% - 36px);
-      left: calc(66% - 36px); }
+      left: -webkit-calc(50% - 28px);
+      left: calc(50% - 28px); }
     .sliderBenefits .allBenefits:nth-child(4) {
-      left: -webkit-calc(100% - 60px);
-      left: calc(100% - 60px); }
+      left: -webkit-calc(75% - 56px);
+      left: calc(75% - 56px); }
+    .sliderBenefits .allBenefits:nth-child(5) {
+      left: -webkit-calc(100% - 84px);
+      left: calc(100% - 84px); }
 
 #slider {
-  margin: 34px 20px 60px; }
+  margin: 34px 40px 60px; }
   @media screen and (max-width: 767px) {
     #slider {
       margin-bottom: 45px; } }
@@ -7745,6 +7748,8 @@ body .modal--full .modal-dialog {
     background-image: -webkit-linear-gradient(top, #d9eef3, #0089b0);
     background-image: -o-linear-gradient(top, #d9eef3, #0089b0);
     background-image: linear-gradient(to bottom, #d9eef3, #0089b0); }
+  #slider .noUi-marker-normal {
+    display: none; }
 
 .stepper {
   display: -webkit-box;
