@@ -57,23 +57,23 @@ $screen-detail-selection: calc(#{$detail-selection} + 2*15px);
 .gallery {
 	margin-bottom: 24px;
 	img {
-		width: 100%;
+		// width: 100%;
 	}
 }
 
-.gallery__thumbnails {
-	display: flex;
-	flex-direction: row;
-	// align-items: stretch;
-	a {
-		width: 33%;
-		flex: 1;
-	}
+// .gallery__thumbnails {
+// 	display: flex;
+// 	flex-direction: row;
+// 	// align-items: stretch;
+// 	a {
+// 		width: 33%;
+// 		flex: 1;
+// 	}
 
-	img {
-		max-width: 185px;
-	}
-}
+// 	img {
+// 		max-width: 185px;
+// 	}
+// }
 .gallery--hepa {
 	.gallery__thumbnails {
 		a {
