@@ -33,12 +33,15 @@
     // @include media-breakpoint-up(xl) {
     //     width: calc(100% / 10);
     // }
-    width: calc(( 100% - 3 * 16px ) / 3);
+    width: calc(( 100% - 4 * 16px ) / 4);
     // @media (min-width: $screen-sm) {
     //     width: calc(( 100% - 3 * 8px ) / 3);
     // }
-    @media (min-width: $screen-lg) {
+    @media (min-width: $screen-sm) {
         width: calc(( 100% - 5 * 8px ) / 5);
+    }
+    @media (min-width: $screen-lg) {
+        width: calc(( 100% - 7 * 8px ) / 7);
     }
     & > img {
         width: 100%;

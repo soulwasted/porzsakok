@@ -9607,16 +9607,20 @@ input.big_search__input {
   transition: all 0.3s ease-in-out;
   border: 1px solid #e6e6e6;
   aspect-ratio: 1 / 1;
-  width: -webkit-calc(( 100% - 3 * 16px ) / 3);
-  width: calc(( 100% - 3 * 16px ) / 3); }
+  width: -webkit-calc(( 100% - 4 * 16px ) / 4);
+  width: calc(( 100% - 4 * 16px ) / 4); }
   .gallery__link:hover {
     text-decoration: none;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
             box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .gallery__link {
       width: -webkit-calc(( 100% - 5 * 8px ) / 5);
       width: calc(( 100% - 5 * 8px ) / 5); } }
+  @media (min-width: 1200px) {
+    .gallery__link {
+      width: -webkit-calc(( 100% - 7 * 8px ) / 7);
+      width: calc(( 100% - 7 * 8px ) / 7); } }
   .gallery__link > img {
     width: 100%;
     height: 100%;
